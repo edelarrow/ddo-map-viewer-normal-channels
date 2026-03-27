@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_top">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DDON Maps</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html, body {
+            height: 100%;
+            font-family: system-ui, sans-serif;
+            background: #1a1a2e;
+            color: #e0e0e0;
+        }
+
+        #app {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* ── Sidebar ── */
+        #sidebar {
+            width: 260px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            background: #16213e;
+            border-right: 1px solid #0f3460;
+            overflow: hidden;
+        }
+
+        #sidebar h1 {
+            padding: 12px 16px;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: #e94560;
+            border-bottom: 1px solid #0f3460;
+        }
+
+        #search-box {
+            padding: 8px;
+            border-bottom: 1px solid #0f3460;
+            position: relative;
+        }
+        #search-box input {
+            width: 100%;
+            padding: 6px 28px 6px 8px;
+            background: #0f3460;
+            border: none;
+            border-radius: 4px;
+            color: #e0e0e0;
+            font-size: 0.85rem;
+            box-sizing: border-box;
+        }
+        #search-box input::placeholder { color: #888; }
+        #map-search-clear {
+            position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+            background: none; border: none; color: #556; cursor: pointer;
+            font-size: 0.8rem; line-height: 1; padding: 2px 4px;
+            display: none;
+        }
+        #map-search-clear:hover { color: #bbb; }
+
+        #map-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 4px 0;
+        }
+
+        .map-group-header {
+            padding: 6px 16px 2px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #888;
+        }
+
+        .map-entry {
+            padding: 5px 16px;
+            cursor: pointer;
+            font-size: 0.82rem;
+            border-left: 3px solid transparent;
+            transition: background 0.1s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .map-entry:hover { background: #0f3460; }
+
+        .map-entry.active {
+            background: #0f3460;
+            border-left-color: #e94560;
+            color: #fff;
+        }
+
+        .map-entry .img-dot,
+        .map-subentry .img-dot {
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .map-entry .img-dot.has-img,
+        .map-subentry .img-dot.has-img { background: #4caf50; }
+        .map-entry .img-dot.no-img,
+        .map-subentry .img-dot.no-img  { background: #555; }
+
+        .map-entry .expand-arrow {
+            font-size: 0.6rem;
+            color: #888;
+            flex-shrink: 0;
+            transition: transform 0.15s;
+            width: 10px;
+            text-align: center;
+        }
+        .map-entry.expanded .expand-arrow { transform: rotate(90deg); }
+
+        .map-sublist { display: none; }
+        .map-sublist.open { display: block; }
+
+        .map-subentry {
+            padding: 4px 16px 4px 30px;
+            cursor: pointer;
+            font-size: 0.78rem;
+            color: #aaa;
+            border-left: 3px solid transparent;
+            transition: background 0.1s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .map-subentry:hover { background: #0f3460; color: #e0e0e0; }
+        .map-subentry.active {
+            background: #0f3460;
+            border-left-color: #e94560;
+            color: #fff;
+        }
+
+        /* ── Layers panel ── */
+        #layers-panel {
+            padding: 10px 16px;
+            border-top: 1px solid #0f3460;
+            font-size: 0.82rem;
+        }
+
+        #layers-panel h3 {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #888;
+            margin-bottom: 6px;
+        }
+
+        #layers-panel .layer-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0 8px;
+        }
+
+        .layer-toggle {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 2px 0;
+            cursor: pointer;
+        }
+
+        .layer-toggle input { cursor: pointer; accent-color: #e94560; }
+
+        /* ── Map container ── */
+        #map-container {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #map {
+            height: 100%;
+            width: 100%;
+            background: #0d0d1a;
+        }
+
+        #map-title {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background: rgba(22, 33, 62, 0.9);
+            padding: 4px 14px;
+            border-radius: 16px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #fff;
+            pointer-events: none;
+            border: 1px solid #0f3460;
+        }
+
+        #floor-selector {
+            position: absolute;
+            top: 42px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            display: flex;
+            gap: 4px;
+        }
+        #floor-selector button {
+            background: rgba(22, 33, 62, 0.88);
+            color: #ccd;
+            border: 1px solid #0f3460;
+            border-radius: 12px;
+            padding: 2px 10px;
+            font-size: 0.75rem;
+            cursor: pointer;
+        }
+        #floor-selector button.active {
+            background: #0f3460;
+            color: #fff;
+            border-color: #4a90d9;
+        }
+
+        #tile-layer-selector {
+            position: absolute;
+            top: 72px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            display: flex;
+            gap: 4px;
+        }
+        #tile-layer-selector button {
+            background: rgba(22, 33, 62, 0.88);
+            color: #ccd;
+            border: 1px solid #0f3460;
+            border-radius: 12px;
+            padding: 2px 10px;
+            font-size: 0.75rem;
+            cursor: pointer;
+        }
+        #tile-layer-selector button.active {
+            background: #0f3460;
+            color: #fff;
+            border-color: #4a90d9;
+        }
+
+        #coord-display {
+            position: absolute;
+            bottom: 8px;
+            left: 8px;
+            z-index: 1000;
+            background: rgba(22, 33, 62, 0.88);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-family: monospace;
+            font-weight: 600;
+            color: #e0e0e0;
+            pointer-events: none;
+            min-width: 280px;
+            text-align: left;
+            border: 1px solid #0f3460;
+        }
+
+        /* ── Pd piece boundary labels ── */
+        .pd-label {
+            color: #ffcc44;
+            font-size: 10px;
+            font-family: monospace;
+            font-weight: 600;
+            white-space: nowrap;
+            pointer-events: none;
+        }
+        .pd-label-btn {
+            pointer-events: auto;
+            cursor: zoom-in;
+            text-decoration: underline dotted;
+        }
+        .pd-label-btn:hover { color: #ffe88a; }
+
+        /* ── Stage / area name labels ── */
+        .stage-label {
+            color: rgba(255, 220, 80, 0.80);
+            font-size: 20px;
+            font-family: system-ui, sans-serif;
+            font-weight: 800;
+            text-align: center;
+            pointer-events: none;
+            white-space: nowrap;
+            text-shadow: 0 0 8px rgba(0,0,0,1), 0 0 4px rgba(0,0,0,1), 1px 1px 2px rgba(0,0,0,1);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        /* ── Grid labels ── */
+        .grid-label {
+            color: rgba(255, 255, 255, 0.55);
+            font-size: 10px;
+            font-family: monospace;
+            font-weight: 600;
+            text-align: center;
+            pointer-events: none;
+            white-space: nowrap;
+            text-shadow: 0 0 3px rgba(0,0,0,0.9);
+        }
+
+        /* ── Enemy marker drop-shadow for contrast against any map background ── */
+        .enemy-marker {
+            filter: drop-shadow(0 0 2px #000) drop-shadow(0 0 1px #000);
+        }
+        .key-bearer-spawn {
+            filter: drop-shadow(0 0 3px #c8a000) drop-shadow(0 0 2px #000);
+        }
+
+        /* ── Group chip labels ── */
+        .group-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+            padding: 2px 7px 2px 5px;
+            border: 1.5px solid currentColor;
+            border-radius: 10px;
+            background: rgba(10, 15, 35, 0.88);
+            font-family: system-ui, sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            white-space: nowrap;
+            cursor: pointer;
+            user-select: none;
+            text-shadow: 0 0 4px rgba(0,0,0,0.9);
+            box-shadow: 0 0 4px rgba(0,0,0,0.7);
+            transition: background 0.1s;
+        }
+        .group-chip:hover { background: rgba(30, 40, 80, 0.95); }
+        .chip-count {
+            font-size: 9px;
+            opacity: 0.75;
+            font-weight: 500;
+        }
+        .chip-arrow {
+            font-size: 8px;
+            transition: transform 0.15s;
+            display: inline-block;
+            opacity: 0.8;
+        }
+        .chip-arrow.open { transform: rotate(90deg); }
+        .group-chip.chip-open { opacity: 0.75; }
+
+        /* ── Reset-view control ── */
+        .leaflet-control-reset-view {
+            font-size: 18px;
+            line-height: 26px !important;
+            font-weight: normal;
+        }
+
+        /* ── Sidebar collapse ── */
+        #sidebar {
+            transition: width 0.2s ease, min-width 0.2s ease;
+        }
+        #sidebar.collapsed {
+            width: 0 !important;
+            min-width: 0 !important;
+            overflow: hidden;
+        }
+        #sidebar-toggle {
+            position: absolute;
+            top: 130px;
+            left: 10px;
+            z-index: 1001;
+            width: 30px;
+            height: 30px;
+            background: rgba(22, 33, 62, 0.92);
+            border: 1px solid #0f3460;
+            border-radius: 4px;
+            color: #e0e0e0;
+            font-size: 16px;
+            line-height: 28px;
+            text-align: center;
+            cursor: pointer;
+            display: none;
+        }
+        #sidebar-toggle:hover { background: #0f3460; }
+
+        /* ── Scrollbar ── */
+        #map-list::-webkit-scrollbar { width: 6px; }
+        #map-list::-webkit-scrollbar-track { background: transparent; }
+        #map-list::-webkit-scrollbar-thumb { background: #0f3460; border-radius: 3px; }
+
+        /* ── Spot search panel ── */
+        #spot-panel-toggle {
+            position: absolute;
+            right: 10px;
+            top: 40px;
+            z-index: 1100;
+            background: #16213e;
+            border: 1px solid #0f3460;
+            color: #bbb;
+            border-radius: 4px;
+            width: 28px; height: 28px;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        #spot-panel-toggle:hover { background: #0f3460; }
+        #spot-panel {
+            position: absolute;
+            right: 0; top: 0; bottom: 0;
+            width: 265px;
+            background: #16213e;
+            border-left: 1px solid #0f3460;
+            z-index: 1050;
+            display: flex;
+            flex-direction: column;
+            transform: translateX(100%);
+            transition: transform 0.2s ease;
+            overflow: hidden;
+            color: #e0e0e0;
+        }
+        #spot-panel.open { transform: translateX(0); }
+        #spot-panel-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 7px 10px;
+            background: #0f2040;
+            border-bottom: 1px solid #0f3460;
+            font-size: 0.73rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #7a8aba;
+            flex-shrink: 0;
+        }
+        #spot-panel-close {
+            background: none; border: none; color: #556; cursor: pointer;
+            font-size: 0.9rem; line-height: 1; padding: 2px 4px;
+        }
+        #spot-panel-close:hover { color: #bbb; }
+        #spot-search-wrap {
+            position: relative;
+            margin: 7px 8px 4px;
+            flex-shrink: 0;
+        }
+        #spot-search-input {
+            padding: 5px 24px 5px 8px;
+            background: #0d1b35;
+            border: 1px solid #1a4a7a;
+            border-radius: 4px;
+            color: #e0e0e0;
+            font-size: 0.82rem;
+            width: 100%;
+            box-sizing: border-box;
+            outline: none;
+        }
+        #spot-search-input:focus { border-color: #3a7aba; }
+        #spot-search-clear {
+            position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
+            background: none; border: none; color: #556; cursor: pointer;
+            font-size: 0.8rem; line-height: 1; padding: 2px 4px;
+            display: none;
+        }
+        #spot-search-clear:hover { color: #bbb; }
+        #spot-filter-tabs {
+            display: flex; gap: 4px;
+            padding: 0 8px 6px;
+            flex-shrink: 0;
+        }
+        .spot-tab {
+            flex: 1; padding: 3px 0;
+            background: #0d1b35;
+            border: 1px solid #1a4a7a;
+            border-radius: 3px;
+            color: #778; font-size: 0.72rem;
+            cursor: pointer;
+        }
+        .spot-tab.active { background: #1a4a7a; color: #cde; }
+        .spot-tab:hover:not(.active) { background: #112040; color: #99b; }
+        #spot-results {
+            flex: 1;
+            overflow-y: auto;
+            padding: 0 4px 4px;
+        }
+        #spot-results::-webkit-scrollbar { width: 5px; }
+        #spot-results::-webkit-scrollbar-track { background: transparent; }
+        #spot-results::-webkit-scrollbar-thumb { background: #0f3460; border-radius: 3px; }
+        .spot-empty {
+            padding: 10px 8px;
+            color: #556; font-size: 0.78rem; text-align: center;
+        }
+        .spot-summary {
+            padding: 4px 8px 2px;
+            color: #556; font-size: 0.7rem;
+            border-bottom: 1px solid #0d1b35;
+        }
+        .spot-result-row {
+            position: relative;
+            display: flex; align-items: center; gap: 6px;
+            padding: 5px 8px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 0.78rem;
+            border-bottom: 1px solid #0d1b35;
+        }
+        .spot-result-row:hover { background: #1a3060; }
+        .spot-result-name { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #ccd; }
+        .spot-result-count { color: #667; font-size: 0.7rem; flex-shrink: 0; }
+        .spot-nav-btn {
+            background: #0d1b35; border: 1px solid #1a4a7a; color: #778;
+            border-radius: 3px; padding: 1px 5px; cursor: pointer; font-size: 0.68rem; line-height: 1.4;
+        }
+        .spot-nav-btn:hover { background: #1a4a7a; color: #cde; }
+        .spot-preview {
+            display: none;
+            position: absolute;
+            right: calc(100% + 4px);
+            top: 0;
+            background: #1a2a50;
+            border: 1px solid #0f3460;
+            border-radius: 4px;
+            padding: 6px 10px;
+            font-size: 0.74rem;
+            line-height: 1.6;
+            white-space: nowrap;
+            z-index: 1200;
+            pointer-events: none;
+            box-shadow: -2px 2px 8px rgba(0,0,0,0.6);
+            color: #aab;
+        }
+        .spot-result-row:hover .spot-preview { display: block; }
+        .spot-preview b { color: #dde; }
+        .spot-hl-outer { background: none !important; border: none !important; }
+        .spot-hl {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            border: 3px solid #ffe600;
+            box-shadow: 0 0 0 3px rgba(255,230,0,0.25), 0 0 12px 5px rgba(255,200,0,0.55);
+            animation: spot-pulse 0.85s ease-in-out infinite;
+            pointer-events: none;
+        }
+        .group-chip.spot-hl-chip {
+            animation: spot-pulse-chip 0.85s ease-in-out infinite;
+        }
+        @keyframes spot-pulse-chip {
+            0%, 100% { box-shadow: 0 0 4px rgba(0,0,0,0.7), 0 0 0 2px rgba(255,230,0,0.5), 0 0 12px 5px rgba(255,200,0,0.7); }
+            50%       { box-shadow: 0 0 4px rgba(0,0,0,0.7), 0 0 0 4px rgba(255,230,0,0.15), 0 0 18px 8px rgba(255,200,0,0.25); }
+        }
+        @keyframes spot-pulse {
+            0%, 100% { transform: scale(1);   opacity: 1; }
+            50%       { transform: scale(1.6); opacity: 0.35; }
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div id="sidebar">
+        <h1>DDON Maps <button id="sidebar-collapse" title="Collapse sidebar" style="float:right;background:none;border:none;color:#888;font-size:1rem;cursor:pointer;padding:0 4px;line-height:1">◀</button></h1>
+        <div id="search-box">
+            <input type="text" id="map-search" placeholder="Search maps..." autocomplete="off" spellcheck="false" title="Search by name&#10;stageno=200  — match stage number&#10;stageid=2    — match internal stage ID&#10;area=cassardis — match quest area name">
+            <button id="map-search-clear" title="Clear search">✕</button>
+        </div>
+        <div id="map-list"></div>
+        <div id="layers-panel">
+            <h3>Layers</h3>
+            <label class="layer-toggle">
+                <input type="checkbox" id="layer-enemies" checked>
+                Enemy Spawns
+            </label>
+            <div id="subgroup-bar" style="display:none;flex-wrap:wrap;gap:3px;margin:2px 0 4px 20px;align-items:center"></div>
+            <div class="layer-list">
+                <label class="layer-toggle">
+                    <input type="checkbox" id="layer-gather">
+                    Gathering Nodes
+                </label>
+                <label class="layer-toggle">
+                    <input type="checkbox" id="layer-npc-shops">
+                    Shops
+                </label>
+                <label class="layer-toggle">
+                    <input type="checkbox" id="layer-special-shops">
+                    Appraisals
+                </label>
+                <label class="layer-toggle">
+                    <input type="checkbox" id="layer-break-targets">
+                    Destroyable Objects
+                </label>
+                <label class="layer-toggle">
+                    <input type="checkbox" id="layer-connections" checked>
+                    Connections
+                </label>
+                <label class="layer-toggle">
+                    <input type="checkbox" id="layer-landmarks" checked>
+                    Landmarks
+                </label>
+                <label class="layer-toggle">
+                    <input type="checkbox" id="layer-stage-labels" checked>
+                    Area Names
+                </label>
+                <label class="layer-toggle">
+                    <input type="checkbox" id="layer-radii">
+                    Aggro/Link Radius
+                </label>
+                <label class="layer-toggle">
+                    <input type="checkbox" id="layer-territory">
+                    Territory Bounds
+                </label>
+                <label class="layer-toggle">
+                    <input type="checkbox" id="layer-grid">
+                    Grid
+                </label>
+            </div>
+            <div id="exits-panel" style="display:none;margin-top:6px;padding-top:6px;border-top:1px solid #0f3460;">
+                <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#888;margin-bottom:4px;">Exits</div>
+                <div id="exits-list"></div>
+            </div>
+            <button id="btn-expand-collapse" style="
+                margin-top:8px;width:100%;padding:4px 0;
+                background:#0f3460;color:#e0e0e0;border:1px solid #1a4a7a;
+                border-radius:4px;font-size:0.78rem;cursor:pointer;
+            ">Expand All</button>
+            <div style="margin-top:6px;padding-top:6px;border-top:1px solid #0f3460;font-size:0.75rem;color:#888;line-height:1.7">
+                Click chip to expand group<br>
+                Middle-click hull to collapse<br>
+                🗝 chip = key bearer group<br>
+                Click spawn to show:<br>
+                <span style="color:#ffd700">&#9679;</span> Aggro radius<br>
+                <span style="color:#ff7700">&#9675;</span> Link radius<br>
+                <span style="color:#c8a000">&#9679;</span> Gold ring = key bearer
+            </div>
+        </div>
+    </div>
+
+    <div id="map-container">
+        <button id="sidebar-toggle" title="Open sidebar">☰</button>
+        <div id="map-title">—</div>
+        <div id="floor-selector"></div>
+        <div id="tile-layer-selector"></div>
+        <div id="map"></div>
+        <div id="coord-display"></div>
+        <button id="spot-panel-toggle" title="Spot search (Ctrl+F)">🔍</button>
+        <div id="spot-panel">
+            <div id="spot-panel-header">
+                <span>Spot Search</span>
+                <button id="spot-panel-close" title="Close (Esc)">✕</button>
+            </div>
+            <div id="spot-search-wrap">
+                <input type="text" id="spot-search-input" placeholder="Enemy, item or gathering type…" autocomplete="off" spellcheck="false">
+                <button id="spot-search-clear" title="Clear search">✕</button>
+            </div>
+            <div id="spot-filter-tabs">
+                <button class="spot-tab active" data-filter="enemy">Enemies</button>
+                <button class="spot-tab" data-filter="gather">Gathering</button>
+                <button class="spot-tab" data-filter="item">Items</button>
+            </div>
+            <div id="spot-results"><div class="spot-empty">Type to search enemies or gathering points on this map.</div></div>
+        </div>
+    </div>
+</div>
+<script type="module" src="map.js"></script>
+</body>
+</html>

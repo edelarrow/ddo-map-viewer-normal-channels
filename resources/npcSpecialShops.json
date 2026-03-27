@@ -1,0 +1,564 @@
+{
+  "103": [
+    {
+      "NpcId": 4979,
+      "ShopType": 1,
+      "ShopTypeName": "Trinkets",
+      "NpcName": "Gregory",
+      "Position": {
+        "x": -229246.4,
+        "y": 916.5652,
+        "z": -71823.6
+      }
+    }
+  ],
+  "138": [
+    {
+      "NpcId": 3200,
+      "ShopType": 4,
+      "ShopTypeName": "EmblemMedalExchangeMegadosysPlateau",
+      "NpcName": "Doris",
+      "Position": {
+        "x": 579.8029,
+        "y": 1974.9152,
+        "z": -1344.3773
+      }
+    }
+  ],
+  "139": [
+    {
+      "NpcId": 4512,
+      "ShopType": 5,
+      "ShopTypeName": "EmblemMedalExchangeUrtecaMountains",
+      "NpcName": "Bacias",
+      "Position": {
+        "x": 32730.797,
+        "y": 81204.984,
+        "z": -414860.0
+      }
+    }
+  ],
+  "200": [
+    {
+      "NpcId": 4706,
+      "ShopType": 1,
+      "ShopTypeName": "Trinkets",
+      "NpcName": "Gregory",
+      "Position": {
+        "x": -3930.4856,
+        "y": 10236.758,
+        "z": 9099.6455
+      }
+    },
+    {
+      "NpcId": 550,
+      "ShopType": 27,
+      "ShopTypeName": "ExtremeMission",
+      "NpcName": "Isaac",
+      "Position": {
+        "x": -1185.0391,
+        "y": 12401.422,
+        "z": 1210.1118
+      }
+    }
+  ],
+  "203": [
+    {
+      "NpcId": 548,
+      "ShopType": 6,
+      "ShopTypeName": "BitterBlackMaze",
+      "NpcName": "Luca",
+      "Position": {
+        "x": 744.3626,
+        "y": 256.2531,
+        "z": -139.6035
+      }
+    }
+  ],
+  "322": [
+    {
+      "NpcId": 1412,
+      "ShopType": 9,
+      "ShopTypeName": "MedalExchangeVerda",
+      "NpcName": "Patricia",
+      "Position": {
+        "x": -316.2525,
+        "y": 27.9036,
+        "z": -1362.591
+      }
+    }
+  ],
+  "330": [
+    {
+      "NpcId": 1313,
+      "ShopType": 7,
+      "ShopTypeName": "MedalExchangeHidellPlains",
+      "NpcName": "Alfred",
+      "Position": {
+        "x": 111.8863,
+        "y": 0,
+        "z": -465.6188
+      }
+    }
+  ],
+  "331": [
+    {
+      "NpcId": 1205,
+      "ShopType": 8,
+      "ShopTypeName": "MedalExchangeBriaCoast",
+      "NpcName": "O'Neill",
+      "Position": {
+        "x": -257.8658,
+        "y": 0,
+        "z": -203.6441
+      }
+    }
+  ],
+  "370": [
+    {
+      "NpcId": 1508,
+      "ShopType": 11,
+      "ShopTypeName": "MedalExchangeWideMoor",
+      "NpcName": "Hayden",
+      "Position": {
+        "x": 786.2258,
+        "y": -274.0709,
+        "z": 966.5552
+      }
+    }
+  ],
+  "381": [
+    {
+      "NpcId": 1701,
+      "ShopType": 15,
+      "ShopTypeName": "MedalExchangeOldSorMountain",
+      "NpcName": "Sunny",
+      "Position": {
+        "x": 798.0021,
+        "y": -958.5602,
+        "z": -1687.3698
+      }
+    }
+  ],
+  "400": [
+    {
+      "NpcId": 1905,
+      "ShopType": 14,
+      "ShopTypeName": "MedalExchangeGarlevMountain",
+      "NpcName": "Scherzo",
+      "Position": {
+        "x": 4265.5273,
+        "y": 8.9102,
+        "z": -1745.1465
+      }
+    }
+  ],
+  "414": [
+    {
+      "NpcId": 1604,
+      "ShopType": 10,
+      "ShopTypeName": "MedalExchangeHarspuds",
+      "NpcName": "Roy",
+      "Position": {
+        "x": -1040.9635,
+        "y": 0,
+        "z": -5604.6978
+      }
+    }
+  ],
+  "443": [
+    {
+      "NpcId": 2800,
+      "ShopType": 2,
+      "ShopTypeName": "EmblemMedalExchangeRathniteFoothills",
+      "NpcName": "Endale",
+      "Position": {
+        "x": 1791.5708,
+        "y": 397.1489,
+        "z": -3767.3425
+      }
+    }
+  ],
+  "451": [
+    {
+      "NpcId": 3050,
+      "ShopType": 3,
+      "ShopTypeName": "EmblemMedalExchangeFeryanaWilderness",
+      "NpcName": "Nazik",
+      "Position": {
+        "x": 1644.4484,
+        "y": 3342.3855,
+        "z": -5443.276
+      }
+    }
+  ],
+  "461": [
+    {
+      "NpcId": 3271,
+      "ShopType": 1,
+      "ShopTypeName": "Trinkets",
+      "NpcName": "Timur",
+      "Position": {
+        "x": 5651.9355,
+        "y": 420.4421,
+        "z": -13902.029
+      }
+    },
+    {
+      "NpcId": 3200,
+      "ShopType": 4,
+      "ShopTypeName": "EmblemMedalExchangeMegadosysPlateau",
+      "NpcName": "Doris",
+      "Position": {
+        "x": 1778.6202,
+        "y": 2449.5425,
+        "z": -28839.615
+      }
+    }
+  ],
+  "471": [
+    {
+      "NpcId": 3271,
+      "ShopType": 1,
+      "ShopTypeName": "Trinkets",
+      "NpcName": "Timur",
+      "Position": {
+        "x": 5782.7285,
+        "y": 390.3375,
+        "z": -13650.167
+      }
+    }
+  ],
+  "472": [
+    {
+      "NpcId": 3271,
+      "ShopType": 1,
+      "ShopTypeName": "Trinkets",
+      "NpcName": "Timur",
+      "Position": {
+        "x": 5782.7285,
+        "y": 390.3375,
+        "z": -13650.167
+      }
+    },
+    {
+      "NpcId": 3200,
+      "ShopType": 4,
+      "ShopTypeName": "EmblemMedalExchangeMegadosysPlateau",
+      "NpcName": "Doris",
+      "Position": {
+        "x": 1778.6202,
+        "y": 2449.5425,
+        "z": -28839.615
+      }
+    }
+  ],
+  "480": [
+    {
+      "NpcId": 3200,
+      "ShopType": 4,
+      "ShopTypeName": "EmblemMedalExchangeMegadosysPlateau",
+      "NpcName": "Doris",
+      "Position": {
+        "x": 579.8029,
+        "y": 1974.9152,
+        "z": -1344.3773
+      }
+    }
+  ],
+  "520": [
+    {
+      "NpcId": 4508,
+      "ShopType": 13,
+      "ShopTypeName": "MedalExchangeCrumblingStones",
+      "NpcName": "Rondejeel",
+      "Position": {
+        "x": -2836.7139,
+        "y": 125.2266,
+        "z": -15168.216
+      }
+    }
+  ],
+  "552": [
+    {
+      "NpcId": 4506,
+      "ShopType": 12,
+      "ShopTypeName": "MedalExchangeLimgom",
+      "NpcName": "Christine",
+      "Position": {
+        "x": -471.5419,
+        "y": -400.0,
+        "z": -7995.3906
+      }
+    }
+  ],
+  "554": [
+    {
+      "NpcId": 4507,
+      "ShopType": 17,
+      "ShopTypeName": "MedalExchangeTataru",
+      "NpcName": "Dian",
+      "Position": {
+        "x": -474.569,
+        "y": -400.0,
+        "z": -11291.293
+      }
+    }
+  ],
+  "620": [
+    {
+      "NpcId": 1811,
+      "ShopType": 16,
+      "ShopTypeName": "MedalExchangeCazhetteForest",
+      "NpcName": "Nadia",
+      "Position": {
+        "x": 1051.2896,
+        "y": 544.7533,
+        "z": -2368.7715
+      }
+    }
+  ],
+  "625": [
+    {
+      "NpcId": 2301,
+      "ShopType": 18,
+      "ShopTypeName": "MedalExchangeTamaSpa",
+      "NpcName": "Beatrix",
+      "Position": {
+        "x": 440.0568,
+        "y": -142.0309,
+        "z": -2534.4365
+      }
+    }
+  ],
+  "630": [
+    {
+      "NpcId": 2800,
+      "ShopType": 2,
+      "ShopTypeName": "EmblemMedalExchangeRathniteFoothills",
+      "NpcName": "Endale",
+      "Position": {
+        "x": -310.998,
+        "y": 27.9036,
+        "z": -851.4175
+      }
+    }
+  ],
+  "635": [
+    {
+      "NpcId": 3050,
+      "ShopType": 3,
+      "ShopTypeName": "EmblemMedalExchangeFeryanaWilderness",
+      "NpcName": "Nazik",
+      "Position": {
+        "x": 0.0,
+        "y": 0,
+        "z": 157.3475
+      }
+    }
+  ],
+  "636": [
+    {
+      "NpcId": 3200,
+      "ShopType": 4,
+      "ShopTypeName": "EmblemMedalExchangeMegadosysPlateau",
+      "NpcName": "Doris",
+      "Position": {
+        "x": -2139.8406,
+        "y": -100.0,
+        "z": -2820.045
+      }
+    }
+  ],
+  "637": [
+    {
+      "NpcId": 4512,
+      "ShopType": 5,
+      "ShopTypeName": "EmblemMedalExchangeUrtecaMountains",
+      "NpcName": "Bacias",
+      "Position": {
+        "x": 905.2416,
+        "y": -959.0264,
+        "z": -689.9004
+      }
+    }
+  ],
+  "801": [
+    {
+      "NpcId": 549,
+      "ShopType": 19,
+      "ShopTypeName": "MedalExchangeGransysOrchard",
+      "NpcName": "Bertrand",
+      "Position": {
+        "x": -2458.7034,
+        "y": 32.9737,
+        "z": -8649.892
+      }
+    }
+  ],
+  "910": [
+    {
+      "NpcId": 4509,
+      "ShopType": 20,
+      "ShopTypeName": "MedalExchangeGustFront",
+      "NpcName": "Mucel",
+      "Position": {
+        "x": -455.0918,
+        "y": 5.8457,
+        "z": -195.0862
+      }
+    }
+  ],
+  "920": [
+    {
+      "NpcId": 2600,
+      "ShopType": 22,
+      "ShopTypeName": "MedalExchangeCanyon",
+      "NpcName": "Arthfael",
+      "Position": {
+        "x": -117.7161,
+        "y": 0.0117,
+        "z": 549.0834
+      }
+    }
+  ],
+  "921": [
+    {
+      "NpcId": 2700,
+      "ShopType": 23,
+      "ShopTypeName": "MedalExchangeWestFrontier",
+      "NpcName": "Ciarán",
+      "Position": {
+        "x": 157.0291,
+        "y": 0.0104,
+        "z": 519.6289
+      }
+    }
+  ],
+  "930": [
+    {
+      "NpcId": 2501,
+      "ShopType": 21,
+      "ShopTypeName": "MedalExchangeVolatileVolcano",
+      "NpcName": "Razanailt",
+      "Position": {
+        "x": 174.4818,
+        "y": 0.0098,
+        "z": 473.2619
+      }
+    }
+  ],
+  "2000": [
+    {
+      "NpcId": 715,
+      "ShopType": 6,
+      "ShopTypeName": "BitterBlackMaze",
+      "NpcName": "Luca",
+      "Position": {
+        "x": -865.5699,
+        "y": 145.1705,
+        "z": -6385.763
+      }
+    },
+    {
+      "NpcId": 717,
+      "ShopType": 6,
+      "ShopTypeName": "BitterBlackMaze",
+      "NpcName": "Lucien",
+      "Position": {
+        "x": -4835.0137,
+        "y": 152.3995,
+        "z": -2539.9404
+      }
+    }
+  ],
+  "2016": [
+    {
+      "NpcId": 716,
+      "ShopType": 6,
+      "ShopTypeName": "BitterBlackMaze",
+      "NpcName": "Luca",
+      "Position": {
+        "x": 0.0,
+        "y": 0,
+        "z": 179.0341
+      }
+    }
+  ],
+  "2017": [
+    {
+      "NpcId": 716,
+      "ShopType": 6,
+      "ShopTypeName": "BitterBlackMaze",
+      "NpcName": "Luca",
+      "Position": {
+        "x": 0.0,
+        "y": 0,
+        "z": 0.0
+      }
+    }
+  ],
+  "2034": [
+    {
+      "NpcId": 719,
+      "ShopType": 6,
+      "ShopTypeName": "BitterBlackMaze",
+      "NpcName": "Lucien",
+      "Position": {
+        "x": 0.0,
+        "y": 0,
+        "z": 179.0341
+      }
+    }
+  ],
+  "2035": [
+    {
+      "NpcId": 719,
+      "ShopType": 6,
+      "ShopTypeName": "BitterBlackMaze",
+      "NpcName": "Lucien",
+      "Position": {
+        "x": 0.0,
+        "y": 0,
+        "z": 179.0341
+      }
+    }
+  ],
+  "2036": [
+    {
+      "NpcId": 719,
+      "ShopType": 6,
+      "ShopTypeName": "BitterBlackMaze",
+      "NpcName": "Lucien",
+      "Position": {
+        "x": 0.0,
+        "y": 0,
+        "z": 179.0341
+      }
+    }
+  ],
+  "3602": [
+    {
+      "NpcId": 4706,
+      "ShopType": 1,
+      "ShopTypeName": "Trinkets",
+      "NpcName": "Gregory",
+      "Position": {
+        "x": -3930.4856,
+        "y": 10236.758,
+        "z": 9099.6455
+      }
+    },
+    {
+      "NpcId": 550,
+      "ShopType": 27,
+      "ShopTypeName": "ExtremeMission",
+      "NpcName": "Isaac",
+      "Position": {
+        "x": -1185.0391,
+        "y": 12401.422,
+        "z": 1210.1118
+      }
+    }
+  ]
+}

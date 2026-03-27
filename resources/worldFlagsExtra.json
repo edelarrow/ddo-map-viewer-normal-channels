@@ -1,0 +1,594 @@
+{
+  "100": [
+    {
+      "name": "GerdWhiteKnights0",
+      "className": "Lestania",
+      "description": "Spawns Gerd and the White Knights outside for the 3rd MSQ.",
+      "flagNo": 977,
+      "questNo": 70000001,
+      "season": "S1.0"
+    },
+    {
+      "name": "The1stArkRandom",
+      "className": "Lestania",
+      "description": "Changes the entrance of The 1st Ark to teleport the player to st0573.",
+      "flagNo": 2201,
+      "questNo": 70000001,
+      "season": "S1.0"
+    },
+    {
+      "name": "The1stArkQuest",
+      "className": "Lestania",
+      "description": "Changes the entrance of The 1st Ark to teleport the player to st0576.",
+      "flagNo": 2202,
+      "questNo": 70000001,
+      "season": "S1.0"
+    },
+    {
+      "name": "The2ndArkRandom",
+      "className": "Lestania",
+      "description": "Changes the entrance of The 2nd Ark to teleport the player to st0574.",
+      "flagNo": 1263,
+      "questNo": 70000001,
+      "season": "S1.0"
+    },
+    {
+      "name": "The2ndArkQuest",
+      "className": "Lestania",
+      "description": "Changes the entrance of The 2nd Ark to teleport the player to st0571.",
+      "flagNo": 2204,
+      "questNo": 70000001,
+      "season": "S1.0"
+    }
+  ],
+  "121": [
+    {
+      "name": "Unk0",
+      "className": "ElanWaterGrove",
+      "flagNo": 3954,
+      "questNo": 70022001,
+      "season": "S2.2"
+    },
+    {
+      "name": "Unk1",
+      "className": "ElanWaterGrove",
+      "flagNo": 4033,
+      "questNo": 70022001,
+      "season": "S2.2"
+    },
+    {
+      "name": "Unk2",
+      "className": "ElanWaterGrove",
+      "flagNo": 4968,
+      "questNo": 70022001,
+      "season": "S2.2"
+    }
+  ],
+  "130": [
+    {
+      "name": "OrcEncampmentDebrisMSQ",
+      "className": "RathniteFoothills",
+      "description": "Spawns Debris and Barries for the 2nd MSQ in 3.0.",
+      "flagNo": 5615,
+      "questNo": 70030001,
+      "season": "S3.0"
+    },
+    {
+      "name": "OrcCampSettlementBuildings",
+      "className": "RathniteFoothills",
+      "description": "Enables the building for the orc encampment.",
+      "flagNo": 5708,
+      "questNo": 70030001,
+      "season": "S3.0"
+    },
+    {
+      "name": "OrcCampSettlementNPCs",
+      "className": "RathniteFoothills",
+      "description": "NPCs which populate the shop in the orc encampment.",
+      "flagNo": 6196,
+      "questNo": 70030001,
+      "season": "S3.0"
+    },
+    {
+      "name": "OrcCampSettlementFixWall",
+      "className": "RathniteFoothills",
+      "description": "Fixes the wall which is used to breach the fortress in the 2nd MSQ in 3.0",
+      "flagNo": 5614,
+      "questNo": 70030001,
+      "season": "S3.0"
+    },
+    {
+      "name": "OrcCampSettlementFlags",
+      "className": "RathniteFoothills",
+      "description": "Spawns the flags of the kingdom inside the orc settlement.",
+      "flagNo": 5706,
+      "questNo": 70030001,
+      "season": "S3.0"
+    },
+    {
+      "name": "FortThinesDebrisMSQ",
+      "className": "RathniteFoothills",
+      "description": "Spawns Debris and Barries for the 4th MSQ in 3.0.",
+      "flagNo": 5633,
+      "questNo": 70030001,
+      "season": "S3.0"
+    },
+    {
+      "name": "FortThinesNpcs",
+      "className": "RathniteFoothills",
+      "description": "Spawns the NPCs in the area outside Fort Thines.",
+      "flagNo": 6197,
+      "questNo": 70030001,
+      "season": "S3.0"
+    },
+    {
+      "name": "FortThinesBuildings",
+      "className": "RathniteFoothills",
+      "description": "Spawns the buildings for the NPCs outside Fort Thines",
+      "flagNo": 5635,
+      "questNo": 70030001,
+      "season": "S3.0"
+    },
+    {
+      "name": "FortThinesFixWall",
+      "className": "RathniteFoothills",
+      "description": "Fixes the wall in the camp outside Fort Thines",
+      "flagNo": 5632,
+      "questNo": 70030001,
+      "season": "S3.0"
+    },
+    {
+      "name": "FortThines0",
+      "className": "RathniteFoothills",
+      "description": "Opens the gate to Fort Thines (440)",
+      "flagNo": 5581,
+      "questNo": 70030001,
+      "season": "S3.0"
+    },
+    {
+      "name": "FortThines1",
+      "className": "RathniteFoothills",
+      "description": "Opens the gate to Fort Thines (443)",
+      "flagNo": 5407,
+      "questNo": 70030001,
+      "season": "S3.0"
+    }
+  ],
+  "131": [
+    {
+      "name": "FortDacriumWallBreach",
+      "className": "RathniteFoothillsLakeside",
+      "description": "Closes the hole in the wall when set.",
+      "flagNo": 5589,
+      "questNo": 70030001,
+      "season": "S3.0"
+    },
+    {
+      "name": "DacriumFortressEntrance",
+      "className": "RathniteFoothillsLakeside",
+      "description": "Enables the Dacrium Fortress Entrance which teleports the player to st0443.",
+      "flagNo": 6291,
+      "questNo": 70030001,
+      "season": "S3.0"
+    }
+  ],
+  "200": [
+    {
+      "name": "RedWhiteFlagDecoration",
+      "className": "TheWhiteDragonTemple0",
+      "description": "Spawns a red/white flags around the stage.",
+      "flagNo": 1149,
+      "questNo": 70000001,
+      "season": "S1.0"
+    },
+    {
+      "name": "Q70000001Unk1",
+      "className": "TheWhiteDragonTemple0",
+      "flagNo": 1150,
+      "questNo": 70000001,
+      "season": "S1.0"
+    },
+    {
+      "name": "Q70020001Unk0",
+      "className": "TheWhiteDragonTemple0",
+      "flagNo": 3805,
+      "questNo": 70020001,
+      "season": "S2.0"
+    },
+    {
+      "name": "Q70034001Unk0",
+      "className": "TheWhiteDragonTemple0",
+      "flagNo": 8486,
+      "questNo": 70034001,
+      "season": "S3.4"
+    },
+    {
+      "name": "Mayleaf",
+      "className": "TheWhiteDragonTemple0",
+      "description": "Controls if Mayleaf appears or not in the stage.",
+      "flagNo": 2245,
+      "questNo": 70000001,
+      "season": "S1.0"
+    },
+    {
+      "name": "Fabio",
+      "className": "TheWhiteDragonTemple0",
+      "description": "Controls if Fabio appears or not in the stage.",
+      "flagNo": 2246,
+      "questNo": 70000001,
+      "season": "S1.0"
+    },
+    {
+      "name": "Heniz",
+      "className": "TheWhiteDragonTemple0",
+      "description": "Controls if Heniz appears or not in the stage.",
+      "flagNo": 2247,
+      "questNo": 70000001,
+      "season": "S1.0"
+    },
+    {
+      "name": "Julia0",
+      "className": "TheWhiteDragonTemple0",
+      "description": "Controls if Julia appears or not in the stage in Group 6. @note This one may be the final NPC located when achievments are unlocked.",
+      "flagNo": 3805,
+      "questNo": 70020001,
+      "season": "S2.0"
+    },
+    {
+      "name": "Julia1",
+      "className": "TheWhiteDragonTemple0",
+      "description": "Controls if Julia appears or not in the stage in Group 0. @note This one may be used for unlocking the arisens room as it has a movement FSM.",
+      "flagNo": 4037,
+      "questNo": 70020001,
+      "season": "S2.0"
+    }
+  ],
+  "201": [
+    {
+      "name": "Mysial",
+      "className": "AudienceChamber",
+      "description": "Controls if Mysial appears or not in the stage.",
+      "flagNo": 1215,
+      "questNo": 70000001,
+      "season": "S1.0"
+    },
+    {
+      "name": "Leo",
+      "className": "AudienceChamber",
+      "description": "Controls if Season 1 Leo appears or not in the stage.",
+      "flagNo": 1218,
+      "questNo": 70000001,
+      "season": "S1.0"
+    },
+    {
+      "name": "Iris",
+      "className": "AudienceChamber",
+      "description": "Controls if Iris appears or not in the stage.",
+      "flagNo": 1219,
+      "questNo": 70000001,
+      "season": "S1.0"
+    },
+    {
+      "name": "TheWhiteDragon0",
+      "className": "AudienceChamber",
+      "description": "The White Dragon is gravely Injured.",
+      "flagNo": 1293,
+      "questNo": 70000001,
+      "season": "S1.0"
+    },
+    {
+      "name": "TheWhiteDragon1",
+      "className": "AudienceChamber",
+      "description": "The White Dragon is slightly healed.",
+      "flagNo": 1294,
+      "questNo": 70000001,
+      "season": "S1.0"
+    },
+    {
+      "name": "TheWhiteDragon2",
+      "className": "AudienceChamber",
+      "description": "The White Dragon is mostly healed.",
+      "flagNo": 1295,
+      "questNo": 70000001,
+      "season": "S1.0"
+    },
+    {
+      "name": "TheWhiteDragon3",
+      "className": "AudienceChamber",
+      "description": "The White Dragon is fully healed.",
+      "flagNo": 1296,
+      "questNo": 70000001,
+      "season": "S1.0"
+    },
+    {
+      "name": "TheWhiteDragon4",
+      "className": "AudienceChamber",
+      "description": "The White Dragon is gravely Injured.",
+      "flagNo": 7387,
+      "questNo": 70032001,
+      "season": "S3.2"
+    },
+    {
+      "name": "TheWhiteDragon5",
+      "className": "AudienceChamber",
+      "description": "The White Dragon is slightly healed.",
+      "flagNo": 7388,
+      "questNo": 70032001,
+      "season": "S3.2"
+    },
+    {
+      "name": "TheWhiteDragon6",
+      "className": "AudienceChamber",
+      "description": "The White Dragon is mostly healed.",
+      "flagNo": 7389,
+      "questNo": 70032001,
+      "season": "S3.2"
+    },
+    {
+      "name": "TheWhiteDragon7",
+      "className": "AudienceChamber",
+      "description": "The White Dragon is fully healed.",
+      "flagNo": 7390,
+      "questNo": 70032001,
+      "season": "S3.2"
+    },
+    {
+      "name": "TheCrewEndSeason2",
+      "className": "AudienceChamber",
+      "description": "Spawns Elliot, Lise and Gurdolin after season 2 is completed.",
+      "flagNo": 3442,
+      "questNo": 70020001,
+      "season": "S2.0"
+    },
+    {
+      "name": "TheCrewEndSeason32",
+      "className": "AudienceChamber",
+      "description": "Spawns Gurdolin, Lise, Elliot after Clearing (クリア後)",
+      "flagNo": 7169,
+      "questNo": 70032001,
+      "season": "S3.2"
+    },
+    {
+      "name": "TheCrewEndSeason34",
+      "className": "AudienceChamber",
+      "description": "Spawns Gurdolin, Lise, Elliot after Clearing",
+      "flagNo": 8630,
+      "questNo": 70034001,
+      "season": "S3.4"
+    }
+  ],
+  "402": [
+    {
+      "name": "FloorLever",
+      "className": "GardnoxFortress0",
+      "description": "Floor Lever and Large Door closed?",
+      "flagNo": 3859,
+      "questNo": 70002001,
+      "season": "S1.2"
+    },
+    {
+      "name": "LargeDoor",
+      "className": "GardnoxFortress0",
+      "description": "Large door open?",
+      "flagNo": 3860,
+      "questNo": 70002001,
+      "season": "S1.2"
+    }
+  ],
+  "403": [
+    {
+      "name": "LockChapelDoors",
+      "className": "DreedCastle",
+      "description": "Locks the double doors to the Chapel at (x:51,y:89)",
+      "flagNo": 1109,
+      "questNo": 70000001,
+      "season": "S1.0"
+    },
+    {
+      "name": "UnlockChapelDoors",
+      "className": "DreedCastle",
+      "description": "Unlocks the double doors to the Chapel at (x:51,y:89)",
+      "flagNo": 1110,
+      "questNo": 70000001,
+      "season": "S1.0"
+    }
+  ],
+  "404": [
+    {
+      "name": "LargeDoorClosed",
+      "className": "ErteDeenan",
+      "description": "Large Door Closed.",
+      "flagNo": 1113,
+      "questNo": 70002001,
+      "season": "S1.2"
+    },
+    {
+      "name": "LargeDoorOpen",
+      "className": "ErteDeenan",
+      "description": "Large Door Open.",
+      "flagNo": 1114,
+      "questNo": 70002001,
+      "season": "S1.2"
+    }
+  ],
+  "408": [
+    {
+      "name": "LockWaterFlowControlRoomDoor",
+      "className": "TempleofPurification",
+      "description": "Locks the door to the water flow control room.",
+      "flagNo": 1111,
+      "questNo": 70000001,
+      "season": "S1.0"
+    },
+    {
+      "name": "UnlockWaterFlowControlRoomDoor",
+      "className": "TempleofPurification",
+      "description": "Unlocks the door to the water flow control room.",
+      "flagNo": 1112,
+      "questNo": 70000001,
+      "season": "S1.0"
+    },
+    {
+      "name": "WaterfallGimmick",
+      "className": "TempleofPurification",
+      "description": "Used to turn on/off the waterfall gimmick in the dungeon.",
+      "flagNo": 1317,
+      "questNo": 70000001,
+      "season": "S1.0"
+    },
+    {
+      "name": "CloseLeverDoor",
+      "className": "TempleofPurification",
+      "description": "Closed Lever Door (Stone Door, middle)",
+      "flagNo": 1671,
+      "questNo": 70000001,
+      "season": "S1.0"
+    },
+    {
+      "name": "OpenLeverDoor",
+      "className": "TempleofPurification",
+      "description": "Open Lever Door  (Stone Door, middle)",
+      "flagNo": 1672,
+      "questNo": 70000001,
+      "season": "S1.0"
+    }
+  ],
+  "443": [
+    {
+      "name": "Endale",
+      "className": "FortThines",
+      "description": "Spawns the area master Endale when set.",
+      "flagNo": 5397,
+      "questNo": 70030001,
+      "season": "S3.0"
+    },
+    {
+      "name": "Quintus",
+      "className": "FortThines",
+      "description": "Spawns Quintus in Fort Thines infront of the seat where Nedo sits. @note Only appears to be set when the party is first created and doesn't change afterwards.",
+      "flagNo": 8166,
+      "questNo": 70033001,
+      "season": "S3.3"
+    }
+  ],
+  "451": [
+    {
+      "name": "NedosFurniture",
+      "className": "LookoutCastle",
+      "description": "Spawns Nedos Table, chair and seats",
+      "flagNo": 6377,
+      "questNo": 70031001,
+      "season": "S3.1"
+    }
+  ],
+  "630": [
+    {
+      "name": "Endale",
+      "className": "PiremothTravelersInn",
+      "description": "Spawns the area master Endale when set.",
+      "flagNo": 5396,
+      "questNo": 70030001,
+      "season": "S3.0"
+    }
+  ],
+  "635": [
+    {
+      "name": "Nayajiku",
+      "className": "MephiteTravelersInn",
+      "description": "Spawns the area master Nayajiku (Nazik)",
+      "flagNo": 5557,
+      "questNo": 70030001,
+      "season": "S3.0"
+    }
+  ],
+  "881": [
+    {
+      "name": "SpiritDragon",
+      "className": "HollowOfBeginnings",
+      "description": "Spawns Spirit Dragon in Hallow of Beginnings",
+      "flagNo": 4515,
+      "questNo": 70023001,
+      "season": "S2.3"
+    },
+    {
+      "name": "Mordred",
+      "className": "HollowOfBeginnings",
+      "description": "Spawns Mordred in Hallow of Beginnings",
+      "flagNo": 4973,
+      "questNo": 70023001,
+      "season": "S2.3"
+    }
+  ],
+  "914": [
+    {
+      "name": "Geroid0",
+      "className": "MorfaulChiefsHome",
+      "description": "Placement of Geroid before clearing Season 2",
+      "flagNo": 4053,
+      "questNo": 70022001,
+      "season": "S2.2"
+    },
+    {
+      "name": "Geroid1",
+      "className": "MorfaulChiefsHome",
+      "description": "Placement of Geroid after clearing Season 2",
+      "flagNo": 4066,
+      "questNo": 70023001,
+      "season": "S2.3"
+    }
+  ],
+  "1001": [
+    {
+      "name": "Bertha",
+      "className": "BerthasBanditGroupHideout",
+      "description": "When set spawns the NPC Bertha",
+      "flagNo": 5588,
+      "questNo": 70030001,
+      "season": "S3.0"
+    }
+  ],
+  "1021": [
+    {
+      "name": "KeyMonsterGate",
+      "className": "BeforetheSecretSpring",
+      "description": "Spawns the gate for the key monster enemy.",
+      "flagNo": 7206,
+      "questNo": 70030001,
+      "season": "S3.0"
+    },
+    {
+      "name": "DragonSpringPresent",
+      "className": "BeforetheSecretSpring",
+      "description": "Makes the dragon spring present on the map",
+      "flagNo": 5552,
+      "questNo": 70030001,
+      "season": "S3.0"
+    },
+    {
+      "name": "DragonSpringOn",
+      "className": "BeforetheSecretSpring",
+      "description": "Turns the dragon spring on",
+      "flagNo": 5553,
+      "questNo": 70031001,
+      "season": "S3.1"
+    }
+  ],
+  "1091": [
+    {
+      "name": "LookoutCastleDoor0",
+      "className": "RoyalFamilysSecretPath",
+      "description": "Enables warp To Lookout Castle (st0450)",
+      "flagNo": 6194,
+      "questNo": 70031001,
+      "season": "S3.1"
+    },
+    {
+      "name": "LookoutCastleDoor1",
+      "className": "RoyalFamilysSecretPath",
+      "description": "Enables warp To Lookout Castle (st0451)",
+      "flagNo": 6195,
+      "questNo": 70031001,
+      "season": "S3.1"
+    }
+  ]
+}

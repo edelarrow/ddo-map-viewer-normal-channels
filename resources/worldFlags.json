@@ -1,0 +1,2195 @@
+{
+  "100": [
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 1,
+      "flagNo": 1115,
+      "eraseFlagNo": 1115,
+      "comment": "ver1.1ガルドノック砦の門(削除)",
+      "deprecated": true,
+      "commentEn": "ver1.1 Gate of Gardnoch Fort (Deleted)"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 2,
+      "flagNo": 1116,
+      "eraseFlagNo": 1116,
+      "comment": "ver1.1ガルドノックの大門・開き（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.1 Gardnock's Great Gate/Opening (Deleted)"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 3,
+      "flagNo": 1117,
+      "eraseFlagNo": 1117,
+      "comment": "ver1.1禊の神殿離殿・閉じる(削除)",
+      "deprecated": true,
+      "commentEn": "ver1.1 Temple of Misogi Leaving / Close (Delete)"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 4,
+      "flagNo": 1118,
+      "eraseFlagNo": 1118,
+      "comment": "ver1.2禊の神殿離殿・開き（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.2 Shrine of Misogi separation/opening (deleted)"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 5,
+      "flagNo": 1201,
+      "eraseFlagNo": 1201,
+      "comment": "ver1.0q016用NPC",
+      "commentEn": "NPC for ver1.0q016"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 6,
+      "flagNo": 1263,
+      "eraseFlagNo": 1263,
+      "comment": "ver1.0第二アーク（ランダム）",
+      "commentEn": "ver1.0 2nd arc (random)"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 7,
+      "flagNo": 1297,
+      "eraseFlagNo": 1297,
+      "comment": "ver1.0関所",
+      "commentEn": "ver1.0 checkpoint"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 8,
+      "flagNo": 1309,
+      "eraseFlagNo": 1309,
+      "comment": "ver1.0関所（開）",
+      "commentEn": "ver1.0 checkpoint (open)"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 9,
+      "flagNo": 1658,
+      "eraseFlagNo": 1658,
+      "comment": "ver1.0崖崩れOM",
+      "commentEn": "ver1.0 Cliffslide OM"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 10,
+      "flagNo": 2201,
+      "eraseFlagNo": 2201,
+      "comment": "ver1.0第一アーク（ランダム）",
+      "commentEn": "ver1.0 1st arc (random)"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 11,
+      "flagNo": 2202,
+      "eraseFlagNo": 2202,
+      "comment": "ver1.0第一アーク（クエスト用）",
+      "commentEn": "ver1.0 1st arc (for quest)"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 12,
+      "flagNo": 2204,
+      "eraseFlagNo": 2204,
+      "comment": "ver1.0第二アーク（クエスト用）",
+      "commentEn": "ver1.0 2nd arc (for quest)"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 13,
+      "flagNo": 2208,
+      "eraseFlagNo": 2208,
+      "comment": "ver1.0狩人の抜け穴入口",
+      "commentEn": "ver1.0 hunter loophole entrance"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 15,
+      "flagNo": 2380,
+      "eraseFlagNo": 2380,
+      "comment": "ver1.0ホボリック入口のゴブリン",
+      "commentEn": "ver1.0 Goblin at the Hoborik entrance"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 1,
+      "flagNo": 1115,
+      "eraseFlagNo": 1115,
+      "comment": "ver1.1ガルドノック砦の門",
+      "commentEn": "ver1.1 Gardnoch Fort Gate"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 2,
+      "flagNo": 1116,
+      "eraseFlagNo": 1116,
+      "comment": "ver1.1ガルドノックの大門・開き",
+      "commentEn": "ver1.1 Gardnock's Great Gate/Opening"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 3,
+      "flagNo": 1117,
+      "eraseFlagNo": 1117,
+      "comment": "ver1.1禊の神殿離殿・閉じる",
+      "commentEn": "ver1.1 Purification Temple Leaving/Close"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 4,
+      "flagNo": 1118,
+      "eraseFlagNo": 1118,
+      "comment": "ver1.2禊の神殿離殿・開き(削除)",
+      "deprecated": true,
+      "commentEn": "ver1.2 Shrine of Misogi separation/opening (deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 6,
+      "flagNo": 1263,
+      "eraseFlagNo": 1263,
+      "comment": "ver1.0第二アーク（ランダム）（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 2nd arc (random) (deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 7,
+      "flagNo": 1297,
+      "eraseFlagNo": 1297,
+      "comment": "ver1.0関所（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 checkpoint (deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 8,
+      "flagNo": 1309,
+      "eraseFlagNo": 1309,
+      "comment": "ver1.0関所（開）（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 Checkpoint (Open) (Deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 9,
+      "flagNo": 1658,
+      "eraseFlagNo": 1658,
+      "comment": "ver1.0崖崩れOM（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 Cliffslide OM (deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 10,
+      "flagNo": 2201,
+      "eraseFlagNo": 2201,
+      "comment": "ver1.0第一アーク（ランダム）（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 1st arc (random) (deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 11,
+      "flagNo": 2202,
+      "eraseFlagNo": 2202,
+      "comment": "ver1.0第一アーク（クエスト用）（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 1st arc (for quest) (deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 6,
+      "flagNo": 2204,
+      "eraseFlagNo": 2204,
+      "comment": "ver1.0第二アーク（クエスト用）（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 2nd arc (for quest) (deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 13,
+      "flagNo": 2208,
+      "eraseFlagNo": 2208,
+      "comment": "ver1.0狩人の抜け穴入口（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 Hunter's loophole entrance (deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 14,
+      "flagNo": 2402,
+      "eraseFlagNo": 0,
+      "comment": "ver1.1第二アーク入口（塞ぎ）",
+      "commentEn": "ver1.1 Second arc entrance (blocked)"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 1,
+      "flagNo": 1115,
+      "eraseFlagNo": 1115,
+      "comment": "ver1.1ガルドノック砦の門(削除)",
+      "deprecated": true,
+      "commentEn": "ver1.1 Gate of Gardnoch Fort (Deleted)"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 2,
+      "flagNo": 1116,
+      "eraseFlagNo": 1116,
+      "comment": "ver1.1ガルドノックの大門・開き（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.1 Gardnock's Great Gate/Opening (Deleted)"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 3,
+      "flagNo": 1117,
+      "eraseFlagNo": 1117,
+      "comment": "ver1.1禊の神殿離殿・閉じる(削除)",
+      "deprecated": true,
+      "commentEn": "ver1.1 Temple of Misogi Leaving / Close (Delete)"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 4,
+      "flagNo": 1118,
+      "eraseFlagNo": 1118,
+      "comment": "ver1.2禊の神殿離殿・開き",
+      "commentEn": "ver1.2 Temple of Misogi separation/opening"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 6,
+      "flagNo": 1263,
+      "eraseFlagNo": 1263,
+      "comment": "ver1.0第二アーク（ランダム）(削除)",
+      "deprecated": true,
+      "commentEn": "ver1.0 2nd arc (random) (deleted)"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 7,
+      "flagNo": 1297,
+      "eraseFlagNo": 1297,
+      "comment": "ver1.0関所(削除)",
+      "deprecated": true,
+      "commentEn": "ver1.0 checkpoint (deleted)"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 8,
+      "flagNo": 1309,
+      "eraseFlagNo": 1309,
+      "comment": "ver1.0関所（開）(削除)",
+      "deprecated": true,
+      "commentEn": "ver1.0 Checkpoint (Open) (Deleted)"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 9,
+      "flagNo": 1658,
+      "eraseFlagNo": 1658,
+      "comment": "ver1.0崖崩れOM(削除)",
+      "deprecated": true,
+      "commentEn": "ver1.0 Cliffslide OM (deleted)"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 10,
+      "flagNo": 2201,
+      "eraseFlagNo": 2201,
+      "comment": "ver1.0第一アーク（ランダム）(削除)",
+      "deprecated": true,
+      "commentEn": "ver1.0 1st arc (random) (deleted)"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 11,
+      "flagNo": 2202,
+      "eraseFlagNo": 2202,
+      "comment": "ver1.0第一アーク（クエスト用）(削除)",
+      "deprecated": true,
+      "commentEn": "ver1.0 1st arc (for quest) (deleted)"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 6,
+      "flagNo": 2204,
+      "eraseFlagNo": 2204,
+      "comment": "ver1.0第二アーク（クエスト用）(削除)",
+      "deprecated": true,
+      "commentEn": "ver1.0 2nd arc (for quest) (deleted)"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 13,
+      "flagNo": 2208,
+      "eraseFlagNo": 2208,
+      "comment": "ver1.0猟人の抜け穴入口(削除)",
+      "deprecated": true,
+      "commentEn": "ver1.0 Hunter's loophole entrance (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 1,
+      "flagNo": 1115,
+      "eraseFlagNo": 1115,
+      "comment": "ver1.0ガルドノック砦の門（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 Gardnoch Fort Gate (Deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 2,
+      "flagNo": 1116,
+      "eraseFlagNo": 1116,
+      "comment": "ver1.1ガルドノックの大門・開き（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.1 Gardnock's Great Gate/Opening (Deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 3,
+      "flagNo": 1117,
+      "eraseFlagNo": 1117,
+      "comment": "ver1.0禊の神殿離殿・閉じる（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 Temple of Misogi Leaving/Close (Delete)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 4,
+      "flagNo": 1118,
+      "eraseFlagNo": 1118,
+      "comment": "ver1.2禊の神殿離殿・開き（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.2 Shrine of Misogi separation/opening (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 6,
+      "flagNo": 1263,
+      "eraseFlagNo": 1263,
+      "comment": "ver1.0第二アーク（ランダム）（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 2nd arc (random) (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 7,
+      "flagNo": 1297,
+      "eraseFlagNo": 1297,
+      "comment": "ver1.0関所（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 checkpoint (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 8,
+      "flagNo": 1309,
+      "eraseFlagNo": 1309,
+      "comment": "ver1.0関所（開）（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 Checkpoint (Open) (Deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 9,
+      "flagNo": 1658,
+      "eraseFlagNo": 1658,
+      "comment": "ver1.0崖崩れOM（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 Cliffslide OM (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 10,
+      "flagNo": 2201,
+      "eraseFlagNo": 2201,
+      "comment": "ver1.0第一アーク（ランダム）（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 1st arc (random) (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 11,
+      "flagNo": 2202,
+      "eraseFlagNo": 2202,
+      "comment": "ver1.0第一アーク（クエスト用）（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 1st arc (for quest) (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 6,
+      "flagNo": 2204,
+      "eraseFlagNo": 2204,
+      "comment": "ver1.0第二アーク（クエスト用）（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 2nd arc (for quest) (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 13,
+      "flagNo": 2208,
+      "eraseFlagNo": 2208,
+      "comment": "ver1.0猟人の抜け穴入口（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 Hunter's loophole entrance (deleted)"
+    }
+  ],
+  "200": [
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 1,
+      "flagNo": 2245,
+      "eraseFlagNo": 2245,
+      "comment": "留守番メイリーフ",
+      "commentEn": "House sitting mailleaf"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 2,
+      "flagNo": 2246,
+      "eraseFlagNo": 2246,
+      "comment": "留守番ファビオ",
+      "commentEn": "House-sitter Fabio"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 3,
+      "flagNo": 2247,
+      "eraseFlagNo": 2247,
+      "comment": "留守番ハインツ",
+      "commentEn": "house sitting heinz"
+    },
+    {
+      "questNo": 70020001,
+      "season": "S2.0",
+      "groupNo": 0,
+      "flagNo": 4037,
+      "eraseFlagNo": 4037
+    }
+  ],
+  "201": [
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 1,
+      "flagNo": 1293,
+      "eraseFlagNo": 1293,
+      "comment": "ver1.0白竜１",
+      "commentEn": "ver1.0 Hakuryu 1"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 2,
+      "flagNo": 1294,
+      "eraseFlagNo": 1294,
+      "comment": "ver1.0白竜２",
+      "commentEn": "ver1.0 Hakuryu 2"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 3,
+      "flagNo": 1295,
+      "eraseFlagNo": 1295,
+      "comment": "ver1.1白竜３（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.1 Hakuryu 3 (deleted)"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 4,
+      "flagNo": 1296,
+      "eraseFlagNo": 1296,
+      "comment": "ver1.2白竜４（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.2 Hakuryu 4 (deleted)"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 5,
+      "flagNo": 2243,
+      "eraseFlagNo": 2243,
+      "comment": "留守番クラウス",
+      "commentEn": "Klaus the house-sitter"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 6,
+      "flagNo": 2244,
+      "eraseFlagNo": 2244,
+      "comment": "留守番ジョセフ",
+      "commentEn": "house sitter joseph"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 1,
+      "flagNo": 1293,
+      "eraseFlagNo": 1293,
+      "comment": "ver1.0白竜１（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 Hakuryu 1 (deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 2,
+      "flagNo": 1294,
+      "eraseFlagNo": 1294,
+      "comment": "ver1.0白竜２（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 Hakuryu 2 (deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 3,
+      "flagNo": 1295,
+      "eraseFlagNo": 1295,
+      "comment": "ver1.1白竜３",
+      "commentEn": "ver1.1 Hakuryu 3"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 4,
+      "flagNo": 1296,
+      "eraseFlagNo": 1296,
+      "comment": "ver1.2白竜４（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.2 Hakuryu 4 (deleted)"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 1,
+      "flagNo": 1293,
+      "eraseFlagNo": 1293,
+      "comment": "ver1.0白竜１（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 Hakuryu 1 (deleted)"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 2,
+      "flagNo": 1294,
+      "eraseFlagNo": 1294,
+      "comment": "ver1.0白竜２（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 Hakuryu 2 (deleted)"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 3,
+      "flagNo": 1295,
+      "eraseFlagNo": 1295,
+      "comment": "ver1.1白竜３（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.1 Hakuryu 3 (deleted)"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 4,
+      "flagNo": 1296,
+      "eraseFlagNo": 1296,
+      "comment": "ver1.2白竜４",
+      "commentEn": "ver1.2 Hakuryu 4"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 1,
+      "flagNo": 1293,
+      "eraseFlagNo": 1293,
+      "comment": "ver1.0白竜１（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 Hakuryu 1 (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 2,
+      "flagNo": 1294,
+      "eraseFlagNo": 1294,
+      "comment": "ver1.0白竜２（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 Hakuryu 2 (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 3,
+      "flagNo": 1295,
+      "eraseFlagNo": 1295,
+      "comment": "ver1.1白竜３（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.1 Hakuryu 3 (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 4,
+      "flagNo": 1296,
+      "eraseFlagNo": 1296,
+      "comment": "ver1.2白竜４（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.2 Hakuryu 4 (deleted)"
+    },
+    {
+      "questNo": 70020001,
+      "season": "S2.0",
+      "groupNo": 1,
+      "flagNo": 3442,
+      "eraseFlagNo": 3442,
+      "comment": "ver2.0終了時の重要NPCセット",
+      "commentEn": "Important NPC set at the end of ver2.0"
+    },
+    {
+      "questNo": 70021001,
+      "season": "S2.1",
+      "groupNo": 1,
+      "flagNo": 3861,
+      "eraseFlagNo": 3861,
+      "comment": "2.1終了時の謁見部屋演出置きnpc",
+      "commentEn": "2.1 Throne room production NPC at the end of 2.1"
+    },
+    {
+      "questNo": 70022001,
+      "season": "S2.2",
+      "groupNo": 0,
+      "flagNo": 4053,
+      "eraseFlagNo": 4053,
+      "comment": "2.2クリア後の演出セット",
+      "commentEn": "2.2 Production set after clearing"
+    },
+    {
+      "questNo": 70023001,
+      "season": "S2.3",
+      "groupNo": 0,
+      "flagNo": 4067,
+      "eraseFlagNo": 4067,
+      "comment": "クリア後のセット",
+      "commentEn": "Set after clearing"
+    },
+    {
+      "questNo": 70030001,
+      "season": "S3.0",
+      "groupNo": 0,
+      "flagNo": 5671,
+      "eraseFlagNo": 5671,
+      "comment": "3.0クリア後の謁見部屋セット",
+      "commentEn": "Throne room set after clearing 3.0"
+    },
+    {
+      "questNo": 70031001,
+      "season": "S3.1",
+      "groupNo": 0,
+      "flagNo": 5672,
+      "eraseFlagNo": 5672,
+      "comment": "3.1クリア後セット",
+      "commentEn": "3.1 Set after clearing"
+    },
+    {
+      "questNo": 70032001,
+      "season": "S3.2",
+      "groupNo": 1,
+      "flagNo": 7387,
+      "eraseFlagNo": 7387,
+      "comment": "白竜４",
+      "commentEn": "white dragon 4"
+    },
+    {
+      "questNo": 70032001,
+      "season": "S3.2",
+      "groupNo": 2,
+      "flagNo": 7388,
+      "eraseFlagNo": 7388,
+      "comment": "白竜５",
+      "commentEn": "white dragon 5"
+    },
+    {
+      "questNo": 70032001,
+      "season": "S3.2",
+      "groupNo": 0,
+      "flagNo": 7389,
+      "eraseFlagNo": 7389,
+      "comment": "白竜６",
+      "commentEn": "white dragon 6"
+    },
+    {
+      "questNo": 70032001,
+      "season": "S3.2",
+      "groupNo": 3,
+      "flagNo": 7390,
+      "eraseFlagNo": 7390,
+      "comment": "白竜７",
+      "commentEn": "white dragon 7"
+    },
+    {
+      "questNo": 70032001,
+      "season": "S3.2",
+      "groupNo": 4,
+      "flagNo": 7169,
+      "eraseFlagNo": 7169,
+      "comment": "クリア後",
+      "commentEn": "After clearing"
+    },
+    {
+      "questNo": 70033001,
+      "season": "S3.3",
+      "groupNo": 4,
+      "flagNo": 7916,
+      "eraseFlagNo": 7916,
+      "comment": "クリア後",
+      "commentEn": "After clearing"
+    },
+    {
+      "questNo": 70034001,
+      "season": "S3.4",
+      "groupNo": 4,
+      "flagNo": 8630,
+      "eraseFlagNo": 8630,
+      "comment": "クリア後",
+      "commentEn": "After clearing"
+    }
+  ],
+  "203": [
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 1,
+      "flagNo": 1103,
+      "eraseFlagNo": 1103,
+      "comment": "ver1.2第三アーク行OM（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.2 third arc line OM (deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 1,
+      "flagNo": 1103,
+      "eraseFlagNo": 1103,
+      "comment": "ver1.2第三アーク行OM（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.2 third arc line OM (deleted)"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 1,
+      "flagNo": 1103,
+      "eraseFlagNo": 1103,
+      "comment": "ver1.2第三アーク行OM",
+      "commentEn": "ver1.2 third arc line OM"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 1,
+      "flagNo": 1103,
+      "eraseFlagNo": 1103,
+      "comment": "ver1.2第三アーク行OM（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.2 third arc line OM (deleted)"
+    }
+  ],
+  "400": [
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 1,
+      "flagNo": 1310,
+      "eraseFlagNo": 1310,
+      "comment": "ver1.0グリッテン砦扉（閉）",
+      "commentEn": "ver1.0 Gritten Fort door (closed)"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 2,
+      "flagNo": 1311,
+      "eraseFlagNo": 0,
+      "comment": "ver1.0グリッテン砦扉（開）",
+      "commentEn": "ver1.0 Gritten Keep door (open)"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 3,
+      "flagNo": 2248,
+      "eraseFlagNo": 2248,
+      "comment": "留守番ヴァネッサ",
+      "commentEn": "House sitting Vanessa"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 1,
+      "flagNo": 1310,
+      "eraseFlagNo": 1310,
+      "comment": "ver1.0グリッテン砦扉（閉）（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 Gritten Keep door (closed) (deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 2,
+      "flagNo": 1311,
+      "eraseFlagNo": 1311,
+      "comment": "ver1.0グリッテン砦扉（開）（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 Gritten Keep door (open) (deleted)"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 1,
+      "flagNo": 1310,
+      "eraseFlagNo": 1310,
+      "comment": "ver1.0グリッテン砦扉（閉）(削除)",
+      "deprecated": true,
+      "commentEn": "ver1.0 Gritten Fort door (closed) (deleted)"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 2,
+      "flagNo": 1311,
+      "eraseFlagNo": 1311,
+      "comment": "ver1.0グリッテン砦扉（開）(削除)",
+      "deprecated": true,
+      "commentEn": "ver1.0 Gritten Fort door (open) (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 1,
+      "flagNo": 1310,
+      "eraseFlagNo": 1310,
+      "comment": "ver1.0グリッテン砦扉（閉）（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 Gritten Keep door (closed) (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 2,
+      "flagNo": 1311,
+      "eraseFlagNo": 1311,
+      "comment": "ver1.0グリッテン砦扉（開）（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 Gritten Keep door (open) (deleted)"
+    }
+  ],
+  "403": [
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 1,
+      "flagNo": 1109,
+      "eraseFlagNo": 0,
+      "comment": "ver1.0礼拝堂の扉閉じる",
+      "commentEn": "ver1.0 chapel door close"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 2,
+      "flagNo": 1110,
+      "eraseFlagNo": 1110,
+      "comment": "ver1.0礼拝堂の扉開く",
+      "commentEn": "ver1.0 chapel door opens"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 1,
+      "flagNo": 1109,
+      "eraseFlagNo": 1109,
+      "comment": "ver1.0礼拝堂の扉閉じる（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 Chapel door close (deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 2,
+      "flagNo": 1110,
+      "eraseFlagNo": 1110,
+      "comment": "ver1.0礼拝堂の扉開く（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 Chapel door opens (deleted)"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 1,
+      "flagNo": 1109,
+      "eraseFlagNo": 1109,
+      "comment": "ver1.0礼拝堂の扉閉じる(削除)",
+      "deprecated": true,
+      "commentEn": "ver1.0 Chapel door close (deleted)"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 2,
+      "flagNo": 1110,
+      "eraseFlagNo": 1110,
+      "comment": "ver1.0礼拝堂の扉開く（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 Chapel door opens (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 1,
+      "flagNo": 1109,
+      "eraseFlagNo": 1109,
+      "comment": "（削除）",
+      "deprecated": true,
+      "commentEn": "(delete)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 2,
+      "flagNo": 1110,
+      "eraseFlagNo": 1110,
+      "comment": "ver1.0礼拝堂の扉開く（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 Chapel door opens (deleted)"
+    }
+  ],
+  "404": [
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 1,
+      "flagNo": 1113,
+      "eraseFlagNo": 1113,
+      "comment": "ver1.1閉じ_エルテディナンの大門(削除)",
+      "deprecated": true,
+      "commentEn": "ver1.1 closed_Daimon of Eltedinan (deleted)"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 2,
+      "flagNo": 1114,
+      "eraseFlagNo": 1114,
+      "comment": "ver1.1開き_エルテディナンの大門（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.1 open_Daimon of Eltedinan (deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 1,
+      "flagNo": 1113,
+      "eraseFlagNo": 1113,
+      "comment": "ver1.1閉じ_エルテディナンの大門",
+      "commentEn": "ver1.1 closed_Daimon of Eltedinan"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 2,
+      "flagNo": 1114,
+      "eraseFlagNo": 1114,
+      "comment": "ver1.1開き_エルテディナンの大門",
+      "commentEn": "ver1.1 opening_Daimon of El Tedinan"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 1,
+      "flagNo": 1113,
+      "eraseFlagNo": 1113,
+      "comment": "ver1.1閉じ_エルテディナンの大門(削除)",
+      "deprecated": true,
+      "commentEn": "ver1.1 closed_Daimon of Eltedinan (deleted)"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 2,
+      "flagNo": 1114,
+      "eraseFlagNo": 1114,
+      "comment": "ver1.1開き_エルテディナンの大門（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.1 open_Daimon of Eltedinan (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 1,
+      "flagNo": 1113,
+      "eraseFlagNo": 1113,
+      "comment": "ver1.0閉じ_エルテディナンの大門（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 closed_Daimon of Eltedinan (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 2,
+      "flagNo": 1114,
+      "eraseFlagNo": 1114,
+      "comment": "ver1.1開き_エルテディナンの大門（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.1 open_Daimon of Eltedinan (deleted)"
+    }
+  ],
+  "408": [
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 1,
+      "flagNo": 1111,
+      "eraseFlagNo": 1111,
+      "comment": "ver1.0閉じ_水流制御室扉",
+      "commentEn": "ver1.0 closed_Water flow control room door"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 2,
+      "flagNo": 1112,
+      "eraseFlagNo": 1112,
+      "comment": "ver1.0開き_水流制御室扉",
+      "commentEn": "ver1.0 open_water flow control room door"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 3,
+      "flagNo": 1317,
+      "eraseFlagNo": 1317,
+      "comment": "ver1.0滝",
+      "commentEn": "ver1.0 waterfall"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 4,
+      "flagNo": 1671,
+      "eraseFlagNo": 1671,
+      "comment": "ver1.0閉じてるレバー扉",
+      "commentEn": "ver1.0 closed lever door"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 5,
+      "flagNo": 1672,
+      "eraseFlagNo": 1672,
+      "comment": "ver1.0開いてるレバー扉",
+      "commentEn": "ver1.0open lever door"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 1,
+      "flagNo": 1111,
+      "eraseFlagNo": 1111,
+      "comment": "ver1.0閉じ_水流制御室扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 closed_Water flow control room door (deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 2,
+      "flagNo": 1112,
+      "eraseFlagNo": 1112,
+      "comment": "ver1.0開き_水流制御室扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 open_Water flow control room door (deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 3,
+      "flagNo": 1317,
+      "eraseFlagNo": 1317,
+      "comment": "ver1.0滝（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 waterfall (deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 4,
+      "flagNo": 1671,
+      "eraseFlagNo": 1671,
+      "comment": "ver1.0閉じてるレバー扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 Closed lever door (deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 5,
+      "flagNo": 1672,
+      "eraseFlagNo": 1672,
+      "comment": "ver1.0開いてるレバー扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0Open lever door (deleted)"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 1,
+      "flagNo": 1111,
+      "eraseFlagNo": 1111,
+      "comment": "ver1.0閉じ_水流制御室扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 closed_Water flow control room door (deleted)"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 2,
+      "flagNo": 1112,
+      "eraseFlagNo": 1112,
+      "comment": "ver1.0開き_水流制御室扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 open_Water flow control room door (deleted)"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 3,
+      "flagNo": 1317,
+      "eraseFlagNo": 1317,
+      "comment": "ver1.0滝（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 waterfall (deleted)"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 4,
+      "flagNo": 1671,
+      "eraseFlagNo": 1671,
+      "comment": "ver1.0閉じてるレバー扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 Closed lever door (deleted)"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 5,
+      "flagNo": 1672,
+      "eraseFlagNo": 1672,
+      "comment": "ver1.0開いてるレバー扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0Open lever door (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 1,
+      "flagNo": 1111,
+      "eraseFlagNo": 1111,
+      "comment": "ver1.0閉じ_水流制御室扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 closed_Water flow control room door (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 2,
+      "flagNo": 1112,
+      "eraseFlagNo": 1112,
+      "comment": "ver1.0開き_水流制御室扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 open_Water flow control room door (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 3,
+      "flagNo": 1317,
+      "eraseFlagNo": 1317,
+      "comment": "ver1.0滝（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 waterfall (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 4,
+      "flagNo": 1671,
+      "eraseFlagNo": 1671,
+      "comment": "ver1.0閉じてるレバー扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 Closed lever door (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 5,
+      "flagNo": 1672,
+      "eraseFlagNo": 1672,
+      "comment": "ver1.0開いてるレバー扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0Open lever door (deleted)"
+    }
+  ],
+  "411": [
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 1,
+      "flagNo": 1106,
+      "eraseFlagNo": 1106,
+      "comment": "ver1.2_正面扉用_レバー（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.2_Front door_Lever (deleted)"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 2,
+      "flagNo": 1104,
+      "eraseFlagNo": 1104,
+      "comment": "ver1.2閉じ_正面扉(削除)",
+      "deprecated": true,
+      "commentEn": "ver1.2 closed_front door (deleted)"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 3,
+      "flagNo": 1105,
+      "eraseFlagNo": 1105,
+      "comment": "ver1.2開き_正面扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.2 open_front door (deleted)"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 4,
+      "flagNo": 1104,
+      "eraseFlagNo": 1104,
+      "comment": "ver1.2制御(削除)",
+      "deprecated": true,
+      "commentEn": "ver1.2 control (delete)"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 5,
+      "flagNo": 1119,
+      "eraseFlagNo": 1119,
+      "comment": "ver1.2閉じ_錬金研究棟扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.2 closed_Alchemy research building door (deleted)"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 6,
+      "flagNo": 1120,
+      "eraseFlagNo": 1120,
+      "comment": "ver1.2開き_錬金研究棟扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.2 open_Alchemy research building door (deleted)"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 7,
+      "flagNo": 1121,
+      "eraseFlagNo": 1121,
+      "comment": "ver1.2閉じ_軍事指導官扉(削除)",
+      "deprecated": true,
+      "commentEn": "ver1.2 closed_Military instructor door (deleted)"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 8,
+      "flagNo": 1122,
+      "eraseFlagNo": 1122,
+      "comment": "ver1.2開き_軍事指導官扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.2 open_Military instructor door (deleted)"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 9,
+      "flagNo": 1123,
+      "eraseFlagNo": 1123,
+      "comment": "ver1.2閉じ_特別研究区扉(削除)",
+      "deprecated": true,
+      "commentEn": "ver1.2 closed_Special Research Area door (deleted)"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 10,
+      "flagNo": 1124,
+      "eraseFlagNo": 1124,
+      "comment": "ver1.2開き_特別研究区扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.2 open_Special Research Area door (deleted)"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 11,
+      "flagNo": 1202,
+      "eraseFlagNo": 1202,
+      "comment": "ver1.2OFF_メルゴダワープ系(削除)",
+      "deprecated": true,
+      "commentEn": "ver1.2OFF_Melgodawarp system (deleted)"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 12,
+      "flagNo": 1203,
+      "eraseFlagNo": 1203,
+      "comment": "ver1.2ON_メルゴダ行き（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.2ON_To Melgoda (deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 1,
+      "flagNo": 1106,
+      "eraseFlagNo": 1106,
+      "comment": "ver1.2_正面扉用_レバー（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.2_Front door_Lever (deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 2,
+      "flagNo": 1104,
+      "eraseFlagNo": 1104,
+      "comment": "ver1.2閉じ_正面扉(削除)",
+      "deprecated": true,
+      "commentEn": "ver1.2 closed_front door (deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 3,
+      "flagNo": 1105,
+      "eraseFlagNo": 1105,
+      "comment": "ver1.2開き_正面扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.2 open_front door (deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 4,
+      "flagNo": 1104,
+      "eraseFlagNo": 1104,
+      "comment": "ver1.2制御（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.2 control (delete)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 5,
+      "flagNo": 1119,
+      "eraseFlagNo": 1119,
+      "comment": "ver1.2閉じ_錬金研究棟扉(削除)",
+      "deprecated": true,
+      "commentEn": "ver1.2 closed_Alchemy research building door (deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 6,
+      "flagNo": 1120,
+      "eraseFlagNo": 1120,
+      "comment": "ver1.2開き_錬金研究棟扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.2 open_Alchemy research building door (deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 7,
+      "flagNo": 1121,
+      "eraseFlagNo": 1121,
+      "comment": "ver1.2閉じ_軍事指導官扉(削除)",
+      "deprecated": true,
+      "commentEn": "ver1.2 closed_Military instructor door (deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 8,
+      "flagNo": 1122,
+      "eraseFlagNo": 1122,
+      "comment": "ver1.2開き_軍事指導官扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.2 open_Military instructor door (deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 9,
+      "flagNo": 1123,
+      "eraseFlagNo": 1123,
+      "comment": "ver1.2閉じ_特別研究区扉(削除)",
+      "deprecated": true,
+      "commentEn": "ver1.2 closed_Special Research Area door (deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 10,
+      "flagNo": 1124,
+      "eraseFlagNo": 1124,
+      "comment": "ver1.2開き_特別研究区扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.2 open_Special Research Area door (deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 11,
+      "flagNo": 1202,
+      "eraseFlagNo": 1202,
+      "comment": "ver1.2OFF_メルゴダワープ系(削除)",
+      "deprecated": true,
+      "commentEn": "ver1.2OFF_Melgodawarp system (deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 12,
+      "flagNo": 1203,
+      "eraseFlagNo": 1203,
+      "comment": "ver1.2ON_メルゴダ行き（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.2ON_To Melgoda (deleted)"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 1,
+      "flagNo": 1106,
+      "eraseFlagNo": 1106,
+      "comment": "ver1.2_正面扉用_レバー",
+      "commentEn": "ver1.2_Front door lever"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 2,
+      "flagNo": 1104,
+      "eraseFlagNo": 1104,
+      "comment": "ver1.2閉じ_正面扉",
+      "commentEn": "ver1.2 closed_front door"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 3,
+      "flagNo": 1105,
+      "eraseFlagNo": 1105,
+      "comment": "ver1.2開き_正面扉",
+      "commentEn": "ver1.2 open_front door"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 4,
+      "flagNo": 1104,
+      "eraseFlagNo": 1104,
+      "comment": "ver1.2制御",
+      "commentEn": "ver1.2 control"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 5,
+      "flagNo": 1119,
+      "eraseFlagNo": 0,
+      "comment": "ver1.2閉じ_錬金研究棟扉",
+      "commentEn": "ver1.2 closed_Alchemy research building door"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 6,
+      "flagNo": 1120,
+      "eraseFlagNo": 1120,
+      "comment": "ver1.2開き_錬金研究棟扉",
+      "commentEn": "ver1.2 open_alchemy research building door"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 7,
+      "flagNo": 1121,
+      "eraseFlagNo": 0,
+      "comment": "ver1.2閉じ_軍事指導官扉",
+      "commentEn": "ver1.2 closed_military instructor door"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 8,
+      "flagNo": 1122,
+      "eraseFlagNo": 1122,
+      "comment": "ver1.2開き_軍事指導官扉",
+      "commentEn": "ver1.2 open_military instructor door"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 9,
+      "flagNo": 1123,
+      "eraseFlagNo": 0,
+      "comment": "ver1.2閉じ_特別研究区扉",
+      "commentEn": "ver1.2 closed_special research area door"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 10,
+      "flagNo": 1124,
+      "eraseFlagNo": 1124,
+      "comment": "ver1.2開き_特別研究区扉",
+      "commentEn": "ver1.2 opening_special research area door"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 11,
+      "flagNo": 1202,
+      "eraseFlagNo": 1202,
+      "comment": "ver1.2OFF_メルゴダワープ系",
+      "commentEn": "ver1.2OFF_Melgodawarp system"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 12,
+      "flagNo": 1203,
+      "eraseFlagNo": 1203,
+      "comment": "ver1.2ON_メルゴダ行き",
+      "commentEn": "ver1.2ON_To Melgoda"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 13,
+      "flagNo": 2458,
+      "eraseFlagNo": 2458,
+      "comment": "ver1.2メルゴダ大扉用メッセージＯＭ",
+      "commentEn": "ver1.2 Melgoda large door message OM"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 1,
+      "flagNo": 1106,
+      "eraseFlagNo": 1106,
+      "comment": "ver1.2_正面扉用_レバー（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.2_Front door_Lever (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 2,
+      "flagNo": 1104,
+      "eraseFlagNo": 1104,
+      "comment": "ver1.0閉じ_正面扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 closed_front door (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 3,
+      "flagNo": 1105,
+      "eraseFlagNo": 1105,
+      "comment": "ver1.2開き_正面扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.2 open_front door (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 4,
+      "flagNo": 1104,
+      "eraseFlagNo": 1104,
+      "comment": "ver1.0制御（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 control (delete)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 5,
+      "flagNo": 1119,
+      "eraseFlagNo": 1119,
+      "comment": "ver1.0閉じ_錬金研究棟扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 closed_Alchemy research building door (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 6,
+      "flagNo": 1120,
+      "eraseFlagNo": 1120,
+      "comment": "ver1.2開き_錬金研究棟扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.2 open_Alchemy research building door (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 7,
+      "flagNo": 1121,
+      "eraseFlagNo": 1121,
+      "comment": "ver1.0閉じ_軍事指導官扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 closed_Military instructor door (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 8,
+      "flagNo": 1122,
+      "eraseFlagNo": 1122,
+      "comment": "ver1.2開き_軍事指導官扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.2 open_Military instructor door (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 9,
+      "flagNo": 1123,
+      "eraseFlagNo": 1123,
+      "comment": "ver1.0閉じ_特別研究区扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 closed_Special Research Area door (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 10,
+      "flagNo": 1124,
+      "eraseFlagNo": 1124,
+      "comment": "ver1.2開き_特別研究区扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.2 open_Special Research Area door (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 11,
+      "flagNo": 1202,
+      "eraseFlagNo": 1202,
+      "comment": "ver1.0OFF_メルゴダワープ系（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0OFF_Melgodawarp system (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 12,
+      "flagNo": 1203,
+      "eraseFlagNo": 1203,
+      "comment": "ver1.2ON_メルゴダ行き（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.2ON_To Melgoda (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 13,
+      "flagNo": 2509,
+      "eraseFlagNo": 2509,
+      "comment": "ver1.3ボス戦封鎖用扉OM",
+      "commentEn": "ver1.3 Boss battle blockade door OM"
+    }
+  ],
+  "412": [
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 1,
+      "flagNo": 1261,
+      "eraseFlagNo": 1261,
+      "comment": "ver1.0ポーンダンジョン入口",
+      "commentEn": "ver1.0 pawn dungeon entrance"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 2,
+      "flagNo": 1262,
+      "eraseFlagNo": 1262,
+      "comment": "ver1.0ポーンダンジョン入口",
+      "commentEn": "ver1.0 pawn dungeon entrance"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 1,
+      "flagNo": 1261,
+      "eraseFlagNo": 1261,
+      "comment": "ver1.0ポーンダンジョン入口(削除)",
+      "deprecated": true,
+      "commentEn": "ver1.0 pawn dungeon entrance (deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 2,
+      "flagNo": 1262,
+      "eraseFlagNo": 1262,
+      "comment": "ver1.0ポーンダンジョン入口（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 pawn dungeon entrance (deleted)"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 1,
+      "flagNo": 1261,
+      "eraseFlagNo": 1261,
+      "comment": "ver1.0ポーンダンジョン入口（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 pawn dungeon entrance (deleted)"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 2,
+      "flagNo": 1262,
+      "eraseFlagNo": 1262,
+      "comment": "ver1.0ポーンダンジョン入口（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 pawn dungeon entrance (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 1,
+      "flagNo": 1261,
+      "eraseFlagNo": 1261,
+      "comment": "ver1.0ポーンダンジョン入口（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 pawn dungeon entrance (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 2,
+      "flagNo": 1262,
+      "eraseFlagNo": 1262,
+      "comment": "ver1.0ポーンダンジョン入口（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 pawn dungeon entrance (deleted)"
+    }
+  ],
+  "418": [
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 1,
+      "flagNo": 1098,
+      "eraseFlagNo": 1098,
+      "comment": "ver1.2閉じ_ディアマンテス扉(削除)",
+      "deprecated": true,
+      "commentEn": "ver1.2 closed_Diamantes door (deleted)"
+    },
+    {
+      "questNo": 70000001,
+      "season": "S1.0",
+      "groupNo": 2,
+      "flagNo": 1713,
+      "eraseFlagNo": 1713,
+      "comment": "ver1.2開き_ディアマンテス扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.2 open_diamantes door (deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 1,
+      "flagNo": 1098,
+      "eraseFlagNo": 1098,
+      "comment": "ver1.2閉じ_ディアマンテス扉(削除)",
+      "deprecated": true,
+      "commentEn": "ver1.2 closed_Diamantes door (deleted)"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 2,
+      "flagNo": 1713,
+      "eraseFlagNo": 1713,
+      "comment": "ver1.2開き_ディアマンテス扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.2 open_diamantes door (deleted)"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 1,
+      "flagNo": 1098,
+      "eraseFlagNo": 1098,
+      "comment": "ver1.2閉じ_ディアマンテス扉",
+      "commentEn": "ver1.2 closed_diamantes door"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 2,
+      "flagNo": 1713,
+      "eraseFlagNo": 1713,
+      "comment": "ver1.2開き_ディアマンテス扉",
+      "commentEn": "ver1.2 opening_diamantes door"
+    },
+    {
+      "questNo": 70003001,
+      "season": "S1.3",
+      "groupNo": 3,
+      "flagNo": 2456,
+      "eraseFlagNo": 0,
+      "comment": "ver1.2王宮と住居区の扉ワープOM",
+      "commentEn": "ver1.2 Royal palace and residential area door warp OM"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 1,
+      "flagNo": 1098,
+      "eraseFlagNo": 1098,
+      "comment": "ver1.0閉じ_ディアマンテス扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.0 closed_Diamantes door (deleted)"
+    },
+    {
+      "questNo": 70004001,
+      "season": "S1.4",
+      "groupNo": 2,
+      "flagNo": 1713,
+      "eraseFlagNo": 1713,
+      "comment": "ver1.2開き_ディアマンテス扉（削除）",
+      "deprecated": true,
+      "commentEn": "ver1.2 open_diamantes door (deleted)"
+    }
+  ],
+  "402": [
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 2,
+      "flagNo": 3859,
+      "eraseFlagNo": 0,
+      "comment": "ver1.1床置きレバー",
+      "commentEn": "ver1.1 floor lever"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 3,
+      "flagNo": 3859,
+      "eraseFlagNo": 0,
+      "comment": "ver1.1ガルドノック砦内大型ドア",
+      "commentEn": "ver1.1 Large door inside Gardnock Fort"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 4,
+      "flagNo": 3859,
+      "eraseFlagNo": 3859,
+      "comment": "ver1.1複数OMコントロール",
+      "commentEn": "ver1.1 multiple OM control"
+    },
+    {
+      "questNo": 70002001,
+      "season": "S1.2",
+      "groupNo": 5,
+      "flagNo": 3860,
+      "eraseFlagNo": 0,
+      "comment": "ver1.1ガルドノック砦内大型ドア",
+      "commentEn": "ver1.1 Large door inside Gardnock Fort"
+    }
+  ],
+  "112": [
+    {
+      "questNo": 70022001,
+      "season": "S2.2",
+      "groupNo": 0,
+      "flagNo": 3977,
+      "eraseFlagNo": 3977,
+      "comment": "仮の大陸移動用OM",
+      "commentEn": "Temporary continental drift OM"
+    }
+  ],
+  "120": [
+    {
+      "questNo": 70022001,
+      "season": "S2.2",
+      "groupNo": 0,
+      "flagNo": 4803,
+      "eraseFlagNo": 4803
+    }
+  ],
+  "121": [
+    {
+      "questNo": 70022001,
+      "season": "S2.2",
+      "groupNo": 0,
+      "flagNo": 3953,
+      "eraseFlagNo": 0,
+      "comment": "綺麗森船頭（手前）",
+      "commentEn": "Beautiful forest boatman (front)"
+    },
+    {
+      "questNo": 70022001,
+      "season": "S2.2",
+      "groupNo": 1,
+      "flagNo": 3953,
+      "eraseFlagNo": 0,
+      "comment": "綺麗森船頭（奥）",
+      "commentEn": "Beautiful forest boatman (back)"
+    },
+    {
+      "questNo": 70022001,
+      "season": "S2.2",
+      "groupNo": 2,
+      "flagNo": 4063,
+      "eraseFlagNo": 4063,
+      "comment": "綺麗森→平原エリア封鎖壁",
+      "commentEn": "Beautiful Forest → Plains Area Blockade Wall"
+    }
+  ],
+  "914": [
+    {
+      "questNo": 70022001,
+      "season": "S2.2",
+      "groupNo": 0,
+      "flagNo": 4053,
+      "eraseFlagNo": 4053,
+      "comment": "通常置きのガラダ",
+      "commentEn": "Regular Garada"
+    },
+    {
+      "questNo": 70023001,
+      "season": "S2.3",
+      "groupNo": 0,
+      "flagNo": 4066,
+      "eraseFlagNo": 4066,
+      "comment": "クリア後のガラダ",
+      "commentEn": "Garada after clearing"
+    }
+  ],
+  "443": [
+    {
+      "questNo": 70030001,
+      "season": "S3.0",
+      "groupNo": 0,
+      "flagNo": 5671,
+      "eraseFlagNo": 5671,
+      "comment": "3.0クリア後セット",
+      "commentEn": "Set after clearing 3.0"
+    },
+    {
+      "questNo": 70031001,
+      "season": "S3.1",
+      "groupNo": 0,
+      "flagNo": 5672,
+      "eraseFlagNo": 5672,
+      "comment": "3.1クリア後のクインタス",
+      "commentEn": "Quintus after clearing 3.1"
+    },
+    {
+      "questNo": 70033001,
+      "season": "S3.3",
+      "groupNo": 0,
+      "flagNo": 8166,
+      "eraseFlagNo": 8166,
+      "comment": "クインタス",
+      "commentEn": "quintus"
+    }
+  ],
+  "451": [
+    {
+      "questNo": 70031001,
+      "season": "S3.1",
+      "groupNo": 0,
+      "flagNo": 5672,
+      "eraseFlagNo": 5672,
+      "comment": "3.1クリア後のネド達",
+      "commentEn": "Nedo and others after clearing 3.1"
+    },
+    {
+      "questNo": 70032001,
+      "season": "S3.2",
+      "groupNo": 0,
+      "flagNo": 7169,
+      "eraseFlagNo": 7169,
+      "comment": "クリア後",
+      "commentEn": "After clearing"
+    },
+    {
+      "questNo": 70033001,
+      "season": "S3.3",
+      "groupNo": 0,
+      "flagNo": 7917,
+      "eraseFlagNo": 7917,
+      "comment": "クリア後",
+      "commentEn": "After clearing"
+    },
+    {
+      "questNo": 70034001,
+      "season": "S3.4",
+      "groupNo": 0,
+      "flagNo": 8631,
+      "eraseFlagNo": 8631,
+      "comment": "クリア後",
+      "commentEn": "After clearing"
+    }
+  ],
+  "130": [
+    {
+      "questNo": 70032001,
+      "season": "S3.2",
+      "groupNo": 0,
+      "flagNo": 7498,
+      "eraseFlagNo": 7498,
+      "comment": "133と130の関所移動用",
+      "commentEn": "For moving between checkpoints 133 and 130"
+    }
+  ],
+  "1026": [
+    {
+      "questNo": 70032001,
+      "season": "S3.2",
+      "groupNo": 0,
+      "flagNo": 7512,
+      "eraseFlagNo": 7512,
+      "comment": "大人アタリ用OM",
+      "commentEn": "OM for adult Atari"
+    },
+    {
+      "questNo": 70032001,
+      "season": "S3.2",
+      "groupNo": 1,
+      "flagNo": 7514,
+      "eraseFlagNo": 7514,
+      "comment": "フロア移動用OM",
+      "commentEn": "OM for floor movement"
+    }
+  ],
+  "139": [
+    {
+      "questNo": 70033001,
+      "season": "S3.3",
+      "groupNo": 0,
+      "flagNo": 8201,
+      "eraseFlagNo": 8201
+    }
+  ],
+  "1100": [
+    {
+      "questNo": 70033001,
+      "season": "S3.3",
+      "groupNo": 0,
+      "flagNo": 8202,
+      "eraseFlagNo": 8202
+    }
+  ]
+}

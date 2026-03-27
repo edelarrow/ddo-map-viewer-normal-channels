@@ -1,0 +1,2122 @@
+{
+  "em015230": {
+    "name": "Abaddon",
+    "uiId": 394
+  },
+  "em080800": {
+    "name": "Abaddon",
+    "uiId": 394
+  },
+  "em010911": {
+    "name": "Acid Blob",
+    "uiId": 299
+  },
+  "em080801": {
+    "name": "Albe",
+    "uiId": 396
+  },
+  "em011201": {
+    "name": "Albe",
+    "uiId": 396
+  },
+  "em077000": {
+    "name": "Insect Mound",
+    "uiId": 395
+  },
+  "em011120": {
+    "name": "Alchemized Goblin",
+    "uiId": 134
+  },
+  "em011121": {
+    "name": "Alchemized Goblin Fighter",
+    "uiId": 116
+  },
+  "em015304": {
+    "name": "Alchemized Griffin",
+    "uiId": 87
+  },
+  "em010606": {
+    "name": "Alchemized Harpy",
+    "uiId": 56
+  },
+  "em010312": {
+    "name": "Alchemized Skeleton",
+    "uiId": 33
+  },
+  "em011122": {
+    "name": "Alchemized Sling Goblin",
+    "uiId": 169
+  },
+  "em010207": {
+    "name": "Alchemized Wolf",
+    "uiId": 28
+  },
+  "em015420": {
+    "name": "Alchemy Eye",
+    "uiId": 90
+  },
+  "em020403": {
+    "name": "Altered Zuhl",
+    "uiId": 271
+  },
+  "em015831": {
+    "name": "Ancestor Orc",
+    "uiId": 354
+  },
+  "em015833": {
+    "name": "Ancestor Orc",
+    "uiId": 354
+  },
+  "em015832": {
+    "name": "Ancestor Orc",
+    "uiId": 354
+  },
+  "em015870": {
+    "name": "Ancestor Origin",
+    "uiId": 360
+  },
+  "em015708": {
+    "name": "Angules",
+    "uiId": 24
+  },
+  "em070920": {
+    "name": "Angules",
+    "uiId": 24
+  },
+  "em010904": {
+    "name": "Aqua Jelly",
+    "uiId": 219
+  },
+  "em080504": {
+    "name": "Arisenofthe Black Dragon",
+    "uiId": 406
+  },
+  "em015002": {
+    "name": "Armored Cyclops",
+    "uiId": 76
+  },
+  "em015003": {
+    "name": "Armored Cyclops",
+    "uiId": 76
+  },
+  "em010820": {
+    "name": "Armored Insect",
+    "uiId": 217
+  },
+  "em010821": {
+    "name": "Armored Insect",
+    "uiId": 217
+  },
+  "em010822": {
+    "name": "Armored Insect",
+    "uiId": 217
+  },
+  "em010823": {
+    "name": "Armored Insect",
+    "uiId": 217
+  },
+  "em011014": {
+    "name": "Banded Defender",
+    "uiId": 145
+  },
+  "em011010": {
+    "name": "Banded Fighter",
+    "uiId": 66
+  },
+  "em011013": {
+    "name": "Banded Healer",
+    "uiId": 144
+  },
+  "em011012": {
+    "name": "Banded Hunter",
+    "uiId": 143
+  },
+  "em011015": {
+    "name": "Banded Mage",
+    "uiId": 146
+  },
+  "em011011": {
+    "name": "Banded Seeker",
+    "uiId": 142
+  },
+  "em011016": {
+    "name": "Banded Warrior",
+    "uiId": 147
+  },
+  "em020602": {
+    "name": "Baphomet",
+    "uiId": 362
+  },
+  "em080900": {
+    "name": "Baphomet",
+    "uiId": 362
+  },
+  "em071311": {
+    "name": "Baphomet",
+    "uiId": 362
+  },
+  "em080901": {
+    "name": "Baphomet",
+    "uiId": 362
+  },
+  "em018100": {
+    "name": "Bat",
+    "uiId": 0
+  },
+  "em015920": {
+    "name": "Bearded Grigori",
+    "uiId": 287
+  },
+  "em015861": {
+    "name": "Beast Commander",
+    "uiId": 357
+  },
+  "em071252": {
+    "name": "Beast Commander",
+    "uiId": 357
+  },
+  "em015709": {
+    "name": "Behemoth",
+    "uiId": 23
+  },
+  "em070930": {
+    "name": "Behemoth",
+    "uiId": 23
+  },
+  "em015740": {
+    "name": "Behemoth Goblin Test",
+    "uiId": 0
+  },
+  "em100100": {
+    "name": "Behemoth",
+    "uiId": 23
+  },
+  "em015321": {
+    "name": "Bifrest",
+    "uiId": 282
+  },
+  "em070640": {
+    "name": "Bifrest",
+    "uiId": 282
+  },
+  "em070641": {
+    "name": "Bifrest",
+    "uiId": 282
+  },
+  "em024000": {
+    "name": "Black Dragon",
+    "uiId": 410
+  },
+  "em081000": {
+    "name": "Black Dragon",
+    "uiId": 410
+  },
+  "em081002": {
+    "name": "Black Dragon",
+    "uiId": 410
+  },
+  "em071101": {
+    "name": "Black Dragon",
+    "uiId": 410
+  },
+  "em081001": {
+    "name": "Powerthat Destroys Reason",
+    "uiId": 422
+  },
+  "em081003": {
+    "name": "Powerthat Destroys Reason",
+    "uiId": 422
+  },
+  "em071102": {
+    "name": "Black Dragon",
+    "uiId": 410
+  },
+  "em024002": {
+    "name": "Powerthat Destroys Reason",
+    "uiId": 422
+  },
+  "em024001": {
+    "name": "Powerthat Destroys Reason",
+    "uiId": 422
+  },
+  "em015303": {
+    "name": "Black Griffin",
+    "uiId": 88
+  },
+  "em070610": {
+    "name": "Black Griffin",
+    "uiId": 88
+  },
+  "em080501": {
+    "name": "Black Knight",
+    "uiId": 274
+  },
+  "em020700": {
+    "name": "Black Knight",
+    "uiId": 274
+  },
+  "em080502": {
+    "name": "Black Knight",
+    "uiId": 274
+  },
+  "em100104": {
+    "name": "Black Knight",
+    "uiId": 274
+  },
+  "em020701": {
+    "name": "Black Knight",
+    "uiId": 274
+  },
+  "em020702": {
+    "name": "Black Knight",
+    "uiId": 274
+  },
+  "em080500": {
+    "name": "Black Knight Phantom",
+    "uiId": 313
+  },
+  "em080503": {
+    "name": "Black Knight Phantom",
+    "uiId": 313
+  },
+  "em030118": {
+    "name": "Black Sword",
+    "uiId": 426
+  },
+  "em080505": {
+    "name": "Black Sword",
+    "uiId": 426
+  },
+  "em015204": {
+    "name": "Blaze Chimera",
+    "uiId": 339
+  },
+  "em011170": {
+    "name": "Blaze Goblin",
+    "uiId": 332
+  },
+  "em011171": {
+    "name": "Blaze Goblin",
+    "uiId": 332
+  },
+  "em011173": {
+    "name": "Blaze Goblin Leader",
+    "uiId": 380
+  },
+  "em011172": {
+    "name": "Blaze Goblin",
+    "uiId": 332
+  },
+  "em015930": {
+    "name": "Blaze Grigori",
+    "uiId": 361
+  },
+  "em010608": {
+    "name": "Blaze Harpy",
+    "uiId": 329
+  },
+  "em010212": {
+    "name": "Blaze Wolf",
+    "uiId": 321
+  },
+  "em010910": {
+    "name": "Blob",
+    "uiId": 18
+  },
+  "em010460": {
+    "name": "Blue Newt",
+    "uiId": 41
+  },
+  "em015822": {
+    "name": "Blunt Soldier Dwarf Orc",
+    "uiId": 366
+  },
+  "em018600": {
+    "name": "Boar",
+    "uiId": 109
+  },
+  "em010514": {
+    "name": "Bolt Corpse Punisher",
+    "uiId": 204
+  },
+  "em010518": {
+    "name": "Bolt Corpse Torturer",
+    "uiId": 208
+  },
+  "em010211": {
+    "name": "Bolt Grimwarg",
+    "uiId": 187
+  },
+  "em015852": {
+    "name": "Bolt Machina",
+    "uiId": 412
+  },
+  "em095803": {
+    "name": "Bolt Machina Trinity",
+    "uiId": 416
+  },
+  "em010316": {
+    "name": "Bolt Skeleton",
+    "uiId": 192
+  },
+  "em010322": {
+    "name": "Bolt Skeleton Brute",
+    "uiId": 197
+  },
+  "em015053": {
+    "name": "Bolt Skeleton Cyclops",
+    "uiId": 404
+  },
+  "em015504": {
+    "name": "Brute Ape",
+    "uiId": 95
+  },
+  "em018200": {
+    "name": "Buck",
+    "uiId": 113
+  },
+  "em015033": {
+    "name": "Burned Ent",
+    "uiId": 335
+  },
+  "em015839": {
+    "name": "Captain Ancestor Orc",
+    "uiId": 355
+  },
+  "em015820": {
+    "name": "Captain Orc",
+    "uiId": 13
+  },
+  "em085004": {
+    "name": "Captain Orc",
+    "uiId": 13
+  },
+  "em015730": {
+    "name": "Catoblepas",
+    "uiId": 351
+  },
+  "em019001": {
+    "name": "Chicken",
+    "uiId": 264
+  },
+  "em019000": {
+    "name": "Chicken",
+    "uiId": 264
+  },
+  "em015200": {
+    "name": "Chimera",
+    "uiId": 79
+  },
+  "em070800": {
+    "name": "Chimera",
+    "uiId": 79
+  },
+  "em015301": {
+    "name": "Cockatrice",
+    "uiId": 85
+  },
+  "em015020": {
+    "name": "Colossus",
+    "uiId": 75
+  },
+  "em070041": {
+    "name": "Colossus",
+    "uiId": 75
+  },
+  "em070042": {
+    "name": "Colossus",
+    "uiId": 75
+  },
+  "em015508": {
+    "name": "Cragger",
+    "uiId": 344
+  },
+  "em015410": {
+    "name": "Crystal Eye",
+    "uiId": 94
+  },
+  "em030114": {
+    "name": "Crystalof Blessing",
+    "uiId": 419
+  },
+  "em015706": {
+    "name": "Cursed Dragon",
+    "uiId": 253
+  },
+  "em015000": {
+    "name": "Cyclops",
+    "uiId": 70
+  },
+  "em085110": {
+    "name": "Cyclops",
+    "uiId": 70
+  },
+  "em085111": {
+    "name": "Cyclops",
+    "uiId": 70
+  },
+  "em085112": {
+    "name": "Cyclops",
+    "uiId": 70
+  },
+  "em085113": {
+    "name": "Cyclops",
+    "uiId": 70
+  },
+  "em085114": {
+    "name": "Cyclops",
+    "uiId": 70
+  },
+  "em015001": {
+    "name": "Cyclops",
+    "uiId": 70
+  },
+  "em015004": {
+    "name": "Cyclops",
+    "uiId": 70
+  },
+  "em015719": {
+    "name": "Dagon",
+    "uiId": 403
+  },
+  "em011123": {
+    "name": "Damned Goblin",
+    "uiId": 168
+  },
+  "em011125": {
+    "name": "Damned Goblin Fighter",
+    "uiId": 166
+  },
+  "em015103": {
+    "name": "Damned Golem",
+    "uiId": 81
+  },
+  "em011124": {
+    "name": "Damned Sling Goblin",
+    "uiId": 167
+  },
+  "em010208": {
+    "name": "Damned Wolf",
+    "uiId": 180
+  },
+  "em010516": {
+    "name": "Dark Corpse Punisher",
+    "uiId": 206
+  },
+  "em010520": {
+    "name": "Dark Corpse Torturer",
+    "uiId": 210
+  },
+  "em010318": {
+    "name": "Dark Skeleton",
+    "uiId": 194
+  },
+  "em010324": {
+    "name": "Dark Skeleton Brute",
+    "uiId": 199
+  },
+  "em015603": {
+    "name": "Death",
+    "uiId": 392
+  },
+  "em010310": {
+    "name": "Death Knight",
+    "uiId": 35
+  },
+  "em010901": {
+    "name": "Deep Slime",
+    "uiId": 17
+  },
+  "em020500": {
+    "name": "Diamantes",
+    "uiId": 105
+  },
+  "em011041": {
+    "name": "Diamantes",
+    "uiId": 105
+  },
+  "em010909": {
+    "name": "Dim Slime",
+    "uiId": 224
+  },
+  "em010201": {
+    "name": "Direwolf",
+    "uiId": 31
+  },
+  "em018201": {
+    "name": "Doe",
+    "uiId": 112
+  },
+  "em030117": {
+    "name": "Dragon Crystalof Binding",
+    "uiId": 427
+  },
+  "em030115": {
+    "name": "Dragon Crystalof Darkness",
+    "uiId": 418
+  },
+  "em030113": {
+    "name": "Dragon Crystalof Darkness",
+    "uiId": 418
+  },
+  "em030112": {
+    "name": "Dragon Crystalof Darkness",
+    "uiId": 418
+  },
+  "em030116": {
+    "name": "Dragon Crystalof Destruction",
+    "uiId": 424
+  },
+  "em081006": {
+    "name": "Dragon Crystalof Destruction",
+    "uiId": 424
+  },
+  "em081004": {
+    "name": "Dragon Crystalof Destruction",
+    "uiId": 424
+  },
+  "em081005": {
+    "name": "Dragon Crystalof Destruction",
+    "uiId": 424
+  },
+  "em081007": {
+    "name": "Dragon Crystalof Destruction",
+    "uiId": 424
+  },
+  "em030105": {
+    "name": "Dragon Crystalof Groaning",
+    "uiId": 311
+  },
+  "em030104": {
+    "name": "Dragon Crystalof Praying",
+    "uiId": 310
+  },
+  "em030107": {
+    "name": "Evil Dragon Test",
+    "uiId": 384
+  },
+  "em015700": {
+    "name": "Drake",
+    "uiId": 27
+  },
+  "em070900": {
+    "name": "Drake",
+    "uiId": 27
+  },
+  "em015502": {
+    "name": "Dread Ape",
+    "uiId": 97
+  },
+  "em015825": {
+    "name": "Dwarf Orc",
+    "uiId": 391
+  },
+  "em021001": {
+    "name": "Elder Dragon",
+    "uiId": 103
+  },
+  "em080000": {
+    "name": "Elder Dragon",
+    "uiId": 103
+  },
+  "em071100": {
+    "name": "Elder Dragon",
+    "uiId": 103
+  },
+  "em010907": {
+    "name": "Electric Slime",
+    "uiId": 222
+  },
+  "em010508": {
+    "name": "Eliminator",
+    "uiId": 202
+  },
+  "em010530": {
+    "name": "Eliminator Slay",
+    "uiId": 312
+  },
+  "em015413": {
+    "name": "Emerald Eye",
+    "uiId": 91
+  },
+  "em015605": {
+    "name": "Empress Ghost",
+    "uiId": 99
+  },
+  "em071400": {
+    "name": "Empty No Enemy",
+    "uiId": 0
+  },
+  "em079000": {
+    "name": "Empty No Enemy",
+    "uiId": 0
+  },
+  "em080802": {
+    "name": "Empty No Enemy",
+    "uiId": 0
+  },
+  "em015031": {
+    "name": "Ent",
+    "uiId": 73
+  },
+  "em015400": {
+    "name": "Evil Eye",
+    "uiId": 248
+  },
+  "em080700": {
+    "name": "Evil Eye",
+    "uiId": 248
+  },
+  "em010513": {
+    "name": "Flame Corpse Punisher",
+    "uiId": 203
+  },
+  "em010517": {
+    "name": "Flame Corpse Torturer",
+    "uiId": 207
+  },
+  "em010314": {
+    "name": "Flame Skeleton",
+    "uiId": 190
+  },
+  "em010320": {
+    "name": "Flame Skeleton Brute",
+    "uiId": 195
+  },
+  "em015054": {
+    "name": "Flame Skeleton Cyclops",
+    "uiId": 408
+  },
+  "em015042": {
+    "name": "Fodden",
+    "uiId": 336
+  },
+  "em011500": {
+    "name": "Foot Biter",
+    "uiId": 201
+  },
+  "em011100": {
+    "name": "Forest Goblin",
+    "uiId": 128
+  },
+  "em011101": {
+    "name": "Forest Goblin Fighter",
+    "uiId": 129
+  },
+  "em011044": {
+    "name": "Former Arisen Corps Leader Leo",
+    "uiId": 411
+  },
+  "em010906": {
+    "name": "Freezing Slime",
+    "uiId": 221
+  },
+  "em019201": {
+    "name": "Frog",
+    "uiId": 267
+  },
+  "em019200": {
+    "name": "Frog",
+    "uiId": 267
+  },
+  "em010511": {
+    "name": "Frost Corpse Punisher",
+    "uiId": 48
+  },
+  "em010512": {
+    "name": "Frost Corpse Torturer",
+    "uiId": 47
+  },
+  "em015851": {
+    "name": "Frost Machina",
+    "uiId": 259
+  },
+  "em095802": {
+    "name": "Frost Machina Trinity",
+    "uiId": 415
+  },
+  "em010315": {
+    "name": "Frost Skeleton",
+    "uiId": 191
+  },
+  "em010321": {
+    "name": "Frost Skeleton Brute",
+    "uiId": 196
+  },
+  "em015052": {
+    "name": "Frost Skeleton Cyclops",
+    "uiId": 397
+  },
+  "em010603": {
+    "name": "Gargoyle",
+    "uiId": 211
+  },
+  "em015830": {
+    "name": "General Orc",
+    "uiId": 12
+  },
+  "em015104": {
+    "name": "Geo Golem",
+    "uiId": 80
+  },
+  "em010420": {
+    "name": "Geo Saurian",
+    "uiId": 325
+  },
+  "em015620": {
+    "name": "Ghost",
+    "uiId": 252
+  },
+  "em010311": {
+    "name": "Ghost Mail",
+    "uiId": 34
+  },
+  "em015503": {
+    "name": "Ghoul",
+    "uiId": 96
+  },
+  "em070200": {
+    "name": "Ghoul",
+    "uiId": 96
+  },
+  "em010421": {
+    "name": "Giant Geo Saurian",
+    "uiId": 326
+  },
+  "em018401": {
+    "name": "Giant Rat",
+    "uiId": 110
+  },
+  "em010401": {
+    "name": "Giant Saurian",
+    "uiId": 45
+  },
+  "em010431": {
+    "name": "Giant Saurian Sage",
+    "uiId": 308
+  },
+  "em010411": {
+    "name": "Giant Sulfur Saurian",
+    "uiId": 43
+  },
+  "em030101": {
+    "name": "Giant Unspeakable Meat",
+    "uiId": 173
+  },
+  "em015850": {
+    "name": "Gigant Machina",
+    "uiId": 10
+  },
+  "em095801": {
+    "name": "Gigant Machina Trinity",
+    "uiId": 414
+  },
+  "em010903": {
+    "name": "Glutton Ooze",
+    "uiId": 19
+  },
+  "em019100": {
+    "name": "Goat",
+    "uiId": 266
+  },
+  "em010100": {
+    "name": "Goblin",
+    "uiId": 1
+  },
+  "em010141": {
+    "name": "Goblin Aid Shaman",
+    "uiId": 319
+  },
+  "em011150": {
+    "name": "Goblin Bomber",
+    "uiId": 161
+  },
+  "em010101": {
+    "name": "Goblin Fighter",
+    "uiId": 2
+  },
+  "em085010": {
+    "name": "Goblin Fighter",
+    "uiId": 2
+  },
+  "em085011": {
+    "name": "Goblin Fighter",
+    "uiId": 2
+  },
+  "em085012": {
+    "name": "Goblin Fighter",
+    "uiId": 2
+  },
+  "em085013": {
+    "name": "Goblin Fighter",
+    "uiId": 2
+  },
+  "em085014": {
+    "name": "Goblin Fighter",
+    "uiId": 2
+  },
+  "em085015": {
+    "name": "Goblin Fighter",
+    "uiId": 2
+  },
+  "em085016": {
+    "name": "Goblin Fighter",
+    "uiId": 2
+  },
+  "em085017": {
+    "name": "Goblin Fighter",
+    "uiId": 2
+  },
+  "em085018": {
+    "name": "Goblin Fighter",
+    "uiId": 2
+  },
+  "em085019": {
+    "name": "Goblin Fighter",
+    "uiId": 2
+  },
+  "em010180": {
+    "name": "Goblin",
+    "uiId": 1
+  },
+  "em011140": {
+    "name": "Goblin King",
+    "uiId": 162
+  },
+  "em010104": {
+    "name": "Goblin Leader",
+    "uiId": 5
+  },
+  "em010140": {
+    "name": "Goblin Shaman",
+    "uiId": 318
+  },
+  "em015100": {
+    "name": "Golem",
+    "uiId": 83
+  },
+  "em021002": {
+    "name": "Golgorran",
+    "uiId": 102
+  },
+  "em080100": {
+    "name": "Golgorran",
+    "uiId": 425
+  },
+  "em015102": {
+    "name": "Goliath",
+    "uiId": 82
+  },
+  "em015105": {
+    "name": "Goliath",
+    "uiId": 82
+  },
+  "em015201": {
+    "name": "Gorechimera",
+    "uiId": 244
+  },
+  "em070820": {
+    "name": "Gorechimera",
+    "uiId": 244
+  },
+  "em015010": {
+    "name": "Gorecyclops",
+    "uiId": 239
+  },
+  "em070050": {
+    "name": "Gorecyclops",
+    "uiId": 239
+  },
+  "em070051": {
+    "name": "Gorecyclops",
+    "uiId": 239
+  },
+  "em015211": {
+    "name": "Goremanticore",
+    "uiId": 340
+  },
+  "em015611": {
+    "name": "Gorgon",
+    "uiId": 407
+  },
+  "em015030": {
+    "name": "Grand Ent",
+    "uiId": 74
+  },
+  "em070510": {
+    "name": "Grand Ent",
+    "uiId": 74
+  },
+  "em080200": {
+    "name": "Grand Ent",
+    "uiId": 74
+  },
+  "em010130": {
+    "name": "Greater Goblin",
+    "uiId": 317
+  },
+  "em010131": {
+    "name": "Greater Goblin",
+    "uiId": 317
+  },
+  "em010210": {
+    "name": "Green Guardian",
+    "uiId": 186
+  },
+  "em015300": {
+    "name": "Griffin",
+    "uiId": 84
+  },
+  "em070600": {
+    "name": "Griffin",
+    "uiId": 84
+  },
+  "em015900": {
+    "name": "Grigori",
+    "uiId": 260
+  },
+  "em010120": {
+    "name": "Grim Goblin",
+    "uiId": 314
+  },
+  "em010121": {
+    "name": "Grim Goblin Fighter",
+    "uiId": 315
+  },
+  "em010124": {
+    "name": "Grim Goblin Leader",
+    "uiId": 369
+  },
+  "em010205": {
+    "name": "Grimwarg",
+    "uiId": 30
+  },
+  "em015622": {
+    "name": "Grudge Ghost",
+    "uiId": 348
+  },
+  "em011302": {
+    "name": "Habanero",
+    "uiId": 333
+  },
+  "em010600": {
+    "name": "Harpy",
+    "uiId": 58
+  },
+  "em015823": {
+    "name": "Heavy Soldier Dwarf Orc",
+    "uiId": 367
+  },
+  "em010202": {
+    "name": "Hellhound",
+    "uiId": 320
+  },
+  "em010190": {
+    "name": "High Pixie Biff",
+    "uiId": 294
+  },
+  "em010192": {
+    "name": "High Pixie Pow",
+    "uiId": 296
+  },
+  "em010191": {
+    "name": "High Pixie Zolda",
+    "uiId": 295
+  },
+  "em010110": {
+    "name": "Hobgoblin",
+    "uiId": 6
+  },
+  "em010111": {
+    "name": "Hobgoblin Fighter",
+    "uiId": 7
+  },
+  "em010113": {
+    "name": "Hobgoblin Leader",
+    "uiId": 9
+  },
+  "em011043": {
+    "name": "Hooded Iris",
+    "uiId": 179
+  },
+  "em020803": {
+    "name": "Ifrit",
+    "uiId": 363
+  },
+  "em020804": {
+    "name": "Ifrit",
+    "uiId": 363
+  },
+  "em015712": {
+    "name": "Infected Behemoth",
+    "uiId": 254
+  },
+  "em010209": {
+    "name": "Infected Direwolf",
+    "uiId": 185
+  },
+  "em015012": {
+    "name": "Infected Gorecyclops",
+    "uiId": 240
+  },
+  "em015306": {
+    "name": "Infected Griffin",
+    "uiId": 246
+  },
+  "em010160": {
+    "name": "Infected Hobgoblin",
+    "uiId": 182
+  },
+  "em010161": {
+    "name": "Infected Hobgoblin Fighter",
+    "uiId": 278
+  },
+  "em015814": {
+    "name": "Infected Orc Aimer",
+    "uiId": 284
+  },
+  "em015815": {
+    "name": "Infected Orc Banger",
+    "uiId": 285
+  },
+  "em015813": {
+    "name": "Infected Orc Soldier",
+    "uiId": 257
+  },
+  "em010162": {
+    "name": "Infected Sling Hobgoblin",
+    "uiId": 279
+  },
+  "em010612": {
+    "name": "Infected Snow Harpy",
+    "uiId": 215
+  },
+  "em011040": {
+    "name": "Iris",
+    "uiId": 117
+  },
+  "em011200": {
+    "name": "Killer Bee",
+    "uiId": 159
+  },
+  "em015412": {
+    "name": "Lapis Eye",
+    "uiId": 92
+  },
+  "em010461": {
+    "name": "Large Newt",
+    "uiId": 200
+  },
+  "em010810": {
+    "name": "Leech",
+    "uiId": 68
+  },
+  "em015835": {
+    "name": "Legion",
+    "uiId": 398
+  },
+  "em015837": {
+    "name": "Legion",
+    "uiId": 398
+  },
+  "em015836": {
+    "name": "Legion",
+    "uiId": 398
+  },
+  "em015838": {
+    "name": "Legion Leader",
+    "uiId": 399
+  },
+  "em011042": {
+    "name": "Leo",
+    "uiId": 118
+  },
+  "em015707": {
+    "name": "Lindwurm",
+    "uiId": 25
+  },
+  "em070940": {
+    "name": "Lindwurm",
+    "uiId": 25
+  },
+  "em015509": {
+    "name": "Little Crag",
+    "uiId": 345
+  },
+  "em015507": {
+    "name": "Little Spine",
+    "uiId": 309
+  },
+  "em010306": {
+    "name": "Living Armor",
+    "uiId": 154
+  },
+  "em015718": {
+    "name": "Lotus Fin",
+    "uiId": 349
+  },
+  "em010515": {
+    "name": "Lux Corpse Punisher",
+    "uiId": 205
+  },
+  "em010519": {
+    "name": "Lux Corpse Torturer",
+    "uiId": 209
+  },
+  "em010317": {
+    "name": "Lux Skeleton",
+    "uiId": 193
+  },
+  "em010323": {
+    "name": "Lux Skeleton Brute",
+    "uiId": 198
+  },
+  "em011300": {
+    "name": "Mandragora",
+    "uiId": 237
+  },
+  "em011301": {
+    "name": "Mandragora",
+    "uiId": 237
+  },
+  "em011400": {
+    "name": "Maneater",
+    "uiId": 249
+  },
+  "em011401": {
+    "name": "Maneater",
+    "uiId": 249
+  },
+  "em015210": {
+    "name": "Manticore",
+    "uiId": 242
+  },
+  "em070830": {
+    "name": "Manticore",
+    "uiId": 242
+  },
+  "em015610": {
+    "name": "Medusa",
+    "uiId": 251
+  },
+  "em011080": {
+    "name": "Megado Guard",
+    "uiId": 386
+  },
+  "em011082": {
+    "name": "Megado Guard",
+    "uiId": 386
+  },
+  "em011081": {
+    "name": "Megado Guard",
+    "uiId": 386
+  },
+  "em011083": {
+    "name": "Megado Guard",
+    "uiId": 386
+  },
+  "em011024": {
+    "name": "Mergan Defender",
+    "uiId": 150
+  },
+  "em011027": {
+    "name": "Mergan Element Archer",
+    "uiId": 153
+  },
+  "em011020": {
+    "name": "Mergan Fighter",
+    "uiId": 175
+  },
+  "em011023": {
+    "name": "Mergan Healer",
+    "uiId": 149
+  },
+  "em011022": {
+    "name": "Mergan Hunter",
+    "uiId": 148
+  },
+  "em011025": {
+    "name": "Mergan Mage",
+    "uiId": 151
+  },
+  "em011021": {
+    "name": "Mergan Seeker",
+    "uiId": 65
+  },
+  "em011026": {
+    "name": "Mergan Warrior",
+    "uiId": 152
+  },
+  "em010480": {
+    "name": "Merman",
+    "uiId": 401
+  },
+  "em015621": {
+    "name": "Misery Ghost",
+    "uiId": 347
+  },
+  "em015710": {
+    "name": "Mist Drake",
+    "uiId": 22
+  },
+  "em011030": {
+    "name": "Mist Fighter",
+    "uiId": 64
+  },
+  "em011031": {
+    "name": "Mist Hunter",
+    "uiId": 63
+  },
+  "em011032": {
+    "name": "Mist Priest",
+    "uiId": 62
+  },
+  "em011033": {
+    "name": "Mist Sorcerer",
+    "uiId": 61
+  },
+  "em011034": {
+    "name": "Mist Warrior",
+    "uiId": 60
+  },
+  "em015711": {
+    "name": "Mist Wyrm",
+    "uiId": 21
+  },
+  "em015840": {
+    "name": "Mogok",
+    "uiId": 11
+  },
+  "em015041": {
+    "name": "Mole Troll",
+    "uiId": 71
+  },
+  "em070410": {
+    "name": "Mole Troll",
+    "uiId": 71
+  },
+  "em011210": {
+    "name": "Moth",
+    "uiId": 235
+  },
+  "em011211": {
+    "name": "Moth",
+    "uiId": 235
+  },
+  "em010509": {
+    "name": "Mudman",
+    "uiId": 50
+  },
+  "em015862": {
+    "name": "Necro Master",
+    "uiId": 358
+  },
+  "em015305": {
+    "name": "Nightmare",
+    "uiId": 86
+  },
+  "em030106": {
+    "name": "Invisibleaggroenemy",
+    "uiId": 390
+  },
+  "em030108": {
+    "name": "Invisibleaggroenemy",
+    "uiId": 390
+  },
+  "em030111": {
+    "name": "Invisibleaggroenemy",
+    "uiId": 390
+  },
+  "em015500": {
+    "name": "Ogre",
+    "uiId": 98
+  },
+  "em010920": {
+    "name": "Oil Jelly",
+    "uiId": 300
+  },
+  "em010902": {
+    "name": "Ooze",
+    "uiId": 20
+  },
+  "em015801": {
+    "name": "Orc Aimer",
+    "uiId": 155
+  },
+  "em015802": {
+    "name": "Orc Banger",
+    "uiId": 156
+  },
+  "em015810": {
+    "name": "Orc Battler",
+    "uiId": 14
+  },
+  "em015811": {
+    "name": "Orc Bringer",
+    "uiId": 157
+  },
+  "em085009": {
+    "name": "Goblin Orc",
+    "uiId": 298
+  },
+  "em015800": {
+    "name": "Orc Soldier",
+    "uiId": 15
+  },
+  "em085000": {
+    "name": "Orc Soldier",
+    "uiId": 15
+  },
+  "em085001": {
+    "name": "Orc Soldier",
+    "uiId": 15
+  },
+  "em085002": {
+    "name": "Orc Soldier",
+    "uiId": 15
+  },
+  "em085003": {
+    "name": "Orc Soldier",
+    "uiId": 15
+  },
+  "em015812": {
+    "name": "Orc Trooper",
+    "uiId": 158
+  },
+  "em018300": {
+    "name": "Ox",
+    "uiId": 111
+  },
+  "em011054": {
+    "name": "Pawn Defender",
+    "uiId": 123
+  },
+  "em011057": {
+    "name": "Pawn Element Archer",
+    "uiId": 126
+  },
+  "em011050": {
+    "name": "Pawn Fighter",
+    "uiId": 119
+  },
+  "em011053": {
+    "name": "Pawn Healer",
+    "uiId": 122
+  },
+  "em011052": {
+    "name": "Pawn Hunter",
+    "uiId": 121
+  },
+  "em011055": {
+    "name": "Pawn Mage",
+    "uiId": 124
+  },
+  "em011051": {
+    "name": "Pawn Seeker",
+    "uiId": 120
+  },
+  "em011056": {
+    "name": "Pawn Warrior",
+    "uiId": 125
+  },
+  "em011064": {
+    "name": "Phindymian Defender",
+    "uiId": 229
+  },
+  "em011067": {
+    "name": "Phindymian Element Archer",
+    "uiId": 232
+  },
+  "em015032": {
+    "name": "Phindymian Ent",
+    "uiId": 280
+  },
+  "em070520": {
+    "name": "Phindymian Ent",
+    "uiId": 280
+  },
+  "em011060": {
+    "name": "Phindymian Fighter",
+    "uiId": 225
+  },
+  "em011062": {
+    "name": "Phindymian Hunter",
+    "uiId": 227
+  },
+  "em011063": {
+    "name": "Phindymian Priest",
+    "uiId": 228
+  },
+  "em011061": {
+    "name": "Phindymian Seeker",
+    "uiId": 226
+  },
+  "em011065": {
+    "name": "Phindymian Sorcerer",
+    "uiId": 231
+  },
+  "em011066": {
+    "name": "Phindymian Warrior",
+    "uiId": 230
+  },
+  "em010908": {
+    "name": "Photon Slime",
+    "uiId": 223
+  },
+  "em018601": {
+    "name": "Pig",
+    "uiId": 108
+  },
+  "em018603": {
+    "name": "Pig",
+    "uiId": 108
+  },
+  "em018602": {
+    "name": "Piglet",
+    "uiId": 172
+  },
+  "em018604": {
+    "name": "Piglet",
+    "uiId": 172
+  },
+  "em010150": {
+    "name": "Pixie",
+    "uiId": 292
+  },
+  "em010151": {
+    "name": "Pixie Biff",
+    "uiId": 288
+  },
+  "em010152": {
+    "name": "Pixie Din",
+    "uiId": 289
+  },
+  "em010155": {
+    "name": "Pixie Jabber",
+    "uiId": 181
+  },
+  "em010195": {
+    "name": "Pixie King",
+    "uiId": 297
+  },
+  "em010153": {
+    "name": "Pixie Pow",
+    "uiId": 290
+  },
+  "em010482": {
+    "name": "Poison Merman",
+    "uiId": 402
+  },
+  "em010440": {
+    "name": "Pyre Saurian",
+    "uiId": 371
+  },
+  "em010905": {
+    "name": "Pyro Slime",
+    "uiId": 220
+  },
+  "em018000": {
+    "name": "Rabbit",
+    "uiId": 114
+  },
+  "em015623": {
+    "name": "Rage Ghost",
+    "uiId": 413
+  },
+  "em015824": {
+    "name": "Ranged Soldier Dwarf Orc",
+    "uiId": 368
+  },
+  "em020404": {
+    "name": "Red Zuhl",
+    "uiId": 373
+  },
+  "em011110": {
+    "name": "Redcap",
+    "uiId": 131
+  },
+  "em011111": {
+    "name": "Redcap Fighter",
+    "uiId": 132
+  },
+  "em010450": {
+    "name": "Rock Saurian",
+    "uiId": 42
+  },
+  "em010451": {
+    "name": "Rock Saurian Spinel",
+    "uiId": 171
+  },
+  "em030109": {
+    "name": "Rock The Evil Dragon Wm",
+    "uiId": 0
+  },
+  "em011004": {
+    "name": "Rogue Defender",
+    "uiId": 139
+  },
+  "em011000": {
+    "name": "Rogue Fighter",
+    "uiId": 67
+  },
+  "em011003": {
+    "name": "Rogue Healer",
+    "uiId": 138
+  },
+  "em011002": {
+    "name": "Rogue Hunter",
+    "uiId": 137
+  },
+  "em011005": {
+    "name": "Rogue Mage",
+    "uiId": 140
+  },
+  "em011001": {
+    "name": "Rogue Seeker",
+    "uiId": 136
+  },
+  "em011006": {
+    "name": "Rogue Warrior",
+    "uiId": 141
+  },
+  "em015411": {
+    "name": "Ruby Eye",
+    "uiId": 93
+  },
+  "em015921": {
+    "name": "Samyaza",
+    "uiId": 421
+  },
+  "em010400": {
+    "name": "Saurian",
+    "uiId": 46
+  },
+  "em010430": {
+    "name": "Saurian Sage",
+    "uiId": 277
+  },
+  "em011074": {
+    "name": "Scarlet Defender",
+    "uiId": 305
+  },
+  "em011070": {
+    "name": "Scarlet Fighter",
+    "uiId": 301
+  },
+  "em011073": {
+    "name": "Scarlet Healer",
+    "uiId": 304
+  },
+  "em011072": {
+    "name": "Scarlet Hunter",
+    "uiId": 303
+  },
+  "em011075": {
+    "name": "Scarlet Mage",
+    "uiId": 306
+  },
+  "em011071": {
+    "name": "Scarlet Seeker",
+    "uiId": 302
+  },
+  "em011076": {
+    "name": "Scarlet Warrior",
+    "uiId": 307
+  },
+  "em020601": {
+    "name": "Scourge",
+    "uiId": 272
+  },
+  "em071310": {
+    "name": "Scourge",
+    "uiId": 272
+  },
+  "em015717": {
+    "name": "Severely Infected Behemoth",
+    "uiId": 255
+  },
+  "em015910": {
+    "name": "Severely Infected Demon",
+    "uiId": 261
+  },
+  "em015017": {
+    "name": "Severely Infected Gorecyclops",
+    "uiId": 241
+  },
+  "em015310": {
+    "name": "Severely Infected Griffin",
+    "uiId": 245
+  },
+  "em010170": {
+    "name": "Severely Infected Pixie",
+    "uiId": 291
+  },
+  "em010171": {
+    "name": "Severely Infected Pixie",
+    "uiId": 291
+  },
+  "em010172": {
+    "name": "Severely Infected Pixie",
+    "uiId": 291
+  },
+  "em020606": {
+    "name": "Severely Infected Scourge",
+    "uiId": 372
+  },
+  "em010614": {
+    "name": "Severely Infected Stymphalídes",
+    "uiId": 216
+  },
+  "em010220": {
+    "name": "Severely Infected Warg",
+    "uiId": 188
+  },
+  "em015203": {
+    "name": "Shadow Chimera",
+    "uiId": 77
+  },
+  "em011130": {
+    "name": "Shadow Goblin",
+    "uiId": 165
+  },
+  "em011131": {
+    "name": "Shadow Goblin Fighter",
+    "uiId": 164
+  },
+  "em011160": {
+    "name": "Shadow Goblin Leader",
+    "uiId": 160
+  },
+  "em015932": {
+    "name": "Shadow Grigori",
+    "uiId": 400
+  },
+  "em010607": {
+    "name": "Shadow Harpy",
+    "uiId": 55
+  },
+  "em071250": {
+    "name": "Shadow Master",
+    "uiId": 359
+  },
+  "em015863": {
+    "name": "Shadow Master",
+    "uiId": 359
+  },
+  "em011132": {
+    "name": "Shadow Sling Goblin",
+    "uiId": 163
+  },
+  "em010206": {
+    "name": "Shadow Wolf",
+    "uiId": 29
+  },
+  "em010102": {
+    "name": "Shield Goblin",
+    "uiId": 3
+  },
+  "em015505": {
+    "name": "Silver Roar",
+    "uiId": 170
+  },
+  "em010605": {
+    "name": "Siren",
+    "uiId": 212
+  },
+  "em010300": {
+    "name": "Skeleton",
+    "uiId": 40
+  },
+  "em010307": {
+    "name": "Skeleton Brute",
+    "uiId": 189
+  },
+  "em015050": {
+    "name": "Skeleton Cyclops",
+    "uiId": 337
+  },
+  "em015051": {
+    "name": "Skeleton Cyclops",
+    "uiId": 337
+  },
+  "em010301": {
+    "name": "Skeleton Knight",
+    "uiId": 39
+  },
+  "em010303": {
+    "name": "Skeleton Lord Abyss",
+    "uiId": 324
+  },
+  "em010308": {
+    "name": "Skeleton Mage",
+    "uiId": 37
+  },
+  "em075120": {
+    "name": "Skeleton Mage",
+    "uiId": 37
+  },
+  "em075121": {
+    "name": "Skeleton Mage",
+    "uiId": 37
+  },
+  "em010309": {
+    "name": "Skeleton Sorcerer",
+    "uiId": 36
+  },
+  "em075130": {
+    "name": "Skeleton Sorcerer",
+    "uiId": 36
+  },
+  "em075131": {
+    "name": "Skeleton Sorcerer",
+    "uiId": 36
+  },
+  "em075300": {
+    "name": "Skeleton Sorcerer",
+    "uiId": 36
+  },
+  "em010221": {
+    "name": "Skeleton Warg",
+    "uiId": 322
+  },
+  "em010302": {
+    "name": "Skeleton Warrior",
+    "uiId": 38
+  },
+  "em010313": {
+    "name": "Skull Lord",
+    "uiId": 115
+  },
+  "em010900": {
+    "name": "Slime",
+    "uiId": 16
+  },
+  "em011102": {
+    "name": "Sling Forest Goblin",
+    "uiId": 130
+  },
+  "em010103": {
+    "name": "Sling Goblin",
+    "uiId": 4
+  },
+  "em010105": {
+    "name": "Sling Goblin",
+    "uiId": 4
+  },
+  "em010123": {
+    "name": "Sling Grim Goblin",
+    "uiId": 316
+  },
+  "em010112": {
+    "name": "Sling Hobgoblin",
+    "uiId": 8
+  },
+  "em010114": {
+    "name": "Sling Hobgoblin",
+    "uiId": 8
+  },
+  "em011112": {
+    "name": "Sling Redcap",
+    "uiId": 133
+  },
+  "em010510": {
+    "name": "Sludgeman",
+    "uiId": 49
+  },
+  "em018700": {
+    "name": "Snake",
+    "uiId": 0
+  },
+  "em010601": {
+    "name": "Snow Harpy",
+    "uiId": 57
+  },
+  "em015302": {
+    "name": "Sphinx",
+    "uiId": 89
+  },
+  "em070700": {
+    "name": "Sphinx",
+    "uiId": 89
+  },
+  "em018800": {
+    "name": "Spider",
+    "uiId": 107
+  },
+  "em015506": {
+    "name": "Spineback",
+    "uiId": 250
+  },
+  "em070210": {
+    "name": "Spineback",
+    "uiId": 250
+  },
+  "em070211": {
+    "name": "Spineback",
+    "uiId": 250
+  },
+  "em022000": {
+    "name": "Spirit Dragon Willmia",
+    "uiId": 276
+  },
+  "em080400": {
+    "name": "Spirit Dragon Willmia",
+    "uiId": 276
+  },
+  "em100106": {
+    "name": "Spirit Dragon Willmia",
+    "uiId": 276
+  },
+  "em022001": {
+    "name": "Spirit Dragon Willmia",
+    "uiId": 276
+  },
+  "em100105": {
+    "name": "Spirit Dragon Willmia",
+    "uiId": 276
+  },
+  "em015826": {
+    "name": "Squad Leader Dwarf Orc",
+    "uiId": 353
+  },
+  "em010915": {
+    "name": "Stone Blob",
+    "uiId": 331
+  },
+  "em010502": {
+    "name": "Stout Undead",
+    "uiId": 53
+  },
+  "em010610": {
+    "name": "Strix",
+    "uiId": 214
+  },
+  "em010611": {
+    "name": "Stymphalídes",
+    "uiId": 213
+  },
+  "em010410": {
+    "name": "Sulfur Saurian",
+    "uiId": 44
+  },
+  "em015821": {
+    "name": "Sword Soldier Dwarf Orc",
+    "uiId": 352
+  },
+  "em010503": {
+    "name": "Sword Undead",
+    "uiId": 52
+  },
+  "em015720": {
+    "name": "Tarasque",
+    "uiId": 258
+  },
+  "em070950": {
+    "name": "Tarasque",
+    "uiId": 258
+  },
+  "em011410": {
+    "name": "Tentacle",
+    "uiId": 283
+  },
+  "em011411": {
+    "name": "Tentacle",
+    "uiId": 283
+  },
+  "em011412": {
+    "name": "Tentacle",
+    "uiId": 283
+  },
+  "em011413": {
+    "name": "Tentacle",
+    "uiId": 283
+  },
+  "em023000": {
+    "name": "The Evil Dragon",
+    "uiId": 365
+  },
+  "em075401": {
+    "name": "The Evil Dragon",
+    "uiId": 393
+  },
+  "em075400": {
+    "name": "The Evil Dragon",
+    "uiId": 393
+  },
+  "em030110": {
+    "name": "Grudge",
+    "uiId": 385
+  },
+  "em015040": {
+    "name": "Troll",
+    "uiId": 72
+  },
+  "em010621": {
+    "name": "Ukobach",
+    "uiId": 405
+  },
+  "em010501": {
+    "name": "Undead",
+    "uiId": 54
+  },
+  "em010500": {
+    "name": "Undead",
+    "uiId": 54
+  },
+  "em030100": {
+    "name": "Unspeakable Meat",
+    "uiId": 174
+  },
+  "em021004": {
+    "name": "Ushumgal",
+    "uiId": 364
+  },
+  "em010240": {
+    "name": "Valefar",
+    "uiId": 409
+  },
+  "em015401": {
+    "name": "Vile Eye",
+    "uiId": 247
+  },
+  "em015406": {
+    "name": "Volt Eye",
+    "uiId": 381
+  },
+  "em015860": {
+    "name": "War Master",
+    "uiId": 356
+  },
+  "em071251": {
+    "name": "War Master",
+    "uiId": 356
+  },
+  "em010471": {
+    "name": "War Ready Giant Saurian",
+    "uiId": 328
+  },
+  "em015060": {
+    "name": "War Ready Gorecyclops",
+    "uiId": 338
+  },
+  "em015061": {
+    "name": "War Ready Gorecyclops",
+    "uiId": 338
+  },
+  "em015220": {
+    "name": "War Ready Goremanticore",
+    "uiId": 341
+  },
+  "em010230": {
+    "name": "War Ready Grimwarg",
+    "uiId": 323
+  },
+  "em015330": {
+    "name": "War Ready Nightmare",
+    "uiId": 342
+  },
+  "em015510": {
+    "name": "War Ready Ogre",
+    "uiId": 346
+  },
+  "em010470": {
+    "name": "War Ready Saurian",
+    "uiId": 327
+  },
+  "em010203": {
+    "name": "Warg",
+    "uiId": 184
+  },
+  "em010504": {
+    "name": "Warrior Undead",
+    "uiId": 51
+  },
+  "em015202": {
+    "name": "White Chimera",
+    "uiId": 78
+  },
+  "em070810": {
+    "name": "White Chimera",
+    "uiId": 78
+  },
+  "em021003": {
+    "name": "Phantasmic Great Dragon",
+    "uiId": 275
+  },
+  "em021000": {
+    "name": "The White Dragon",
+    "uiId": 104
+  },
+  "em015320": {
+    "name": "White Griffin",
+    "uiId": 281
+  },
+  "em070620": {
+    "name": "White Griffin",
+    "uiId": 281
+  },
+  "em015723": {
+    "name": "White Tarasque",
+    "uiId": 350
+  },
+  "em015600": {
+    "name": "Wight",
+    "uiId": 101
+  },
+  "em075700": {
+    "name": "Wight",
+    "uiId": 101
+  },
+  "em019300": {
+    "name": "Wild Boar",
+    "uiId": 269
+  },
+  "em019301": {
+    "name": "Wild Boar",
+    "uiId": 269
+  },
+  "em015721": {
+    "name": "Wisened Tarasque",
+    "uiId": 286
+  },
+  "em080600": {
+    "name": "Wisened Tarasque",
+    "uiId": 286
+  },
+  "em015604": {
+    "name": "Witch",
+    "uiId": 100
+  },
+  "em010200": {
+    "name": "Wolf",
+    "uiId": 32
+  },
+  "em010800": {
+    "name": "Worm",
+    "uiId": 69
+  },
+  "em015701": {
+    "name": "Wyrm",
+    "uiId": 26
+  },
+  "em070910": {
+    "name": "Wyrm",
+    "uiId": 26
+  },
+  "em020402": {
+    "name": "Zuhl",
+    "uiId": 106
+  },
+  "em071300": {
+    "name": "Zuhl",
+    "uiId": 106
+  },
+  "em080300": {
+    "name": "Zuhl",
+    "uiId": 106
+  },
+  "em100101": {
+    "name": "Zuhl Passive",
+    "uiId": 0
+  }
+}

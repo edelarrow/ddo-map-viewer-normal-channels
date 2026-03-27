@@ -1,0 +1,569 @@
+[
+  {
+    "name": "Season3Warp",
+    "className": "TheWhiteDragonTemple0",
+    "description": "Enables the warp crystal in the shopping district to warp to Hidden Village Piremoth and Mergoda Golden Palace",
+    "flagNo": 3239,
+    "questNo": 70030001,
+    "season": "S3.0",
+    "stageNo": 200
+  },
+  {
+    "name": "BitterblackMazeEntrance",
+    "className": "CaveHarbor",
+    "description": "Controls if the portal to Bitterblack Maze is usable or not.",
+    "flagNo": 4978,
+    "questNo": 70032001,
+    "season": "S3.2",
+    "stageNo": 203
+  },
+  {
+    "name": "BloodbaneIslePrecipice",
+    "className": "CaveHarbor",
+    "description": "Controls if the portal in cave harbor can warp to Bloodbane Isle Precipice or not.",
+    "flagNo": 1433,
+    "questNo": 70021001,
+    "season": "S2.1",
+    "stageNo": 203
+  },
+  {
+    "name": "GardnoxFortress",
+    "className": "Lestania",
+    "description": "Allows the player to enter Gardnox Fortress when set",
+    "flagNo": 925,
+    "questNo": 70002001,
+    "season": "S1.2",
+    "stageNo": 100
+  },
+  {
+    "name": "DreedCastle",
+    "className": "Lestania",
+    "description": "Allows the player to enter Dreed Castle when set",
+    "flagNo": 5186,
+    "questNo": 70034001,
+    "season": "S3.4",
+    "stageNo": 100
+  },
+  {
+    "name": "MergodaSecurityDistrict",
+    "className": "Lestania",
+    "description": "Allows the player to enter Mergoda Security District when set",
+    "flagNo": 5187,
+    "questNo": 70034001,
+    "season": "S3.4",
+    "stageNo": 100
+  },
+  {
+    "name": "KnightsDepotRuins",
+    "className": "Lestania",
+    "description": "Allows the player to enter the Knights' Depot Ruins when set",
+    "flagNo": 1545,
+    "questNo": 70021001,
+    "season": "S2.1",
+    "stageNo": 100
+  },
+  {
+    "name": "TempleOfPurificationSouthChamber",
+    "className": "Lestania",
+    "description": "Allows the player to enter \"Temple of Purification: South Chamber\" when set",
+    "flagNo": 926,
+    "questNo": 70000001,
+    "season": "S1.0",
+    "stageNo": 100
+  },
+  {
+    "name": "BloodbaneIsleSummit",
+    "className": "ExpeditionGarrison",
+    "description": "Unlocks the door to Bloodbane Isle Summit and opens the gate at (51,-28)",
+    "flagNo": 1489,
+    "questNo": 70021001,
+    "season": "S2.1",
+    "stageNo": 801
+  },
+  {
+    "name": "PathToMorrow",
+    "className": "ElanWaterGrove",
+    "description": "Unlocks the Path to Morrow when set.",
+    "flagNo": 1699,
+    "questNo": 70022001,
+    "season": "S2.2",
+    "stageNo": 121
+  },
+  {
+    "name": "DanaGate",
+    "className": "FaranaPlains",
+    "description": "Opens the gates around Dana when set.",
+    "flagNo": 1698,
+    "questNo": 70022001,
+    "season": "S2.2",
+    "stageNo": 120
+  },
+  {
+    "name": "KingalCanyonBorderCheckpoint",
+    "className": "FaranaPlains",
+    "description": "Unlocks the \"Kingal Canyon Border Checkpoint\" when set (from Dana to Glyndwr)",
+    "flagNo": 1703,
+    "questNo": 70022001,
+    "season": "S2.2",
+    "stageNo": 120
+  },
+  {
+    "name": "VegasaCorridorSouth",
+    "className": "FaranaPlains",
+    "description": "Unlocks the southern \"Vegasa Corridor\" entrance when set",
+    "flagNo": 1997,
+    "questNo": 70023001,
+    "season": "S2.3",
+    "stageNo": 120
+  },
+  {
+    "name": "MorfaulWestGate",
+    "className": "MorrowForest",
+    "description": "Opens the Western Gate in Morfaul when set",
+    "flagNo": 1999,
+    "questNo": 70022001,
+    "season": "S2.2",
+    "stageNo": 123
+  },
+  {
+    "name": "VegasaCorridorWest",
+    "className": "MorrowForest",
+    "description": "Unlocks the western \"Vegasa Corridor\" entrance when set Morrow Forest",
+    "flagNo": 2402,
+    "questNo": 70023001,
+    "season": "S2.3",
+    "stageNo": 123
+  },
+  {
+    "name": "GlyndwrGates",
+    "className": "KingalCanyon",
+    "description": "Opens the gates around Glyndwr when set",
+    "flagNo": 1998,
+    "questNo": 70022001,
+    "season": "S2.2",
+    "stageNo": 122
+  },
+  {
+    "name": "ShadoleanGreatTemple",
+    "className": "KingalCanyon",
+    "description": "Unlocks \"Shadolean Great Temple\" when set (st0439).",
+    "flagNo": 5184,
+    "questNo": 70034001,
+    "season": "S3.4",
+    "stageNo": 122
+  },
+  {
+    "name": "VegasaCorridorEast",
+    "className": "KingalCanyon",
+    "description": "Unlocks the eastern \"Vegasa Corridor\" entrance when set Kingal Canyon",
+    "flagNo": 2400,
+    "questNo": 70023001,
+    "season": "S2.3",
+    "stageNo": 122
+  },
+  {
+    "name": "QuestBoard",
+    "className": "ManunVillage",
+    "description": "Unlocks the quest board in Manun Village when set.",
+    "flagNo": 2245,
+    "questNo": 70023001,
+    "season": "S2.3",
+    "stageNo": 810
+  },
+  {
+    "name": "QuestBoard",
+    "className": "TowerOfIvanos",
+    "description": "Unlocks the quest board in the Tower of Ivanos when set.",
+    "flagNo": 2246,
+    "questNo": 70023001,
+    "season": "S2.3",
+    "stageNo": 905
+  },
+  {
+    "name": "HollowOfBeginningsGatheringArea",
+    "className": "HollowOfBeginnings",
+    "description": "Unlocks \"Hollow Of Beginnings GatheringArea\" in Stage.HollowofBeginnings0 when set.",
+    "flagNo": 2182,
+    "questNo": 70023001,
+    "season": "S2.3",
+    "stageNo": null
+  },
+  {
+    "name": "ValtableHall",
+    "className": "HollowOfBeginnings",
+    "description": "Unlocks \"Valtable Hall\" in Stage.HollowofBeginnings0 when set",
+    "flagNo": 2183,
+    "questNo": 70023001,
+    "season": "S2.3",
+    "stageNo": null
+  },
+  {
+    "name": "ValtableHallUpperArea",
+    "className": "ValtableHall",
+    "description": "Unlocks \"Valtable Hall Upper Area\" when set.",
+    "flagNo": 2184,
+    "questNo": 70023001,
+    "season": "S2.3",
+    "stageNo": null
+  },
+  {
+    "name": "OrcEncampmentInnerGate",
+    "className": "RathniteFoothills",
+    "description": "Opens the gate in the back of the fortress used in the 2nd MSW in 3.0",
+    "flagNo": 3483,
+    "questNo": 70030001,
+    "season": "S3.0",
+    "stageNo": 130
+  },
+  {
+    "name": "OrcEncampmentGate",
+    "className": "RathniteFoothills",
+    "description": "Toggles the gate for Orc Encampment after being populated with shops.",
+    "flagNo": 2914,
+    "questNo": 70030001,
+    "season": "S3.0",
+    "stageNo": 130
+  },
+  {
+    "name": "FortThinesGate",
+    "className": "RathniteFoothills",
+    "description": "Opens the gate in fortress in front of Fort Thines.",
+    "flagNo": 2915,
+    "questNo": 70030001,
+    "season": "S3.0",
+    "stageNo": 130
+  },
+  {
+    "name": "CaveOfHellsDescent",
+    "className": "RathniteFoothills",
+    "description": "Opens the entrance to the cave of hells descent.",
+    "flagNo": 3414,
+    "questNo": 70030001,
+    "season": "S3.0",
+    "stageNo": 130
+  },
+  {
+    "name": "EpitaphRoadRathniteFoothills",
+    "className": "FortThines",
+    "description": "Opens the door to Epitaph Road: Rathnite Foothills",
+    "flagNo": 3518,
+    "questNo": 70030001,
+    "season": "S3.0",
+    "stageNo": 443
+  },
+  {
+    "name": "RothgillFrontGate",
+    "className": "RathniteFoothillsLakeside",
+    "description": "Opens the front gate to Rothgill.",
+    "flagNo": 2816,
+    "questNo": 70030001,
+    "season": "S3.0",
+    "stageNo": 131
+  },
+  {
+    "name": "GateToBandGroupHide",
+    "className": "LakesideGrotto",
+    "description": "Opens the front gate to Bertha's Bandit Group Hideout",
+    "flagNo": 2814,
+    "questNo": 70030001,
+    "season": "S3.0",
+    "stageNo": 1000
+  },
+  {
+    "name": "DarkPathToTheSecretSpring",
+    "className": "FeryanaWilderness",
+    "description": "Opens the door to \"Dark Path to the Secret Spring\" dungeon",
+    "flagNo": 3111,
+    "questNo": 70031001,
+    "season": "S3.1",
+    "stageNo": 132
+  },
+  {
+    "name": "WestFeryanaGate",
+    "className": "FeryanaWilderness",
+    "description": "Opens gate next to \"West Feryana Wilderness\" warp point",
+    "flagNo": 2930,
+    "questNo": 70030001,
+    "season": "S3.0",
+    "stageNo": 132
+  },
+  {
+    "name": "ActivateLookoutCastleWarp",
+    "className": "RoyalFamilysSecretPath",
+    "description": "Activates the door to Lookout castle",
+    "flagNo": 2956,
+    "questNo": 70031001,
+    "season": "S3.1",
+    "stageNo": 1091
+  },
+  {
+    "name": "EpitaphRoadFeryanaWilderness",
+    "className": "LookoutCastle",
+    "description": "Opens the gate to Epitaph Road: Feryana Wilderness",
+    "flagNo": 3520,
+    "questNo": 70031001,
+    "season": "S3.1",
+    "stageNo": 451
+  },
+  {
+    "name": "GrandMission",
+    "className": "NpcFunctions",
+    "description": "Adds \"Grand Mission\" title and functionality to Travers, Logan, Hancock and Cornelia. Found in npc.nll.json",
+    "flagNo": 657,
+    "questNo": 70000001,
+    "season": "S1.0",
+    "stageNo": null
+  },
+  {
+    "name": "DragonForceAugmentation",
+    "className": "NpcFunctions",
+    "description": "Adds \"Dragon Force Augmentation\" functionality to The White Dragon. Found in npc.nll.json",
+    "flagNo": 658,
+    "questNo": 70000001,
+    "season": "S1.0",
+    "stageNo": null
+  },
+  {
+    "name": "SpecialSkillAugmentation",
+    "className": "NpcFunctions",
+    "description": "Opens up the menu to start the S3 BO/HO tree at the White Dragon.",
+    "flagNo": 3301,
+    "questNo": 70030001,
+    "season": "S3.0",
+    "stageNo": null
+  },
+  {
+    "name": "PartyCreation",
+    "className": "NpcFunctions",
+    "description": "Adds \"Party Creation\" to various NCPCs.",
+    "flagNo": 659,
+    "questNo": 70000001,
+    "season": "S1.0",
+    "stageNo": null
+  },
+  {
+    "name": "AreaInformation",
+    "className": "NpcFunctions",
+    "description": "Adds \"Area Information\" to various NPCs. Found in npc.nll.json",
+    "flagNo": 660,
+    "questNo": 70000001,
+    "season": "S1.0",
+    "stageNo": null
+  },
+  {
+    "name": "ClanManagement",
+    "className": "NpcFunctions",
+    "description": "Adds \"Clan Management\" to Kibiza. Found in npc.nll.json",
+    "flagNo": 661,
+    "questNo": 70000001,
+    "season": "S1.0",
+    "stageNo": null
+  },
+  {
+    "name": "CraftOfficer",
+    "className": "NpcFunctions",
+    "description": "Adds Crafting options to Sonia. Found in npc.nll.json",
+    "flagNo": 662,
+    "questNo": 70000001,
+    "season": "S1.0",
+    "stageNo": null
+  },
+  {
+    "name": "VocationArts",
+    "className": "NpcFunctions",
+    "description": "Adds \"Vocation/Arts support\" options to Archibald. Found in npc.nll.json",
+    "flagNo": 663,
+    "questNo": 70000001,
+    "season": "S1.0",
+    "stageNo": null
+  },
+  {
+    "name": "PawnContracts",
+    "className": "NpcFunctions",
+    "description": "Adds \"Pawn Contract\" options to the \"Second Pawn\". Found in npc.nll.json",
+    "flagNo": 765,
+    "questNo": 70000001,
+    "season": "S1.0",
+    "stageNo": null
+  },
+  {
+    "name": "LestaniaNews",
+    "className": "NpcFunctions",
+    "description": "Adds \"Lestania News\" functionality to Seneka. Found in npc.nll.json",
+    "flagNo": 772,
+    "questNo": 70000001,
+    "season": "S1.0",
+    "stageNo": null
+  },
+  {
+    "name": "MyrmidonsPledge",
+    "className": "NpcFunctions",
+    "description": "Adds \"Myrmidons Pledge\" to The White Dragon Found in npc.nll.json",
+    "flagNo": 787,
+    "questNo": 70000001,
+    "season": "S1.0",
+    "stageNo": null
+  },
+  {
+    "name": "VocationEmblem",
+    "className": "NpcFunctions",
+    "description": "Adds \"Vocation Emblem\" option to Renton.",
+    "flagNo": 2946,
+    "questNo": 70030001,
+    "season": "S3.0",
+    "stageNo": null
+  },
+  {
+    "name": "PlayPointShop",
+    "className": "NpcFunctions",
+    "description": "Adds \"Play Point Shop\" option to Renton.",
+    "flagNo": 2477,
+    "questNo": 70021001,
+    "season": "S2.1",
+    "stageNo": null
+  },
+  {
+    "name": "ArisensRoom",
+    "className": "NpcFunctions",
+    "description": "Unlocks the Arisen's Room.",
+    "flagNo": 1490,
+    "questNo": 70020001,
+    "season": "S2.0",
+    "stageNo": null
+  },
+  {
+    "name": "CustomMadeArmsAndEquipmentDissaembly",
+    "className": "NpcFunctions",
+    "description": "Unlocks the NPC options \"Custom Made Arms\" and \"Equipment Dissaembly\" at the NPC Craig.",
+    "flagNo": 3592,
+    "questNo": 70030001,
+    "season": "S3.0",
+    "stageNo": null
+  },
+  {
+    "name": "SynthesisOfDragonAbilities",
+    "className": "NpcFunctions",
+    "description": "Unlocks the NPC option \"Synthesis of Dragon Abilities\" at the NPC Craig.",
+    "flagNo": 5274,
+    "questNo": 70034001,
+    "season": "S3.4",
+    "stageNo": null
+  },
+  {
+    "name": "DragonArmorAppraisal",
+    "className": "NpcFunctions",
+    "description": "Unlocks the NPC option \"Dragon Armor Appraisal\" at the NPC Craig.",
+    "flagNo": 5380,
+    "questNo": 70034001,
+    "season": "S3.4",
+    "stageNo": null
+  },
+  {
+    "name": "BloodbaneAreaInfo",
+    "className": "NpcFunctions",
+    "description": "Unlocks the NPC option \"Area Information\" for the NPC Bertrand in BBI",
+    "flagNo": 1479,
+    "questNo": 70020001,
+    "season": "S2.0",
+    "stageNo": null
+  },
+  {
+    "name": "ElanWaterGroveAreaInfo",
+    "className": "NpcFunctions",
+    "description": "Unlocks the NPC option \"Area Information\" for the NPC Musel in Elan Water Grove (Protector's Retreat)",
+    "flagNo": 1709,
+    "questNo": 70022001,
+    "season": "S2.2",
+    "stageNo": null
+  },
+  {
+    "name": "MorrowForestAreaInfo",
+    "className": "NpcFunctions",
+    "description": "Unlocks the NPC option \"Area Information\" for the NPC Arthfael in Morrow Forest (Moarfaul Centrum)",
+    "flagNo": 1710,
+    "questNo": 70022001,
+    "season": "S2.2",
+    "stageNo": null
+  },
+  {
+    "name": "FaranaPlainsAreaInfo",
+    "className": "NpcFunctions",
+    "description": "Unlocks the NPC option \"Area Information\" for the NPC Razanailt in Farna Plains (Dana Centrum)",
+    "flagNo": 1711,
+    "questNo": 70022001,
+    "season": "S2.2",
+    "stageNo": null
+  },
+  {
+    "name": "KingalCanyonAreaInfo",
+    "className": "NpcFunctions",
+    "description": "Unlocks the NPC option \"Area Information\" for the NPC Ciaran in Kingal Canyon (Glyndwr Centrum)",
+    "flagNo": 1712,
+    "questNo": 70022001,
+    "season": "S2.2",
+    "stageNo": null
+  },
+  {
+    "name": "RathniteFoothillsAreaInfo",
+    "className": "NpcFunctions",
+    "description": "Unlocks the NPC option \"Area Information\" for the NPC Endale in Rathnite Foothills",
+    "flagNo": 3240,
+    "questNo": 70030001,
+    "season": "S3.0",
+    "stageNo": null
+  },
+  {
+    "name": "FeryanaWildernessAreaInfo",
+    "className": "NpcFunctions",
+    "description": "Unlocks the NPC option \"Area Information\" for the NPC Nayajiku in Feryana Wilderness",
+    "flagNo": 3241,
+    "questNo": 70030001,
+    "season": "S3.0",
+    "stageNo": null
+  },
+  {
+    "name": "SenekaExm",
+    "className": "NpcFunctions",
+    "description": "Adds the NPC option \"Extreme Mission\" for the NPC Seneka",
+    "flagNo": 761,
+    "questNo": 70004001,
+    "season": "S1.4",
+    "stageNo": null
+  },
+  {
+    "name": "IsaacExm",
+    "className": "NpcFunctions",
+    "description": "Adds the NPC option \"Extreme Mission\" for the NPC Issac",
+    "flagNo": 1524,
+    "questNo": 70020001,
+    "season": "S2.0",
+    "stageNo": null
+  },
+  {
+    "name": "DorisExm",
+    "className": "NpcFunctions",
+    "description": "Adds the NPC option \"Extreme Mission\" for the NPC Doris",
+    "flagNo": 4410,
+    "questNo": 70032001,
+    "season": "S3.2",
+    "stageNo": null
+  },
+  {
+    "name": "EndaleExm",
+    "className": "NpcFunctions",
+    "description": "Adds the NPC option \"Extreme Mission\" for the NPC Endale @warning the QuestId might be wrong, it is not in the packet capture",
+    "flagNo": 2922,
+    "questNo": 70031001,
+    "season": "S3.1",
+    "stageNo": null
+  },
+  {
+    "name": "NayajikuExm",
+    "className": "NpcFunctions",
+    "description": "Adds the NPC option \"Extreme Mission\" for the NPC Nayajiku",
+    "flagNo": 2923,
+    "questNo": 70031001,
+    "season": "S3.1",
+    "stageNo": null
+  }
+]

@@ -1,0 +1,3842 @@
+{
+  "field000_m00": [
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": -11316.654,
+      "z": -361660.22,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": -19389.172,
+      "z": -364082.34,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_WELL",
+      "id": 511010,
+      "x": -5485.7266,
+      "z": -345069.47,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -10147.885,
+      "z": -347812.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 9347.364,
+      "z": -357510.72,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -148633.0,
+      "z": -301204.66,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -140392.58,
+      "z": -285863.34,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_WATER_LINE",
+      "id": 511050,
+      "x": -156635.1,
+      "z": -292910.62,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -155599.39,
+      "z": -293361.6,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -89943.0,
+      "z": -304104.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -12605.623,
+      "z": -313465.53,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_WATER_LINE",
+      "id": 511050,
+      "x": -33289.66,
+      "z": -311327.03,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_SHRINE",
+      "id": 511040,
+      "x": -19019.777,
+      "z": -304273.75,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 511120,
+      "x": -43790.9,
+      "z": -291895.94,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_WELL",
+      "id": 511010,
+      "x": -35025.7,
+      "z": -316051.3,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_WELL",
+      "id": 511010,
+      "x": -44299.504,
+      "z": -293168.44,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_BASEMENT",
+      "id": 511090,
+      "x": -527.325,
+      "z": -311024.44,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -44709.906,
+      "z": -286178.53,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -45759.84,
+      "z": -313540.44,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -29035.0,
+      "z": -306762.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_WATER_LINE",
+      "id": 511050,
+      "x": 12744.913,
+      "z": -294988.44,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_WATER_LINE",
+      "id": 511051,
+      "x": 55715.83,
+      "z": -287087.34,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 41270.0,
+      "z": -294370.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 6300.0,
+      "z": -302000.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": -221011.84,
+      "z": -264396.78,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -221704.44,
+      "z": -257292.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -221714.0,
+      "z": -248769.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -174413.0,
+      "z": -242575.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_WATER_LINE",
+      "id": 511051,
+      "x": -120021.55,
+      "z": -243872.58,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_WATER_LINE",
+      "id": 511050,
+      "x": -165954.69,
+      "z": -240342.6,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_WELL",
+      "id": 511010,
+      "x": -162064.44,
+      "z": -255691.73,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -136228.0,
+      "z": -240169.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -31683.238,
+      "z": -235300.36,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -50920.0,
+      "z": -236646.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -44685.0,
+      "z": -281603.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 46373.664,
+      "z": -246768.08,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": 31052.242,
+      "z": -243545.52,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 53439.0,
+      "z": -264305.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 511090,
+      "x": 113608.92,
+      "z": -255100.02,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": 58420.395,
+      "z": -228371.81,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_WELL",
+      "id": 511010,
+      "x": 99632.836,
+      "z": -245281.11,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_BASEMENT",
+      "id": 511090,
+      "x": 111618.75,
+      "z": -258275.34,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_BASEMENT",
+      "id": 511090,
+      "x": 97368.17,
+      "z": -247496.06,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": 85928.68,
+      "z": -241223.17,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 99729.0,
+      "z": -243402.72,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 81935.0,
+      "z": -238976.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_CATACOMB",
+      "id": 511001,
+      "x": 88591.516,
+      "z": -235367.94,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -177476.94,
+      "z": -218862.9,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_CATACOMB",
+      "id": 511000,
+      "x": -216740.45,
+      "z": -211747.77,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": -189747.95,
+      "z": -207546.19,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_WELL",
+      "id": 511010,
+      "x": -188214.9,
+      "z": -203369.72,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_WELL",
+      "id": 511010,
+      "x": -135279.52,
+      "z": -181007.75,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -114951.664,
+      "z": -190747.44,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -154322.0,
+      "z": -198154.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -131335.0,
+      "z": -185421.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -125508.0,
+      "z": -191310.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_CATACOMB",
+      "id": 511002,
+      "x": -114224.516,
+      "z": -191617.53,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_WATER_LINE",
+      "id": 511050,
+      "x": -67809.016,
+      "z": -225039.95,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_CATACOMB",
+      "id": 511001,
+      "x": -83483.89,
+      "z": -182554.4,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_BASEMENT",
+      "id": 511090,
+      "x": -70588.77,
+      "z": -184695.92,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_WATER_LINE",
+      "id": 511050,
+      "x": -50205.906,
+      "z": -221811.22,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": -46967.668,
+      "z": -183539.98,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": -32898.28,
+      "z": -181763.48,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": -44540.734,
+      "z": -175048.64,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -37590.812,
+      "z": -194873.08,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 0,
+      "x": -44450.0,
+      "z": -174237.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_WELL",
+      "id": 511010,
+      "x": 54701.36,
+      "z": -227074.88,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_CATACOMB",
+      "id": 511000,
+      "x": 84958.47,
+      "z": -227141.66,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_CATACOMB",
+      "id": 511001,
+      "x": 90577.34,
+      "z": -216954.88,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_CATACOMB",
+      "id": 511002,
+      "x": 108493.875,
+      "z": -224477.27,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": 93462.97,
+      "z": -223325.81,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 104207.39,
+      "z": -226665.84,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_SHRINE",
+      "id": 511040,
+      "x": -132673.0,
+      "z": -115143.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -79477.84,
+      "z": -165630.16,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_CATACOMB",
+      "id": 511001,
+      "x": -111128.7,
+      "z": -114114.95,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_WATER_LINE",
+      "id": 511050,
+      "x": -81017.71,
+      "z": -153169.45,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": -82524.07,
+      "z": -146715.9,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": -91124.17,
+      "z": -129473.695,
+      "name_en": "",
+      "name_jp": ""
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": -87085.85,
+      "z": -142328.75,
+      "name_en": "",
+      "name_jp": ""
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": -38450.582,
+      "z": -168765.33,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_BASEMENT",
+      "id": 511090,
+      "x": -51009.168,
+      "z": -142696.05,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -1138.0,
+      "z": -167885.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_WATER_LINE",
+      "id": 511052,
+      "x": 5607.0654,
+      "z": -158730.84,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -257821.0,
+      "z": -62566.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -224590.08,
+      "z": -85082.86,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": -204457.94,
+      "z": -75913.516,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_BASEMENT",
+      "id": 511090,
+      "x": -226251.81,
+      "z": -60584.79,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -217935.0,
+      "z": -94997.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -115382.65,
+      "z": -89885.73,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 0,
+      "x": -152462.55,
+      "z": -113014.76,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511070,
+      "x": -127080.836,
+      "z": -62732.258,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": -114700.32,
+      "z": -61361.773,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_WELL",
+      "id": 511010,
+      "x": -129461.53,
+      "z": -106445.24,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_BASEMENT",
+      "id": 511090,
+      "x": -123459.75,
+      "z": -64003.85,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -135735.61,
+      "z": -57563.46,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -137190.0,
+      "z": -62781.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 0,
+      "x": -133325.0,
+      "z": -113559.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_BASEMENT",
+      "id": 511090,
+      "x": -79900.52,
+      "z": -83700.445,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -97708.38,
+      "z": -104367.06,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -89278.14,
+      "z": -59562.645,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -96625.0,
+      "z": -63457.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -103777.0,
+      "z": -85413.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -70489.0,
+      "z": -64821.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_CATACOMB",
+      "id": 511001,
+      "x": -8779.983,
+      "z": -57063.004,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_WATER_LINE",
+      "id": 511052,
+      "x": -3495.2954,
+      "z": -76517.086,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -343.3932,
+      "z": -64453.367,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -2671.0,
+      "z": -74183.69,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511071,
+      "x": 50954.938,
+      "z": -66309.76,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511071,
+      "x": 31841.047,
+      "z": -76042.266,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_SHRINE",
+      "id": 511040,
+      "x": 44418.074,
+      "z": -85080.23,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 511101,
+      "x": 49794.605,
+      "z": -62134.35,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_WELL",
+      "id": 511010,
+      "x": 48615.96,
+      "z": -61341.684,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_BASEMENT",
+      "id": 511090,
+      "x": 11734.076,
+      "z": -57233.035,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_BASEMENT",
+      "id": 511090,
+      "x": 11955.196,
+      "z": -70901.71,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": 48831.637,
+      "z": -63365.12,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 59075.69,
+      "z": -62729.152,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_WELL",
+      "id": 511010,
+      "x": -279165.16,
+      "z": -52655.56,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -278871.16,
+      "z": -49294.688,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511070,
+      "x": -211978.06,
+      "z": -33725.133,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_BASEMENT",
+      "id": 511090,
+      "x": -205779.64,
+      "z": -14046.898,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -222276.61,
+      "z": -33140.484,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -214261.0,
+      "z": -43052.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -203800.0,
+      "z": -12180.786,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -218094.0,
+      "z": -5510.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_WELL",
+      "id": 511010,
+      "x": -114488.56,
+      "z": -56619.953,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_CATACOMB",
+      "id": 511000,
+      "x": -84660.85,
+      "z": -55545.375,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -104695.0,
+      "z": -38742.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -11350.167,
+      "z": -39994.656,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511050,
+      "x": -33911.45,
+      "z": -36521.8,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 18,
+      "x": 3452.5186,
+      "z": -34526.93,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_WATER_LINE",
+      "id": 511050,
+      "x": 18406.25,
+      "z": -55470.72,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_CATACOMB",
+      "id": 511001,
+      "x": 14228.65,
+      "z": -40010.355,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511071,
+      "x": 37463.797,
+      "z": -37826.06,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_WATER_LINE",
+      "id": 511050,
+      "x": 16089.594,
+      "z": -21636.197,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": 36092.914,
+      "z": -44374.98,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_WELL",
+      "id": 511010,
+      "x": 31668.088,
+      "z": -47928.176,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_WELL",
+      "id": 511010,
+      "x": 12951.912,
+      "z": -52865.38,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_WELL",
+      "id": 511010,
+      "x": 18735.023,
+      "z": -35739.176,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": 18586.875,
+      "z": -35210.36,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 21685.0,
+      "z": -50248.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 20460.61,
+      "z": -41861.38,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 68291.0,
+      "z": -2910.9243,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511070,
+      "x": -146012.73,
+      "z": 20603.191,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": -120892.65,
+      "z": 34959.59,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": -146611.7,
+      "z": 3968.3916,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -132768.0,
+      "z": 18612.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -128124.0,
+      "z": 10210.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -110485.78,
+      "z": 14771.946,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511070,
+      "x": -88143.25,
+      "z": 2086.496,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_WATER_LINE",
+      "id": 511050,
+      "x": -90794.555,
+      "z": 28013.72,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511070,
+      "x": -83278.73,
+      "z": 50005.03,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 511020,
+      "x": -99031.86,
+      "z": 45684.13,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": -77367.06,
+      "z": 22759.97,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_WELL",
+      "id": 511010,
+      "x": -111716.16,
+      "z": 21374.85,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -75693.27,
+      "z": 32879.348,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -99580.0,
+      "z": 11362.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -100780.0,
+      "z": 38203.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -91554.0,
+      "z": 16172.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 0,
+      "x": -97300.0,
+      "z": 44360.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 2,
+      "x": -7980.383,
+      "z": 53915.71,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 17153.379,
+      "z": 34148.027,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511071,
+      "x": 7932.536,
+      "z": 44545.773,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511071,
+      "x": 46497.54,
+      "z": 52687.66,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511070,
+      "x": 7740.553,
+      "z": 25087.092,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 6,
+      "x": 87403.4,
+      "z": 6978.0303,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 7,
+      "x": 84610.234,
+      "z": 17002.047,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511071,
+      "x": 67851.54,
+      "z": 20585.957,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511071,
+      "x": 65724.36,
+      "z": 11869.756,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_SHRINE",
+      "id": 511040,
+      "x": 67310.61,
+      "z": 1917.5428,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_WATER_LINE",
+      "id": 511050,
+      "x": 89470.22,
+      "z": 43210.336,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": 78112.15,
+      "z": 50509.215,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": 82685.52,
+      "z": 51905.73,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_WELL",
+      "id": 511010,
+      "x": 77253.69,
+      "z": 54585.406,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": 64373.336,
+      "z": 15915.967,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 70165.0,
+      "z": 24114.482,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 15,
+      "x": -127172.86,
+      "z": 65479.1,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -76962.35,
+      "z": 99684.2,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_BASEMENT",
+      "id": 511090,
+      "x": -72548.375,
+      "z": 106263.766,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -100726.09,
+      "z": 68043.375,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_CATACOMB",
+      "id": 511000,
+      "x": -92810.914,
+      "z": 62388.848,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -65381.0,
+      "z": 100244.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -54216.0,
+      "z": 108860.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -71983.6,
+      "z": 133309.92,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_ELF_RUIN",
+      "id": 511080,
+      "x": -90448.03,
+      "z": 135791.72,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_ELF_RUIN",
+      "id": 511080,
+      "x": -96604.0,
+      "z": 167776.2,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_SHRINE",
+      "id": 511040,
+      "x": -68116.766,
+      "z": 117500.16,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -95736.29,
+      "z": 155282.67,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -78049.69,
+      "z": 127977.61,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -78923.0,
+      "z": 158756.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -84605.0,
+      "z": 131072.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -83228.0,
+      "z": 146626.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -97004.0,
+      "z": 158619.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_ELF_RUIN",
+      "id": 511080,
+      "x": -97288.73,
+      "z": 151279.2,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511071,
+      "x": -53042.418,
+      "z": 123963.51,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_ELF_RUIN",
+      "id": 511080,
+      "x": -53996.44,
+      "z": 137280.34,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_ELF_RUIN",
+      "id": 511080,
+      "x": -53447.89,
+      "z": 166429.78,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_ELF_RUIN",
+      "id": 511080,
+      "x": -82056.47,
+      "z": 193573.56,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_ELF_RUIN",
+      "id": 511081,
+      "x": -71631.914,
+      "z": 179585.17,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": -72353.766,
+      "z": 175147.44,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -74092.0,
+      "z": 184500.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_ELF_RUIN",
+      "id": 511080,
+      "x": -43171.92,
+      "z": 195274.17,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_ELF_RUIN",
+      "id": 511080,
+      "x": -39504.566,
+      "z": 171864.88,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511070,
+      "x": -25796.24,
+      "z": 172869.58,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -40002.805,
+      "z": 185890.83,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -32864.0,
+      "z": 183707.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -37571.0,
+      "z": 197784.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -51234.0,
+      "z": 176790.0,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_ELF_RUIN",
+      "id": 511080,
+      "x": -55066.895,
+      "z": 185139.88,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": 8952.506,
+      "z": 181891.72,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": 6611.713,
+      "z": 177161.3,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    }
+  ],
+  "field003_m00": [
+    {
+      "type": "TYPE_CAVE",
+      "id": 511072,
+      "x": -13020.624,
+      "z": -6479.872,
+      "name_en": "Exploring the Den of Monsters",
+      "name_jp": "魔窟探索"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511070,
+      "x": -6063.2705,
+      "z": -17148.057,
+      "name_en": "Exploring the Den of Monsters",
+      "name_jp": "魔窟探索"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511070,
+      "x": -24856.613,
+      "z": -27845.078,
+      "name_en": "Exploring the Den of Monsters",
+      "name_jp": "魔窟探索"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511070,
+      "x": -1696.2852,
+      "z": -33701.555,
+      "name_en": "Exploring the Den of Monsters",
+      "name_jp": "魔窟探索"
+    },
+    {
+      "type": "TYPE_WATER_LINE",
+      "id": 511053,
+      "x": -8845.638,
+      "z": -28742.125,
+      "name_en": "Exploring the Den of Monsters",
+      "name_jp": "魔窟探索"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -22135.484,
+      "z": -26505.688,
+      "name_en": "Exploring the Den of Monsters",
+      "name_jp": "魔窟探索"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -2588.3938,
+      "z": -6651.651,
+      "name_en": "The Corruption and the Knights",
+      "name_jp": "侵食と騎士団"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -22797.363,
+      "z": -34396.043,
+      "name_en": "Exploring the Den of Monsters",
+      "name_jp": "魔窟探索"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -6899.0,
+      "z": -11397.0,
+      "name_en": "Exploring the Den of Monsters",
+      "name_jp": "魔窟探索"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": 11278.582,
+      "z": -23016.783,
+      "name_en": "The Corruption and the Knights",
+      "name_jp": "侵食と騎士団"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511071,
+      "x": 13662.438,
+      "z": -26520.139,
+      "name_en": "The Corruption and the Knights",
+      "name_jp": "侵食と騎士団"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511070,
+      "x": 3418.0295,
+      "z": -35579.926,
+      "name_en": "Exploring the Den of Monsters",
+      "name_jp": "魔窟探索"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511070,
+      "x": 9642.5205,
+      "z": -33553.78,
+      "name_en": "Exploring the Den of Monsters",
+      "name_jp": "魔窟探索"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511071,
+      "x": 20100.242,
+      "z": -24088.277,
+      "name_en": "Exploring the Den of Monsters",
+      "name_jp": "魔窟探索"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 0,
+      "x": 3426.6824,
+      "z": -18977.598,
+      "name_en": "The Corruption and the Knights",
+      "name_jp": "侵食と騎士団"
+    },
+    {
+      "type": "TYPE_WATER_LINE",
+      "id": 511053,
+      "x": 4689.6885,
+      "z": -14997.469,
+      "name_en": "The Corruption and the Knights",
+      "name_jp": "侵食と騎士団"
+    },
+    {
+      "type": "TYPE_WELL",
+      "id": 511230,
+      "x": 18511.094,
+      "z": -8466.481,
+      "name_en": "Exploring the Den of Monsters",
+      "name_jp": "魔窟探索"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 24380.973,
+      "z": -33734.83,
+      "name_en": "Exploring the Den of Monsters",
+      "name_jp": "魔窟探索"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 11348.0,
+      "z": -6529.0,
+      "name_en": "Exploring the Den of Monsters",
+      "name_jp": "魔窟探索"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 0,
+      "x": 19221.0,
+      "z": -11017.0,
+      "name_en": "Exploring the Den of Monsters",
+      "name_jp": "魔窟探索"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -15870.005,
+      "z": -1215.979,
+      "name_en": "Exploring the Den of Monsters",
+      "name_jp": "魔窟探索"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -3182.0,
+      "z": 2644.0,
+      "name_en": "Exploring the Den of Monsters",
+      "name_jp": "魔窟探索"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511070,
+      "x": 12215.339,
+      "z": 4994.7495,
+      "name_en": "Exploring the Den of Monsters",
+      "name_jp": "魔窟探索"
+    },
+    {
+      "type": "TYPE_WATER_LINE",
+      "id": 511053,
+      "x": 10792.93,
+      "z": 9399.893,
+      "name_en": "Exploring the Den of Monsters",
+      "name_jp": "魔窟探索"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": 4539.0073,
+      "z": 6808.4146,
+      "name_en": "The Corruption and the Knights",
+      "name_jp": "侵食と騎士団"
+    }
+  ],
+  "field004_m00": [
+    {
+      "type": "TYPE_CAVE",
+      "id": 511183,
+      "x": -91016.39,
+      "z": -63463.03,
+      "name_en": "Homecoming",
+      "name_jp": "帰郷"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511182,
+      "x": -74259.76,
+      "z": -57155.81,
+      "name_en": "Homecoming",
+      "name_jp": "帰郷"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -84299.0,
+      "z": -49414.0,
+      "name_en": "The Village of Soldiers",
+      "name_jp": "戦士の集落"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -69938.0,
+      "z": -71836.09,
+      "name_en": "Homecoming",
+      "name_jp": "帰郷"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -79094.0,
+      "z": -79292.0,
+      "name_en": "Homecoming",
+      "name_jp": "帰郷"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": -11458.464,
+      "z": -63664.996,
+      "name_en": "Gallant Footsteps",
+      "name_jp": "勇敢なる足跡"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": -37526.426,
+      "z": -52006.86,
+      "name_en": "Homecoming",
+      "name_jp": "帰郷"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511183,
+      "x": -55742.875,
+      "z": -79068.195,
+      "name_en": "Homecoming",
+      "name_jp": "帰郷"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -62445.0,
+      "z": -56625.0,
+      "name_en": "Homecoming",
+      "name_jp": "帰郷"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -45153.0,
+      "z": -57762.0,
+      "name_en": "Homecoming",
+      "name_jp": "帰郷"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -61946.0,
+      "z": -82367.0,
+      "name_en": "Homecoming",
+      "name_jp": "帰郷"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -66365.19,
+      "z": -66454.81,
+      "name_en": "Homecoming",
+      "name_jp": "帰郷"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": 18880.955,
+      "z": -57807.7,
+      "name_en": "Homecoming",
+      "name_jp": "帰郷"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511261,
+      "x": 6722.816,
+      "z": -96778.16,
+      "name_en": "Within the Tree",
+      "name_jp": "侵された樹内"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": 17252.0,
+      "z": -89466.0,
+      "name_en": "Gallant Footsteps",
+      "name_jp": "勇敢なる足跡"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511206,
+      "x": 37683.0,
+      "z": -79188.0,
+      "name_en": "Gallant Footsteps",
+      "name_jp": "勇敢なる足跡"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511206,
+      "x": 535.87915,
+      "z": -49324.53,
+      "name_en": "Gallant Footsteps",
+      "name_jp": "勇敢なる足跡"
+    },
+    {
+      "type": "TYPE_WATER_LINE",
+      "id": 0,
+      "x": 20097.0,
+      "z": -79240.0,
+      "name_en": "Gallant Footsteps",
+      "name_jp": "勇敢なる足跡"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 5773.0,
+      "z": -80662.0,
+      "name_en": "Homecoming",
+      "name_jp": "帰郷"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -2650.0,
+      "z": -54890.0,
+      "name_en": "Homecoming",
+      "name_jp": "帰郷"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 27770.0,
+      "z": -66239.0,
+      "name_en": "Homecoming",
+      "name_jp": "帰郷"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 46022.0,
+      "z": -73746.0,
+      "name_en": "Homecoming",
+      "name_jp": "帰郷"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 32735.0,
+      "z": -53183.0,
+      "name_en": "Homecoming",
+      "name_jp": "帰郷"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -7309.0,
+      "z": -92925.0,
+      "name_en": "Gallant Footsteps",
+      "name_jp": "勇敢なる足跡"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 29630.0,
+      "z": -98162.0,
+      "name_en": "Gallant Footsteps",
+      "name_jp": "勇敢なる足跡"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": 34929.297,
+      "z": -69030.164,
+      "name_en": "Homecoming",
+      "name_jp": "帰郷"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": 54680.098,
+      "z": -75792.93,
+      "name_en": "Homecoming",
+      "name_jp": "帰郷"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511181,
+      "x": -98734.875,
+      "z": 5632.582,
+      "name_en": "The Village of Soldiers",
+      "name_jp": "戦士の集落"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511182,
+      "x": -102263.875,
+      "z": -33948.445,
+      "name_en": "The Village of Soldiers",
+      "name_jp": "戦士の集落"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511181,
+      "x": -91822.19,
+      "z": -20810.47,
+      "name_en": "The Village of Soldiers",
+      "name_jp": "戦士の集落"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511181,
+      "x": -88742.8,
+      "z": -28800.957,
+      "name_en": "The Village of Soldiers",
+      "name_jp": "戦士の集落"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -77702.0,
+      "z": -36178.0,
+      "name_en": "The Village of Soldiers",
+      "name_jp": "戦士の集落"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -87698.0,
+      "z": -34433.0,
+      "name_en": "The Village of Soldiers",
+      "name_jp": "戦士の集落"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -97594.0,
+      "z": -32030.0,
+      "name_en": "The Village of Soldiers",
+      "name_jp": "戦士の集落"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": -41860.582,
+      "z": -13389.705,
+      "name_en": "The Lost Hometown",
+      "name_jp": "失われた故郷"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": -56291.094,
+      "z": -35115.3,
+      "name_en": "The Village of Soldiers",
+      "name_jp": "戦士の集落"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511157,
+      "x": -10618.7295,
+      "z": -35606.094,
+      "name_en": "The Lost Hometown",
+      "name_jp": "失われた故郷"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": -12091.0,
+      "z": -8887.0,
+      "name_en": "The Lost Hometown",
+      "name_jp": "失われた故郷"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": -25652.0,
+      "z": -22329.0,
+      "name_en": "The Lost Hometown",
+      "name_jp": "失われた故郷"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511071,
+      "x": -64860.887,
+      "z": -9814.03,
+      "name_en": "The Lost Hometown",
+      "name_jp": "失われた故郷"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511180,
+      "x": -24463.613,
+      "z": -9421.293,
+      "name_en": "A New Continent",
+      "name_jp": "新大陸"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511207,
+      "x": -23950.945,
+      "z": -26962.85,
+      "name_en": "The Lost Hometown",
+      "name_jp": "失われた故郷"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 0,
+      "x": -53025.53,
+      "z": -11555.044,
+      "name_en": "The Lost Hometown",
+      "name_jp": "失われた故郷"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -12663.0,
+      "z": 5230.0,
+      "name_en": "A New Continent",
+      "name_jp": "新大陸"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -56504.0,
+      "z": -46330.0,
+      "name_en": "Homecoming",
+      "name_jp": "帰郷"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 0,
+      "x": -57336.0,
+      "z": 5021.0,
+      "name_en": "The Lost Hometown",
+      "name_jp": "失われた故郷"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": -4932.0,
+      "z": -10769.0,
+      "name_en": "The Lost Hometown",
+      "name_jp": "失われた故郷"
+    },
+    {
+      "type": "TYPE_NONE",
+      "id": 511207,
+      "x": 33697.195,
+      "z": -4385.1606,
+      "name_en": "The Village of Soldiers",
+      "name_jp": "戦士の集落"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511207,
+      "x": 17103.0,
+      "z": -40202.0,
+      "name_en": "Homecoming",
+      "name_jp": "帰郷"
+    },
+    {
+      "type": "TYPE_NONE",
+      "id": 511207,
+      "x": 27350.0,
+      "z": -44884.0,
+      "name_en": "Gallant Footsteps",
+      "name_jp": "勇敢なる足跡"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511207,
+      "x": 44910.7,
+      "z": -47334.9,
+      "name_en": "Homecoming",
+      "name_jp": "帰郷"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 16033.0,
+      "z": 2217.0,
+      "name_en": "The Village of Soldiers",
+      "name_jp": "戦士の集落"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 11757.0,
+      "z": -47156.0,
+      "name_en": "Homecoming",
+      "name_jp": "帰郷"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -10150.0,
+      "z": -33151.0,
+      "name_en": "The Lost Hometown",
+      "name_jp": "失われた故郷"
+    },
+    {
+      "type": "TYPE_WELL",
+      "id": 511230,
+      "x": -88405.72,
+      "z": 53484.992,
+      "name_en": "The Village of Soldiers",
+      "name_jp": "戦士の集落"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": -91840.305,
+      "z": 11187.076,
+      "name_en": "The Village of Soldiers",
+      "name_jp": "戦士の集落"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": -85273.72,
+      "z": 9490.0625,
+      "name_en": "The Village of Soldiers",
+      "name_jp": "戦士の集落"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 522781,
+      "x": -113644.836,
+      "z": 21835.818,
+      "name_en": "The Village of Soldiers",
+      "name_jp": "戦士の集落"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -112569.16,
+      "z": 16601.9,
+      "name_en": "The Village of Soldiers",
+      "name_jp": "戦士の集落"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511180,
+      "x": -105036.55,
+      "z": 35809.93,
+      "name_en": "The Entrusted One",
+      "name_jp": "託されし者"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511181,
+      "x": -105016.95,
+      "z": 22375.326,
+      "name_en": "The Village of Soldiers",
+      "name_jp": "戦士の集落"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511181,
+      "x": -74304.62,
+      "z": 15789.649,
+      "name_en": "The Entrusted One",
+      "name_jp": "託されし者"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -86610.0,
+      "z": 33910.0,
+      "name_en": "The Entrusted One",
+      "name_jp": "託されし者"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -92857.0,
+      "z": 44780.0,
+      "name_en": "The Entrusted One",
+      "name_jp": "託されし者"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -76040.0,
+      "z": 37252.0,
+      "name_en": "The Entrusted One",
+      "name_jp": "託されし者"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -101817.0,
+      "z": 41422.0,
+      "name_en": "The Entrusted One",
+      "name_jp": "託されし者"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -86026.0,
+      "z": 55444.0,
+      "name_en": "The Village of Soldiers",
+      "name_jp": "戦士の集落"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -104752.0,
+      "z": 53470.0,
+      "name_en": "The Village of Soldiers",
+      "name_jp": "戦士の集落"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -75172.0,
+      "z": 61890.0,
+      "name_en": "The Village of Soldiers",
+      "name_jp": "戦士の集落"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -76177.0,
+      "z": 19157.0,
+      "name_en": "The Entrusted One",
+      "name_jp": "託されし者"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -99346.71,
+      "z": 62059.74,
+      "name_en": "The Village of Soldiers",
+      "name_jp": "戦士の集落"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -83850.01,
+      "z": 10184.38,
+      "name_en": "The Entrusted One",
+      "name_jp": "託されし者"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": -54494.008,
+      "z": 49759.023,
+      "name_en": "The Entrusted One",
+      "name_jp": "託されし者"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511206,
+      "x": -16950.076,
+      "z": 39688.86,
+      "name_en": "A New Continent",
+      "name_jp": "新大陸"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511072,
+      "x": -55777.984,
+      "z": 45402.094,
+      "name_en": "The Entrusted One",
+      "name_jp": "託されし者"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -17299.0,
+      "z": 61306.0,
+      "name_en": "The Entrusted One",
+      "name_jp": "託されし者"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -33917.0,
+      "z": 22677.0,
+      "name_en": "A New Continent",
+      "name_jp": "新大陸"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -60536.0,
+      "z": 31802.0,
+      "name_en": "The Entrusted One",
+      "name_jp": "託されし者"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -53841.0,
+      "z": 35189.0,
+      "name_en": "The Entrusted One",
+      "name_jp": "託されし者"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -44416.0,
+      "z": 8345.0,
+      "name_en": "A New Continent",
+      "name_jp": "新大陸"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -12493.0,
+      "z": 34413.0,
+      "name_en": "A New Continent",
+      "name_jp": "新大陸"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -44893.77,
+      "z": 17868.37,
+      "name_en": "A New Continent",
+      "name_jp": "新大陸"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511070,
+      "x": 35372.35,
+      "z": 29893.678,
+      "name_en": "The Village of Soldiers",
+      "name_jp": "戦士の集落"
+    },
+    {
+      "type": "TYPE_NONE",
+      "id": 511070,
+      "x": 30774.96,
+      "z": 45561.273,
+      "name_en": "A New Continent",
+      "name_jp": "新大陸"
+    },
+    {
+      "type": "TYPE_WATER_LINE",
+      "id": 511050,
+      "x": 34449.73,
+      "z": 39560.637,
+      "name_en": "The Village of Soldiers",
+      "name_jp": "戦士の集落"
+    },
+    {
+      "type": "TYPE_WATER_LINE",
+      "id": 0,
+      "x": 21444.0,
+      "z": 13767.0,
+      "name_en": "The Village of Soldiers",
+      "name_jp": "戦士の集落"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 13374.0,
+      "z": 33967.0,
+      "name_en": "A New Continent",
+      "name_jp": "新大陸"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 22274.0,
+      "z": 18853.0,
+      "name_en": "The Village of Soldiers",
+      "name_jp": "戦士の集落"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 6042.0,
+      "z": 53260.0,
+      "name_en": "The Village of Soldiers",
+      "name_jp": "戦士の集落"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -2820.2598,
+      "z": 17408.13,
+      "name_en": "A New Continent",
+      "name_jp": "新大陸"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511181,
+      "x": -78381.74,
+      "z": 79058.27,
+      "name_en": "The Village of Soldiers",
+      "name_jp": "戦士の集落"
+    }
+  ],
+  "field005_m00": [
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -17875.0,
+      "z": -406665.0,
+      "name_en": "The Final Battle of the Royal Capital",
+      "name_jp": "王都の決戦"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": 37276.9,
+      "z": -401451.0,
+      "name_en": "The Missing Prince",
+      "name_jp": "消えた王子"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 29830.0,
+      "z": -403508.0,
+      "name_en": "The Final Battle of the Royal Capital",
+      "name_jp": "王都の決戦"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 0,
+      "x": 30537.0,
+      "z": -422149.0,
+      "name_en": "The Missing Prince",
+      "name_jp": "消えた王子"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": -58713.652,
+      "z": -394144.75,
+      "name_en": "The Missing Prince",
+      "name_jp": "消えた王子"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -78379.92,
+      "z": -367163.56,
+      "name_en": "The Missing Prince",
+      "name_jp": "消えた王子"
+    },
+    {
+      "type": "TYPE_SHRINE",
+      "id": 510480,
+      "x": -93373.18,
+      "z": -365956.25,
+      "name_en": "The Missing Prince",
+      "name_jp": "消えた王子"
+    },
+    {
+      "type": "TYPE_NONE",
+      "id": 510481,
+      "x": -81263.82,
+      "z": -383819.0,
+      "name_en": "The Final Battle of the Royal Capital",
+      "name_jp": "王都の決戦"
+    },
+    {
+      "type": "TYPE_NONE",
+      "id": 510481,
+      "x": -63227.4,
+      "z": -365807.9,
+      "name_en": "The Final Battle of the Royal Capital",
+      "name_jp": "王都の決戦"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -72905.0,
+      "z": -362470.0,
+      "name_en": "The Final Battle of the Royal Capital",
+      "name_jp": "王都の決戦"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -81387.0,
+      "z": -379983.0,
+      "name_en": "The Final Battle of the Royal Capital",
+      "name_jp": "王都の決戦"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 0,
+      "x": -67432.0,
+      "z": -350195.84,
+      "name_en": "The Final Battle of the Royal Capital",
+      "name_jp": "王都の決戦"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -65709.0,
+      "z": -371531.0,
+      "name_en": "The Final Battle of the Royal Capital",
+      "name_jp": "王都の決戦"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -32090.914,
+      "z": -363125.6,
+      "name_en": "The Final Battle of the Royal Capital",
+      "name_jp": "王都の決戦"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511070,
+      "x": -51074.004,
+      "z": -352948.66,
+      "name_en": "The Final Battle of the Royal Capital",
+      "name_jp": "王都の決戦"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": -29855.998,
+      "z": -363578.22,
+      "name_en": "The Final Battle of the Royal Capital",
+      "name_jp": "王都の決戦"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -46969.0,
+      "z": -360791.0,
+      "name_en": "The Final Battle of the Royal Capital",
+      "name_jp": "王都の決戦"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 15022.0,
+      "z": -345881.0,
+      "name_en": "The Battle of Lookout Castle",
+      "name_jp": "展望城の戦い"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": 34342.34,
+      "z": -377455.47,
+      "name_en": "The Missing Prince",
+      "name_jp": "消えた王子"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": 40085.617,
+      "z": -371304.7,
+      "name_en": "The Missing Prince",
+      "name_jp": "消えた王子"
+    },
+    {
+      "type": "TYPE_SHRINE",
+      "id": 511040,
+      "x": 29689.613,
+      "z": -383941.47,
+      "name_en": "The Final Battle of the Royal Capital",
+      "name_jp": "王都の決戦"
+    },
+    {
+      "type": "TYPE_NONE",
+      "id": 510481,
+      "x": 16416.453,
+      "z": -385379.84,
+      "name_en": "The Final Battle of the Royal Capital",
+      "name_jp": "王都の決戦"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": 38610.117,
+      "z": -372321.47,
+      "name_en": "The Missing Prince",
+      "name_jp": "消えた王子"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 29119.0,
+      "z": -390315.0,
+      "name_en": "The Final Battle of the Royal Capital",
+      "name_jp": "王都の決戦"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 46708.0,
+      "z": -363507.0,
+      "name_en": "The Missing Prince",
+      "name_jp": "消えた王子"
+    },
+    {
+      "type": "TYPE_CATACOMB",
+      "id": 511000,
+      "x": 77232.11,
+      "z": -389065.88,
+      "name_en": "The Missing Prince",
+      "name_jp": "消えた王子"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511070,
+      "x": 68913.305,
+      "z": -370217.62,
+      "name_en": "The Missing Prince",
+      "name_jp": "消えた王子"
+    },
+    {
+      "type": "TYPE_NONE",
+      "id": 510481,
+      "x": 59741.0,
+      "z": -380810.4,
+      "name_en": "The Missing Prince",
+      "name_jp": "消えた王子"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 64616.0,
+      "z": -376869.0,
+      "name_en": "The Missing Prince",
+      "name_jp": "消えた王子"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 0,
+      "x": -10195.369,
+      "z": -314630.88,
+      "name_en": "The Battle of Lookout Castle",
+      "name_jp": "展望城の戦い"
+    },
+    {
+      "type": "TYPE_WATER_LINE",
+      "id": 511051,
+      "x": 30122.74,
+      "z": -292832.7,
+      "name_en": "The Battle of Lookout Castle",
+      "name_jp": "展望城の戦い"
+    },
+    {
+      "type": "TYPE_NONE",
+      "id": 510481,
+      "x": 22803.406,
+      "z": -310488.72,
+      "name_en": "The Battle of Lookout Castle",
+      "name_jp": "展望城の戦い"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 0,
+      "x": 14409.0,
+      "z": -307049.0,
+      "name_en": "The Battle of Lookout Castle",
+      "name_jp": "展望城の戦い"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 3672.0,
+      "z": -290069.0,
+      "name_en": "The Battle of Lookout Castle",
+      "name_jp": "展望城の戦い"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 21182.0,
+      "z": -304159.0,
+      "name_en": "The Battle of Lookout Castle",
+      "name_jp": "展望城の戦い"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511071,
+      "x": 29755.465,
+      "z": -228815.38,
+      "name_en": "The Battle of Lookout Castle",
+      "name_jp": "展望城の戦い"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511071,
+      "x": 42226.58,
+      "z": -231269.55,
+      "name_en": "The Battle of Lookout Castle",
+      "name_jp": "展望城の戦い"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511071,
+      "x": 31881.133,
+      "z": -233270.9,
+      "name_en": "The Battle of Lookout Castle",
+      "name_jp": "展望城の戦い"
+    },
+    {
+      "type": "TYPE_NONE",
+      "id": 510481,
+      "x": 34195.996,
+      "z": -280601.44,
+      "name_en": "The Battle of Lookout Castle",
+      "name_jp": "展望城の戦い"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": 43864.645,
+      "z": -241955.27,
+      "name_en": "The Battle of Lookout Castle",
+      "name_jp": "展望城の戦い"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": 31909.928,
+      "z": -271134.22,
+      "name_en": "The Battle of Lookout Castle",
+      "name_jp": "展望城の戦い"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 24784.43,
+      "z": -244105.84,
+      "name_en": "The Battle of Lookout Castle",
+      "name_jp": "展望城の戦い"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 40882.0,
+      "z": -283065.0,
+      "name_en": "The Battle of Lookout Castle",
+      "name_jp": "展望城の戦い"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 46220.0,
+      "z": -263659.0,
+      "name_en": "The Battle of Lookout Castle",
+      "name_jp": "展望城の戦い"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 56033.0,
+      "z": -261049.0,
+      "name_en": "The Battle of Lookout Castle",
+      "name_jp": "展望城の戦い"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": 79105.29,
+      "z": -254203.23,
+      "name_en": "The Battle of Lookout Castle",
+      "name_jp": "展望城の戦い"
+    },
+    {
+      "type": "TYPE_WELL",
+      "id": 511300,
+      "x": 77474.0,
+      "z": -255990.0,
+      "name_en": "The Battle of Lookout Castle",
+      "name_jp": "展望城の戦い"
+    },
+    {
+      "type": "TYPE_SHRINE",
+      "id": 511040,
+      "x": 83116.31,
+      "z": -262350.88,
+      "name_en": "The Battle of Lookout Castle",
+      "name_jp": "展望城の戦い"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 64183.0,
+      "z": -254705.0,
+      "name_en": "The Battle of Lookout Castle",
+      "name_jp": "展望城の戦い"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 72473.0,
+      "z": -239576.0,
+      "name_en": "The Battle of Lookout Castle",
+      "name_jp": "展望城の戦い"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 2,
+      "x": 68294.26,
+      "z": -234418.0,
+      "name_en": "The Battle of Lookout Castle",
+      "name_jp": "展望城の戦い"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 74546.0,
+      "z": -276598.0,
+      "name_en": "The Battle of Lookout Castle",
+      "name_jp": "展望城の戦い"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 90565.305,
+      "z": -265193.16,
+      "name_en": "The Battle of Lookout Castle",
+      "name_jp": "展望城の戦い"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": -177631.53,
+      "z": -116957.21,
+      "name_en": "Prince Nedo",
+      "name_jp": "王子ネド"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511310,
+      "x": -122100.0,
+      "z": -149100.0,
+      "name_en": "Prince Nedo",
+      "name_jp": "王子ネド"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": -162312.44,
+      "z": -147449.92,
+      "name_en": "The Missing Prince",
+      "name_jp": "消えた王子"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 0,
+      "x": -129753.0,
+      "z": -156750.0,
+      "name_en": "Prince Nedo",
+      "name_jp": "王子ネド"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -159839.0,
+      "z": -143003.0,
+      "name_en": "Prince Nedo",
+      "name_jp": "王子ネド"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -127190.0,
+      "z": -146046.0,
+      "name_en": "Prince Nedo",
+      "name_jp": "王子ネド"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -122276.0,
+      "z": -117211.0,
+      "name_en": "Prince Nedo",
+      "name_jp": "王子ネド"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -152432.31,
+      "z": -121159.914,
+      "name_en": "Prince Nedo",
+      "name_jp": "王子ネド"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511310,
+      "x": -100100.0,
+      "z": -132200.0,
+      "name_en": "Prince Nedo",
+      "name_jp": "王子ネド"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511051,
+      "x": -68980.0,
+      "z": -155830.0,
+      "name_en": "Prince Nedo",
+      "name_jp": "王子ネド"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": -80335.16,
+      "z": -165469.31,
+      "name_en": "Prince Nedo",
+      "name_jp": "王子ネド"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -108485.07,
+      "z": -128076.39,
+      "name_en": "Prince Nedo",
+      "name_jp": "王子ネド"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 0,
+      "x": -84021.0,
+      "z": -166568.0,
+      "name_en": "Prince Nedo",
+      "name_jp": "王子ネド"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511071,
+      "x": -118547.69,
+      "z": -103373.93,
+      "name_en": "Prince Nedo",
+      "name_jp": "王子ネド"
+    },
+    {
+      "type": "TYPE_WATER_LINE",
+      "id": 511051,
+      "x": -168635.0,
+      "z": -94228.0,
+      "name_en": "Prince Nedo",
+      "name_jp": "王子ネド"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -117541.0,
+      "z": -88564.0,
+      "name_en": "Prince Nedo",
+      "name_jp": "王子ネド"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -136129.0,
+      "z": -96549.0,
+      "name_en": "Prince Nedo",
+      "name_jp": "王子ネド"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -164090.0,
+      "z": -111649.0,
+      "name_en": "Prince Nedo",
+      "name_jp": "王子ネド"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -129764.984,
+      "z": -69047.91,
+      "name_en": "Prince Nedo",
+      "name_jp": "王子ネド"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": -93370.0,
+      "z": -88400.0,
+      "name_en": "Prince Nedo",
+      "name_jp": "王子ネド"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511310,
+      "x": -78724.734,
+      "z": -64341.434,
+      "name_en": "The New Generation",
+      "name_jp": "新しい世代"
+    },
+    {
+      "type": "TYPE_WATER_LINE",
+      "id": 511051,
+      "x": -105650.0,
+      "z": -72700.0,
+      "name_en": "Prince Nedo",
+      "name_jp": "王子ネド"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": -59643.406,
+      "z": -75328.375,
+      "name_en": "The Land of Despair",
+      "name_jp": "絶望の大陸"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": -84526.98,
+      "z": -75068.82,
+      "name_en": "The New Generation",
+      "name_jp": "新しい世代"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -92420.0,
+      "z": -60292.0,
+      "name_en": "The New Generation",
+      "name_jp": "新しい世代"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -73779.0,
+      "z": -75384.0,
+      "name_en": "The New Generation",
+      "name_jp": "新しい世代"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -74007.0,
+      "z": -106168.0,
+      "name_en": "Prince Nedo",
+      "name_jp": "王子ネド"
+    },
+    {
+      "type": "TYPE_ELF_RUIN",
+      "id": 0,
+      "x": -100183.0,
+      "z": -101047.0,
+      "name_en": "Prince Nedo",
+      "name_jp": "王子ネド"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -92139.0,
+      "z": -113953.0,
+      "name_en": "Prince Nedo",
+      "name_jp": "王子ネド"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -68223.83,
+      "z": -57021.883,
+      "name_en": "The New Generation",
+      "name_jp": "新しい世代"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": -27968.285,
+      "z": -82178.83,
+      "name_en": "The Battle of Lookout Castle",
+      "name_jp": "展望城の戦い"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -21803.0,
+      "z": -70456.0,
+      "name_en": "The New Generation",
+      "name_jp": "新しい世代"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": 20008.055,
+      "z": -63459.53,
+      "name_en": "The Land of Despair",
+      "name_jp": "絶望の大陸"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": -99500.0,
+      "z": -41950.0,
+      "name_en": "The Land of Despair",
+      "name_jp": "絶望の大陸"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511070,
+      "x": -106241.97,
+      "z": -55591.52,
+      "name_en": "The New Generation",
+      "name_jp": "新しい世代"
+    },
+    {
+      "type": "TYPE_WATER_LINE",
+      "id": 511051,
+      "x": -113725.0,
+      "z": -56135.0,
+      "name_en": "The New Generation",
+      "name_jp": "新しい世代"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -71876.0,
+      "z": -26686.0,
+      "name_en": "The New Generation",
+      "name_jp": "新しい世代"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -88505.0,
+      "z": -2384.0,
+      "name_en": "The Land of Despair",
+      "name_jp": "絶望の大陸"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -57220.0,
+      "z": -35343.0,
+      "name_en": "The New Generation",
+      "name_jp": "新しい世代"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -61003.0,
+      "z": -20333.535,
+      "name_en": "The New Generation",
+      "name_jp": "新しい世代"
+    },
+    {
+      "type": "TYPE_CATACOMB",
+      "id": 511001,
+      "x": -52528.188,
+      "z": -48277.113,
+      "name_en": "The New Generation",
+      "name_jp": "新しい世代"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": -51657.363,
+      "z": -22268.18,
+      "name_en": "The New Generation",
+      "name_jp": "新しい世代"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -16640.0,
+      "z": -10335.0,
+      "name_en": "The New Generation",
+      "name_jp": "新しい世代"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -2277.0,
+      "z": -36891.0,
+      "name_en": "The New Generation",
+      "name_jp": "新しい世代"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -40591.0,
+      "z": -11059.0,
+      "name_en": "The New Generation",
+      "name_jp": "新しい世代"
+    },
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -7457.756,
+      "z": -53942.98,
+      "name_en": "The New Generation",
+      "name_jp": "新しい世代"
+    },
+    {
+      "type": "TYPE_CAVE",
+      "id": 511071,
+      "x": 8779.223,
+      "z": -30621.992,
+      "name_en": "The Land of Despair",
+      "name_jp": "絶望の大陸"
+    },
+    {
+      "type": "TYPE_WATER_LINE",
+      "id": 511053,
+      "x": 5889.743,
+      "z": -34832.254,
+      "name_en": "The New Generation",
+      "name_jp": "新しい世代"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 11829.118,
+      "z": -14943.536,
+      "name_en": "The New Generation",
+      "name_jp": "新しい世代"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": 3200.0,
+      "z": 4250.0,
+      "name_en": "The New Generation",
+      "name_jp": "新しい世代"
+    }
+  ],
+  "sfield000_m00": [
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -12605.623,
+      "z": -313465.53,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -115382.65,
+      "z": -89885.73,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -224590.08,
+      "z": -85082.86,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -177476.94,
+      "z": -218862.9,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 0,
+      "x": -152462.55,
+      "z": -113014.76,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": -114700.32,
+      "z": -61361.773,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": -204457.94,
+      "z": -75913.516,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": -189747.95,
+      "z": -207546.19,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -79477.84,
+      "z": -165630.16,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 46373.664,
+      "z": -246768.08,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": -82524.07,
+      "z": -146715.9,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": 58420.395,
+      "z": -228371.81,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": -120892.65,
+      "z": 34959.59,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": -146611.7,
+      "z": 3968.3916,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -11350.167,
+      "z": -39994.656,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 17153.379,
+      "z": 34148.027,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -110485.78,
+      "z": 14771.946,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -76962.35,
+      "z": 99684.2,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": 36092.914,
+      "z": -44374.98,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": 78112.15,
+      "z": 50509.215,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": -72353.766,
+      "z": 175147.44,
+      "name_en": "Resolutions and Omens",
+      "name_jp": "覚悟と兆し"
+    }
+  ],
+  "sfield003_m00": [
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -2588.3938,
+      "z": -6651.651,
+      "name_en": "The Corruption and the Knights",
+      "name_jp": "侵食と騎士団"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -22797.363,
+      "z": -34396.043,
+      "name_en": "Exploring the Den of Monsters",
+      "name_jp": "魔窟探索"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": 11278.582,
+      "z": -23016.783,
+      "name_en": "The Corruption and the Knights",
+      "name_jp": "侵食と騎士団"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 24380.973,
+      "z": -33734.83,
+      "name_en": "Exploring the Den of Monsters",
+      "name_jp": "魔窟探索"
+    }
+  ],
+  "sfield004_m00": [
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": 18880.955,
+      "z": -57807.7,
+      "name_en": "Homecoming",
+      "name_jp": "帰郷"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 5773.0,
+      "z": -80662.0,
+      "name_en": "Homecoming",
+      "name_jp": "帰郷"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": -41860.582,
+      "z": -13389.705,
+      "name_en": "The Lost Hometown",
+      "name_jp": "失われた故郷"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": -54494.008,
+      "z": 49759.023,
+      "name_en": "The Entrusted One",
+      "name_jp": "託されし者"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": -56291.094,
+      "z": -35115.3,
+      "name_en": "The Village of Soldiers",
+      "name_jp": "戦士の集落"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -86610.0,
+      "z": 33910.0,
+      "name_en": "The Entrusted One",
+      "name_jp": "託されし者"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -84299.0,
+      "z": -49414.0,
+      "name_en": "The Village of Soldiers",
+      "name_jp": "戦士の集落"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -33917.0,
+      "z": 22677.0,
+      "name_en": "A New Continent",
+      "name_jp": "新大陸"
+    }
+  ],
+  "sfield005_m00": [
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": -58713.652,
+      "z": -394144.75,
+      "name_en": "The Missing Prince",
+      "name_jp": "消えた王子"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -17875.0,
+      "z": -406665.0,
+      "name_en": "The Final Battle of the Royal Capital",
+      "name_jp": "王都の決戦"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 15022.0,
+      "z": -345881.0,
+      "name_en": "The Battle of Lookout Castle",
+      "name_jp": "展望城の戦い"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": 37276.9,
+      "z": -401451.0,
+      "name_en": "The Missing Prince",
+      "name_jp": "消えた王子"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": -93370.0,
+      "z": -88400.0,
+      "name_en": "Prince Nedo",
+      "name_jp": "王子ネド"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": -59643.406,
+      "z": -75328.375,
+      "name_en": "The Land of Despair",
+      "name_jp": "絶望の大陸"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": -177631.53,
+      "z": -116957.21,
+      "name_en": "Prince Nedo",
+      "name_jp": "王子ネド"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": -80335.16,
+      "z": -165469.31,
+      "name_en": "Prince Nedo",
+      "name_jp": "王子ネド"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -129764.984,
+      "z": -69047.91,
+      "name_en": "Prince Nedo",
+      "name_jp": "王子ネド"
+    },
+    {
+      "type": "TYPE_DOOR",
+      "id": 511150,
+      "x": 20008.055,
+      "z": -63459.53,
+      "name_en": "The Land of Despair",
+      "name_jp": "絶望の大陸"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": 79105.29,
+      "z": -254203.23,
+      "name_en": "The Battle of Lookout Castle",
+      "name_jp": "展望城の戦い"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 24784.43,
+      "z": -244105.84,
+      "name_en": "The Battle of Lookout Castle",
+      "name_jp": "展望城の戦い"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": -99500.0,
+      "z": -41950.0,
+      "name_en": "The Land of Despair",
+      "name_jp": "絶望の大陸"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": -61003.0,
+      "z": -20333.535,
+      "name_en": "The New Generation",
+      "name_jp": "新しい世代"
+    },
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": 3200.0,
+      "z": 4250.0,
+      "name_en": "The New Generation",
+      "name_jp": "新しい世代"
+    },
+    {
+      "type": "TYPE_TEXT",
+      "id": 0,
+      "x": 11829.118,
+      "z": -14943.536,
+      "name_en": "The New Generation",
+      "name_jp": "新しい世代"
+    }
+  ]
+}
