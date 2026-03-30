@@ -1787,9 +1787,8 @@ const HIDDEN_LANDMARK_TYPES = new Set(['TYPE_TEXT', 'TYPE_WATER_LINE', 'TYPE_NON
 
 // ── Live server data (fetched at runtime) ─────────────────────────────────────
 const _DEFAULT_GATHERING_URL = 'https://raw.githubusercontent.com/edelarrow/map-spawns/refs/heads/main/Normal%20Channels/GatheringItem.csv';
-const _DEFAULT_SPAWNS_URL    = 'https://raw.githubusercontent.com/edelarrow/map-spawns/refs/heads/main/Normal%20Channels/EnemySpawn.json';
-const _DEFAULT_SHOP_URL      = 'https://raw.githubusercontent.com/edelarrow/map-spawns/refs/heads/main/Normal%20Channels/Shop.json';
-const _DEFAULT_SPECIAL_SHOP_URL = 'https://raw.githubusercontent.com/edelarrow/map-spawns/refs/heads/main/Normal%20Channels/SpecialShops.json';
+const _DEFAULT_SPAWNS_URL = 'https://raw.githubusercontent.com/edelarrow/map-spawns/refs/heads/main/Normal%20Channels/EnemySpawn.json';
+const _DEFAULT_SHOP_URL = 'https://raw.githubusercontent.com/edelarrow/map-spawns/refs/heads/main/Normal%20Channels/Shop.json';
 const _DEFAULT_SPECIAL_SHOP_URL = 'https://raw.githubusercontent.com/edelarrow/map-spawns/refs/heads/main/Normal%20Channels/SpecialShops.json';
 
 function _srcErrorBox() {
