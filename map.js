@@ -1856,7 +1856,6 @@ const _gatherItemsPromise = fetch(_DEFAULT_GATHERING_URL)
         return result;
     })
     .catch(() => { showSrcError('Gathering Items'); _gatherItemsCache = new Map(); return _gatherItemsCache; });
-    .catch(() => { showSrcError('Gathering Items'); _gatherItemsCache = new Map(); return _gatherItemsCache; });
 
 // Map key for enemy spawns: "stageId,groupId,posIdx" → [{emCode, lv, bloodOrbs, highOrbs, spawnTime, drops}]
 let _enemySpawnCache = null;
@@ -1864,88 +1863,82 @@ const _enemySpawnPromise = fetch(_DEFAULT_SPAWNS_URL)
     .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
     .then(data => {
         const schemas = data.schemas?.enemies ?? [];
-        const iStage      = schemas.indexOf('StageId'),
-              iGroup      = schemas.indexOf('GroupId'),
-              iPosIdx     = schemas.indexOf('PositionIndex'),
-              iEnemyId    = schemas.indexOf('EnemyId'),
-              iLv         = schemas.indexOf('Lv'),
-              iBlood      = schemas.indexOf('BloodOrbs'),
-              iHigh       = schemas.indexOf('HighOrbs'),
-              iSpawnTime  = schemas.indexOf('SpawnTime'),
-              iDrops      = schemas.indexOf('DropsTableId'),
-              iScale      = schemas.indexOf('Scale'),
-              iSubGroup   = schemas.indexOf('SubGroupId'),
-              iNamed      = schemas.indexOf('NamedEnemyParamsId'),
-              iRaidBoss   = schemas.indexOf('RaidBossId'),
-              iSetType    = schemas.indexOf('SetType'),
-              iInfection  = schemas.indexOf('InfectionType'),
-              iIsBossG    = schemas.indexOf('IsBossGauge'),
-              iIsBossBGM  = schemas.indexOf('IsBossBGM'),
-              iIsAreaBoss = schemas.indexOf('IsAreaBoss'),
-              iExp        = schemas.indexOf('Experience'),
-              iRepopNum   = schemas.indexOf('RepopNum'),
-              iRepopCount = schemas.indexOf('RepopCount'),
-              iTargetType = schemas.indexOf('EnemyTargetTypesId'),
-              iHmPreset   = schemas.indexOf('HmPresetNo'),
-              iStartThink = schemas.indexOf('StartThinkTblNo'),
-              iMontage    = schemas.indexOf('MontageFixNo'),
-              iIsManualSet     = schemas.indexOf('IsManualSet'),
-              iPPDrop          = schemas.indexOf('PPDrop'),
-              iIsBloodOrbEnemy = schemas.indexOf('IsBloodOrbEnemy'),
-              iIsHighOrbEnemy  = schemas.indexOf('IsHighOrbEnemy');
-        // Store raw data and schema indices for write-back
-            iStage, iGroup, iPosIdx, iEnemyId, iLv, iBlood, iHigh, iSpawnTime, iDrops,
-            iScale, iSubGroup, iNamed, iRaidBoss, iSetType, iInfection,
-            iIsBossG, iIsBossBGM, iIsAreaBoss, iExp, iRepopNum, iRepopCount,
-            iTargetType, iHmPreset, iStartThink, iMontage, iIsManualSet, iPPDrop,
-            iIsBloodOrbEnemy, iIsHighOrbEnemy,
-        };
+        const iStage = schemas.indexOf('StageId');
+        const iGroup = schemas.indexOf('GroupId');
+        const iPosIdx = schemas.indexOf('PositionIndex');
+        const iEnemyId = schemas.indexOf('EnemyId');
+        const iLv = schemas.indexOf('Lv');
+        const iBlood = schemas.indexOf('BloodOrbs');
+        const iHigh = schemas.indexOf('HighOrbs');
+        const iSpawnTime = schemas.indexOf('SpawnTime');
+        const iDrops = schemas.indexOf('DropsTableId');
+        const iScale = schemas.indexOf('Scale');
+        const iSubGroup = schemas.indexOf('SubGroupId');
+        const iNamed = schemas.indexOf('NamedEnemyParamsId');
+        const iRaidBoss = schemas.indexOf('RaidBossId');
+        const iSetType = schemas.indexOf('SetType');
+        const iInfection = schemas.indexOf('InfectionType');
+        const iIsBossG = schemas.indexOf('IsBossGauge');
+        const iIsBossBGM = schemas.indexOf('IsBossBGM');
+        const iIsAreaBoss = schemas.indexOf('IsAreaBoss');
+        const iExp = schemas.indexOf('Experience');
+        const iRepopNum = schemas.indexOf('RepopNum');
+        const iRepopCount = schemas.indexOf('RepopCount');
+        const iTargetType = schemas.indexOf('EnemyTargetTypesId');
+        const iHmPreset = schemas.indexOf('HmPresetNo');
+        const iStartThink = schemas.indexOf('StartThinkTblNo');
+        const iMontage = schemas.indexOf('MontageFixNo');
+        const iIsManualSet = schemas.indexOf('IsManualSet');
+        const iPPDrop = schemas.indexOf('PPDrop');
+        const iIsBloodOrbEnemy = schemas.indexOf('IsBloodOrbEnemy');
+        const iIsHighOrbEnemy = schemas.indexOf('IsHighOrbEnemy');
+
         const dropsTables = {};
         _dropsTablesMap = new Map();
         for (const dt of (data.dropsTables ?? [])) { dropsTables[dt.id] = dt; _dropsTablesMap.set(dt.id, dt); }
         const result = new Map();
         for (let rawIdx = 0; rawIdx < (data.enemies?.length ?? 0); rawIdx++) {
-            const e    = data.enemies[rawIdx];
-            const key  = `${e[iStage]},${e[iGroup]},${e[iPosIdx]}`;
+            const e = data.enemies[rawIdx];
+            const key = `${e[iStage]},${e[iGroup]},${e[iPosIdx]}`;
             const dtId = e[iDrops];
-            const dt   = dtId != null && dtId >= 0 ? dropsTables[dtId] : null;
+            const dt = dtId != null && dtId >= 0 ? dropsTables[dtId] : null;
             // Convert '0x011200' → 'em011200'
             const hexStr = e[iEnemyId];
             const emCode = hexStr ? `em${hexStr.slice(2).toLowerCase().padStart(6, '0')}` : null;
             const bloodOrbs = e[iBlood] ?? 0;
-            const highOrbs  = e[iHigh]  ?? 0;
+            const highOrbs = e[iHigh] ?? 0;
             const entry = {
                 emCode,
-                lv:          e[iLv]         ?? null,
+                lv: e[iLv] ?? null,
                 bloodOrbs,
                 highOrbs,
-                spawnTime:     e[iSpawnTime]  ?? null,
-                dropsTableId:  dtId ?? -1,
-                drops:         dt ? dt.items : [],
-                scale:       e[iScale]      ?? 100,
-                subGroupId:  e[iSubGroup]   ?? 0,
-                namedId:     e[iNamed]      ?? 0,
-                raidBossId:  e[iRaidBoss]   ?? 0,
-                setType:     e[iSetType]    ?? 0,
-                infection:   e[iInfection]  ?? 0,
-                isBossGauge: e[iIsBossG]     ?? false,
-                isBossBGM:   e[iIsBossBGM]  ?? false,
-                isAreaBoss:  e[iIsAreaBoss]  ?? false,
-                isManualSet:      e[iIsManualSet] ?? false,
+                spawnTime: e[iSpawnTime] ?? null,
+                dropsTableId: dtId ?? -1,
+                drops: dt ? dt.items : [],
+                scale: e[iScale] ?? 100,
+                subGroupId: e[iSubGroup] ?? 0,
+                namedId: e[iNamed] ?? 0,
+                raidBossId: e[iRaidBoss] ?? 0,
+                setType: e[iSetType] ?? 0,
+                infection: e[iInfection] ?? 0,
+                isBossGauge: e[iIsBossG] ?? false,
+                isBossBGM: e[iIsBossBGM] ?? false,
+                isAreaBoss: e[iIsAreaBoss] ?? false,
+                isManualSet: e[iIsManualSet] ?? false,
                 // Fallback mirrors server logic: old schema derives from orb value > 0
-                isBloodOrbEnemy:  iIsBloodOrbEnemy >= 0 ? (e[iIsBloodOrbEnemy] ?? false) : bloodOrbs > 0,
-                isHighOrbEnemy:   iIsHighOrbEnemy  >= 0 ? (e[iIsHighOrbEnemy]  ?? false) : highOrbs  > 0,
-                exp:         e[iExp]         ?? 0,
-                repopNum:    e[iRepopNum]    ?? 0,
-                repopCount:  e[iRepopCount]  ?? 0,
-                targetTypeId:e[iTargetType]  ?? 0,
-                hmPreset:    e[iHmPreset]    ?? 0,
-                startThink:  e[iStartThink]  ?? 0,
-                montage:     e[iMontage]     ?? 0,
-                ppDrop:      e[iPPDrop]      ?? 0,
+                isBloodOrbEnemy: iIsBloodOrbEnemy >= 0 ? (e[iIsBloodOrbEnemy] ?? false) : bloodOrbs > 0,
+                isHighOrbEnemy: iIsHighOrbEnemy >= 0 ? (e[iIsHighOrbEnemy] ?? false) : highOrbs > 0,
+                exp: e[iExp] ?? 0,
+                repopNum: e[iRepopNum] ?? 0,
+                repopCount: e[iRepopCount] ?? 0,
+                targetTypeId: e[iTargetType] ?? 0,
+                hmPreset: e[iHmPreset] ?? 0,
+                startThink: e[iStartThink] ?? 0,
+                montage: e[iMontage] ?? 0,
+                ppDrop: e[iPPDrop] ?? 0,
             };
             if (result.has(key)) result.get(key).push(entry);
-            else                 result.set(key, [entry]);
+            else result.set(key, [entry]);
         }
         _enemySpawnCache = result;
         return result;
