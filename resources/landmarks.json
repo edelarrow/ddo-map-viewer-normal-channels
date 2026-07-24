@@ -33,7 +33,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 481,
       "spot_name_en": "Mergoda Security District",
-      "spot_name_jp": "メルゴダ護政区"
+      "spot_name_jp": "メルゴダ護政区",
+      "stage_no": 100
     },
     {
       "type": "TYPE_TEXT",
@@ -75,8 +76,9 @@
       "name_en": "Resolutions and Omens",
       "name_jp": "覚悟と兆し",
       "spot_id": 567,
-      "spot_name_en": "Tegor Flood Control Channel",
-      "spot_name_jp": "テゴル治水路"
+      "spot_name_en": "Tegor Floodway",
+      "spot_name_jp": "テゴル治水路",
+      "stage_no": 100
     },
     {
       "type": "TYPE_TEXT",
@@ -111,7 +113,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 573,
       "spot_name_en": "Zandora Wastelands Shrine",
-      "spot_name_jp": "標の祠　ザンドラ禁域"
+      "spot_name_jp": "標の祠　ザンドラ禁域",
+      "stage_no": 554
     },
     {
       "type": "TYPE_TEXT",
@@ -154,7 +157,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 810,
       "spot_name_en": "West Zandora Wastelands",
-      "spot_name_jp": "ザンドラ禁域 西側"
+      "spot_name_jp": "ザンドラ禁域 西側",
+      "stage_no": 100
     },
     {
       "type": "TYPE_AREA_WARP",
@@ -165,7 +169,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 732,
       "spot_name_en": "Fanatic's Hiding Ground",
-      "spot_name_jp": "狂信者の潜伏地"
+      "spot_name_jp": "狂信者の潜伏地",
+      "stage_no": 100
     },
     {
       "type": "TYPE_TEXT",
@@ -224,7 +229,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 473,
       "spot_name_en": "Gardnox Fortress",
-      "spot_name_jp": "ガルドノック砦"
+      "spot_name_jp": "ガルドノック砦",
+      "stage_no": 100
     },
     {
       "type": "TYPE_TEXT",
@@ -339,7 +345,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 458,
       "spot_name_en": "Zoma",
-      "spot_name_jp": "ゾマ"
+      "spot_name_jp": "ゾマ",
+      "stage_no": 100
     },
     {
       "type": "TYPE_WELL",
@@ -372,9 +379,10 @@
       "z": -241223.17,
       "name_en": "Resolutions and Omens",
       "name_jp": "覚悟と兆し",
-      "spot_id": 458,
-      "spot_name_en": "Zoma",
-      "spot_name_jp": "ゾマ"
+      "spot_id": 701,
+      "spot_name_en": "Mysterious Mausoleum",
+      "spot_name_jp": "幽玄の霊堂",
+      "stage_no": 100
     },
     {
       "type": "TYPE_TEXT",
@@ -425,7 +433,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 457,
       "spot_name_en": "Drawan",
-      "spot_name_jp": "ドラワン"
+      "spot_name_jp": "ドラワン",
+      "stage_no": 100
     },
     {
       "type": "TYPE_WELL",
@@ -452,7 +461,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 694,
       "spot_name_en": "Penitentiary",
-      "spot_name_jp": "罪人の修獄"
+      "spot_name_jp": "罪人の修獄",
+      "stage_no": 100
     },
     {
       "type": "TYPE_TEXT",
@@ -551,7 +561,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 809,
       "spot_name_en": "Temple of Purification Lakeside",
-      "spot_name_jp": "禊の神殿 湖畔"
+      "spot_name_jp": "禊の神殿 湖畔",
+      "stage_no": 100
     },
     {
       "type": "TYPE_AREA_WARP",
@@ -562,7 +573,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 478,
       "spot_name_en": "Temple of Purification",
-      "spot_name_jp": "禊の神殿"
+      "spot_name_jp": "禊の神殿",
+      "stage_no": 100
     },
     {
       "type": "TYPE_WELL",
@@ -605,7 +617,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 540,
       "spot_name_en": "Zandora Chapel",
-      "spot_name_jp": "ザンドラ礼拝堂"
+      "spot_name_jp": "ザンドラ礼拝堂",
+      "stage_no": 100
     },
     {
       "type": "TYPE_TEXT",
@@ -655,8 +668,9 @@
       "name_en": "Resolutions and Omens",
       "name_jp": "覚悟と兆し",
       "spot_id": 471,
-      "spot_name_en": "Gritten Fort",
-      "spot_name_jp": "グリッテン砦"
+      "spot_name_en": "Fort Gritten",
+      "spot_name_jp": "グリッテン砦",
+      "stage_no": 100
     },
     {
       "type": "TYPE_DOOR",
@@ -731,7 +745,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 452,
       "spot_name_en": "Rotes",
-      "spot_name_jp": "ローテス"
+      "spot_name_jp": "ローテス",
+      "stage_no": 100
     },
     {
       "type": "TYPE_BASEMENT",
@@ -782,7 +797,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 451,
       "spot_name_en": "Tel",
-      "spot_name_jp": "テル"
+      "spot_name_jp": "テル",
+      "stage_no": 100
     },
     {
       "type": "TYPE_WELL",
@@ -809,7 +825,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 517,
       "spot_name_en": "The Ark",
-      "spot_name_jp": "アーク"
+      "spot_name_jp": "アーク",
+      "stage_no": 100
     },
     {
       "type": "TYPE_TEXT",
@@ -828,7 +845,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 569,
       "spot_name_en": "Training Chapel",
-      "spot_name_jp": "修練の祠"
+      "spot_name_jp": "修練の祠",
+      "stage_no": 100
     },
     {
       "type": "TYPE_BASEMENT",
@@ -846,8 +864,9 @@
       "name_en": "Resolutions and Omens",
       "name_jp": "覚悟と兆し",
       "spot_id": 804,
-      "spot_name_en": "Before Gritten Fort Main Gate",
-      "spot_name_jp": "グリッテン砦 正門前"
+      "spot_name_en": "Before Gritten's Main Gate",
+      "spot_name_jp": "グリッテン砦 正門前",
+      "stage_no": 100
     },
     {
       "type": "TYPE_AREA_WARP",
@@ -856,9 +875,10 @@
       "z": -59562.645,
       "name_en": "Resolutions and Omens",
       "name_jp": "覚悟と兆し",
-      "spot_id": 451,
-      "spot_name_en": "Tel",
-      "spot_name_jp": "テル"
+      "spot_id": 486,
+      "spot_name_en": "Hidell Catacombs",
+      "spot_name_jp": "ハイデル地下霊廟",
+      "stage_no": 100
     },
     {
       "type": "TYPE_TEXT",
@@ -909,7 +929,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 808,
       "spot_name_en": "West Dowe Valley",
-      "spot_name_jp": "ダウ渓谷 西側"
+      "spot_name_jp": "ダウ渓谷 西側",
+      "stage_no": 100
     },
     {
       "type": "TYPE_TEXT",
@@ -944,7 +965,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 570,
       "spot_name_en": "Valley Chapel",
-      "spot_name_jp": "渓谷の小堂"
+      "spot_name_jp": "渓谷の小堂",
+      "stage_no": 100
     },
     {
       "type": "TYPE_TEXT",
@@ -985,9 +1007,10 @@
       "z": -63365.12,
       "name_en": "Resolutions and Omens",
       "name_jp": "覚悟と兆し",
-      "spot_id": 454,
-      "spot_name_en": "Jingen",
-      "spot_name_jp": "ジンゲン"
+      "spot_id": 576,
+      "spot_name_en": "Lone House in the Valley",
+      "spot_name_jp": "渓谷の一軒家",
+      "stage_no": 100
     },
     {
       "type": "TYPE_TEXT",
@@ -1014,7 +1037,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 520,
       "spot_name_en": "Moltova Lighthouse",
-      "spot_name_jp": "モルトバ灯台"
+      "spot_name_jp": "モルトバ灯台",
+      "stage_no": 100
     },
     {
       "type": "TYPE_CAVE",
@@ -1041,7 +1065,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 805,
       "spot_name_en": "South Breya Coast",
-      "spot_name_jp": "ブリア海岸 南側"
+      "spot_name_jp": "ブリア海岸 南側",
+      "stage_no": 100
     },
     {
       "type": "TYPE_TEXT",
@@ -1156,7 +1181,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 454,
       "spot_name_en": "Jingen",
-      "spot_name_jp": "ジンゲン"
+      "spot_name_jp": "ジンゲン",
+      "stage_no": 100
     },
     {
       "type": "TYPE_WELL",
@@ -1189,9 +1215,10 @@
       "z": -35210.36,
       "name_en": "Resolutions and Omens",
       "name_jp": "覚悟と兆し",
-      "spot_id": 454,
-      "spot_name_en": "Jingen",
-      "spot_name_jp": "ジンゲン"
+      "spot_id": 813,
+      "spot_name_en": "Canopied Statuary",
+      "spot_name_jp": "石像立つ木陰",
+      "stage_no": 100
     },
     {
       "type": "TYPE_TEXT",
@@ -1234,7 +1261,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 453,
       "spot_name_en": "Lynwood",
-      "spot_name_jp": "リンウッド"
+      "spot_name_jp": "リンウッド",
+      "stage_no": 100
     },
     {
       "type": "TYPE_DOOR",
@@ -1325,7 +1353,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 806,
       "spot_name_en": "East Mysree Forest",
-      "spot_name_jp": "ミスリウ森林 東側"
+      "spot_name_jp": "ミスリウ森林 東側",
+      "stage_no": 100
     },
     {
       "type": "TYPE_TEXT",
@@ -1358,9 +1387,10 @@
       "z": 44360.0,
       "name_en": "Resolutions and Omens",
       "name_jp": "覚悟と兆し",
-      "spot_id": 453,
-      "spot_name_en": "Lynwood",
-      "spot_name_jp": "リンウッド"
+      "spot_id": 574,
+      "spot_name_en": "Lone House in the Forest",
+      "spot_name_jp": "森の一軒家",
+      "stage_no": 100
     },
     {
       "type": "TYPE_CAVE",
@@ -1443,7 +1473,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 572,
       "spot_name_en": "Summit Chapel",
-      "spot_name_jp": "山頂の小堂"
+      "spot_name_jp": "山頂の小堂",
+      "stage_no": 100
     },
     {
       "type": "TYPE_WATER_LINE",
@@ -1462,7 +1493,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 455,
       "spot_name_en": "Kinoza",
-      "spot_name_jp": "キノザ"
+      "spot_name_jp": "キノザ",
+      "stage_no": 100
     },
     {
       "type": "TYPE_DOOR",
@@ -1489,7 +1521,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 807,
       "spot_name_en": "North Volden Mines",
-      "spot_name_jp": "ボルド鉱山 北側"
+      "spot_name_jp": "ボルド鉱山 北側",
+      "stage_no": 100
     },
     {
       "type": "TYPE_TEXT",
@@ -1532,7 +1565,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 719,
       "spot_name_en": "Peddler's Peril",
-      "spot_name_jp": "行商人の難所"
+      "spot_name_jp": "行商人の難所",
+      "stage_no": 100
     },
     {
       "type": "TYPE_CATACOMB",
@@ -1591,7 +1625,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 571,
       "spot_name_en": "Mysree Grove Shrine",
-      "spot_name_jp": "標の祠　ミスリウ森林深部"
+      "spot_name_jp": "標の祠　ミスリウ森林深部",
+      "stage_no": 552
     },
     {
       "type": "TYPE_AREA_WARP",
@@ -1600,9 +1635,10 @@
       "z": 155282.67,
       "name_en": "Resolutions and Omens",
       "name_jp": "覚悟と兆し",
-      "spot_id": 470,
-      "spot_name_en": "Deenan Woods",
-      "spot_name_jp": "ディナン深層林"
+      "spot_id": 692,
+      "spot_name_en": "Misty Illusion Terrace",
+      "spot_name_jp": "霧幻のテラス",
+      "stage_no": 100
     },
     {
       "type": "TYPE_AREA_WARP",
@@ -1613,7 +1649,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 575,
       "spot_name_en": "Ivan's Lodge",
-      "spot_name_jp": "イヴァンの山小屋"
+      "spot_name_jp": "イヴァンの山小屋",
+      "stage_no": 100
     },
     {
       "type": "TYPE_TEXT",
@@ -1704,7 +1741,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 470,
       "spot_name_en": "Deenan Woods",
-      "spot_name_jp": "ディナン深層林"
+      "spot_name_jp": "ディナン深層林",
+      "stage_no": 100
     },
     {
       "type": "TYPE_TEXT",
@@ -1745,9 +1783,10 @@
       "z": 185890.83,
       "name_en": "Resolutions and Omens",
       "name_jp": "覚悟と兆し",
-      "spot_id": 470,
-      "spot_name_en": "Deenan Woods",
-      "spot_name_jp": "ディナン深層林"
+      "spot_id": 635,
+      "spot_name_en": "Groan Nos",
+      "spot_name_jp": "グローン・ノス",
+      "stage_no": 100
     },
     {
       "type": "TYPE_TEXT",
@@ -1798,7 +1837,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 475,
       "spot_name_en": "Erte Deenan",
-      "spot_name_jp": "エルテ・ディナン"
+      "spot_name_jp": "エルテ・ディナン",
+      "stage_no": 100
     }
   ],
   "field003_m00": [
@@ -1849,9 +1889,10 @@
       "z": -26505.688,
       "name_en": "Exploring the Den of Monsters",
       "name_jp": "魔窟探索",
-      "spot_id": 687,
-      "spot_name_en": "Expedition Garrison",
-      "spot_name_jp": "調査隊駐屯地"
+      "spot_id": 816,
+      "spot_name_en": "Bloodbane Isle Precipice",
+      "spot_name_jp": "魔赤島・絶崖",
+      "stage_no": 111
     },
     {
       "type": "TYPE_TEXT",
@@ -1886,7 +1927,8 @@
       "name_jp": "侵食と騎士団",
       "spot_id": 687,
       "spot_name_en": "Expedition Garrison",
-      "spot_name_jp": "調査隊駐屯地"
+      "spot_name_jp": "調査隊駐屯地",
+      "stage_no": 110
     },
     {
       "type": "TYPE_CAVE",
@@ -1977,7 +2019,8 @@
       "name_jp": "魔窟探索",
       "spot_id": 723,
       "spot_name_en": "Foreign Cape",
-      "spot_name_jp": "異邦の岬"
+      "spot_name_jp": "異邦の岬",
+      "stage_no": 110
     },
     {
       "type": "TYPE_TEXT",
@@ -2012,7 +2055,8 @@
       "name_jp": "侵食と騎士団",
       "spot_id": 815,
       "spot_name_en": "Recrudescent Beach",
-      "spot_name_jp": "再帰の浜辺"
+      "spot_name_jp": "再帰の浜辺",
+      "stage_no": 110
     }
   ],
   "field004_m00": [
@@ -2113,7 +2157,8 @@
       "name_jp": "帰郷",
       "spot_id": 964,
       "spot_name_en": "Morrow Forest Depths",
-      "spot_name_jp": "モロー樹林 深層"
+      "spot_name_jp": "モロー樹林 深層",
+      "stage_no": 123
     },
     {
       "type": "TYPE_OUTPOST",
@@ -2124,7 +2169,8 @@
       "name_jp": "帰郷",
       "spot_id": 879,
       "spot_name_en": "Glyndwr",
-      "spot_name_jp": "グリンデュア"
+      "spot_name_jp": "グリンデュア",
+      "stage_no": 122
     },
     {
       "type": "TYPE_DOOR",
@@ -2231,7 +2277,8 @@
       "name_jp": "帰郷",
       "spot_id": 965,
       "spot_name_en": "Kingal Canyon Depths",
-      "spot_name_jp": "キンガル峡谷 深層"
+      "spot_name_jp": "キンガル峡谷 深層",
+      "stage_no": 122
     },
     {
       "type": "TYPE_DOOR",
@@ -2306,7 +2353,8 @@
       "name_jp": "失われた故郷",
       "spot_id": 877,
       "spot_name_en": "Dana",
-      "spot_name_jp": "ダナ"
+      "spot_name_jp": "ダナ",
+      "stage_no": 120
     },
     {
       "type": "TYPE_OUTPOST",
@@ -2317,7 +2365,8 @@
       "name_jp": "戦士の集落",
       "spot_id": 878,
       "spot_name_en": "Morfaul",
-      "spot_name_jp": "モルフォール"
+      "spot_name_jp": "モルフォール",
+      "stage_no": 123
     },
     {
       "type": "TYPE_DOOR",
@@ -2376,7 +2425,8 @@
       "name_jp": "失われた故郷",
       "spot_id": 759,
       "spot_name_en": "Spirit Arts Hut",
-      "spot_name_jp": "武霊の庵"
+      "spot_name_jp": "武霊の庵",
+      "stage_no": 120
     },
     {
       "type": "TYPE_TEXT",
@@ -2603,7 +2653,8 @@
       "name_jp": "戦士の集落",
       "spot_id": 963,
       "spot_name_en": "Elan Water Grove Depths",
-      "spot_name_jp": "エラン水林 深層"
+      "spot_name_jp": "エラン水林 深層",
+      "stage_no": 121
     },
     {
       "type": "TYPE_AREA_WARP",
@@ -2614,7 +2665,8 @@
       "name_jp": "託されし者",
       "spot_id": 962,
       "spot_name_en": "Wharf",
-      "spot_name_jp": "船着き場"
+      "spot_name_jp": "船着き場",
+      "stage_no": 121
     },
     {
       "type": "TYPE_OUTPOST",
@@ -2625,7 +2677,8 @@
       "name_jp": "託されし者",
       "spot_id": 876,
       "spot_name_en": "Protector's Retreat",
-      "spot_name_jp": "守り人の庵"
+      "spot_name_jp": "守り人の庵",
+      "stage_no": 121
     },
     {
       "type": "TYPE_CAVE",
@@ -2700,7 +2753,8 @@
       "name_jp": "新大陸",
       "spot_id": 917,
       "spot_name_en": "Deserted Village of Nabhadh",
-      "spot_name_jp": "廃村ナバド"
+      "spot_name_jp": "廃村ナバド",
+      "stage_no": 120
     },
     {
       "type": "TYPE_CAVE",
@@ -2767,7 +2821,8 @@
       "name_jp": "新大陸",
       "spot_id": 961,
       "spot_name_en": "Farana Plains Center",
-      "spot_name_jp": "ファーラナ平原 中央"
+      "spot_name_jp": "ファーラナ平原 中央",
+      "stage_no": 120
     },
     {
       "type": "TYPE_CAVE",
@@ -2796,7 +2851,8 @@
       "name_jp": "消えた王子",
       "spot_id": 1217,
       "spot_name_en": "Firefall Mountain Campsite",
-      "spot_name_jp": "火垂れ山野営地"
+      "spot_name_jp": "火垂れ山野営地",
+      "stage_no": 139
     },
     {
       "type": "TYPE_TEXT",
@@ -2823,7 +2879,8 @@
       "name_jp": "消えた王子",
       "spot_id": 1216,
       "spot_name_en": "Northern Bandit Hideout",
-      "spot_name_jp": "北の盗賊のアジト"
+      "spot_name_jp": "北の盗賊のアジト",
+      "stage_no": 134
     },
     {
       "type": "TYPE_AREA_WARP",
@@ -2834,7 +2891,8 @@
       "name_jp": "消えた王子",
       "spot_id": 1287,
       "spot_name_en": "Before the Tomb of the Royal Family",
-      "spot_name_jp": "王家の墓前"
+      "spot_name_jp": "王家の墓前",
+      "stage_no": 134
     },
     {
       "type": "TYPE_SHRINE",
@@ -2845,7 +2903,8 @@
       "name_jp": "消えた王子",
       "spot_id": 1220,
       "spot_name_en": "The Royal Family Mausoleum",
-      "spot_name_jp": "王家の墓"
+      "spot_name_jp": "王家の墓",
+      "stage_no": 134
     },
     {
       "type": "TYPE_NONE",
@@ -2904,7 +2963,8 @@
       "name_jp": "王都の決戦",
       "spot_id": 1284,
       "spot_name_en": "Western Urteca Mountains",
-      "spot_name_jp": "ウルテカ山岳 西部"
+      "spot_name_jp": "ウルテカ山岳 西部",
+      "stage_no": 134
     },
     {
       "type": "TYPE_CAVE",
@@ -2947,7 +3007,8 @@
       "name_jp": "消えた王子",
       "spot_id": 1283,
       "spot_name_en": "Northern Urteca Mountains",
-      "spot_name_jp": "ウルテカ山岳 北部"
+      "spot_name_jp": "ウルテカ山岳 北部",
+      "stage_no": 134
     },
     {
       "type": "TYPE_AREA_WARP",
@@ -2958,7 +3019,8 @@
       "name_jp": "消えた王子",
       "spot_id": 1282,
       "spot_name_en": "Eastern Urteca Mountains",
-      "spot_name_jp": "ウルテカ山岳 東部"
+      "spot_name_jp": "ウルテカ山岳 東部",
+      "stage_no": 134
     },
     {
       "type": "TYPE_SHRINE",
@@ -2969,7 +3031,8 @@
       "name_jp": "王都の決戦",
       "spot_id": 1078,
       "spot_name_en": "Firefall Mountain Dragon Temple",
-      "spot_name_jp": "火垂れ山拝竜院"
+      "spot_name_jp": "火垂れ山拝竜院",
+      "stage_no": 134
     },
     {
       "type": "TYPE_NONE",
@@ -3124,7 +3187,8 @@
       "name_jp": "展望城の戦い",
       "spot_id": 1215,
       "spot_name_en": "Plateau Shack",
-      "spot_name_jp": "高地のあばら屋"
+      "spot_name_jp": "高地のあばら屋",
+      "stage_no": 133
     },
     {
       "type": "TYPE_AREA_WARP",
@@ -3135,7 +3199,8 @@
       "name_jp": "展望城の戦い",
       "spot_id": 1238,
       "spot_name_en": "Fortress City Megado: City Gate",
-      "spot_name_jp": "城塞都市メガド 城門"
+      "spot_name_jp": "城塞都市メガド 城門",
+      "stage_no": 133
     },
     {
       "type": "TYPE_TEXT",
@@ -3178,7 +3243,8 @@
       "name_jp": "展望城の戦い",
       "spot_id": 1168,
       "spot_name_en": "Eli Guard Tower",
-      "spot_name_jp": "エリ警備塔"
+      "spot_name_jp": "エリ警備塔",
+      "stage_no": 133
     },
     {
       "type": "TYPE_WELL",
@@ -3197,7 +3263,8 @@
       "name_jp": "展望城の戦い",
       "spot_id": 1076,
       "spot_name_en": "Shrine of Combat",
-      "spot_name_jp": "戦練の社"
+      "spot_name_jp": "戦練の社",
+      "stage_no": 133
     },
     {
       "type": "TYPE_TEXT",
@@ -3304,7 +3371,8 @@
       "name_jp": "王子ネド",
       "spot_id": 1140,
       "spot_name_en": "West Feryana Wilderness",
-      "spot_name_jp": "フェルヤナ荒原 西側"
+      "spot_name_jp": "フェルヤナ荒原 西側",
+      "stage_no": 132
     },
     {
       "type": "TYPE_CAVE",
@@ -3338,8 +3406,9 @@
       "name_en": "Prince Nedo",
       "name_jp": "王子ネド",
       "spot_id": 1139,
-      "spot_name_en": "Lookout Castle: Before the Castle Gate",
-      "spot_name_jp": "展望城 城門前"
+      "spot_name_en": "Lookout Castle: Castle Gate Exterior",
+      "spot_name_jp": "展望城 城門前",
+      "stage_no": 132
     },
     {
       "type": "TYPE_AREA_WARP",
@@ -3350,7 +3419,8 @@
       "name_jp": "王子ネド",
       "spot_id": 1236,
       "spot_name_en": "Lookout Castle Exterior: Sonel's Camp",
-      "spot_name_jp": "展望城城外 ソネルキャンプ"
+      "spot_name_jp": "展望城城外 ソネルキャンプ",
+      "stage_no": 137
     },
     {
       "type": "TYPE_CAVE",
@@ -3409,7 +3479,8 @@
       "name_jp": "王子ネド",
       "spot_id": 1093,
       "spot_name_en": "Mephite",
-      "spot_name_jp": "メフィテ"
+      "spot_name_jp": "メフィテ",
+      "stage_no": 132
     },
     {
       "type": "TYPE_CAVE",
@@ -3490,9 +3561,10 @@
       "z": -57021.883,
       "name_en": "The New Generation",
       "name_jp": "新しい世代",
-      "spot_id": 1032,
-      "spot_name_en": "Rothgill",
-      "spot_name_jp": "ロスギル"
+      "spot_id": 1105,
+      "spot_name_en": "Dacreim Fortress",
+      "spot_name_jp": "ダクレイム砦",
+      "stage_no": 131
     },
     {
       "type": "TYPE_DOOR",
@@ -3527,7 +3599,8 @@
       "name_jp": "絶望の大陸",
       "spot_id": 1032,
       "spot_name_en": "Rothgill",
-      "spot_name_jp": "ロスギル"
+      "spot_name_jp": "ロスギル",
+      "stage_no": 131
     },
     {
       "type": "TYPE_CAVE",
@@ -3626,7 +3699,8 @@
       "name_jp": "新しい世代",
       "spot_id": 1107,
       "spot_name_en": "North Rathnite Foothills",
-      "spot_name_jp": "ラスニテ山麓 北側"
+      "spot_name_jp": "ラスニテ山麓 北側",
+      "stage_no": 130
     },
     {
       "type": "TYPE_CAVE",
@@ -3661,7 +3735,8 @@
       "name_jp": "新しい世代",
       "spot_id": 1031,
       "spot_name_en": "Hidden Village Piremoth",
-      "spot_name_jp": "隠れ村ピレモス"
+      "spot_name_jp": "隠れ村ピレモス",
+      "stage_no": 130
     }
   ],
   "sfield000_m00": [
@@ -3714,7 +3789,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 451,
       "spot_name_en": "Tel",
-      "spot_name_jp": "テル"
+      "spot_name_jp": "テル",
+      "stage_no": 100
     },
     {
       "type": "TYPE_OUTPOST",
@@ -3725,7 +3801,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 452,
       "spot_name_en": "Rotes",
-      "spot_name_jp": "ローテス"
+      "spot_name_jp": "ローテス",
+      "stage_no": 100
     },
     {
       "type": "TYPE_OUTPOST",
@@ -3736,7 +3813,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 457,
       "spot_name_en": "Drawan",
-      "spot_name_jp": "ドラワン"
+      "spot_name_jp": "ドラワン",
+      "stage_no": 100
     },
     {
       "type": "TYPE_TEXT",
@@ -3762,8 +3840,9 @@
       "name_en": "Resolutions and Omens",
       "name_jp": "覚悟と兆し",
       "spot_id": 471,
-      "spot_name_en": "Gritten Fort",
-      "spot_name_jp": "グリッテン砦"
+      "spot_name_en": "Fort Gritten",
+      "spot_name_jp": "グリッテン砦",
+      "stage_no": 100
     },
     {
       "type": "TYPE_OUTPOST",
@@ -3774,7 +3853,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 458,
       "spot_name_en": "Zoma",
-      "spot_name_jp": "ゾマ"
+      "spot_name_jp": "ゾマ",
+      "stage_no": 100
     },
     {
       "type": "TYPE_OUTPOST",
@@ -3785,7 +3865,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 453,
       "spot_name_en": "Lynwood",
-      "spot_name_jp": "リンウッド"
+      "spot_name_jp": "リンウッド",
+      "stage_no": 100
     },
     {
       "type": "TYPE_DOOR",
@@ -3836,7 +3917,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 454,
       "spot_name_en": "Jingen",
-      "spot_name_jp": "ジンゲン"
+      "spot_name_jp": "ジンゲン",
+      "stage_no": 100
     },
     {
       "type": "TYPE_OUTPOST",
@@ -3847,7 +3929,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 455,
       "spot_name_en": "Kinoza",
-      "spot_name_jp": "キノザ"
+      "spot_name_jp": "キノザ",
+      "stage_no": 100
     },
     {
       "type": "TYPE_OUTPOST",
@@ -3858,7 +3941,8 @@
       "name_jp": "覚悟と兆し",
       "spot_id": 470,
       "spot_name_en": "Deenan Woods",
-      "spot_name_jp": "ディナン深層林"
+      "spot_name_jp": "ディナン深層林",
+      "stage_no": 100
     }
   ],
   "sfield003_m00": [
@@ -3887,7 +3971,8 @@
       "name_jp": "侵食と騎士団",
       "spot_id": 687,
       "spot_name_en": "Expedition Garrison",
-      "spot_name_jp": "調査隊駐屯地"
+      "spot_name_jp": "調査隊駐屯地",
+      "stage_no": 110
     },
     {
       "type": "TYPE_TEXT",
@@ -3908,7 +3993,8 @@
       "name_jp": "帰郷",
       "spot_id": 879,
       "spot_name_en": "Glyndwr",
-      "spot_name_jp": "グリンデュア"
+      "spot_name_jp": "グリンデュア",
+      "stage_no": 122
     },
     {
       "type": "TYPE_TEXT",
@@ -3927,7 +4013,8 @@
       "name_jp": "失われた故郷",
       "spot_id": 877,
       "spot_name_en": "Dana",
-      "spot_name_jp": "ダナ"
+      "spot_name_jp": "ダナ",
+      "stage_no": 120
     },
     {
       "type": "TYPE_OUTPOST",
@@ -3938,7 +4025,8 @@
       "name_jp": "託されし者",
       "spot_id": 876,
       "spot_name_en": "Protector's Retreat",
-      "spot_name_jp": "守り人の庵"
+      "spot_name_jp": "守り人の庵",
+      "stage_no": 121
     },
     {
       "type": "TYPE_OUTPOST",
@@ -3949,7 +4037,8 @@
       "name_jp": "戦士の集落",
       "spot_id": 878,
       "spot_name_en": "Morfaul",
-      "spot_name_jp": "モルフォール"
+      "spot_name_jp": "モルフォール",
+      "stage_no": 123
     },
     {
       "type": "TYPE_TEXT",
@@ -3986,7 +4075,8 @@
       "name_jp": "消えた王子",
       "spot_id": 1216,
       "spot_name_en": "Northern Bandit Hideout",
-      "spot_name_jp": "北の盗賊のアジト"
+      "spot_name_jp": "北の盗賊のアジト",
+      "stage_no": 134
     },
     {
       "type": "TYPE_TEXT",
@@ -4013,7 +4103,8 @@
       "name_jp": "消えた王子",
       "spot_id": 1217,
       "spot_name_en": "Firefall Mountain Campsite",
-      "spot_name_jp": "火垂れ山野営地"
+      "spot_name_jp": "火垂れ山野営地",
+      "stage_no": 139
     },
     {
       "type": "TYPE_OUTPOST",
@@ -4024,7 +4115,8 @@
       "name_jp": "王子ネド",
       "spot_id": 1093,
       "spot_name_en": "Mephite",
-      "spot_name_jp": "メフィテ"
+      "spot_name_jp": "メフィテ",
+      "stage_no": 132
     },
     {
       "type": "TYPE_DOOR",
@@ -4075,7 +4167,8 @@
       "name_jp": "展望城の戦い",
       "spot_id": 1168,
       "spot_name_en": "Eli Guard Tower",
-      "spot_name_jp": "エリ警備塔"
+      "spot_name_jp": "エリ警備塔",
+      "stage_no": 133
     },
     {
       "type": "TYPE_TEXT",
@@ -4094,7 +4187,8 @@
       "name_jp": "絶望の大陸",
       "spot_id": 1032,
       "spot_name_en": "Rothgill",
-      "spot_name_jp": "ロスギル"
+      "spot_name_jp": "ロスギル",
+      "stage_no": 131
     },
     {
       "type": "TYPE_TEXT",
@@ -4113,7 +4207,8 @@
       "name_jp": "新しい世代",
       "spot_id": 1031,
       "spot_name_en": "Hidden Village Piremoth",
-      "spot_name_jp": "隠れ村ピレモス"
+      "spot_name_jp": "隠れ村ピレモス",
+      "stage_no": 130
     },
     {
       "type": "TYPE_TEXT",
@@ -4122,6 +4217,374 @@
       "z": -14943.536,
       "name_en": "The New Generation",
       "name_jp": "新しい世代"
+    }
+  ],
+  "lb000_m00": [
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": 341.0609,
+      "y": 12302.385,
+      "z": -840.66516,
+      "name_en": "The White Dragon Temple",
+      "name_jp": "白竜神殿レーゼ",
+      "spot_id": 450,
+      "spot_name_en": "The White Dragon Temple",
+      "spot_name_jp": "白竜神殿レーゼ",
+      "stage_no": 200,
+      "source": "dungeon_warp"
+    }
+  ],
+  "rm112_m00": [
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": -1037.5245,
+      "y": 133.93758,
+      "z": -1074.7748,
+      "name_en": "Pawn Cathedral",
+      "name_jp": "ポーン郷",
+      "spot_id": 482,
+      "spot_name_en": "Pawn Cathedral",
+      "spot_name_jp": "ポーン郷",
+      "stage_no": 412,
+      "source": "dungeon_warp"
+    }
+  ],
+  "st0510": [
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": -2611.3403,
+      "y": 41.635506,
+      "z": -17757.912,
+      "name_en": "Hobolic Cave",
+      "name_jp": "ホボリック洞穴",
+      "spot_id": 456,
+      "spot_name_en": "Hobolic Cave",
+      "spot_name_jp": "ホボリック洞穴",
+      "stage_no": 510,
+      "source": "dungeon_warp"
+    }
+  ],
+  "st0552": [
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": 247.73347,
+      "y": -383.36652,
+      "z": -8180.8315,
+      "name_en": "Mysree Grove Shrine",
+      "name_jp": "標の祠　ミスリウ森林深部",
+      "spot_id": 571,
+      "spot_name_en": "Mysree Grove Shrine",
+      "spot_name_jp": "標の祠　ミスリウ森林深部",
+      "stage_no": 552,
+      "source": "dungeon_warp"
+    }
+  ],
+  "st0554": [
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": -220.41483,
+      "y": -371.03876,
+      "z": -11641.811,
+      "name_en": "Zandora Wastelands Shrine",
+      "name_jp": "標の祠　ザンドラ禁域",
+      "spot_id": 573,
+      "spot_name_en": "Zandora Wastelands Shrine",
+      "spot_name_jp": "標の祠　ザンドラ禁域",
+      "stage_no": 554,
+      "source": "dungeon_warp"
+    }
+  ],
+  "rm110_m00": [
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": 15229.024,
+      "y": 1594.323,
+      "z": -54755.81,
+      "name_en": "Mergoda Ruins",
+      "name_jp": "亡都メルゴダ",
+      "spot_id": 480,
+      "spot_name_en": "Mergoda Ruins",
+      "spot_name_jp": "亡都メルゴダ",
+      "stage_no": 410,
+      "source": "dungeon_warp"
+    }
+  ],
+  "st0882": [
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": -355.514,
+      "y": -468.64047,
+      "z": -4529.782,
+      "name_en": "Hollow of Beginnings: Gathering Area",
+      "name_jp": "始まりの洞　集いの間",
+      "spot_id": 885,
+      "spot_name_en": "Hollow of Beginnings: Gathering Area",
+      "spot_name_jp": "始まりの洞　集いの間",
+      "stage_no": 882,
+      "source": "dungeon_warp"
+    }
+  ],
+  "st0810": [
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -3353.133,
+      "y": -767.9316,
+      "z": -20375.467,
+      "name_en": "Manun Village",
+      "name_jp": "マヌンの集落",
+      "spot_id": 904,
+      "spot_name_en": "Manun Village",
+      "spot_name_jp": "マヌンの集落",
+      "stage_no": 810,
+      "source": "dungeon_warp"
+    }
+  ],
+  "rm011_m00": [
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -2494.3274,
+      "y": 2100.0002,
+      "z": -41.110336,
+      "name_en": "Tower of Ivanos",
+      "name_jp": "イヴァノスの塔",
+      "spot_id": 959,
+      "spot_name_en": "Tower of Ivanos",
+      "spot_name_jp": "イヴァノスの塔",
+      "stage_no": 905,
+      "source": "dungeon_warp"
+    }
+  ],
+  "st0809": [
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -26.103073,
+      "y": 0.791446,
+      "z": -991.7116,
+      "name_en": "Scorching Blocked Passage",
+      "name_jp": "灼熱の封鎖道",
+      "spot_id": 693,
+      "spot_name_en": "Scorching Blocked Passage",
+      "spot_name_jp": "灼熱の封鎖道",
+      "stage_no": 809,
+      "source": "dungeon_warp"
+    }
+  ],
+  "rm110_m01": [
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -16057.919,
+      "y": 3551.3855,
+      "z": -25792.645,
+      "name_en": "Mergoda Ruins: Royal Palace Level",
+      "name_jp": "亡都メルゴダ　王宮層",
+      "spot_id": 668,
+      "spot_name_en": "Mergoda Ruins: Royal Palace Level",
+      "spot_name_jp": "亡都メルゴダ　王宮層",
+      "stage_no": 418,
+      "source": "dungeon_warp"
+    }
+  ],
+  "lb011_m00": [
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -452.23865,
+      "y": 0.107072,
+      "z": -317.1548,
+      "name_en": "Arisen's Room",
+      "name_jp": "覚者の自室",
+      "spot_id": 686,
+      "spot_name_en": "Arisen's Room",
+      "spot_name_jp": "覚者の自室",
+      "stage_no": 211,
+      "source": "dungeon_warp"
+    }
+  ],
+  "lb010_m00": [
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": 3896.3916,
+      "y": 8670.722,
+      "z": 33193.734,
+      "name_en": "Clan Hall",
+      "name_jp": "クラン拠点",
+      "spot_id": 966,
+      "spot_name_en": "Clan Hall",
+      "spot_name_jp": "クラン拠点",
+      "stage_no": 210,
+      "source": "dungeon_warp"
+    }
+  ],
+  "rm130_m11": [
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": 1532.2748,
+      "y": 3388.1057,
+      "z": -2402.7705,
+      "name_en": "Lookout Castle",
+      "name_jp": "展望城",
+      "spot_id": 1092,
+      "spot_name_en": "Lookout Castle",
+      "spot_name_jp": "展望城",
+      "stage_no": 451,
+      "source": "dungeon_warp"
+    }
+  ],
+  "rm130_m04": [
+    {
+      "type": "TYPE_OUTPOST",
+      "id": 522150,
+      "x": -1355.4772,
+      "y": 450.7834,
+      "z": -2474.5063,
+      "name_en": "Fort Thines",
+      "name_jp": "ティネス砦",
+      "spot_id": 1091,
+      "spot_name_en": "Fort Thines",
+      "spot_name_jp": "ティネス砦",
+      "stage_no": 443,
+      "source": "dungeon_warp"
+    }
+  ],
+  "st1001": [
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -4169.625,
+      "y": 0.099094,
+      "z": -8774.982,
+      "name_en": "Bertha's Bandit Group Hideout",
+      "name_jp": "ベルタ盗賊団のアジト",
+      "spot_id": 1094,
+      "spot_name_en": "Bertha's Bandit Group Hideout",
+      "spot_name_jp": "ベルタ盗賊団のアジト",
+      "stage_no": 1001,
+      "source": "dungeon_warp"
+    }
+  ],
+  "st1140": [
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": 1921.0881,
+      "y": 50.517273,
+      "z": -6079.171,
+      "name_en": "Epitaph Road: Rathnite Foothills",
+      "name_jp": "英霊眠りし道　ラスニテ山麓",
+      "spot_id": 1108,
+      "spot_name_en": "Epitaph Road: Rathnite Foothills",
+      "spot_name_jp": "英霊眠りし道　ラスニテ山麓",
+      "stage_no": 1140,
+      "source": "dungeon_warp"
+    }
+  ],
+  "st1148": [
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -437.87067,
+      "y": 797.97974,
+      "z": -4113.5854,
+      "name_en": "Epitaph Road: Feryana Wilderness",
+      "name_jp": "英霊眠りし道　フェルヤナ荒原",
+      "spot_id": 1109,
+      "spot_name_en": "Epitaph Road: Feryana Wilderness",
+      "spot_name_jp": "英霊眠りし道　フェルヤナ荒原",
+      "stage_no": 1148,
+      "source": "dungeon_warp"
+    }
+  ],
+  "rm130_m03": [
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": 6625.599,
+      "y": 81.53401,
+      "z": 4824.8433,
+      "name_en": "Fort Thines: Great Dining Hall",
+      "name_jp": "ティネス砦　大食堂",
+      "spot_id": 1170,
+      "spot_name_en": "Fort Thines: Great Dining Hall",
+      "spot_name_jp": "ティネス砦　大食堂",
+      "stage_no": 448,
+      "source": "dungeon_warp"
+    }
+  ],
+  "rm105_m00": [
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -2887.374,
+      "y": 0.0,
+      "z": -83.5448,
+      "name_en": "Vanessa's Private Room",
+      "name_jp": "ヴァネッサの私室",
+      "spot_id": 1239,
+      "spot_name_en": "Vanessa's Private Room",
+      "spot_name_jp": "ヴァネッサの私室",
+      "stage_no": 400,
+      "source": "dungeon_warp"
+    }
+  ],
+  "rm131_m04": [
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -45.139458,
+      "y": 1450.0,
+      "z": -21721.006,
+      "name_en": "Fortress City Megado: Residential Level",
+      "name_jp": "城塞都市メガド 居住層",
+      "spot_id": 1097,
+      "spot_name_en": "Fortress City Megado: Residential Level",
+      "spot_name_jp": "城塞都市メガド 居住層",
+      "stage_no": 461,
+      "source": "dungeon_warp"
+    }
+  ],
+  "rm900_m00": [
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -1062.5984,
+      "y": -38.49855,
+      "z": -1838.8169,
+      "name_en": "Bitterblack Maze Cove",
+      "name_jp": "黒呪の迷宮：入り江",
+      "spot_id": 1271,
+      "spot_name_en": "Bitterblack Maze Cove",
+      "spot_name_jp": "黒呪の迷宮：入り江",
+      "stage_no": 2000,
+      "source": "dungeon_warp"
+    }
+  ],
+  "st1149": [
+    {
+      "type": "TYPE_AREA_WARP",
+      "id": 522154,
+      "x": -262.18588,
+      "y": 98.30017,
+      "z": -13715.603,
+      "name_en": "Memory of Urteca",
+      "name_jp": "ウルテカの記憶",
+      "spot_id": 1111,
+      "spot_name_en": "Memory of Urteca",
+      "spot_name_jp": "ウルテカの記憶",
+      "stage_no": 1149,
+      "source": "dungeon_warp"
     }
   ]
 }

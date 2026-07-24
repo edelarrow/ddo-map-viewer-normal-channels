@@ -1341,6 +1341,7 @@ function navigateTo(mapName, stid = null, view = null) {
     let hash = stid ? `${mapName}:${stid}` : mapName;
     if (view) {
         hash += `@${view.zoom.toFixed(2)}/${view.center.lat.toFixed(1)}/${view.center.lng.toFixed(1)}`;
+        if (view.floor != null) hash += `/${view.floor}`;
     }
     window.location.hash = hash;
 }
@@ -3762,7 +3763,7 @@ function navigateConnectionChoice(sourceMap, choice) {
     );
 }
 
-function buildConnectionChoicePopup(sourceMap, choices, marker) {
+function buildConnectionChoicePopup(sourceMap, choices, closePopup) {
     const wrap = document.createElement('div');
     wrap.className = 'conn-choice-popup';
     const title = document.createElement('div');
@@ -3784,7 +3785,7 @@ function buildConnectionChoicePopup(sourceMap, choices, marker) {
         btn.addEventListener('click', (e) => {
             L.DomEvent.stopPropagation(e);
             if (choice.hasMap) navigateConnectionChoice(sourceMap, choice);
-            marker.closePopup();
+            closePopup?.();
         });
         wrap.appendChild(btn);
     }
@@ -3801,19 +3802,28 @@ function addConnectionMapMarker(sourceMap, latlng, choices) {
 
     const marker = L.marker(latlng, { icon });
     marker.bindTooltip(tooltip, { permanent: false, direction: 'top', offset: [0, -10] });
+    // Multi-dest popups are opened on the map, not via marker.bindPopup(). Binding on the
+    // marker installs Leaflet's click toggle, which closes the popup on the next click
+    // (handler opens → default toggle closes), so the list never stays open again.
     marker.on('click', (e) => {
         L.DomEvent.stopPropagation(e);
         const vis = visibleChoices();
         if (!vis.length) return;
         if (vis.length === 1 && !vis[0].hasMap) {
-            marker.bindPopup(`No map data for Stage ${vis[0].conn.to_stage}<br>${vis[0].destName}`).openPopup();
+            L.popup({ maxWidth: 300 })
+                .setLatLng(latlng)
+                .setContent(`No map data for Stage ${vis[0].conn.to_stage}<br>${vis[0].destName}`)
+                .openOn(leafletMap);
             return;
         }
         if (vis.length === 1) {
             navigateConnectionChoice(sourceMap, vis[0]);
             return;
         }
-        marker.bindPopup(buildConnectionChoicePopup(sourceMap, vis, marker), { maxWidth: 300 }).openPopup();
+        const popup = L.popup({ maxWidth: 300 })
+            .setLatLng(latlng)
+            .setContent(buildConnectionChoicePopup(sourceMap, vis, () => leafletMap.closePopup()));
+        popup.openOn(leafletMap);
     });
     marker.addTo(connectionLayer);
     marker._poiCategory = poiCat;
@@ -3985,6 +3995,7 @@ const POI_GATHER_CATEGORIES = [
     { id: 'treasure',   label: 'Treasure chests',             icon: 'treasure' },
     { id: 'box',        label: 'Boxes',                       icon: 'box' },
     { id: 'antique',    label: 'Antiques',                    icon: 'antique' },
+    { id: 'book',       label: 'Books',                       icon: 'book' },
     { id: 'grassHerb',  label: 'Grass / herb',                icon: 'grassHerb' },
     { id: 'flower',     label: 'Flower',                      icon: 'flower' },
     { id: 'sand',       label: 'Sand',                        icon: 'sand' },
@@ -4001,7 +4012,7 @@ const LANDMARK_POI_CATEGORIES = new Set([
     'areaWarp', 'outpost', 'door', 'house', 'cave', 'basement', 'catacomb', 'elfRuin', 'shrine', 'well', 'ark', 'landmarkOther',
 ]);
 const GATHER_POI_CATEGORIES = new Set([
-    'mushroom', 'treasure', 'box', 'antique', 'grassHerb', 'flower', 'sand', 'shell', 'crystal', 'gemstone', 'gatherNode', 'water', 'lumber', 'oneOff', 'gatherOther',
+    'mushroom', 'treasure', 'box', 'antique', 'book', 'grassHerb', 'flower', 'sand', 'shell', 'crystal', 'gemstone', 'gatherNode', 'water', 'lumber', 'oneOff', 'gatherOther',
 ]);
 const POI_FILTER_DEFAULTS = Object.fromEntries(POI_CATEGORIES.map(c => [c.id, true]));
 POI_FILTER_DEFAULTS.special = false;
@@ -4106,7 +4117,9 @@ function classifyGatherPoiCategory(type) {
     if (type === 'OM_GATHER_WATER') return 'water';
     if (/^OM_GATHER_TREE_LV/.test(type)) return 'lumber';
     if (type === 'OM_GATHER_BOX') return 'box';
-    if (type === 'OM_GATHER_ANTIQUE') return 'antique';
+    // Alchemy piles use the same gold/antique icon and toggle as antiques (DDOn-Tools).
+    if (type === 'OM_GATHER_ANTIQUE' || type === 'OM_GATHER_ALCHEMY') return 'antique';
+    if (type === 'OM_GATHER_BOOK') return 'book';
     if (type === 'OM_GATHER_ONE_OFF') return 'oneOff';
     if (type.startsWith('CHEST_') || type.startsWith('OM_GATHER_TREA_') ||
         type.startsWith('OM_GATHER_KEY_')) return 'treasure';
@@ -4182,6 +4195,43 @@ function defaultFieldStage(mapName) {
     return info.stages[0];
 }
 
+/**
+ * Stage for a named field POI (Wharf, Glyndwr, Bloodbane Precipice, …).
+ *
+ * Multi-stage field maps share one image (field004 = Farana+Elan+Kingal+Morrow).
+ * Gathers/mobs/shops are keyed by StageNo, so search must open the POI's stage —
+ * not stages[0] (e.g. Wharf is 121 / Elan, Glyndwr is 122 / Kingal).
+ *
+ * Priority:
+ *   1. landmark.stage_no (from warpLocationList.StageNo, else am_spot.StageNoMap)
+ *   2. nearest positioned connection.from_stage on this map
+ *   3. defaultFieldStage (last resort)
+ */
+const FIELD_POI_STAGE_CONN_MAX = 35_000;
+
+function nearestConnectionStageNo(mapName, worldX, worldZ) {
+    const conns = connectionData[mapName];
+    if (!conns || worldX == null || worldZ == null) return null;
+    let best = null;
+    let bestD2 = FIELD_POI_STAGE_CONN_MAX * FIELD_POI_STAGE_CONN_MAX;
+    for (const c of conns) {
+        if (c.from_stage == null || c.x == null || c.z == null) continue;
+        const d2 = (c.x - worldX) ** 2 + (c.z - worldZ) ** 2;
+        if (d2 < bestD2) {
+            bestD2 = d2;
+            best = c.from_stage;
+        }
+    }
+    return best;
+}
+
+function resolveFieldPoiStid(mapName, { stageNo = null, worldX = null, worldZ = null } = {}) {
+    if (stageNo != null) return stageIdFromNo(stageNo);
+    const fromConn = nearestConnectionStageNo(mapName, worldX, worldZ);
+    if (fromConn != null) return stageIdFromNo(fromConn);
+    return defaultFieldStage(mapName);
+}
+
 function mapAreaLabel(mapName) {
     const info = mapParams[mapName];
     const area = info?.quest_area_name;
@@ -4197,7 +4247,7 @@ function locationTypeLabel(categoryId) {
 
 let _namedLocationIndex = null;
 let _namedLocationIndexVersion = 0;
-const NAMED_LOCATION_INDEX_VERSION = 17;
+const NAMED_LOCATION_INDEX_VERSION = 20;
 let _pendingNamedLocNav = null;
 
 function namedLocationMatchesEntry(entry, term, exact) {
@@ -4372,15 +4422,28 @@ function buildNamedLocationIndex() {
     };
 
     for (const [mapName, landmarks] of Object.entries(landmarkData)) {
-        if (!isMainWorldFieldMap(mapName)) continue;
+        // sfield* uses a different projection — skip. field* + dungeon/interior maps are OK.
+        if (/^sfield\d+_m\d+$/.test(mapName)) continue;
+        const isField = isMainWorldFieldMap(mapName);
         for (const lm of landmarks) {
             if (HIDDEN_LANDMARK_TYPES.has(lm.type)) continue;
+            // Non-field landmarks are only indexed when imported as dungeon warps.
+            if (!isField && lm.source !== 'dungeon_warp') continue;
             const label = lm.spot_name_en?.trim();
             if (!label) continue;
             if (/^Darkness\b/i.test(label)) continue;
             const category = classifyLandmarkPoiCategory(lm.type, lm);
             const filterCat = _normalizePoiFilterCategory(category) ?? category;
             if (!NAMED_LOCATION_CATEGORIES.has(filterCat)) continue;
+            const stid = isField
+                ? resolveFieldPoiStid(mapName, {
+                    stageNo: lm.stage_no ?? null,
+                    worldX: lm.x,
+                    worldZ: lm.z,
+                })
+                : (lm.stage_no != null
+                    ? stageIdFromNo(lm.stage_no)
+                    : (mapParams[mapName]?.stages?.[0] ?? null));
             const entry = {
                 label,
                 labelAlt: lm.spot_name_jp ?? '',
@@ -4388,8 +4451,9 @@ function buildNamedLocationIndex() {
                 poiCat: category,
                 isConnection: false,
                 mapName,
-                stid: defaultFieldStage(mapName),
+                stid,
                 worldX: lm.x,
+                worldY: lm.y ?? null,
                 worldZ: lm.z,
             };
             if (lm.spot_id != null) {
@@ -4466,21 +4530,31 @@ function filterNamedLocationEntries(rawFilter) {
     return matches;
 }
 
+function namedLocationFloor(entry) {
+    const info = mapParams[entry.mapName];
+    if (!info?.floor_obbs || entry.worldY == null) return null;
+    return getEnemyFloor(entry.worldX, entry.worldY, entry.worldZ, info.floor_obbs);
+}
+
 function navigateToNamedLocation(entry) {
     const info = mapParams[entry.mapName];
     if (!info) return;
     const latlng = worldToPixel(entry.worldX, entry.worldZ, info);
     const zoom = 1.75;
     const stid = entry.stid;
+    const floor = namedLocationFloor(entry);
     const sameMap = entry.mapName === _loadedMapName;
     const sameStage = !stid || stid === currentStageName();
 
     const persistViewInHash = () => {
         const mapPart = stid ? `${entry.mapName}:${stid}` : entry.mapName;
-        history.replaceState(null, '', `#${mapPart}@${zoom.toFixed(2)}/${latlng.lat.toFixed(1)}/${latlng.lng.toFixed(1)}!${getLayersHash()}`);
+        let hash = `#${mapPart}@${zoom.toFixed(2)}/${latlng.lat.toFixed(1)}/${latlng.lng.toFixed(1)}`;
+        if (floor != null) hash += `/${floor}`;
+        history.replaceState(null, '', `${hash}!${getLayersHash()}`);
     };
 
     if (sameMap && sameStage) {
+        if (floor != null && floor !== currentLayer) _switchToFloor(floor, info);
         leafletMap.flyTo(latlng, zoom, { duration: 0.45 });
         _clearSpotHighlights();
         _addSpotHighlight(latlng);
@@ -4489,7 +4563,7 @@ function navigateToNamedLocation(entry) {
     }
 
     _pendingNamedLocNav = { latlng };
-    navigateTo(entry.mapName, stid, { zoom, center: latlng });
+    navigateTo(entry.mapName, stid, { zoom, center: latlng, floor: floor ?? undefined });
 }
 
 function appendNamedLocationSearchResults(listEl, rawFilter) {
@@ -6567,10 +6641,16 @@ function loadLandmarks(mapName, info) {
     landmarkLayer.clearLayers();
     const entries = landmarkData[mapName];
     if (!entries) return;
+    const floorObbs = info.floor_obbs ?? null;
 
     for (const lm of entries) {
         if (HIDDEN_LANDMARK_TYPES.has(lm.type)) continue;
         if (isLandmarkCoveredByConnection(mapName, lm)) continue;
+        // Dungeon warps carry y so multi-floor maps can hide off-floor crystals.
+        if (floorObbs && lm.y != null) {
+            const floor = getEnemyFloor(lm.x, lm.y, lm.z, floorObbs);
+            if (floor !== null && floor !== currentLayer) continue;
+        }
         const latlng = worldToPixel(lm.x, lm.z, info);
         const label = landmarkDisplayName(lm);
         const category = classifyLandmarkPoiCategory(lm.type, lm);
