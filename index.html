@@ -78,24 +78,6 @@
             gap: 6px;
             flex-shrink: 0;
         }
-        #map-settings-btn {
-            background: rgba(201,168,76,0.06);
-            border: 1px solid var(--panel-border);
-            border-radius: 4px;
-            color: var(--ash);
-            font-size: 0.68rem;
-            font-weight: 600;
-            letter-spacing: 0.03em;
-            cursor: pointer;
-            padding: 4px 8px;
-            line-height: 1.2;
-            white-space: nowrap;
-        }
-        #map-settings-btn:hover {
-            background: var(--panel-hover);
-            border-color: var(--gold);
-            color: var(--parchment);
-        }
         #sidebar-collapse {
             background: none;
             border: none;
@@ -184,7 +166,7 @@
         #search-box input::placeholder { color: var(--text-dim); }
         #map-search-clear {
             position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
-            background: none; border: none; color: #556; cursor: pointer;
+            background: none; border: none; color: var(--text-dim); cursor: pointer;
             font-size: 0.8rem; line-height: 1; padding: 2px 4px;
             display: none;
         }
@@ -200,21 +182,34 @@
         #major-loc-bar select {
             width: 100%;
             padding: 5px 8px;
-            background: rgba(201,168,76,0.06);
+            appearance: none;
+            -webkit-appearance: none;
+            color-scheme: dark;
+            accent-color: var(--gold);
+            background-color: #100c10;
+            background-image: linear-gradient(45deg, transparent 50%, var(--gold) 50%), linear-gradient(135deg, var(--gold) 50%, transparent 50%);
+            background-position: calc(100% - 14px) calc(50% - 2px), calc(100% - 9px) calc(50% - 2px);
+            background-size: 5px 5px, 5px 5px;
+            background-repeat: no-repeat;
             border: 1px solid var(--panel-border);
-            border-radius: 4px;
-            color: var(--text-main);
+            border-radius: 3px;
+            color: var(--parchment);
+            font-family: 'Crimson Text', Georgia, serif;
             font-size: 0.8rem;
             box-sizing: border-box;
             cursor: pointer;
+        }
+        #major-loc-bar select:focus {
+            outline: none;
+            border-color: var(--gold);
         }
         #major-loc-bar select:disabled {
             opacity: 0.55;
             cursor: default;
         }
         #major-loc-bar select option {
-            background: var(--panel-bg);
-            color: var(--text-main);
+            background-color: #100c10;
+            color: var(--parchment);
         }
 
         #map-list {
@@ -420,7 +415,7 @@
         .map-loc-more {
             padding: 4px 16px 8px 36px;
             font-size: 0.68rem;
-            color: #667;
+            color: var(--text-dim);
             font-style: italic;
         }
 
@@ -594,7 +589,7 @@
             min-width: 0;
             padding: 5px 8px;
             background: rgba(201,168,76,0.06);
-            color: #ccd;
+            color: var(--parchment);
             border: 1px solid var(--panel-border);
             border-radius: 4px;
             font-size: 0.75rem;
@@ -619,7 +614,7 @@
         }
         .sg-filter-label {
             font-size: 9px;
-            color: #778;
+            color: var(--text-dim);
             text-transform: uppercase;
             letter-spacing: 0.4px;
             margin-right: 4px;
@@ -628,16 +623,22 @@
         .sg-filter-btn {
             font-size: 10px;
             padding: 1px 8px;
-            border-radius: 10px;
+            border-radius: 3px;
             cursor: pointer;
-            border: 1px solid #555;
-            background: var(--void);
+            border: 1px solid var(--panel-border);
+            background: rgba(201,168,76,0.06);
             color: var(--text-dim);
+            font-family: 'Crimson Text', Georgia, serif;
         }
         .sg-filter-btn.active {
-            background: #555;
-            color: var(--parchment);
-            border-color: var(--text-dim);
+            background: rgba(201,168,76,0.22);
+            color: var(--gold);
+            border-color: var(--gold);
+            text-shadow: 0 0 8px rgba(201,168,76,0.35);
+        }
+        .sg-filter-btn:hover:not(.active) {
+            background: var(--panel-hover);
+            color: var(--ash);
         }
         body.dev-coords-on #coord-display { display: block; }
 
@@ -695,7 +696,7 @@
         }
         #floor-selector button {
             background: rgba(22, 33, 62, 0.88);
-            color: #ccd;
+            color: var(--parchment);
             border: 1px solid var(--panel-border);
             border-radius: 12px;
             padding: 2px 10px;
@@ -719,7 +720,7 @@
         }
         #tile-layer-selector button {
             background: rgba(22, 33, 62, 0.88);
-            color: #ccd;
+            color: var(--parchment);
             border: 1px solid var(--panel-border);
             border-radius: 12px;
             padding: 2px 10px;
@@ -761,7 +762,7 @@
             border: 1px solid var(--panel-border);
             border-radius: 6px;
             font-size: 0.74rem;
-            color: #ccd;
+            color: var(--parchment);
             min-width: 380px;
             max-width: 520px;
             display: none;
@@ -777,7 +778,7 @@
         }
         #stage-groups-panel .sgp-header:hover { background: rgba(15,52,96,0.4); }
         #stage-groups-panel .sgp-title { font-weight: 600; color: #aac; font-size: 0.75rem; }
-        #stage-groups-panel .sgp-toggle { color: #778; font-size: 0.7rem; }
+        #stage-groups-panel .sgp-toggle { color: var(--text-dim); font-size: 0.7rem; }
         #stage-groups-panel .sgp-body {
             max-height: calc(100vh - 120px);
             overflow-y: auto;
@@ -796,7 +797,7 @@
             align-items: start;
         }
         #stage-groups-panel .sgp-row:last-child { border-bottom: none; }
-        #stage-groups-panel .sgp-group { color: #778; font-variant-numeric: tabular-nums; }
+        #stage-groups-panel .sgp-group { color: var(--text-dim); font-variant-numeric: tabular-nums; }
         #stage-groups-panel .sgp-name  { color: #adc; font-style: italic; }
         #stage-groups-panel .sgp-quest { color: #c97a00; font-variant-numeric: tabular-nums; }
         #stage-groups-panel .sgp-flag  { color: #7a8aba; font-variant-numeric: tabular-nums; }
@@ -810,9 +811,9 @@
             padding: 1px 6px; font-size: 0.68rem; color: #9bd;
             white-space: nowrap;
         }
-        #stage-groups-panel .sgp-npc-id { color: #556; font-size: 0.65rem; }
+        #stage-groups-panel .sgp-npc-id { color: var(--text-dim); font-size: 0.65rem; }
         #stage-groups-panel .sgp-col-head {
-            color: #556; font-size: 0.68rem; padding: 2px 10px 3px; display: grid;
+            color: var(--text-dim); font-size: 0.68rem; padding: 2px 10px 3px; display: grid;
             grid-template-columns: 46px 1fr 80px 80px; gap: 2px 6px;
             overflow: hidden; transition: max-height 0.3s ease, opacity 0.3s ease;
             max-height: 30px; opacity: 1;
@@ -820,9 +821,9 @@
         }
 
         /* ── World flags section (inside stage-groups-panel) ── */
-        #stage-groups-panel .wf-header { border-top: 1px solid #1a2a50; }
+        #stage-groups-panel .wf-header { border-top: 1px solid var(--panel-bg); }
         #stage-groups-panel .wf-col-head {
-            color: #556; font-size: 0.68rem; padding: 2px 10px 3px; display: grid;
+            color: var(--text-dim); font-size: 0.68rem; padding: 2px 10px 3px; display: grid;
             grid-template-columns: 42px 52px 52px 90px 72px 1fr; gap: 2px 6px;
             border-bottom: 1px solid var(--panel-border);
             overflow: hidden; transition: max-height 0.3s ease, opacity 0.3s ease;
@@ -931,11 +932,11 @@
             gap: 3px;
             padding: 2px 7px 2px 5px;
             border: 1.5px solid currentColor;
-            border-radius: 10px;
-            background: rgba(10, 15, 35, 0.88);
-            font-family: 'Crimson Text', Georgia, serif;
-            font-size: 11px;
-            font-weight: 700;
+            border-radius: 2px;
+            background: rgba(8,6,8,0.88);
+            font-family: 'Cinzel', serif;
+            font-size: 10px;
+            font-weight: 600;
             white-space: nowrap;
             cursor: pointer;
             user-select: none;
@@ -943,7 +944,8 @@
             box-shadow: 0 0 4px rgba(0,0,0,0.7);
             transition: background 0.1s;
         }
-        .group-chip:hover { background: rgba(30, 40, 80, 0.95); }
+        .group-chip:hover { background: rgba(201,168,76,0.16); }
+        .chip-arrow { color: inherit; opacity: 0.95; }
         .chip-count {
             font-size: 9px;
             opacity: 0.75;
@@ -1116,7 +1118,7 @@
             flex-shrink: 0;
         }
         #spot-panel-close {
-            background: none; border: none; color: #556; cursor: pointer;
+            background: none; border: none; color: var(--text-dim); cursor: pointer;
             font-size: 0.9rem; line-height: 1; padding: 2px 4px;
         }
         #spot-panel-close:hover { color: #bbb; }
@@ -1127,7 +1129,7 @@
         }
         #spot-search-input {
             padding: 5px 24px 5px 8px;
-            background: #0d1b35;
+            background: rgba(8,6,8,0.9);
             border: 1px solid var(--panel-border);
             border-radius: 4px;
             color: var(--text-main);
@@ -1136,10 +1138,10 @@
             box-sizing: border-box;
             outline: none;
         }
-        #spot-search-input:focus { border-color: #3a7aba; }
+        #spot-search-input:focus { border-color: var(--gold); }
         #spot-search-clear {
             position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
-            background: none; border: none; color: #556; cursor: pointer;
+            background: none; border: none; color: var(--text-dim); cursor: pointer;
             font-size: 0.8rem; line-height: 1; padding: 2px 4px;
             display: none;
         }
@@ -1151,20 +1153,20 @@
         }
         .spot-tab {
             flex: 1; padding: 3px 0;
-            background: #0d1b35;
+            background: rgba(8,6,8,0.9);
             border: 1px solid var(--panel-border);
             border-radius: 3px;
-            color: #778; font-size: 0.72rem;
+            color: var(--text-dim); font-size: 0.72rem;
             cursor: pointer;
         }
-        .spot-tab.active { background: var(--panel-hover); color: #cde; }
-        .spot-tab:hover:not(.active) { background: #112040; color: #99b; }
+        .spot-tab.active { background: rgba(201,168,76,0.18); color: var(--gold); }
+        .spot-tab:hover:not(.active) { background: rgba(201,168,76,0.10); color: var(--ash); }
         #spot-level-section {
             display: none;
             flex-direction: column;
             padding: 0 8px 4px;
             flex-shrink: 0;
-            border-bottom: 1px solid #0d1b35;
+            border-bottom: 1px solid rgba(8,6,8,0.9);
         }
         #spot-level-section.visible { display: flex; }
         .spot-level-toggle {
@@ -1175,12 +1177,12 @@
             padding: 4px 2px;
             background: none;
             border: none;
-            color: #778;
+            color: var(--text-dim);
             font-size: 0.72rem;
             cursor: pointer;
             text-align: left;
         }
-        .spot-level-toggle:hover { color: #99b; }
+        .spot-level-toggle:hover { color: var(--ash); }
         .spot-level-chevron {
             margin-left: auto;
             font-size: 0.65rem;
@@ -1189,8 +1191,8 @@
         #spot-level-section.expanded .spot-level-chevron { transform: rotate(90deg); }
         .spot-level-badge {
             font-size: 0.65rem;
-            color: #89c;
-            background: #0d1b35;
+            color: var(--gold);
+            background: rgba(8,6,8,0.9);
             border: 1px solid var(--panel-border);
             border-radius: 3px;
             padding: 0 5px;
@@ -1208,26 +1210,26 @@
             align-items: center;
             gap: 4px;
             font-size: 0.72rem;
-            color: #778;
+            color: var(--text-dim);
         }
         .spot-level-input {
             width: 48px;
             padding: 3px 5px;
-            background: #0d1b35;
+            background: rgba(8,6,8,0.9);
             border: 1px solid var(--panel-border);
             border-radius: 3px;
             color: var(--text-main);
             font-size: 0.78rem;
             outline: none;
         }
-        .spot-level-input:focus { border-color: #3a7aba; }
-        .spot-level-input::placeholder { color: #556; }
+        .spot-level-input:focus { border-color: var(--gold); }
+        .spot-level-input::placeholder { color: var(--text-dim); }
         #spot-sort-section {
             display: none;
             flex-direction: column;
             padding: 0 8px 4px;
             flex-shrink: 0;
-            border-bottom: 1px solid #0d1b35;
+            border-bottom: 1px solid rgba(8,6,8,0.9);
         }
         #spot-sort-section.visible { display: flex; }
         #spot-sort-panel {
@@ -1244,19 +1246,19 @@
         }
         .spot-sort-btn {
             padding: 4px 8px;
-            background: #0d1b35;
+            background: rgba(8,6,8,0.9);
             border: 1px solid var(--panel-border);
             border-radius: 3px;
-            color: #aab;
+            color: var(--ash);
             font-size: 0.72rem;
             cursor: pointer;
             text-align: left;
         }
-        .spot-sort-btn:hover { background: #1a3060; color: #cde; }
+        .spot-sort-btn:hover { background: rgba(201,168,76,0.12); color: var(--parchment); }
         .spot-sort-btn.active {
-            border-color: #3a7aba;
-            color: #cde;
-            background: #1a3060;
+            border-color: var(--gold);
+            color: var(--parchment);
+            background: rgba(201,168,76,0.12);
         }
         .spot-hl-origin {
             width: 14px;
@@ -1268,19 +1270,19 @@
         }
         #spot-scope-row {
             display: flex;
-            border-bottom: 1px solid #0d1b35;
+            border-bottom: 1px solid rgba(8,6,8,0.9);
             flex-shrink: 0;
         }
         .spot-scope {
             flex: 1; padding: 4px 0;
             background: none;
             border: none;
-            color: #556; font-size: 0.72rem;
+            color: var(--text-dim); font-size: 0.72rem;
             cursor: pointer;
             border-bottom: 2px solid transparent;
         }
-        .spot-scope.active { color: #89c; border-bottom-color: #89c; }
-        .spot-scope:hover:not(.active) { color: #99b; }
+        .spot-scope.active { color: var(--gold); border-bottom-color: var(--gold); }
+        .spot-scope:hover:not(.active) { color: var(--ash); }
         #spot-results {
             flex: 1;
             overflow-y: auto;
@@ -1291,16 +1293,16 @@
         #spot-results::-webkit-scrollbar-thumb { background: rgba(201,168,76,0.06); border-radius: 3px; }
         .spot-empty {
             padding: 10px 8px;
-            color: #556; font-size: 0.78rem; text-align: center;
+            color: var(--text-dim); font-size: 0.78rem; text-align: center;
         }
         .spot-summary {
             padding: 4px 8px 2px;
-            color: #556; font-size: 0.7rem;
-            border-bottom: 1px solid #0d1b35;
+            color: var(--text-dim); font-size: 0.7rem;
+            border-bottom: 1px solid rgba(8,6,8,0.9);
         }
         .spot-section-header {
             padding: 6px 8px 2px;
-            color: #89c;
+            color: var(--gold);
             font-size: 0.68rem;
             font-weight: 600;
             letter-spacing: 0.04em;
@@ -1309,13 +1311,13 @@
         .spot-multi-badge {
             flex-shrink: 0;
             font-size: 0.65rem;
-            color: #cde;
+            color: var(--parchment);
             background: var(--panel-hover);
             border: 1px solid #2a5a8a;
             border-radius: 3px;
             padding: 1px 5px;
         }
-        .spot-roster-row .spot-result-count { color: #778; }
+        .spot-roster-row .spot-result-count { color: var(--text-dim); }
         .spot-result-row {
             position: relative;
             display: flex; align-items: center; gap: 6px;
@@ -1323,23 +1325,23 @@
             border-radius: 3px;
             cursor: pointer;
             font-size: 0.78rem;
-            border-bottom: 1px solid #0d1b35;
+            border-bottom: 1px solid rgba(8,6,8,0.9);
         }
-        .spot-result-row:hover { background: #1a3060; }
-        .spot-result-name { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #ccd; }
-        .spot-result-count { color: #667; font-size: 0.7rem; flex-shrink: 0; }
+        .spot-result-row:hover { background: rgba(201,168,76,0.12); }
+        .spot-result-name { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--parchment); }
+        .spot-result-count { color: var(--text-dim); font-size: 0.7rem; flex-shrink: 0; }
         .spot-nav-btn {
-            background: #0d1b35; border: 1px solid var(--panel-border); color: #778;
+            background: rgba(201,168,76,0.06); border: 1px solid var(--panel-border); color: var(--gold);
             border-radius: 3px; padding: 1px 5px; cursor: pointer; font-size: 0.68rem; line-height: 1.4;
         }
-        .spot-nav-btn:hover { background: var(--panel-hover); color: #cde; }
+        .spot-nav-btn:hover { background: rgba(201,168,76,0.18); color: var(--parchment); border-color: var(--gold); }
         /* Preview card — pops out to the left on hover */
         .spot-preview {
             display: none;
             position: absolute;
             right: calc(100% + 4px);
             top: 0;
-            background: #1a2a50;
+            background: var(--panel-bg);
             border: 1px solid var(--panel-border);
             border-radius: 4px;
             padding: 6px 10px;
@@ -1349,10 +1351,10 @@
             z-index: 1200;
             pointer-events: none;
             box-shadow: -2px 2px 8px rgba(0,0,0,0.6);
-            color: #aab;
+            color: var(--ash);
         }
         .spot-result-row:hover .spot-preview { display: block; }
-        .spot-preview b { color: #dde; }
+        .spot-preview b { color: var(--parchment); }
         .spot-stage-sub {
             font-size: 0.68rem;
             color: #789;
@@ -1395,7 +1397,6 @@
         <h1>
             <span><span id="rising-title-text">Rising Maps</span><span id="sidebar-preset-label" class="sidebar-preset-label"></span></span>
             <span class="sidebar-header-actions">
-                <button type="button" id="map-settings-btn" title="Data sources (Rising is default; Revival / custom also available)">Select Server</button>
                 <button type="button" id="sidebar-collapse" title="Collapse sidebar">◀</button>
             </span>
         </h1>
@@ -1403,7 +1404,7 @@
             <span class="rising-channel-label">Channel</span>
             <div id="rising-channel-toggle" role="group" aria-label="Rising channel">
                 <button type="button" data-preset="rising" title="Dogma Rising — Normal Channels">Normal</button>
-                <button type="button" data-preset="rising-endgame" title="Dogma Rising — Endgame (Channel 4)">Endgame</button>
+                <button type="button" data-preset="rising-endgame" title="Dogma Rising — Endgame Channel 4">Endgame (CH4)</button>
             </div>
         </div>
         <div id="search-box">
@@ -1567,192 +1568,6 @@
     </div>
 </div>
 <script type="module" src="map.js"></script>
-
-<!-- ── Data source settings modal ─────────────────────────────────────────── -->
-<style>
-    #settings-modal {
-        display: none;
-        position: fixed;
-        inset: 0;
-        z-index: 3000;
-        background: rgba(0,0,0,0.65);
-        align-items: center;
-        justify-content: center;
-    }
-    #settings-modal.open { display: flex; }
-    #settings-box {
-        background: var(--panel-bg);
-        border: 1px solid var(--panel-border);
-        border-radius: 8px;
-        padding: 20px;
-        width: 540px;
-        max-width: 95vw;
-        color: var(--text-main);
-        box-shadow: 0 8px 32px rgba(0,0,0,0.7);
-    }
-    #settings-box h2 {
-        font-size: 0.95rem;
-        font-weight: 700;
-        color: var(--gold);
-        margin-bottom: 12px;
-    }
-    .src-row { margin-bottom: 14px; }
-    .src-row-label {
-        font-size: 0.8rem;
-        font-weight: 600;
-        margin-bottom: 5px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-    .src-status {
-        font-size: 0.72rem;
-        font-weight: 400;
-        color: #666;
-    }
-    .src-preset-row { margin-bottom: 16px; }
-    .src-preset-select {
-        width: 100%;
-        padding: 6px 8px;
-        background: rgba(201,168,76,0.06);
-        border: 1px solid var(--panel-border);
-        border-radius: 4px;
-        color: var(--text-main);
-        font-size: 0.8rem;
-    }
-    .src-preset-select:focus { outline: none; border-color: var(--gold); }
-    .src-preset-note {
-        font-size: 0.72rem;
-        color: var(--ash);
-        margin-top: 6px;
-        line-height: 1.5;
-    }
-    .src-row-inputs { display: flex; gap: 6px; }
-    .src-url-input {
-        flex: 1;
-        min-width: 0;
-        padding: 5px 8px;
-        background: rgba(201,168,76,0.06);
-        border: 1px solid var(--panel-border);
-        border-radius: 4px;
-        color: var(--text-main);
-        font-size: 0.75rem;
-    }
-    .src-url-input:focus { outline: none; border-color: var(--gold); }
-    .src-btn {
-        padding: 4px 10px;
-        background: rgba(201,168,76,0.06);
-        border: 1px solid var(--panel-border);
-        border-radius: 4px;
-        color: #ccd;
-        font-size: 0.75rem;
-        cursor: pointer;
-        white-space: nowrap;
-    }
-    .src-btn:hover { background: var(--panel-hover); }
-    .src-btn:disabled { opacity: 0.35; cursor: not-allowed; }
-    .src-btn:disabled:hover { background: rgba(201,168,76,0.06); }
-    #settings-footer {
-        display: flex;
-        justify-content: flex-end;
-        gap: 8px;
-        margin-top: 16px;
-        padding-top: 14px;
-        border-top: 1px solid var(--panel-border);
-    }
-    .settings-action-btn {
-        padding: 5px 14px;
-        border-radius: 4px;
-        font-size: 0.8rem;
-        cursor: pointer;
-        border: 1px solid var(--panel-border);
-    }
-    #settings-apply  { background: var(--gold); border-color: var(--gold); color: var(--parchment); font-weight: 600; }
-    #settings-apply:hover { background: #c73350; }
-    #settings-cancel, #settings-reset-all { background: rgba(201,168,76,0.06); color: #ccd; }
-    #settings-cancel:hover, #settings-reset-all:hover { background: var(--panel-hover); }
-</style>
-
-<div id="settings-modal">
-  <div id="settings-box">
-    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
-        <h2 style="margin:0">⚙ Data Sources</h2>
-        <button id="settings-close" style="background:none;border:none;color:#888;font-size:1.1rem;cursor:pointer;line-height:1;">✕</button>
-    </div>
-    <p style="font-size:0.75rem;color:#888;margin-bottom:10px;line-height:1.6;">
-        Pick a server preset for Rising or Revival data, or choose <strong style="color:#ccc;font-weight:600">Custom</strong> to enter any <code style="color:#aaa">https://</code> URL or browse a local file per source.<br>
-        Local files are re-read from disk on every page reload when browser file access permission is granted.
-    </p>
-    <div id="settings-browser-hint" style="font-size:0.72rem;color:#aaa;background:#1e1e2e;border:1px solid #333;border-radius:4px;padding:7px 10px;margin-bottom:14px;line-height:1.7;"></div>
-
-    <div class="src-preset-row">
-        <div class="src-row-label">Server preset</div>
-        <select id="settings-preset-select" class="src-preset-select">
-            <option value="rising">Dogma Rising — Normal Channels</option>
-            <option value="rising-endgame">Dogma Rising — Endgame (Channel 4)</option>
-            <option value="arrowgene">Arrowgene</option>
-            <option value="revival">Revival — live.ddon.org Normal</option>
-            <option value="custom">Custom (manual URL or local file)</option>
-        </select>
-        <div id="settings-preset-note" class="src-preset-note"></div>
-    </div>
-
-    <div class="src-row"
-         data-key="ddon-src-gathering"
-         data-default="https://raw.githubusercontent.com/edelarrow/map-spawns/refs/heads/main/Normal%20Channels/GatheringItem.csv">
-        <div class="src-row-label">Gathering Items (CSV) <span class="src-status"></span></div>
-        <div class="src-row-inputs">
-            <input type="text" class="src-url-input">
-            <button class="src-btn src-file-btn">Browse…</button>
-            <button class="src-btn src-reset-btn" title="Reset to default">↩</button>
-            <input type="file" class="src-file-input" accept=".csv" style="display:none">
-        </div>
-    </div>
-
-    <div class="src-row"
-         data-key="ddon-src-spawns"
-         data-default="https://raw.githubusercontent.com/edelarrow/map-spawns/refs/heads/main/Normal%20Channels/EnemySpawn.json">
-        <div class="src-row-label">Enemy Spawns (JSON) <span class="src-status"></span></div>
-        <div class="src-row-inputs">
-            <input type="text" class="src-url-input">
-            <button class="src-btn src-file-btn">Browse…</button>
-            <button class="src-btn src-reset-btn" title="Reset to default">↩</button>
-            <input type="file" class="src-file-input" accept=".json" style="display:none">
-        </div>
-    </div>
-
-    <div class="src-row"
-         data-key="ddon-src-shop"
-         data-default="https://raw.githubusercontent.com/edelarrow/map-spawns/refs/heads/main/Normal%20Channels/Shop.json">
-        <div class="src-row-label">Shop Data (JSON) <span class="src-status"></span></div>
-        <div class="src-row-inputs">
-            <input type="text" class="src-url-input">
-            <button class="src-btn src-file-btn">Browse…</button>
-            <button class="src-btn src-reset-btn" title="Reset to default">↩</button>
-            <input type="file" class="src-file-input" accept=".json" style="display:none">
-        </div>
-    </div>
-
-    <div class="src-row"
-         data-key="ddon-src-special-shop"
-         data-default="https://raw.githubusercontent.com/edelarrow/map-spawns/refs/heads/main/Normal%20Channels/SpecialShops.json">
-        <div class="src-row-label">Appraisal Data (JSON) <span class="src-status"></span></div>
-        <div class="src-row-inputs">
-            <input type="text" class="src-url-input">
-            <button class="src-btn src-file-btn">Browse…</button>
-            <button class="src-btn src-reset-btn" title="Reset to default">↩</button>
-            <input type="file" class="src-file-input" accept=".json" style="display:none">
-        </div>
-    </div>
-
-    <div id="settings-reload-note" style="display:none;font-size:0.75rem;color:#ffa726;background:#2a2200;border:1px solid #7a5200;border-radius:4px;padding:5px 10px;margin-top:10px;line-height:1.5;"></div>
-    <div id="settings-footer">
-        <button id="settings-reset-all" class="settings-action-btn">Reset All</button>
-        <button id="settings-cancel"    class="settings-action-btn">Cancel</button>
-        <button id="settings-apply"     class="settings-action-btn">Apply &amp; Reload</button>
-    </div>
-  </div>
-</div>
 
 <!-- ── Named param picker modal ───────────────────────────────────────────── -->
 <style>
@@ -2215,7 +2030,7 @@
     }
     .edit-source-lbl {
         font-size: 0.7rem;
-        color: #778;
+        color: var(--text-dim);
         flex-shrink: 0;
         width: 90px;
     }
@@ -2228,7 +2043,7 @@
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    .edit-src-badge.remote { background: #1a2030; color: #667; }
+    .edit-src-badge.remote { background: #1a2030; color: var(--text-dim); }
     .edit-src-badge.clean  { background: #0d2010; color: #6a6; }
     .edit-src-badge.dirty  { background: #2a1a08; color: #f93; }
     .edit-src-btn {

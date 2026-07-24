@@ -1,4 +1,4 @@
-import mapParams from './resources/map_params.json' with {type: "json"};
+﻿import mapParams from './resources/map_params.json' with {type: "json"};
 import landmarkData from './resources/landmarks.json' with {type: "json"};
 import connectionData from './resources/connections.json' with {type: "json"};
 import specialConnectionRules from './resources/specialConnections.json' with {type: "json"};
@@ -23,7 +23,7 @@ import worldQuestFlags from './resources/worldQuestFlags.json' with {type: "json
 import emRadii        from './resources/emRadii.json'        with {type: "json"};
 import stageList      from './resources/stage_list.slt.json' with {type: "json"};
 
-// ── Enemy spawn positions (lazy-loaded per stage from resources/enemyPositions/) ──
+// â”€â”€ Enemy spawn positions (lazy-loaded per stage from resources/enemyPositions/) â”€â”€
 const ENEMY_POSITIONS_DIR = './resources/enemyPositions';
 const ENEMY_POS_BATCH_SIZE = 16;
 const _enemyPosStageCache = new Map();
@@ -87,7 +87,7 @@ const preloadAllEnemyPositionsStages = async (onProgress) => {
 
 const _iconIdSet = new Set(iconIds);
 const itemWikiHref = (itemId) => `build/i${String(itemId).padStart(8, '0')}.html`;
-// Build lookup map: id → named param entry
+// Build lookup map: id â†’ named param entry
 const namedParamsById = new Map(namedParamList.map(p => [p.id, p]));
 const hmPresetsByEmCode = new Map(hmPresetList.filter(p => p.emCode).map(p => [p.emCode, p]));
 // Helper: given a named param entry, return display label for the picker button
@@ -120,20 +120,20 @@ function buildNamedStatsHtml(namedId) {
     const inner = p ? buildNamedStatsInner(p) : '';
     return `<div class="se-named-stats"${!inner ? ' style="display:none"' : ''}>${inner}</div>`;
 }
-// ── Named-stats companion panel (floats beside the enemy popup in edit mode) ──
+// â”€â”€ Named-stats companion panel (floats beside the enemy popup in edit mode) â”€â”€
 function buildNamedParamPanelHtml(p, baseEmName) {
     if (!p || p.id === 0) return '';
     const typeName = p.type.replace('NAMED_TYPE_', '');
     const trimName = p.name?.trim();
     let combined = null;
     if (trimName) {
-        const em = baseEmName ?? '…';
+        const em = baseEmName ?? 'â€¦';
         const hi = `<span class="np-name-hi">${trimName}</span>`;
         if      (p.type === 'NAMED_TYPE_PREFIX')  combined = `${hi} ${em}`;
         else if (p.type === 'NAMED_TYPE_SUFFIX')  combined = `${em} ${hi}`;
         else if (p.type === 'NAMED_TYPE_REPLACE') combined = hi;
     }
-    const pct = v => v != null ? `${v}%` : '—';
+    const pct = v => v != null ? `${v}%` : 'â€”';
     const row = (label, val) => {
         const v = pct(val);
         const n = parseFloat(v);
@@ -143,7 +143,7 @@ function buildNamedParamPanelHtml(p, baseEmName) {
     const sec = (title, ...rows) =>
         `<tr class="np-stat-sec"><td colspan="2">${title}</td></tr>` + rows.join('');
     return (combined ? `<div class="np-preview-combined">${combined}</div>` : '') +
-        `<div class="np-preview-type">${typeName} · ID ${p.id}</div>` +
+        `<div class="np-preview-type">${typeName} Â· ID ${p.id}</div>` +
         `<table class="np-stat-table">` +
         sec('HP',
             row('HP Rate',  p.hp),
@@ -202,14 +202,14 @@ function hideNamedStatsPanel() {
     _namedStatsPanelAnchor = null;
 }
 
-// ── Leaflet map setup ──────────────────────────────────────────────────────────
+// â”€â”€ Leaflet map setup â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const leafletMap = L.map('map', {
     crs: L.CRS.Simple,
     maxZoom: 6,
     minZoom: -3,
     zoomSnap: 0.5,
 });
-// Dedicated pane for the map background image — z-index 201 keeps it below
+// Dedicated pane for the map background image â€” z-index 201 keeps it below
 // the overlayPane (400) so polylines (pd boundaries etc.) always render on top
 // even after swapMapImage recreates the imageOverlay.
 leafletMap.createPane('mapImagePane');
@@ -217,13 +217,13 @@ leafletMap.getPane('mapImagePane').style.zIndex = 201;
 
 function xy(x, y) { return L.latLng(y, x); }
 
-// ── Reset-view control (appears below zoom +/−) ────────────────────────────────
+// â”€â”€ Reset-view control (appears below zoom +/âˆ’) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 L.Control.ResetView = L.Control.extend({
     options: { position: 'topleft' },
     onAdd() {
         const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
         const btn = L.DomUtil.create('a', 'leaflet-control-reset-view', container);
-        btn.innerHTML = '&#8962;';  // ⌂ home symbol
+        btn.innerHTML = '&#8962;';  // âŒ‚ home symbol
         btn.title = 'Reset view';
         btn.href = '#';
         btn.setAttribute('role', 'button');
@@ -234,7 +234,7 @@ L.Control.ResetView = L.Control.extend({
 });
 new L.Control.ResetView().addTo(leafletMap);
 
-// ── Day / night spawn filter (below zoom +/− and reset view) ─────────────────
+// â”€â”€ Day / night spawn filter (below zoom +/âˆ’ and reset view) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const SPAWN_TIME_FILTER_KEY = 'ddon-spawn-time-filter';
 let _activeSpawnTimeFilter  = null;   // null = all, 'day' | 'night'
 
@@ -261,8 +261,8 @@ L.Control.SpawnTimeFilter = L.Control.extend({
         this._buttons = [];
         const modes = [
             { filter: null,    cls: 'spawn-time-all',   html: 'All', title: 'All spawn times' },
-            { filter: 'day',   cls: 'spawn-time-day',   html: '☀',  title: 'Day spawns only' },
-            { filter: 'night', cls: 'spawn-time-night', html: '🌙',  title: 'Night spawns only' },
+            { filter: 'day',   cls: 'spawn-time-day',   html: 'â˜€',  title: 'Day spawns only' },
+            { filter: 'night', cls: 'spawn-time-night', html: 'ðŸŒ™',  title: 'Night spawns only' },
         ];
         for (const mode of modes) {
             const btn = L.DomUtil.create('a', mode.cls, this._container);
@@ -293,20 +293,20 @@ L.Control.SpawnTimeFilter = L.Control.extend({
 });
 new L.Control.SpawnTimeFilter().addTo(leafletMap);
 
-// ── Mob type filter (blood orb, high orb, manual, boss, key bearer, regular) ───
+// â”€â”€ Mob type filter (blood orb, high orb, manual, boss, key bearer, regular) â”€â”€â”€
 const MOB_TYPE_FILTER_KEY = 'ddon-mob-type-filters';
 const MOB_TYPES_SPOT_KEY  = 'ddon-mob-types-apply-spot-search';
 const MOB_TYPE_DEFAULTS   = {
     bloodOrb: true, highOrb: true, manual: true, boss: true, keyBearer: true, regular: true, dynamic: true,
 };
 const MOB_TYPE_MODES = [
-    { id: 'bloodOrb',   html: '🩸', title: 'Blood orb' },
-    { id: 'highOrb',    html: '⭐', title: 'High orb' },
-    { id: 'manual',     html: '😴', title: 'Dormant' },
-    { id: 'boss',       html: '☠', title: 'Boss' },
-    { id: 'keyBearer',  html: '🗝', title: 'Key Mobs' },
+    { id: 'bloodOrb',   html: 'ðŸ©¸', title: 'Blood orb' },
+    { id: 'highOrb',    html: 'â­', title: 'High orb' },
+    { id: 'manual',     html: 'ðŸ˜´', title: 'Dormant' },
+    { id: 'boss',       html: 'â˜ ', title: 'Boss' },
+    { id: 'keyBearer',  html: 'ðŸ—', title: 'Key Mobs' },
     { id: 'regular',    html: '',   title: 'Regular' },
-    { id: 'dynamic',    html: '⚡', title: 'Dynamic' },
+    { id: 'dynamic',    html: 'âš¡', title: 'Dynamic' },
 ];
 
 const loadMobTypeFilters = () => {
@@ -363,7 +363,7 @@ function setAllMobTypeFilters(on) {
 }
 
 function initMobTypeFilters() {
-    // Migrate legacy “Enemy Spawns” layer off → all mob types off (once).
+    // Migrate legacy â€œEnemy Spawnsâ€ layer off â†’ all mob types off (once).
     try {
         if (!localStorage.getItem('ddon-mob-type-migrated-enemies')) {
             let legacyOff = false;
@@ -430,7 +430,7 @@ function initMobTypeFilters() {
 }
 
 
-// ── World → pixel conversion ───────────────────────────────────────────────────
+// â”€â”€ World â†’ pixel conversion â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 // Formula from GMP data + engine scale constant (derived from PS4 disassembly):
 //   pixelX = worldX * scale   + center_x
 //   pixelY = (imgHeight - center_y) - worldZ * scale_z
@@ -453,9 +453,9 @@ function worldToPixel(worldX, worldZ, info) {
                 break;
             }
         }
-        const localZ  = worldZ - piece.connect_z;                          // ≤ 0
+        const localZ  = worldZ - piece.connect_z;                          // â‰¤ 0
         // Use pixel_y_entrance_v (virtual entrance, accounts for bottom trim) and
-        // info.scale (DUNGEON_MAP_SCALE, same as X axis) — the correct rendering scale.
+        // info.scale (DUNGEON_MAP_SCALE, same as X axis) â€” the correct rendering scale.
         png_y = piece.pixel_y_entrance_v + localZ * info.scale;
         png_y = Math.max(piece.pixel_y_start, Math.min(piece.pixel_y_entrance, png_y));
     } else {
@@ -469,7 +469,7 @@ function worldToPixel(worldX, worldZ, info) {
     return xy(px, py);
 }
 
-// ── Layer groups ───────────────────────────────────────────────────────────────
+// â”€â”€ Layer groups â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 let imageOverlay    = null;
 let enemyLayer      = L.layerGroup().addTo(leafletMap);  // group chip labels
 let landmarkLayer   = L.layerGroup().addTo(leafletMap);
@@ -478,9 +478,9 @@ let gridLayer        = L.layerGroup();   // off by default
 let territoryLayer   = L.layerGroup();   // off by default; territory rects when groups expand
 let stageLabelsLayer = L.layerGroup().addTo(leafletMap);  // area name text labels
 let gatherLayer       = L.layerGroup().addTo(leafletMap);
-let _gatherMarkerByKey   = new Map();    // "${stageNo}:${groupId}:${posId}" → L.marker
-let _gatherGroupMarkers  = new Map();    // "${stageNo}:${groupId}" → L.marker[]
-let _shopMarkerByNpcId = new Map();    // "${stageNo}:${npcId}" → L.marker
+let _gatherMarkerByKey   = new Map();    // "${stageNo}:${groupId}:${posId}" â†’ L.marker
+let _gatherGroupMarkers  = new Map();    // "${stageNo}:${groupId}" â†’ L.marker[]
+let _shopMarkerByNpcId = new Map();    // "${stageNo}:${npcId}" â†’ L.marker
 let _specialShopMarkerByNpcId = new Map();
 let npcShopLayer        = L.layerGroup().addTo(leafletMap);
 let specialShopLayer    = L.layerGroup().addTo(leafletMap);
@@ -488,17 +488,17 @@ let pdBoundaryLayer = L.layerGroup().addTo(leafletMap);
 let spawnRadiiLayer   = L.layerGroup().addTo(leafletMap);  // aggro/link radius circles
 let _spreadOverlay    = L.layerGroup().addTo(leafletMap);  // cross-group spoke lines + anchor dots
 
-// Canvas renderer — all spawn circleMarkers share one <canvas> element (huge perf win).
+// Canvas renderer â€” all spawn circleMarkers share one <canvas> element (huge perf win).
 const spawnRenderer = L.canvas({ padding: 0.5 });
 
-// ── Group expand/collapse state ───────────────────────────────────────────────
+// â”€â”€ Group expand/collapse state â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 // One entry per group; detailsLayer is lazily created on first expand.
-// Must be `let` — map scene cache swaps the Map reference on restore.
-let _groupStore = new Map(); // groupId string → { groupId, color, territory, items, pts,
+// Must be `let` â€” map scene cache swaps the Map reference on restore.
+let _groupStore = new Map(); // groupId string â†’ { groupId, color, territory, items, pts,
                                //   centroid, labelMarker, detailsLayer, isExpanded }
 let _currentMapInfo  = null;   // stored at loadEnemySpawns time; used by lazy expand
 
-// ── Edit mode state ────────────────────────────────────────────────────────────
+// â”€â”€ Edit mode state â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 let _editMode        = false;
 let _spawnSetMode    = false;   // when true, edits apply to all positions sharing the same SpawnGroup (sg) in the group
 let _activeSubGroupId   = null; // map-wide filter: null = show all, number = show only that splitId
@@ -518,7 +518,7 @@ let _gatherPopupDropFn = null;        // fn(itemId) for the currently open gathe
 let _shopPopupDropFn   = null;        // fn(itemId) for the currently open shop popup
 let _dragEmCode        = null;        // emCode being dragged from the Enemies panel
 let _spawnPopupDropFn  = null;        // fn(emCode) for the currently open spawn popup
-let _dropsTablesMap    = new Map();   // id → {id, name, mdlType, items[]} — populated on spawn parse
+let _dropsTablesMap    = new Map();   // id â†’ {id, name, mdlType, items[]} â€” populated on spawn parse
 let _markDirty         = null;        // set by edit block; callable from gather/shop code
 let _attachDragReorder = null;        // set by edit block; callable from gather/shop code
 let _renderEditPanel   = null;        // set by edit block; callable from spawn popup code
@@ -541,9 +541,9 @@ function updateEnemyVisibility() {
     }
 }
 
-// ── Layer preference persistence ───────────────────────────────────────────────
-// ── Layer state — URL hash + localStorage ─────────────────────────────────────
-// Hash format extension: …@zoom/y/x!elcgt
+// â”€â”€ Layer preference persistence â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// â”€â”€ Layer state â€” URL hash + localStorage â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// Hash format extension: â€¦@zoom/y/x!elcgt
 //   Each letter present = that layer is ON: e=enemies l=landmarks c=connections
 //   g=grid t=territory.  Absent = OFF.
 // URL state takes priority over localStorage (enables sharing exact views).
@@ -581,7 +581,7 @@ const applyDevDisplayPrefs = () => {
     document.body.classList.add('dev-coords-on');
 };
 
-// Territory bounds exist in spawn position data but are not drawn — same as upstream
+// Territory bounds exist in spawn position data but are not drawn â€” same as upstream
 // pacampbell.github.io. Most groups store stage-sized defaults (~130 km), not a tight
 // trigger zone, so rectangles were misleading when expand-all was used in dev mode.
 function removeGroupTerritoryRect(g) {
@@ -616,7 +616,7 @@ const refreshMobTooltips = () => {
             layer._label = tt;
             layer._naturalTooltip = tt;
             const display = layer._spreadCount
-                ? `${tt} <span style="opacity:0.7">[×${layer._spreadCount} stacked]</span>`
+                ? `${tt} <span style="opacity:0.7">[Ã—${layer._spreadCount} stacked]</span>`
                 : tt;
             if (layer.isTooltipOpen()) layer.setTooltipContent(display);
             else layer.bindTooltip(display, { direction: 'top', offset: [0, -8] });
@@ -657,7 +657,7 @@ const applyMobDisplayMode = () => {
         return;
     }
 
-    // Player mode — expand any collapsed groups in chunks so the UI stays responsive.
+    // Player mode â€” expand any collapsed groups in chunks so the UI stays responsive.
     const pending = [..._groupStore.values()].filter(g => !g.isExpanded);
 
     for (const g of _groupStore.values()) {
@@ -759,7 +759,7 @@ function loadLayerPrefs() {
         document.getElementById('sidebar').classList.add('collapsed');
 })();
 
-// ── Layer toggles ──────────────────────────────────────────────────────────────
+// â”€â”€ Layer toggles â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 document.getElementById('layer-enemies')?.addEventListener('change', () => {
     updateEnemyVisibility();
     saveLayerPrefs();
@@ -772,7 +772,7 @@ document.getElementById('layer-radii').addEventListener('change', e => {
     if (!e.target.checked) clearSpawnRadii();
     saveLayerPrefs();
 });
-// ── Sidebar collapse / expand ──────────────────────────────────────────────────
+// â”€â”€ Sidebar collapse / expand â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function setSidebarCollapsed(collapsed) {
     document.getElementById('sidebar').classList.toggle('collapsed', collapsed);
     document.getElementById('sidebar-toggle').style.display = collapsed ? 'block' : 'none';
@@ -787,25 +787,25 @@ document.getElementById('btn-expand-collapse').addEventListener('click', () => {
     if (anyCollapsed) _expandAllGroups(); else _collapseAllGroups();
 });
 
-// ── Sidebar map list ───────────────────────────────────────────────────────────
+// â”€â”€ Sidebar map list â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function splitPascalCase(s) {
     // Pre-split pass: handle "to" preposition glued to the next PascalCase word
-    // (e.g. "PathtoMorrow" → "Path to Morrow"). Must be done before basic split
+    // (e.g. "PathtoMorrow" â†’ "Path to Morrow"). Must be done before basic split
     // so "to" at word-end (e.g. "Grotto") is not incorrectly split.
-    // Handle "tothe" compound first ("PathtotheX" → "Path to the X").
+    // Handle "tothe" compound first ("PathtotheX" â†’ "Path to the X").
     let result = s.replace(/([a-z])(to)(the)(?=[A-Z])/g, '$1 $2 $3 ');
     result = result.replace(/([a-z])(to)(?=[A-Z])/g, '$1 $2 ');
     // Insert space before each uppercase letter that follows a lowercase letter,
-    // e.g. "TheWhiteDragonTemple" → "The White Dragon Temple"
+    // e.g. "TheWhiteDragonTemple" â†’ "The White Dragon Temple"
     result = result.replace(/([a-z])([A-Z])/g, '$1 $2');
     // Insert space before "of"/"the"/"by" when glued to the preceding word (lowercase
-    // prepositions embedded in PascalCase enum names), e.g. "Forestof Mist" → "Forest of Mist",
-    // "Altarofthe Black Curse" → "Altar of the Black Curse",
-    // "Wildernessby Castle" → "Wilderness by Castle".
+    // prepositions embedded in PascalCase enum names), e.g. "Forestof Mist" â†’ "Forest of Mist",
+    // "Altarofthe Black Curse" â†’ "Altar of the Black Curse",
+    // "Wildernessby Castle" â†’ "Wilderness by Castle".
     result = result.replace(/([a-z])(of)(?=the\b|[A-Z\s]|$)/g, '$1 $2');
     result = result.replace(/([a-z])(the)(?=[A-Z\s]|$)/g, '$1 $2');
     result = result.replace(/([ac-z])(by)(?=\s|$)/g, '$1 $2');
-    // Insert space before a digit sequence, e.g. "Netherworld1" → "Netherworld 1"
+    // Insert space before a digit sequence, e.g. "Netherworld1" â†’ "Netherworld 1"
     result = result.replace(/([a-zA-Z])(\d+)/g, '$1 $2');
     return result.replace(/  +/g, ' ').trim();
 }
@@ -834,7 +834,7 @@ function appendMapEntry(listEl, name, info, label, stid, currentMap, currentStag
 }
 
 // Render a collapsible row for multiple entries sharing the same display label.
-// group: Array<{name, info, stid}> — each entry navigates independently.
+// group: Array<{name, info, stid}> â€” each entry navigates independently.
 function appendCollapsibleGroup(listEl, label, group, currentMap, currentStage) {
     const anyActive = group.some(e =>
         e.name === currentMap && (e.stid === null ? !currentStage : e.stid === currentStage)
@@ -846,7 +846,7 @@ function appendCollapsibleGroup(listEl, label, group, currentMap, currentStage) 
 
     const arrow = document.createElement('span');
     arrow.className = 'expand-arrow';
-    arrow.textContent = '▶';
+    arrow.textContent = 'â–¶';
     el.appendChild(arrow);
 
     const text = document.createElement('span');
@@ -880,7 +880,7 @@ function appendCollapsibleGroup(listEl, label, group, currentMap, currentStage) 
     listEl.appendChild(subList);
 }
 
-// Sidebar world hierarchy — matches in-game minimap region menu.
+// Sidebar world hierarchy â€” matches in-game minimap region menu.
 const SIDEBAR_WORLD_GROUPS = [
     {
         key: 'world:lestania',
@@ -902,7 +902,7 @@ const SIDEBAR_WORLD_GROUPS = [
 ];
 const SIDEBAR_GROUPED_AREA_IDS = new Set(SIDEBAR_WORLD_GROUPS.flatMap(g => g.areas));
 
-/** Major overworld jumps — continent → region (matches in-game world menu). */
+/** Major overworld jumps â€” continent â†’ region (matches in-game world menu). */
 const MAJOR_LOCATION_CONTINENTS = [
     {
         id: 'lestania',
@@ -953,7 +953,7 @@ function populateMajorRegionSelect(continentId, { preserveRegion = '' } = {}) {
     const regionEl = document.getElementById('major-region-select');
     if (!regionEl) return;
     regionEl.innerHTML = '';
-    regionEl.appendChild(new Option('— Region —', ''));
+    regionEl.appendChild(new Option('â€” Region â€”', ''));
     if (!continentId) {
         regionEl.disabled = true;
         return;
@@ -967,7 +967,7 @@ function populateMajorRegionSelect(continentId, { preserveRegion = '' } = {}) {
     for (const region of continent.regions) {
         const val = majorLocKey(region.map, region.stid);
         const opt = new Option(region.label, val);
-        opt.title = `${region.stid} · sid ${String(region.sid).padStart(4, '0')}`;
+        opt.title = `${region.stid} Â· sid ${String(region.sid).padStart(4, '0')}`;
         regionEl.appendChild(opt);
     }
     if (preserveRegion && [...regionEl.options].some((o) => o.value === preserveRegion)) {
@@ -1072,7 +1072,7 @@ function appendAreaSection(listEl, areaId, areaName, entries, currentMap, curren
 
     const header = document.createElement('div');
     header.className = 'map-area-header';
-    header.innerHTML = `<span class="expand-arrow">▶</span><span class="map-area-name">${areaName}</span><span class="map-area-count">${entries.length}</span>`;
+    header.innerHTML = `<span class="expand-arrow">â–¶</span><span class="map-area-name">${areaName}</span><span class="map-area-count">${entries.length}</span>`;
 
     const body = document.createElement('div');
     body.className = 'map-area-body';
@@ -1108,7 +1108,7 @@ function appendWorldRegionSection(listEl, regionKey, regionName, subAreas, curre
     const header = document.createElement('div');
     header.className = 'map-world-header';
     header.innerHTML =
-        `<span class="expand-arrow">▶</span>` +
+        `<span class="expand-arrow">â–¶</span>` +
         `<span class="map-world-name">${regionName}</span>` +
         `<span class="map-area-count">${allEntries.length}</span>`;
 
@@ -1159,7 +1159,7 @@ function matchesQuery(name, info, label, stid, { conditions, text }) {
             if (sid === undefined || String(sid) !== value) return false;
         } else if (key === 'stageno') {
             if (!stid) return false;
-            // Accept "100" or "0100" — compare numerically
+            // Accept "100" or "0100" â€” compare numerically
             if (parseInt(stid.slice(2), 10) !== parseInt(value, 10)) return false;
         } else if (key === 'area') {
             const aname = (info.quest_area_name ?? '').toLowerCase();
@@ -1183,15 +1183,15 @@ function buildSidebar(filter = '') {
         appendNamedLocationSearchResults(listEl, filter);
     }
 
-    // Build one entry per (name, stid) pair — stid suffix intentionally omitted from label.
-    // Skip pd piece models (pd###_m##) — internal tileset pieces, not navigable locations.
+    // Build one entry per (name, stid) pair â€” stid suffix intentionally omitted from label.
+    // Skip pd piece models (pd###_m##) â€” internal tileset pieces, not navigable locations.
     const pdPieceRe = /^pd\d+_m\d+$/;
     const entries = [];
     for (const [name, info] of Object.entries(mapParams)) {
         if (pdPieceRe.test(name)) continue;
         const stages = info.stages?.length ? info.stages : [null];
         for (const stid of stages) {
-            // Label never includes the stid suffix — multi-stage maps are collapsed below
+            // Label never includes the stid suffix â€” multi-stage maps are collapsed below
             const label = stid ? stageLabel(info, stid) : displayName(name, info);
             if (hasFilter && !matchesQuery(name, info, label, stid, query)) continue;
             entries.push({ name, info, label, stid });
@@ -1281,7 +1281,7 @@ _mapSearchClear.addEventListener('click', () => {
 
 initMajorLocSelectors();
 
-// ── URL hash navigation ────────────────────────────────────────────────────────
+// â”€â”€ URL hash navigation â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 // Hash format: #mapname  or  #mapname:stid  or either suffixed with @zoom/y/x
 // e.g. #rm000_m02:st0301@2.50/1024.0/800.0
 function parseHash() {
@@ -1388,12 +1388,12 @@ leafletMap.on('moveend zoomend', () => {
     }, 200);
 });
 
-// ── Overlapping marker spread ──────────────────────────────────────────────────
+// â”€â”€ Overlapping marker spread â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 // When multiple markers share the exact same pixel position they stack invisibly.
 // This detects such groups and fans them out into a small ring.
 // Spokes and anchor dots are written to `overlayLayer` so they can be cleared
 // independently (cross-group recompute on expand/collapse).
-const OVERLAP_SPREAD_R = 9;   // ring radius in world-pixels (visible at zoom ≥ 0)
+const OVERLAP_SPREAD_R = 9;   // ring radius in world-pixels (visible at zoom â‰¥ 0)
 
 // Reset a spread marker back to its natural position and style.
 function _resetMarkerSpread(m) {
@@ -1441,7 +1441,7 @@ function _doSpread(markers, overlayLayer) {
             m._origStyle = { ...m._origStyle, dashArray: '4 3' };
             m._spreadCount = N;
             m.bindTooltip(
-                `${m._naturalTooltip} <span style="opacity:0.7">[×${N} stacked]</span>`,
+                `${m._naturalTooltip} <span style="opacity:0.7">[Ã—${N} stacked]</span>`,
                 { direction: 'top', offset: [0, -8] },
             );
             // Store anchor ref so SG-highlight can also enlarge it (task 1).
@@ -1491,8 +1491,8 @@ function reapplySpread() {
     _doSpread(allMarkers, _spreadOverlay);
 }
 
-// ── Group hull helpers ─────────────────────────────────────────────────────────
-// Andrew's monotone chain — returns the convex hull of pts as [x,y] pairs.
+// â”€â”€ Group hull helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// Andrew's monotone chain â€” returns the convex hull of pts as [x,y] pairs.
 function convexHull(pts) {
     if (pts.length < 3) return pts.slice();
     const s = [...pts].sort((a, b) => a[0] !== b[0] ? a[0] - b[0] : a[1] - b[1]);
@@ -1537,7 +1537,7 @@ leafletMap.on('mousedown', (e) => {
     }
 });
 
-// ── Group chip / expand-collapse helpers ──────────────────────────────────────
+// â”€â”€ Group chip / expand-collapse helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 function makeChipIcon(groupId, _color, count, expanded, yOffset = 10, isKeyBearerGroup = false, isBossGroup = false) {
     // Use a brighter variant of the same hue for chip text (dark chip background needs L~0.78).
@@ -1547,7 +1547,7 @@ function makeChipIcon(groupId, _color, count, expanded, yOffset = 10, isKeyBeare
     if (isBossGroup)      glows.push('0 0 7px 2px rgba(255,60,60,0.85)');
     if (isKeyBearerGroup) glows.push('0 0 7px 2px rgba(255,210,0,0.85)');
     const shadowStyle = glows.length ? `box-shadow:0 0 4px rgba(0,0,0,0.7),${glows.join(',')};` : '';
-    const titleAttr = [isBossGroup ? 'Contains boss enemy' : '', isKeyBearerGroup ? 'Key bearer group' : ''].filter(Boolean).join(' · ');
+    const titleAttr = [isBossGroup ? 'Contains boss enemy' : '', isKeyBearerGroup ? 'Key bearer group' : ''].filter(Boolean).join(' Â· ');
     const groupPart = useMobSpawnDevLabels() ? `G${groupId} ` : '';
     const countPart = useMobSpawnDevLabels() ? `<span class="chip-count">${count}</span>` : '';
     return L.divIcon({
@@ -1575,10 +1575,10 @@ function _groupHasBoss(g) {
 
 const _SPAWN_INFECTION_PREFIX = [null, 'Infected', 'Severely Infected', 'War-Ready'];
 
-// Known SpawnTime windows (Lestania clock, "start,end" — night wraps midnight).
+// Known SpawnTime windows (Lestania clock, "start,end" â€” night wraps midnight).
 const SPAWN_TIME_ALWAYS = '00:00,23:59';
-const SPAWN_TIME_DAY    = new Set(['07:00,17:59', '06:00,17:59']);   // Arrowgene / Rising·Revival
-const SPAWN_TIME_NIGHT  = new Set(['18:00,06:59', '18:00,05:59']);   // Arrowgene / Rising·Revival
+const SPAWN_TIME_DAY    = new Set(['07:00,17:59', '06:00,17:59']);   // Arrowgene / RisingÂ·Revival
+const SPAWN_TIME_NIGHT  = new Set(['18:00,06:59', '18:00,05:59']);   // Arrowgene / RisingÂ·Revival
 
 const spawnTimeKind = (t) => {
     if (!t || t === SPAWN_TIME_ALWAYS) return 'always';
@@ -1594,8 +1594,8 @@ const spawnTimeKind = (t) => {
 
 const spawnTimeLabel = (t) => {
     const kind = spawnTimeKind(t);
-    if (kind === 'day')    return '☀ Day';
-    if (kind === 'night')  return '🌙 Night';
+    if (kind === 'day')    return 'â˜€ Day';
+    if (kind === 'night')  return 'ðŸŒ™ Night';
     if (kind === 'always') return '';
     return t;
 };
@@ -1610,7 +1610,7 @@ const filterEntriesBySpawnTime = (entries, filter = _activeSpawnTimeFilter) => {
     });
 };
 
-// Layout slot with no row in EnemySpawn.json — quest/event/dynamic spawn.
+// Layout slot with no row in EnemySpawn.json â€” quest/event/dynamic spawn.
 const isDynamicSpawnSlot = (spawnCache, spawnKey) => {
     if (!_enemySpawnDataLoaded || spawnKey == null || !spawnCache) return false;
     const allEntries = spawnCache.get(spawnKey) ?? [];
@@ -1781,7 +1781,7 @@ function syncGroupStructureVisibility(g, groupVisible) {
 }
 
 // Build the details layer (hull + territory + spawn dots) for a group entry.
-// Does NOT add the layer to the map — that is done by expandGroup.
+// Does NOT add the layer to the map â€” that is done by expandGroup.
 function buildGroupDetails(g) {
     const info  = _currentMapInfo;
     const layer = L.layerGroup();
@@ -1811,8 +1811,8 @@ function buildGroupDetails(g) {
         })() : '';
         const groupLabel = `<span style="color:${g.color};font-weight:bold;">Group: ${g.groupId}</span>`;
         const isKeyBearer = spawn.KeyBearer === true;
-        const keyLine = isKeyBearer ? '<br><span style="font-size:11px">🗝 Key Bearer</span>' : '';
-        // ManualSet is a server-side spawn property — only shown when server data is loaded
+        const keyLine = isKeyBearer ? '<br><span style="font-size:11px">ðŸ— Key Bearer</span>' : '';
+        // ManualSet is a server-side spawn property â€” only shown when server data is loaded
         const buildManualSetLine = (spawnInfo) =>
             spawnInfo?.isManualSet
                 ? `<br><span style="font-size:11px;color:#b0c4ff" title="Spawns dormant (mIsWaitting=true). Activated by boss SummonSet FSM action.">&#128564; Dormant until summoned</span>`
@@ -1824,7 +1824,7 @@ function buildGroupDetails(g) {
             if (spawnInfo.isBossBGM)   parts.push('Boss BGM');
             if (spawnInfo.isAreaBoss)  parts.push('Area Boss');
             if (spawnInfo.raidBossId > 0) parts.push(`Raid Boss ID: ${spawnInfo.raidBossId}`);
-            return parts.length ? `<br><span style="font-size:11px;color:#ff6666">☠ ${parts.join(' · ')}</span>` : '';
+            return parts.length ? `<br><span style="font-size:11px;color:#ff6666">â˜  ${parts.join(' Â· ')}</span>` : '';
         };
 
         // Build popup HTML optionally enriched with server EnemySpawn data
@@ -1871,7 +1871,7 @@ function buildGroupDetails(g) {
                         : `<span style="display:inline-block;width:28px;margin-right:6px"></span>`;
                     const href     = itemWikiHref(itemId);
                     const nameLink = `<a href="${href}" target="_blank" style="color:inherit;text-decoration:none" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">${name}</a>`;
-                    const qty      = maxQty > minQty ? ` ×${minQty}–${maxQty}` : ` ×${minQty}`;
+                    const qty      = maxQty > minQty ? ` Ã—${minQty}â€“${maxQty}` : ` Ã—${minQty}`;
                     const pct      = dropRate > 0
                         ? ` <span style="color:#777">(${(dropRate * 100).toFixed(0)}%)</span>` : '';
                     return `<tr><td style="color:#222;padding-right:8px">${icon}${nameLink}</td><td style="color:#555;white-space:nowrap;vertical-align:top;padding-top:4px">${qty}${pct}</td></tr>`;
@@ -1908,7 +1908,7 @@ function buildGroupDetails(g) {
                 : (namedFull ?? dispName);
             const isReplaced = namedParam?.type === 'NAMED_TYPE_REPLACE' && dispName;
             const emCodeLine = shownName && emCode
-                ? `<span style="color:#888;font-size:10px"> (${isReplaced ? `${dispName} · ` : ''}${emCode})</span>` : '';
+                ? `<span style="color:#888;font-size:10px"> (${isReplaced ? `${dispName} Â· ` : ''}${emCode})</span>` : '';
             const emLine = shownName
                 ? `<br><span class="se-enemy-name" style="color:#333;font-size:12px">${shownName}${lvText}</span>${emCodeLine}` : '';
 
@@ -1918,9 +1918,9 @@ function buildGroupDetails(g) {
                 const timeLabel = spawnTimeLabel(spawnInfo?.spawnTime);
                 const timePart  = timeLabel ? ` &nbsp;${timeLabel}&nbsp; ` : ` &nbsp;`;
                 return `<br><span style="font-size:11px;color:#444">` +
-                    `<button class="spawn-prev" style="${btnStyle}">◀</button>` +
+                    `<button class="spawn-prev" style="${btnStyle}">â—€</button>` +
                     `${timePart}<span style="color:#666">${displayIdx + 1}/${entries.length}</span>&nbsp;` +
-                    `<button class="spawn-next" style="${btnStyle}">▶</button></span>`;
+                    `<button class="spawn-next" style="${btnStyle}">â–¶</button></span>`;
             })() : '';
 
             const radiiLine = hasEnemy ? (() => {
@@ -1934,11 +1934,11 @@ function buildGroupDetails(g) {
                 return `<br><span style="font-size:11px">${[ag, lk].filter(Boolean).join(' &nbsp; ')}</span>`;
             })() : '';
             const orbsLine = hasEnemy && ((spawnInfo?.isBloodOrbEnemy && spawnInfo?.bloodOrbs) || (spawnInfo?.isHighOrbEnemy && spawnInfo?.highOrbs)) ? (() => {
-                const b = (spawnInfo.isBloodOrbEnemy && spawnInfo.bloodOrbs) ? `<span title="Blood Orbs">🩸</span> ${spawnInfo.bloodOrbs}` : '';
-                const h = (spawnInfo.isHighOrbEnemy  && spawnInfo.highOrbs)  ? `<span title="High Orbs">⭐</span> ${spawnInfo.highOrbs}`   : '';
+                const b = (spawnInfo.isBloodOrbEnemy && spawnInfo.bloodOrbs) ? `<span title="Blood Orbs">ðŸ©¸</span> ${spawnInfo.bloodOrbs}` : '';
+                const h = (spawnInfo.isHighOrbEnemy  && spawnInfo.highOrbs)  ? `<span title="High Orbs">â­</span> ${spawnInfo.highOrbs}`   : '';
                 return `<br><span style="font-size:12px">${[b, h].filter(Boolean).join(' &nbsp;&nbsp; ')}</span>`;
             })() : '';
-            // ── Spawn-set prev/next nav (visible in both viewer and edit mode) ──
+            // â”€â”€ Spawn-set prev/next nav (visible in both viewer and edit mode) â”€â”€
             const buildSetNavRow = () => {
                 if (!spawnKey || sg == null) return '';
                 const [sid, gid] = spawnKey.split(',');
@@ -1957,16 +1957,16 @@ function buildGroupDetails(g) {
                 const posLabel = curIdx >= 0 ? `${curIdx + 1}/${allPos.length}` : `?/${allPos.length}`;
                 return `<div style="display:flex;gap:4px;align-items:center;margin-bottom:4px">`
                     + `<span style="font-size:9px;color:#aaa;text-transform:uppercase;letter-spacing:0.4px;margin-right:2px">Set ${sg}</span>`
-                    + `<button class="se-set-nav-btn" data-key="${prevPos.key}" style="${nb}" title="Previous in spawn set">◀</button>`
+                    + `<button class="se-set-nav-btn" data-key="${prevPos.key}" style="${nb}" title="Previous in spawn set">â—€</button>`
                     + `<span style="font-size:10px;color:#666;min-width:28px;text-align:center">${posLabel}</span>`
-                    + `<button class="se-set-nav-btn" data-key="${nextPos.key}" style="${nb}" title="Next in spawn set">▶</button>`
+                    + `<button class="se-set-nav-btn" data-key="${nextPos.key}" style="${nb}" title="Next in spawn set">â–¶</button>`
                     + `</div>`;
             };
 
             const editSection = _editMode ? (() => {
                 if (!spawnKey) return '';
                 if (!spawnInfo) {
-                    // Empty node — show set nav + drop zone + paste button if clipboard has data
+                    // Empty node â€” show set nav + drop zone + paste button if clipboard has data
                     return `<div class="popup-edit-section">` +
                         buildSetNavRow() +
                         `<div class="se-spawn-view se-spawn-empty" style="min-height:40px;display:flex;align-items:center;justify-content:center;border:1px dashed rgba(120,120,120,0.4);border-radius:3px;margin:4px 0">` +
@@ -1974,7 +1974,7 @@ function buildGroupDetails(g) {
                         `</div>` +
                         (_copiedEnemyConfig
                             ? `<div style="text-align:center;margin-top:4px">` +
-                              `<button class="popup-edit-btn accent" data-edit-action="paste-config">📋 Paste ${emNames[_copiedEnemyConfig.emCode]?.name ?? _copiedEnemyConfig.emCode ?? 'enemy'}</button>` +
+                              `<button class="popup-edit-btn accent" data-edit-action="paste-config">ðŸ“‹ Paste ${emNames[_copiedEnemyConfig.emCode]?.name ?? _copiedEnemyConfig.emCode ?? 'enemy'}</button>` +
                               `</div>`
                             : '') +
                         `</div>`;
@@ -1994,8 +1994,8 @@ function buildGroupDetails(g) {
                     `</div>`;
                 const PRESETS = [
                     { label: 'Always', value: '00:00,23:59' },
-                    { label: '☀ Day',  value: '07:00,17:59' },
-                    { label: '🌙 Night',value: '18:00,06:59' },
+                    { label: 'â˜€ Day',  value: '07:00,17:59' },
+                    { label: 'ðŸŒ™ Night',value: '18:00,06:59' },
                 ];
                 const curTime  = spawnInfo.spawnTime ?? '00:00,23:59';
                 // Dropdown: Always / Day / Night (falls back to first preset if custom value)
@@ -2010,7 +2010,7 @@ function buildGroupDetails(g) {
                 // HmPreset + ThinkTbl controls (reused in both column and full-width contexts)
                 const hmPresetCtrl = (() => {
                     const ep  = spawnInfo.emCode ? hmPresetsByEmCode.get(spawnInfo.emCode) : null;
-                    const txt = ep ? `${ep.id}${ep.name ? ' — ' + ep.name : ''}` : '—';
+                    const txt = ep ? `${ep.id}${ep.name ? ' â€” ' + ep.name : ''}` : 'â€”';
                     return `<span style="font-size:11px;color:#666;padding:2px 4px;align-self:center" title="Derived from enemy type">${txt}</span>`;
                 })();
                 const thinkTblCtrl = (() => {
@@ -2018,19 +2018,19 @@ function buildGroupDetails(g) {
                     const cur   = spawnInfo.startThink ?? 0;
                     const notes = ti ? (thinkTableNotes[ti.res] ?? {}) : {};
                     const title = ti
-                        ? `Think table index — ${ti.res}, observed range 0–${ti.max} in spawn data`
+                        ? `Think table index â€” ${ti.res}, observed range 0â€“${ti.max} in spawn data`
                         : 'AI behaviour table index';
                     const control = ti
                         ? `<select class="popup-edit-input" data-edit="startThink" style="width:auto;font-size:11px" title="${title}">` +
                           Array.from({length: ti.max + 1}, (_,i) => {
-                              const note = notes[i] ? ` — ${notes[i]}` : '';
+                              const note = notes[i] ? ` â€” ${notes[i]}` : '';
                               return `<option value="${i}"${cur===i?' selected':''}>${i}${note}</option>`;
                           }).join('') + `</select>`
                         : inp('startThink', cur, '56px');
                     const resLabel = ti ? ` [${ti.res}]` : '';
                     return lbl(`Think Tbl${resLabel}`, control, title);
                 })();
-                // ── Spawn-set mode bar ────────────────────────────────────────
+                // â”€â”€ Spawn-set mode bar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                 const setModeBar = (() => {
                     const btnBase = 'font-size:10px;padding:1px 8px;border-radius:10px;cursor:pointer;border:1px solid;';
                     const singleOn = !_spawnSetMode;
@@ -2040,12 +2040,12 @@ function buildGroupDetails(g) {
                     if (!_spawnSetMode) {
                         return toggleRow + buildSetNavRow();
                     }
-                    // In set mode — determine peers (same SpawnGroup) and check for mixed content
+                    // In set mode â€” determine peers (same SpawnGroup) and check for mixed content
                     const peers = getPeers(spawnCache);
                     const total = peers.length + 1;
                     const navRow = buildSetNavRow();
                     if (!peers.length) {
-                        const info = `<div style="background:#f0f4ff;border:1px solid #b0c4de;border-radius:3px;padding:3px 7px;font-size:11px;color:#555;margin-bottom:4px">⚡ Spawn Set ${sg} — only position in this group with that value</div>`;
+                        const info = `<div style="background:#f0f4ff;border:1px solid #b0c4de;border-radius:3px;padding:3px 7px;font-size:11px;color:#555;margin-bottom:4px">âš¡ Spawn Set ${sg} â€” only position in this group with that value</div>`;
                         return toggleRow + navRow + info;
                     }
                     const curEmCode = spawnInfo?.emCode;
@@ -2053,7 +2053,7 @@ function buildGroupDetails(g) {
                     if (hasMixed) {
                         const nb = 'font-size:10px;padding:1px 7px;border-radius:3px;cursor:pointer;border:1px solid;';
                         const conflict = `<div class="se-set-conflict" style="background:#fff8e1;border:1px solid #f5c518;border-radius:3px;padding:4px 7px;font-size:11px;color:#555;margin-bottom:4px">` +
-                            `⚠ Spawn Set ${sg} has mixed enemies across ${total} positions.&nbsp;` +
+                            `âš  Spawn Set ${sg} has mixed enemies across ${total} positions.&nbsp;` +
                             `<button class="se-set-use-template-btn" style="${nb}background:#4a90d9;color:#fff;border-color:#357abd">Use this as template</button>&nbsp;` +
                             `<button class="se-set-keep-diffs-btn"   style="${nb}background:#f0f0f0;color:#555;border-color:#ccc">Keep differences</button>` +
                             `</div>`;
@@ -2062,11 +2062,11 @@ function buildGroupDetails(g) {
                     const emptyCount   = peers.filter(p => !p.entries.length).length;
                     const nb           = 'font-size:10px;padding:1px 7px;border-radius:3px;cursor:pointer;border:1px solid;';
                     const fillBtn      = emptyCount > 0
-                        ? `<button class="se-set-fill-btn" data-fill-mode="empty" style="${nb}background:#4a90d9;color:#fff;border-color:#357abd" title="Copy this position's enemy and all values to the ${emptyCount} empty position${emptyCount > 1 ? 's' : ''} in this spawn set">📋 Fill ${emptyCount} empty</button>` : '';
-                    const copyAllBtn   = `<button class="se-set-fill-btn" data-fill-mode="all" style="${nb}background:#d97b4a;color:#fff;border-color:#b85e2e" title="Overwrite all ${total} positions in this spawn set with this position's enemy and values">📋 Copy to all ${total}</button>`;
-                    const removeAllBtn = `<button class="se-set-remove-all-btn" style="${nb}background:#c0392b;color:#fff;border-color:#96281b" title="Remove enemy data from all ${total} positions in this spawn set">🗑 Remove all</button>`;
+                        ? `<button class="se-set-fill-btn" data-fill-mode="empty" style="${nb}background:#4a90d9;color:#fff;border-color:#357abd" title="Copy this position's enemy and all values to the ${emptyCount} empty position${emptyCount > 1 ? 's' : ''} in this spawn set">ðŸ“‹ Fill ${emptyCount} empty</button>` : '';
+                    const copyAllBtn   = `<button class="se-set-fill-btn" data-fill-mode="all" style="${nb}background:#d97b4a;color:#fff;border-color:#b85e2e" title="Overwrite all ${total} positions in this spawn set with this position's enemy and values">ðŸ“‹ Copy to all ${total}</button>`;
+                    const removeAllBtn = `<button class="se-set-remove-all-btn" style="${nb}background:#c0392b;color:#fff;border-color:#96281b" title="Remove enemy data from all ${total} positions in this spawn set">ðŸ—‘ Remove all</button>`;
                     const banner = `<div style="background:#f0f7f0;border:1px solid #7ab87a;border-radius:3px;padding:3px 7px;font-size:11px;color:#3a6b3a;margin-bottom:4px">`
-                        + `<div>⚡ Spawn Set ${sg} — ${total} positions</div>`
+                        + `<div>âš¡ Spawn Set ${sg} â€” ${total} positions</div>`
                         + `<div style="display:flex;gap:4px;margin-top:3px">${fillBtn}${copyAllBtn}${removeAllBtn}</div>`
                         + `</div>`;
                     return toggleRow + navRow + banner;
@@ -2094,7 +2094,7 @@ function buildGroupDetails(g) {
                                 const iconNo   = itemNames[String(itemId)]?.iconNo;
                                 const iconFile = iconNo != null ? `ii${String(iconNo).padStart(6,'0')}.png` : null;
                                 const name     = itemNames[String(itemId)]?.name ?? `#${itemId}`;
-                                const qty      = maxQty > minQty ? `×${minQty}–${maxQty}` : `×${minQty}`;
+                                const qty      = maxQty > minQty ? `Ã—${minQty}â€“${maxQty}` : `Ã—${minQty}`;
                                 const pct      = dropRate > 0 ? ` ${(dropRate * 100).toFixed(0)}%` : '';
                                 const imgEl    = iconFile && _iconIdSet.has(iconNo)
                                     ? `<img src="images/icons/small/${iconFile}" width="20" height="20" style="image-rendering:pixelated;vertical-align:middle" title="${name}">`
@@ -2108,12 +2108,12 @@ function buildGroupDetails(g) {
                         })()
                     ) +
                     `<div class="se-grp-cols">` +
-                    // ── Left column ──────────────────────────────────────────
+                    // â”€â”€ Left column â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                     `<div>` +
                     grp('Stats',
                         lbl('Level',      inp('lv',  spawnInfo.lv  ?? 1, '52px')) +
                         lbl('Experience', inp('exp', spawnInfo.exp ?? 0, '60px')) +
-                        lbl('Play Pts',   inp('ppDrop', spawnInfo.ppDrop ?? 0, '56px'), 'Play Points — post-cap experience gained after reaching max EXP'),
+                        lbl('Play Pts',   inp('ppDrop', spawnInfo.ppDrop ?? 0, '56px'), 'Play Points â€” post-cap experience gained after reaching max EXP'),
                         lbl('Named ID',
                             `<input type="hidden" data-edit="namedId" value="${spawnInfo.namedId ?? 0}">` +
                             `<button class="popup-edit-btn se-named-picker-btn" data-named-id="${spawnInfo.namedId ?? 0}" style="max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:left" title="Click to pick a named enemy param">${namedParamLabel(namedParamsById.get(spawnInfo.namedId ?? 0))}</button>`
@@ -2125,10 +2125,10 @@ function buildGroupDetails(g) {
                         lbl('Set Type', (() => {
                             const cur = spawnInfo.setType ?? 0;
                             const opts = [
-                                [0, '0 — Normal'],
-                                [1, '1 — (Unknown)'],
-                                [2, '2 — Gather Spawn'],
-                                [3, '3 — Network Spawn'],
+                                [0, '0 â€” Normal'],
+                                [1, '1 â€” (Unknown)'],
+                                [2, '2 â€” Gather Spawn'],
+                                [3, '3 â€” Network Spawn'],
                             ];
                             return `<select class="popup-edit-input" data-edit="setType" style="width:auto;font-size:11px" title="0: Normal position from layout&#10;2: Spawns at linked gather node (mOmUID)&#10;3: Spawns at live network/player position">` +
                                 opts.map(([v, l]) => `<option value="${v}"${cur===v?' selected':''}>${l}</option>`).join('') +
@@ -2138,16 +2138,16 @@ function buildGroupDetails(g) {
                         lbl('Repop Cnt', inp('repopCount', spawnInfo.repopCount ?? 0,   '56px')),
                     ) +
                     `</div>` +
-                    // ── Right column ─────────────────────────────────────────
+                    // â”€â”€ Right column â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                     `<div>` +
                     grp('Combat',
                         lbl('Variant', (() => {
                             const cur = spawnInfo.infection ?? 0;
                             const opts = [
-                                [0, '0 — None'],
-                                [1, '1 — Infected'],
-                                [2, '2 — Severely Infected'],
-                                [3, '3 — War-Ready'],
+                                [0, '0 â€” None'],
+                                [1, '1 â€” Infected'],
+                                [2, '2 â€” Severely Infected'],
+                                [3, '3 â€” War-Ready'],
                             ];
                             return `<select class="popup-edit-input" data-edit="infection" style="width:auto;font-size:11px">` +
                                 opts.map(([v, l]) => `<option value="${v}"${cur===v?' selected':''}>${l}</option>`).join('') +
@@ -2156,12 +2156,12 @@ function buildGroupDetails(g) {
                         lbl('Target Type', (() => {
                             const cur = spawnInfo.targetTypeId ?? 1;
                             const opts = [
-                                [1, '1 — None'],
-                                [2, '2 — #2'],
-                                [3, '3 — #3'],
-                                [4, '4 — #4'],
-                                [6, '6 — Area Boss'],
-                                [7, '7 — Stage Boss'],
+                                [1, '1 â€” None'],
+                                [2, '2 â€” #2'],
+                                [3, '3 â€” #3'],
+                                [4, '4 â€” #4'],
+                                [6, '6 â€” Area Boss'],
+                                [7, '7 â€” Stage Boss'],
                             ];
                             return `<select class="popup-edit-input" data-edit="targetTypeId" style="width:auto;font-size:11px">` +
                                 opts.map(([v, l]) => `<option value="${v}"${cur===v?' selected':''}>${l}</option>`).join('') +
@@ -2172,12 +2172,12 @@ function buildGroupDetails(g) {
                             const cur   = spawnInfo.montage ?? 0;
                             const notes = mi ? (montageNotes[spawnInfo.emCode] ?? {}) : {};
                             const title = mi
-                                ? `Montage Fix — controls the enemy's appearance (model parts, colors, attachments). 0 typically randomizes the look each spawn; other values lock a specific variant. Valid indices extracted from the enemy's .dme file: ${mi.join(', ')}`
-                                : 'Montage Fix — controls the enemy\'s appearance (model parts, colors, attachments). 0 typically randomizes the look each spawn; other values lock a specific variant.';
+                                ? `Montage Fix â€” controls the enemy's appearance (model parts, colors, attachments). 0 typically randomizes the look each spawn; other values lock a specific variant. Valid indices extracted from the enemy's .dme file: ${mi.join(', ')}`
+                                : 'Montage Fix â€” controls the enemy\'s appearance (model parts, colors, attachments). 0 typically randomizes the look each spawn; other values lock a specific variant.';
                             const control = mi
                                 ? `<select class="popup-edit-input" data-edit="montage" style="width:auto;font-size:11px" title="${title}">` +
                                   mi.map(v => {
-                                      const note = notes[String(v)] ? ` — ${notes[String(v)]}` : '';
+                                      const note = notes[String(v)] ? ` â€” ${notes[String(v)]}` : '';
                                       return `<option value="${v}"${cur===v?' selected':''}>${v}${note}</option>`;
                                   }).join('') +
                                   (mi.includes(cur) ? '' : `<option value="${cur}" selected>${cur} (custom)</option>`) +
@@ -2188,14 +2188,14 @@ function buildGroupDetails(g) {
                     ) +
                     grp('Rewards',
                         `<div style="display:flex;flex-direction:column;gap:4px">` +
-                        [['🩸', 'Blood Orbs', 'bloodOrbs', spawnInfo.bloodOrbs ?? 0, 'isBloodOrbEnemy', spawnInfo.isBloodOrbEnemy],
-                         ['⭐', 'High Orbs',  'highOrbs',  spawnInfo.highOrbs  ?? 0, 'isHighOrbEnemy',  spawnInfo.isHighOrbEnemy]].map(([icon, name, key, val, markKey, marked]) =>
+                        [['ðŸ©¸', 'Blood Orbs', 'bloodOrbs', spawnInfo.bloodOrbs ?? 0, 'isBloodOrbEnemy', spawnInfo.isBloodOrbEnemy],
+                         ['â­', 'High Orbs',  'highOrbs',  spawnInfo.highOrbs  ?? 0, 'isHighOrbEnemy',  spawnInfo.isHighOrbEnemy]].map(([icon, name, key, val, markKey, marked]) =>
                             `<div style="display:flex;align-items:center;gap:5px">` +
                             `<span style="width:14px;text-align:center;font-size:13px">${icon}</span>` +
                             `<span style="color:#888;font-size:9px;text-transform:uppercase;letter-spacing:0.4px;width:54px">${name}</span>` +
                             inp(key, val, '56px') +
                             `<label class="orb-map-toggle" title="Mark as ${name} spawn on map">` +
-                            `<input type="checkbox" class="popup-edit-input" data-edit="${markKey}"${marked ? ' checked' : ''}>📍</label>` +
+                            `<input type="checkbox" class="popup-edit-input" data-edit="${markKey}"${marked ? ' checked' : ''}>ðŸ“</label>` +
                             `</div>`
                         ).join('') +
                         `</div>`,
@@ -2208,16 +2208,16 @@ function buildGroupDetails(g) {
                     ) +
                     grp('Behaviour',
                         lbl('Hm Preset', hmPresetCtrl) + thinkTblCtrl,
-                        chk('isManualSet', spawnInfo.isManualSet, 'Manual Set', 'Enemy spawns dormant at its exact position (mIsWaitting=true). Activated when a boss fires a SummonSet FSM action (cEmActAtkSummonSet). Position index is significant — the client uses the exact spawn slot.'),
+                        chk('isManualSet', spawnInfo.isManualSet, 'Manual Set', 'Enemy spawns dormant at its exact position (mIsWaitting=true). Activated when a boss fires a SummonSet FSM action (cEmActAtkSummonSet). Position index is significant â€” the client uses the exact spawn slot.'),
                     ) +
                     `</div>` +
                     `</div>` +
                     `</div>` +
                     `<div style="display:flex;gap:6px;margin-top:8px">` +
-                    `<button class="popup-edit-btn" data-edit-action="apply" data-raw="${rawIdx}" style="flex:1;opacity:0.45;cursor:not-allowed" disabled>✔ Apply</button>` +
-                    `<button class="popup-edit-btn" data-edit-action="copy-config" title="Copy this enemy's config to clipboard">📋 Copy</button>` +
-                    (_copiedEnemyConfig ? `<button class="popup-edit-btn accent" data-edit-action="paste-config" title="Paste clipboard config onto this enemy">📋 Paste</button>` : '') +
-                    `<button class="popup-edit-btn danger" data-edit-action="remove-spawn" data-raw="${rawIdx}">🗑 Remove</button>` +
+                    `<button class="popup-edit-btn" data-edit-action="apply" data-raw="${rawIdx}" style="flex:1;opacity:0.45;cursor:not-allowed" disabled>âœ” Apply</button>` +
+                    `<button class="popup-edit-btn" data-edit-action="copy-config" title="Copy this enemy's config to clipboard">ðŸ“‹ Copy</button>` +
+                    (_copiedEnemyConfig ? `<button class="popup-edit-btn accent" data-edit-action="paste-config" title="Paste clipboard config onto this enemy">ðŸ“‹ Paste</button>` : '') +
+                    `<button class="popup-edit-btn danger" data-edit-action="remove-spawn" data-raw="${rawIdx}">ðŸ—‘ Remove</button>` +
                     `</div></div>`;
             })() : '';
             return `${badge}<br>${groupLabel}, Index: <b>${idx}</b>${subLine}${triggerLine}${cycleHtml}${emLine}${keyLine}${buildBossLine(spawnInfo)}${buildManualSetLine(spawnInfo)}${radiiLine}${orbsLine}${_editMode ? '' : buildDropsHtml(spawnInfo)}${editSection}`;
@@ -2227,12 +2227,12 @@ function buildGroupDetails(g) {
             const entries = spawnKey && spawnCache ? (spawnCache.get(spawnKey) ?? []) : [];
             const e0 = entries[0] ?? null;
             const mobLabel = resolveSpawnMobLabel(spawnCache, spawnKey, spawn);
-            const orbBadge  = (e0?.isBloodOrbEnemy && e0?.bloodOrbs ? ' 🩸' : '') + (e0?.isHighOrbEnemy && e0?.highOrbs ? ' ⭐' : '');
-            const manualBadge = e0?.isManualSet ? ' 😴' : '';
-            const bossBadge = (e0?.isBossGauge || e0?.isAreaBoss || e0?.raidBossId > 0) ? ' <span style="color:#ff4444" title="Boss enemy">☠</span>' : '';
+            const orbBadge  = (e0?.isBloodOrbEnemy && e0?.bloodOrbs ? ' ðŸ©¸' : '') + (e0?.isHighOrbEnemy && e0?.highOrbs ? ' â­' : '');
+            const manualBadge = e0?.isManualSet ? ' ðŸ˜´' : '';
+            const bossBadge = (e0?.isBossGauge || e0?.isAreaBoss || e0?.raidBossId > 0) ? ' <span style="color:#ff4444" title="Boss enemy">â˜ </span>' : '';
             const idPart = useMobSpawnDevLabels() ? `${g.groupId}.${idx} [SS:${sg}]` : '';
-            const core = [mobLabel, idPart].filter(Boolean).join(' — ');
-            return `${core || DYNAMIC_ENEMY_LABEL}${orbBadge}${manualBadge}${bossBadge}${isKeyBearer ? ' <span style="color:#c8a000;font-size:16px;">🗝</span>' : ''}`;
+            const core = [mobLabel, idPart].filter(Boolean).join(' â€” ');
+            return `${core || DYNAMIC_ENEMY_LABEL}${orbBadge}${manualBadge}${bossBadge}${isKeyBearer ? ' <span style="color:#c8a000;font-size:16px;">ðŸ—</span>' : ''}`;
         };
 
         const marker = L.circleMarker(latlng, {
@@ -2322,9 +2322,9 @@ function buildGroupDetails(g) {
                         else hideNamedStatsPanel();
                         watchEditChanges(contentDiv);
                     }
-                    // Replace click handler (event delegation — survives innerHTML swaps)
+                    // Replace click handler (event delegation â€” survives innerHTML swaps)
                     if (_popupClickHandler) el.removeEventListener('click', _popupClickHandler);
-                    // Always read entries fresh from cache — the cache may gain entries after
+                    // Always read entries fresh from cache â€” the cache may gain entries after
                     // this handler is registered (e.g. drag-drop onto a previously empty spot).
                     const getEntries = () => cache?.get(spawnKey) ?? [];
                     const rebuildPopup = () => {
@@ -2341,7 +2341,7 @@ function buildGroupDetails(g) {
                         watchEditChanges(cd);
                     };
                     _popupClickHandler = (e) => {
-                        // ── Spawn-set set navigation ───────────────────────────
+                        // â”€â”€ Spawn-set set navigation â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                         if (e.target.closest('.se-set-nav-btn')) {
                             e.stopPropagation();
                             const targetKey = e.target.closest('.se-set-nav-btn').dataset.key;
@@ -2358,7 +2358,7 @@ function buildGroupDetails(g) {
                             }
                             return;
                         }
-                        // ── Spawn-set mode toggles ─────────────────────────────
+                        // â”€â”€ Spawn-set mode toggles â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                         if (e.target.closest('.se-set-single-btn')) {
                             e.stopPropagation();
                             _spawnSetMode = false;
@@ -2373,7 +2373,7 @@ function buildGroupDetails(g) {
                             rebuildPopup();
                             return;
                         }
-                        // ── Conflict resolution ────────────────────────────────
+                        // â”€â”€ Conflict resolution â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                         if (e.target.closest('.se-set-keep-diffs-btn')) {
                             e.stopPropagation();
                             _spawnSetConflictDismissed = true;
@@ -2599,7 +2599,7 @@ function buildGroupDetails(g) {
                             rebuildPopup();
                             return;
                         }
-                        // ── Cycle prev/next ───────────────────────────────────
+                        // â”€â”€ Cycle prev/next â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                         const cycleBtn = e.target.closest('.spawn-prev, .spawn-next');
                         if (cycleBtn) {
                             const entries = getEntries();
@@ -2609,7 +2609,7 @@ function buildGroupDetails(g) {
                             rebuildPopup();
                             return;
                         }
-                        // ── Named param picker button ─────────────────────────
+                        // â”€â”€ Named param picker button â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                         const namedPickerBtn = e.target.closest('.se-named-picker-btn');
                         if (namedPickerBtn && _editMode) {
                             e.stopPropagation();
@@ -2620,7 +2620,7 @@ function buildGroupDetails(g) {
                             openNamedParamPicker(section, baseEmName);
                             return;
                         }
-                        // ── Drop table picker ─────────────────────────────────
+                        // â”€â”€ Drop table picker â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                         const dtPickerBtn = e.target.closest('.se-drops-picker-btn');
                         if (dtPickerBtn && _editMode) {
                             e.stopPropagation();
@@ -2628,15 +2628,15 @@ function buildGroupDetails(g) {
                             openDropTablePicker(section);
                             return;
                         }
-                        // ── Drop table editor (from spawn) ────────────────────
+                        // â”€â”€ Drop table editor (from spawn) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                         const dtEditBtn = e.target.closest('.se-drops-edit-btn');
                         if (dtEditBtn && _editMode) {
                             e.stopPropagation();
                             openDropTableEditor(parseInt(dtEditBtn.dataset.dt));
                             return;
                         }
-                        // ── Spawn time presets ────────────────────────────────
-                        // ── Edit actions ──────────────────────────────────────
+                        // â”€â”€ Spawn time presets â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+                        // â”€â”€ Edit actions â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                         if (!_editMode) return;
                         const actionBtn = e.target.closest('[data-edit-action]');
                         if (!actionBtn) return;
@@ -2676,7 +2676,7 @@ function buildGroupDetails(g) {
                             const montage     = iv('montage');
                             const ppDrop      = iv('ppDrop');
                             const dropsTableId = iv('dropsTableId', -1);
-                            // Update cache entry (read fresh — entries may have been added after handler registration)
+                            // Update cache entry (read fresh â€” entries may have been added after handler registration)
                             const entry = getEntries()[displayIdx];
                             if (entry) {
                                 Object.assign(entry, {
@@ -2718,14 +2718,14 @@ function buildGroupDetails(g) {
                                     if (iIsManualSet     >= 0) row[iIsManualSet]     = isManualSet;
                                     if (iIsBloodOrbEnemy >= 0) row[iIsBloodOrbEnemy] = isBloodOrbEnemy;
                                     if (iIsHighOrbEnemy  >= 0) row[iIsHighOrbEnemy]  = isHighOrbEnemy;
-                                    // HmPresetNo is derived from em code — not written back from UI
+                                    // HmPresetNo is derived from em code â€” not written back from UI
                                     if (iStartThink  >= 0) row[iStartThink]  = startThink;
                                     if (iMontage     >= 0) row[iMontage]     = montage;
                                     if (iPPDrop      >= 0) row[iPPDrop]      = ppDrop;
                                     row[iDrops] = dropsTableId;
                                 }
                             }
-                            // ── Propagate to spawn-set peers ──────────────────
+                            // â”€â”€ Propagate to spawn-set peers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                             if (_spawnSetMode) {
                                 const peers = getPeers(cache);
                                 const peerFields = {
@@ -2735,7 +2735,7 @@ function buildGroupDetails(g) {
                                     isAreaBoss, isManualSet, isBloodOrbEnemy, isHighOrbEnemy,
                                     startThink, montage, ppDrop, dropsTableId,
                                     drops: dropsTableId >= 0 ? (_dropsTablesMap.get(dropsTableId)?.items ?? []) : [],
-                                    // Note: subGroupId intentionally excluded — it defines the set membership
+                                    // Note: subGroupId intentionally excluded â€” it defines the set membership
                                 };
                                 for (const peer of peers) {
                                     for (const pEntry of peer.entries) {
@@ -2811,7 +2811,7 @@ function buildGroupDetails(g) {
                                 dropsTableId: src.dropsTableId, drops: [...(src.drops ?? [])],
                             };
                             _updateClipboardBar();
-                            actionBtn.textContent = '✓ Copied!';
+                            actionBtn.textContent = 'âœ“ Copied!';
                             setTimeout(() => { if (_rebuildOpenPopup) _rebuildOpenPopup(); }, 1000);
                         } else if (action === 'paste-config') {
                             if (!_copiedEnemyConfig) return;
@@ -2819,7 +2819,7 @@ function buildGroupDetails(g) {
                             const entry = getEntries()[displayIdx];
                             const hexId = cfg.emCode ? ('0x' + cfg.emCode.slice(2).toUpperCase()) : null;
                             if (entry) {
-                                // ── Overwrite existing entry ──────────────────
+                                // â”€â”€ Overwrite existing entry â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                                 Object.assign(entry, cfg, { drops: [...(cfg.drops ?? [])] });
                                 if (_rawEnemyData && entry._rawIdx >= 0) {
                                     const row = _rawEnemyData.enemies[entry._rawIdx];
@@ -2856,7 +2856,7 @@ function buildGroupDetails(g) {
                                     }
                                 }
                             } else {
-                                // ── Create new entry on empty node ────────────
+                                // â”€â”€ Create new entry on empty node â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                                 if (!spawnKey) return;
                                 const newEntry = {
                                     ...cfg, drops: [...(cfg.drops ?? [])],
@@ -2938,10 +2938,10 @@ function buildGroupDetails(g) {
                     };
                     el.addEventListener('click', _popupClickHandler);
 
-                    // ── Drag-drop: enemy panel → spawn popup ──────────────────
+                    // â”€â”€ Drag-drop: enemy panel â†’ spawn popup â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                     if (_editMode && spawnKey) {
                         _spawnPopupDropFn = (emCode) => {
-                            // Convert emCode → raw hex EnemyId (e.g. 'em011200' → '0x011200')
+                            // Convert emCode â†’ raw hex EnemyId (e.g. 'em011200' â†’ '0x011200')
                             const hexId = '0x' + emCode.slice(2).toUpperCase();
                             const newEntry = {
                                 emCode, lv: 1, bloodOrbs: 0, highOrbs: 0,
@@ -3002,7 +3002,7 @@ function buildGroupDetails(g) {
                             if (!arr) { arr = []; cache.set(spawnKey, arr); }
                             arr.push(newEntry);
                             displayIdx = arr.length - 1;
-                            // ── Propagate emCode to spawn-set peers ───────────
+                            // â”€â”€ Propagate emCode to spawn-set peers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                             if (_spawnSetMode) {
                                 const peers = getPeers(cache);
                                 for (const peer of peers) {
@@ -3075,7 +3075,7 @@ function buildGroupDetails(g) {
 }
 
 // _expandGroupCore / _collapseGroupCore do the state change without triggering
-// reapplySpread or updateLayersInHash — used by bulk operations.
+// reapplySpread or updateLayersInHash â€” used by bulk operations.
 function _expandGroupCore(g, { skipFilter = false } = {}) {
     // Ignore stale expand jobs from a previous map (chunked applyMobDisplayMode).
     if (!_groupStore.has(g.groupId) || _groupStore.get(g.groupId) !== g) return;
@@ -3112,12 +3112,12 @@ function _collapseGroupCore(g) {
         (_activeSubGroupId === 1 && g.areaSpawn));
 }
 
-// ── SubGroup filter ────────────────────────────────────────────────────────────
+// â”€â”€ SubGroup filter â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 // Network SubGroupId is derived from two mechanisms:
 //
 // 1. Kill-triggered (lot SubGroupNo):
-//    SubGroupNo = -1  → SubGroupId = 0  (initial/always-present spawn)
-//    SubGroupNo =  N  → SubGroupId = N+1 (triggered spawn; client requests N+1 after trigger fires)
+//    SubGroupNo = -1  â†’ SubGroupId = 0  (initial/always-present spawn)
+//    SubGroupNo =  N  â†’ SubGroupId = N+1 (triggered spawn; client requests N+1 after trigger fires)
 //    Confirmed by PS4 disassembly: moveSetUnitSubGroupSever sends v5 = flagNo+1.
 //
 // 2. Area-triggered (GPB SetCondition1=1 + AreaHit=True, stored as g.areaSpawn):
@@ -3125,7 +3125,7 @@ function _collapseGroupCore(g) {
 //    The group's spawns all have SubGroupNo=-1, but are re-requested under SubGroupId=1.
 //    Confirmed by server logs: Lestania G27 (areaSpawn=true) sends SubGroupId=1 on area entry.
 //
-// g.splitId (from GPB) is NOT used for filtering — it identifies spatial sections for PD dungeons.
+// g.splitId (from GPB) is NOT used for filtering â€” it identifies spatial sections for PD dungeons.
 
 const _spawnSubGroupId = (spawn) =>
     (spawn?.SubGroupNo == null || spawn.SubGroupNo === -1) ? 0 : spawn.SubGroupNo + 1;
@@ -3267,7 +3267,7 @@ function _updateExpandCollapseBtn() {
     updateLayersInHash();
 }
 
-// ── Enemy spawn markers ────────────────────────────────────────────────────────
+// â”€â”€ Enemy spawn markers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 // Registry of circleMarkers keyed by "sg:groupId", rebuilt on each loadEnemySpawns call.
 // Used to highlight all markers sharing the same SG within the same group on hover.
@@ -3322,7 +3322,7 @@ function _unhighlightSG() {
     _unhighlightTimer = setTimeout(_clearHighlight, 160);
 }
 
-// ── Gathering group hover highlight ──────────────────────────────────────────
+// â”€â”€ Gathering group hover highlight â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 let _gatherHighlightTimer = null;
 let _gatherHighlightedSet = new Set();   // markers currently highlighted
 
@@ -3360,7 +3360,7 @@ function _unhighlightGather() {
     _gatherHighlightTimer = setTimeout(_clearGatherHighlight, 160);
 }
 
-// ── Spawn aggro/link radius circles ───────────────────────────────────────────
+// â”€â”€ Spawn aggro/link radius circles â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 let _activeRadiiMarker = null;   // the marker whose circles are currently shown
 
 function clearSpawnRadii() {
@@ -3394,7 +3394,7 @@ function showSpawnRadii(marker) {
     const emCode = spawnEntries[0]?.emCode ?? spawn.EmName ?? null;
     const radii  = emCode ? (emRadii[emCode] ?? null) : null;
 
-    // Convert world-unit radius → map CRS units (image pixels).
+    // Convert world-unit radius â†’ map CRS units (image pixels).
     // info.scale is pixels-per-world-unit (used for the X axis on all map types).
     const scale = info.scale;
     const latlng = marker.getLatLng();
@@ -3438,13 +3438,13 @@ leafletMap.on('click', () => {
     clearSpawnRadii();
 });
 
-// Each distinct SpawnGroup value (0–255) gets its own deterministic fill colour.
+// Each distinct SpawnGroup value (0â€“255) gets its own deterministic fill colour.
 // Same SpawnGroup value = same spawn condition = same colour everywhere on the map.
 // Uses OKLCH so perceived brightness is uniform across all hues (unlike HSL where
 // yellow looks nearly white and blue looks dark at the same L value).
 function spawnGroupColor(sg) {
     const hue = (sg * 137) % 360;
-    const L = sg < 50 ? 0.80 : 0.72;    // perceptual lightness (0–1)
+    const L = sg < 50 ? 0.80 : 0.72;    // perceptual lightness (0â€“1)
     const C = sg < 50 ? 0.10 : 0.17;    // chroma: softer for common spawns
     return `oklch(${L} ${C} ${hue})`;
 }
@@ -3457,7 +3457,7 @@ function groupBorderColor(groupId) {
     return `oklch(0.55 0.13 ${hue})`;
 }
 
-// ── Floor OBB test ────────────────────────────────────────────────────────────
+// â”€â”€ Floor OBB test â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 // Returns the FloorId (= layer index) for a world position using the GMP OBBs,
 // or null if no OBB contains the point.
 // OBB test: translate to local space via dot products with the two XZ axes,
@@ -3503,7 +3503,7 @@ async function loadEnemySpawns(info, stid = null) {
     await fetchEnemyPositionsStages(stagesToLoad.map((id) => parseInt(id.slice(2), 10)));
 
     // Collect all groups, merging across stages if multiple are loaded
-    const byGroupId = new Map(); // groupId string → { territory, items:[{spawn,idx,sg,latlng}], pts:[] }
+    const byGroupId = new Map(); // groupId string â†’ { territory, items:[{spawn,idx,sg,latlng}], pts:[] }
     for (const stageId of stagesToLoad) {
         const stageNo   = String(parseInt(stageId.slice(2), 10));
         const stageData = enemyPositionsForStage(stageNo);
@@ -3573,11 +3573,11 @@ async function loadEnemySpawns(info, stid = null) {
     _updateExpandCollapseBtn();
     _computeAvailableSubGroups();
     applySubGroupFilter();
-    // Expanding hundreds of groups blocks the main thread — defer so the map image can paint.
+    // Expanding hundreds of groups blocks the main thread â€” defer so the map image can paint.
     setTimeout(() => applyMobDisplayMode(), 0);
 }
 
-// ── Landmark markers ──────────────────────────────────────────────────────────
+// â”€â”€ Landmark markers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const LANDMARK_COLORS = {
     TYPE_DOOR:       '#ffd700',
     TYPE_CAVE:       '#ff8c00',
@@ -3596,7 +3596,7 @@ const LANDMARK_COLORS = {
 // Types that clutter the map without being useful landmarks
 const HIDDEN_LANDMARK_TYPES = new Set(['TYPE_TEXT', 'TYPE_WATER_LINE', 'TYPE_NONE']);
 
-// ── Map point (POI) category filters ───────────────────────────────────────────
+// â”€â”€ Map point (POI) category filters â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const POI_FILTER_KEY = 'ddon-poi-filters';
 const POI_ICON_BASE  = 'resources/poi-icons';
 const MMAPICON_SLICE_BASE = 'resources/mmapicon_slices';
@@ -3646,7 +3646,7 @@ function makePoiMapIcon(src, size = 24) {
     });
 }
 
-/** Same shop mmapicon with purple ring + tint — still uses the shop POI filter. */
+/** Same shop mmapicon with purple ring + tint â€” still uses the shop POI filter. */
 function makeExchangeShopMapIcon(src, size = 22) {
     const pad = 4;
     const outer = size + pad;
@@ -3785,7 +3785,7 @@ function addConnectionMapMarker(sourceMap, latlng, choices) {
     const primary = choices[0];
     const poiCat = choices.length > 1 ? 'outpost' : (primary.poiCat ?? null);
     const icon = makeConnectionMarkerIcon(poiCat);
-    const tooltip = labels.length === 1 ? labels[0] : labels.join(' · ');
+    const tooltip = labels.length === 1 ? labels[0] : labels.join(' Â· ');
 
     const marker = L.marker(latlng, { icon });
     marker.bindTooltip(tooltip, { permanent: false, direction: 'top', offset: [0, -10] });
@@ -3909,7 +3909,7 @@ function classifyConnectionPoi(conn, mapName) {
     return applyInteriorShopEntranceOverride(conn, null);
 }
 
-// Per-map cache — avoids re-classifying every connection for each landmark (O(n²) on load).
+// Per-map cache â€” avoids re-classifying every connection for each landmark (O(nÂ²) on load).
 let _connectionPoiCacheMap = null;
 let _connectionPoiCache    = null;
 
@@ -3943,7 +3943,7 @@ function isLandmarkCoveredByConnection(mapName, lm) {
                 return true;
         }
 
-        // Unlabeled landmark layer (tooltip shows "WELL", "CATACOMB", …) — hide when a
+        // Unlabeled landmark layer (tooltip shows "WELL", "CATACOMB", â€¦) â€” hide when a
         // named stage connection sits on the same entrance (even if orange diamond).
         if (isGenericLandmark(lm) && LANDMARK_ENTRANCE_TYPES.has(lm.type) &&
             conn.name_en?.trim() && dist < landmarkMatchDist(lm)) {
@@ -3998,7 +3998,7 @@ const loadPoiFilters = () => {
     try {
         const raw = localStorage.getItem(POI_FILTER_KEY);
         const parsed = raw ? JSON.parse(raw) : {};
-        // Migrate renamed gather category (chest → treasure)
+        // Migrate renamed gather category (chest â†’ treasure)
         if ('chest' in parsed && !('treasure' in parsed)) parsed.treasure = parsed.chest;
         delete parsed.chest;
         // Merge split shop toggles into one
@@ -4022,7 +4022,7 @@ const loadPoiFilters = () => {
                 localStorage.setItem('ddon-poi-split-crystal-gemstone', '1');
             }
         } catch { /* ignore */ }
-        // Old pathways / connections layer → all location filters off
+        // Old pathways / connections layer â†’ all location filters off
         if (parsed.pathway === false || parsed.entrance === false) {
             for (const c of POI_LOCATION_CATEGORIES) parsed[c.id] = false;
         }
@@ -4137,8 +4137,8 @@ function makeConnectionMarkerIcon(poiCat) {
     return makePoiMapIcon(poiMapIconSrc(poiCat, { uncategorizedConnection: !poiCat }), 22);
 }
 
-// ── Named location search (map sidebar — portcrystals, caves, inns, etc.) ───────
-/** Main overworld field maps only — excludes sfield* spot slices (wrong projection). */
+// â”€â”€ Named location search (map sidebar â€” portcrystals, caves, inns, etc.) â”€â”€â”€â”€â”€â”€â”€
+/** Main overworld field maps only â€” excludes sfield* spot slices (wrong projection). */
 const isMainWorldFieldMap = (mapName) => /^field\d+_m\d+$/.test(mapName);
 
 const NAMED_LOCATION_CATEGORIES = new Set(POI_LOCATION_CATEGORIES.map(c => c.id));
@@ -4281,7 +4281,7 @@ function shopNamedLocationAlt(shopLabel, npcName, funcLabel) {
     const parts = [];
     if (npcName && !shopLabel.toLowerCase().includes(npcName.toLowerCase())) parts.push(npcName);
     if (funcLabel && !shopLabel.toLowerCase().includes(funcLabel.toLowerCase())) parts.push(funcLabel);
-    return parts.join(' · ');
+    return parts.join(' Â· ');
 }
 
 function namedLocationAreaLabel(entry) {
@@ -4292,7 +4292,7 @@ function namedLocationAreaLabel(entry) {
     if (!info) return area;
     const sLabel = stageLabel(info, entry.stid);
     const mapLabel = info.name_en ? splitPascalCase(info.name_en) : entry.mapName;
-    if (sLabel && sLabel !== mapLabel) return `${area} · ${sLabel}`;
+    if (sLabel && sLabel !== mapLabel) return `${area} Â· ${sLabel}`;
     return area;
 }
 
@@ -4495,7 +4495,7 @@ function appendNamedLocationSearchResults(listEl, rawFilter) {
     for (const entry of matches.slice(0, NAMED_LOCATION_RESULT_CAP)) {
         const el = document.createElement('div');
         el.className = 'map-loc-entry';
-        el.title = `${entry.typeLabel} · ${namedLocationAreaLabel(entry)}`;
+        el.title = `${entry.typeLabel} Â· ${namedLocationAreaLabel(entry)}`;
 
         const icon = document.createElement('span');
         icon.className = 'map-loc-icon poi-icon';
@@ -4508,7 +4508,7 @@ function appendNamedLocationSearchResults(listEl, rawFilter) {
             img.loading = 'lazy';
             icon.appendChild(img);
         } else {
-            icon.textContent = '◆';
+            icon.textContent = 'â—†';
         }
 
         const body = document.createElement('div');
@@ -4520,7 +4520,7 @@ function appendNamedLocationSearchResults(listEl, rawFilter) {
 
         const subEl = document.createElement('div');
         subEl.className = 'map-loc-sub';
-        subEl.textContent = `${entry.typeLabel} · ${namedLocationAreaLabel(entry)}`;
+        subEl.textContent = `${entry.typeLabel} Â· ${namedLocationAreaLabel(entry)}`;
 
         body.append(labelEl, subEl);
         el.append(icon, body);
@@ -4531,7 +4531,7 @@ function appendNamedLocationSearchResults(listEl, rawFilter) {
     if (matches.length > NAMED_LOCATION_RESULT_CAP) {
         const more = document.createElement('div');
         more.className = 'map-loc-more';
-        more.textContent = `${matches.length - NAMED_LOCATION_RESULT_CAP} more — refine search`;
+        more.textContent = `${matches.length - NAMED_LOCATION_RESULT_CAP} more â€” refine search`;
         section.appendChild(more);
     }
 
@@ -4719,7 +4719,7 @@ function initPoiFilters() {
     syncGatherablesShowAllCheckbox();
 }
 
-// ── Live server data (fetched from GitHub at runtime) ─────────────────────────
+// â”€â”€ Live server data (fetched from GitHub at runtime) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 // File content for local overrides is stored in IndexedDB (higher capacity than
 // localStorage). localStorage only holds the sentinel '__local__' or a URL string.
 const _idb = new Promise(resolve => {
@@ -4759,7 +4759,7 @@ async function getSrcUrl(lsKey, defaultUrl) {
         const val = localStorage.getItem(lsKey);
         if (!val) return defaultUrl;
         if (val === '__local__') {
-            // Try FSA handle first — always reads fresh file from disk
+            // Try FSA handle first â€” always reads fresh file from disk
             const handle = await _idbGet(lsKey + '-handle');
             if (handle) {
                 try {
@@ -4772,18 +4772,18 @@ async function getSrcUrl(lsKey, defaultUrl) {
                             try { perm = await handle.requestPermission({ mode: 'read' }); } catch { /* blocked */ }
                         }
                         if (perm !== 'granted') {
-                            // Not granted — fall through to stored content.
-                            // User can open ⚙ Settings to grant it (opening the modal = a user gesture).
+                            // Not granted â€” fall through to stored content.
+                            // User can open âš™ Settings to grant it (opening the modal = a user gesture).
                             throw new Error('permission not granted');
                         }
                     }
-                    // Read via stream() → Response to bypass Chromium's FSA write-through cache.
+                    // Read via stream() â†’ Response to bypass Chromium's FSA write-through cache.
                     // file.text() can return buffered content from the browser's last write;
                     // consuming the stream through a Response uses a different code path.
                     const file = await handle.getFile();
                     const text = await new Response(file.stream()).text();
                     return URL.createObjectURL(new Blob([text], { type: file.type || 'text/plain' }));
-                } catch { /* handle stale or permission denied — fall through */ }
+                } catch { /* handle stale or permission denied â€” fall through */ }
             }
             // Fall back to stored content (IDB or legacy localStorage)
             const data = await _idbGet(lsKey);
@@ -4802,7 +4802,7 @@ async function checkLocalSources() {
     const ua = navigator.userAgent;
     const isBrave   = navigator.brave?.isBrave != null;
     const isFirefox = ua.includes('Firefox/');
-    // Chrome and Edge handle FSA permissions natively with their own dialogs — no indicator needed.
+    // Chrome and Edge handle FSA permissions natively with their own dialogs â€” no indicator needed.
     if (!isBrave && !isFirefox) return;
 
     if (sessionStorage.getItem('ddon-src-reloaded')) {
@@ -4883,13 +4883,13 @@ function showSrcError(label) {
     const item = document.createElement('div');
     item.style.cssText = 'display:flex;align-items:center;gap:5px;margin-bottom:3px;'
         + 'color:#f99;background:#2a0f0f;border-left:3px solid #c0392b;border-radius:2px;padding:3px 6px;';
-    item.innerHTML = `⚠ <span style="flex:1"><b>${label}</b> failed to load</span>`
+    item.innerHTML = `âš  <span style="flex:1"><b>${label}</b> failed to load</span>`
         + `<button data-action="fix" style="font-size:0.7rem;padding:1px 5px;cursor:pointer;`
-        + `background:none;color:#ffd700;border:1px solid #666;border-radius:2px">⚙ Fix</button>`
+        + `background:none;color:#ffd700;border:1px solid #666;border-radius:2px">âš™ Fix</button>`
         + `<button data-action="dismiss" style="font-size:0.7rem;padding:1px 4px;cursor:pointer;`
-        + `background:none;color:#aaa;border:none">✕</button>`;
+        + `background:none;color:#aaa;border:none">âœ•</button>`;
     item.querySelector('[data-action="fix"]').addEventListener('click',
-        () => document.getElementById('map-settings-btn')?.click());
+        () => {/* Rising Maps: channel toggle only â€” no multi-server settings */});
     item.querySelector('[data-action="dismiss"]').addEventListener('click', () => item.remove());
     box.appendChild(item);
 }
@@ -4899,33 +4899,26 @@ function _updateClipboardBar() {
     if (!bar) return;
     if (_copiedEnemyConfig) {
         const name = emNames[_copiedEnemyConfig.emCode]?.name ?? _copiedEnemyConfig.emCode ?? '?';
-        bar.querySelector('.edit-clipboard-label').textContent = `📋 ${name} — click Paste on any marker`;
+        bar.querySelector('.edit-clipboard-label').textContent = `ðŸ“‹ ${name} â€” click Paste on any marker`;
         bar.style.display = '';
     } else {
         bar.style.display = 'none';
     }
 }
 
-// Rising-branded build: default data is Dogma Rising (edelarrow/map-spawns).
-const _RISING_BRANDED = true;
+// Rising Maps: Normal + Endgame (CH4) only â€” no other server data sources.
 const _EDELARROW_SPAWNS_BASE = 'https://raw.githubusercontent.com/edelarrow/map-spawns/refs/heads/main';
-const _ARROWGENE_GATHERING_URL = 'https://raw.githubusercontent.com/sebastian-heinz/Arrowgene.DragonsDogmaOnline/refs/heads/develop/Arrowgene.Ddon.Shared/Files/Assets/GatheringItem.csv';
-const _ARROWGENE_SPAWNS_URL        = 'https://raw.githubusercontent.com/sebastian-heinz/Arrowgene.DragonsDogmaOnline/refs/heads/develop/Arrowgene.Ddon.Shared/Files/Assets/EnemySpawn.json';
-const _ARROWGENE_SHOP_URL          = 'https://raw.githubusercontent.com/sebastian-heinz/Arrowgene.DragonsDogmaOnline/refs/heads/develop/Arrowgene.Ddon.Shared/Files/Assets/Shop.json';
-const _ARROWGENE_SPECIAL_SHOP_URL  = 'https://raw.githubusercontent.com/sebastian-heinz/Arrowgene.DragonsDogmaOnline/refs/heads/develop/Arrowgene.Ddon.Shared/Files/Assets/SpecialShops.json';
-
 const _DEFAULT_GATHERING_URL    = `${_EDELARROW_SPAWNS_BASE}/Normal%20Channels/GatheringItem.csv`;
 const _DEFAULT_SPAWNS_URL       = `${_EDELARROW_SPAWNS_BASE}/Normal%20Channels/EnemySpawn.json`;
 const _DEFAULT_SHOP_URL         = `${_EDELARROW_SPAWNS_BASE}/Normal%20Channels/Shop.json`;
 const _DEFAULT_SPECIAL_SHOP_URL = `${_EDELARROW_SPAWNS_BASE}/Normal%20Channels/SpecialShops.json`;
 
-const _PRESET_LS_KEY = 'ddon-server-preset';
+const _PRESET_LS_KEY = 'ddon-rising-channel';
 const _SRC_KEYS = ['ddon-src-gathering', 'ddon-src-spawns', 'ddon-src-shop', 'ddon-src-special-shop'];
 
 const _SERVER_PRESETS = {
     rising: {
-        label: 'Dogma Rising — Normal Channels',
-        note: 'All four data files from the Dogma Rising normal map (edelarrow/map-spawns).',
+        label: 'Normal Channels',
         urls: {
             'ddon-src-gathering':    _DEFAULT_GATHERING_URL,
             'ddon-src-spawns':       _DEFAULT_SPAWNS_URL,
@@ -4934,8 +4927,7 @@ const _SERVER_PRESETS = {
         },
     },
     'rising-endgame': {
-        label: 'Dogma Rising — Endgame (Channel 4)',
-        note: 'All four data files from the Dogma Rising endgame map (edelarrow/map-spawns).',
+        label: 'Endgame (CH4)',
         urls: {
             'ddon-src-gathering':    `${_EDELARROW_SPAWNS_BASE}/Channel%204/GatheringItem.csv`,
             'ddon-src-spawns':       `${_EDELARROW_SPAWNS_BASE}/Channel%204/EnemySpawn.json`,
@@ -4943,37 +4935,28 @@ const _SERVER_PRESETS = {
             'ddon-src-special-shop': `${_EDELARROW_SPAWNS_BASE}/Channel%204/SpecialShops.json`,
         },
     },
-    arrowgene: {
-        label: 'Arrowgene',
-        note: 'Official Arrowgene shared assets — generic server defaults.',
-        urls: {
-            'ddon-src-gathering':    _ARROWGENE_GATHERING_URL,
-            'ddon-src-spawns':       _ARROWGENE_SPAWNS_URL,
-            'ddon-src-shop':         _ARROWGENE_SHOP_URL,
-            'ddon-src-special-shop': _ARROWGENE_SPECIAL_SHOP_URL,
-        },
-    },
-    revival: {
-        label: 'Revival (live.ddon.org — Normal)',
-        note: 'Enemy spawns from live.ddon.org Normal channel. Gathering & shop stay on Arrowgene (live.ddon.org uses a different file format).',
-        urls: {
-            'ddon-src-gathering':    _ARROWGENE_GATHERING_URL,
-            'ddon-src-spawns':       'https://live.ddon.org/datas/EnemySpawn.json',
-            'ddon-src-shop':         _ARROWGENE_SHOP_URL,
-            'ddon-src-special-shop': _ARROWGENE_SPECIAL_SHOP_URL,
-        },
-    },
 };
 
-// Drop removed LegacyDDON preset / URLs left in older browser storage.
+// Clear leftover non-Rising source URLs / old preset keys from shared localStorage.
 (() => {
     try {
-        if (localStorage.getItem(_PRESET_LS_KEY) === 'legacyddon') {
-            localStorage.removeItem(_PRESET_LS_KEY);
+        const oldPreset = localStorage.getItem('ddon-server-preset');
+        if (oldPreset && oldPreset !== 'rising' && oldPreset !== 'rising-endgame') {
+            localStorage.removeItem('ddon-server-preset');
+        }
+        // Migrate old key if present
+        if (!localStorage.getItem(_PRESET_LS_KEY) && (oldPreset === 'rising' || oldPreset === 'rising-endgame')) {
+            localStorage.setItem(_PRESET_LS_KEY, oldPreset);
         }
         for (const key of _SRC_KEYS) {
             const val = localStorage.getItem(key);
-            if (val && /legacyddon\.com/i.test(val)) localStorage.removeItem(key);
+            if (!val || val === '__local__') continue;
+            const isRising = val.includes('edelarrow/map-spawns');
+            if (!isRising) {
+                localStorage.removeItem(key);
+                localStorage.removeItem(key + '-name');
+                localStorage.removeItem(key + '-data');
+            }
         }
     } catch { /* ignore */ }
 })();
@@ -4981,70 +4964,49 @@ const _SERVER_PRESETS = {
 const presetMatchesStored = (presetId) => {
     const preset = _SERVER_PRESETS[presetId];
     if (!preset) return false;
-    const fallbackUrls = _SERVER_PRESETS[_RISING_BRANDED ? 'rising' : 'arrowgene'].urls;
     return _SRC_KEYS.every(key => {
         const stored = localStorage.getItem(key);
         if (stored === '__local__') return false;
         const expected = preset.urls[key];
-        const effective = stored ?? fallbackUrls[key];
+        const effective = stored ?? _SERVER_PRESETS.rising.urls[key];
         return effective === expected;
     });
 };
 
 const detectActivePreset = () => {
-    if (_SRC_KEYS.some(key => localStorage.getItem(key) === '__local__')) return 'custom';
-    const storedPreset = localStorage.getItem(_PRESET_LS_KEY);
-    if (storedPreset && storedPreset !== 'custom' && _SERVER_PRESETS[storedPreset]) return storedPreset;
+    const storedPreset = localStorage.getItem(_PRESET_LS_KEY)
+        || localStorage.getItem('ddon-server-preset');
+    if (storedPreset === 'rising' || storedPreset === 'rising-endgame') return storedPreset;
     for (const presetId of Object.keys(_SERVER_PRESETS)) {
         if (presetMatchesStored(presetId)) return presetId;
     }
-    return _RISING_BRANDED ? 'rising' : 'arrowgene';
-};
-
-/** Short sidebar label — Rising branded build keeps title clean (channel bar shows Normal/Endgame). */
-const _PRESET_SHORT_LABEL = _RISING_BRANDED ? {
-    revival:  'Revival',
-    arrowgene: 'Arrowgene',
-    custom:   'Custom',
-} : {
-    revival:          'Revival',
-    rising:           'Rising',
-    'rising-endgame': 'Rising',
-    custom:           'Custom',
+    return 'rising';
 };
 
 function updateSidebarPresetLabel() {
     const el = document.getElementById('sidebar-preset-label');
-    if (!el) return;
+    if (el) el.textContent = '';
     const presetId = detectActivePreset();
-    const short = _PRESET_SHORT_LABEL[presetId];
-    el.textContent = short ? ` (${short})` : '';
     const titleEl = document.getElementById('rising-title-text');
-    if (titleEl && _RISING_BRANDED) {
-        if (presetId === 'rising') titleEl.textContent = 'Rising Maps';
-        else if (presetId === 'rising-endgame') titleEl.textContent = 'Rising Maps';
-        else titleEl.textContent = 'Rising Maps';
-        document.title = presetId === 'rising-endgame'
-            ? 'Rising Maps · Endgame'
-            : presetId === 'rising'
-                ? 'Rising Maps · Normal'
-                : `Rising Maps${short ? ` · ${short}` : ''}`;
-    }
+    if (titleEl) titleEl.textContent = 'Rising Maps';
+    document.title = presetId === 'rising-endgame'
+        ? 'Rising Maps Â· Endgame (CH4)'
+        : 'Rising Maps Â· Normal';
 }
 
-/** Persist a named server preset's URLs and reload (same effect as Settings → Apply). */
+/** Switch Rising Normal / Endgame (CH4) data and reload. */
 function applyServerPresetAndReload(presetId) {
     const preset = _SERVER_PRESETS[presetId];
     if (!preset) return;
-    const brandDefault = _SERVER_PRESETS[_RISING_BRANDED ? 'rising' : 'arrowgene'].urls;
     for (const key of _SRC_KEYS) {
         const url = preset.urls[key];
-        if (url === brandDefault[key]) localStorage.removeItem(key);
+        if (url === _SERVER_PRESETS.rising.urls[key]) localStorage.removeItem(key);
         else localStorage.setItem(key, url);
         localStorage.removeItem(key + '-name');
         localStorage.removeItem(key + '-data');
     }
     localStorage.setItem(_PRESET_LS_KEY, presetId);
+    localStorage.removeItem('ddon-server-preset');
     location.reload();
 }
 
@@ -5052,17 +5014,8 @@ function updateRisingChannelToggle() {
     const bar = document.getElementById('rising-channel-bar');
     if (!bar) return;
     const presetId = detectActivePreset();
-    const isRising = presetId === 'rising' || presetId === 'rising-endgame';
-    // Rising branded site always shows the channel bar; other builds only when Rising is active.
-    if (_RISING_BRANDED) bar.style.display = '';
-    else bar.classList.toggle('visible', isRising);
-    if (!isRising && !_RISING_BRANDED) return;
-    const activeChannel = presetId === 'rising-endgame' ? 'rising-endgame' : 'rising';
     for (const btn of bar.querySelectorAll('button[data-preset]')) {
-        const on = isRising && btn.dataset.preset === activeChannel;
-        btn.classList.toggle('active', on);
-        // When user left Rising for another server, keep toggle usable to jump back.
-        btn.disabled = false;
+        btn.classList.toggle('active', btn.dataset.preset === presetId);
     }
 }
 
@@ -5082,7 +5035,8 @@ function initRisingChannelToggle() {
 }
 
 const presetUrlFor = (presetId, lsKey) =>
-    _SERVER_PRESETS[presetId]?.urls[lsKey] ?? _SERVER_PRESETS[_RISING_BRANDED ? 'rising' : 'arrowgene'].urls[lsKey];
+    _SERVER_PRESETS[presetId]?.urls[lsKey] ?? _SERVER_PRESETS.rising.urls[lsKey];
+
 
 // Shared metadata for all user-editable data sources.
 // Used by both the settings dialog and the edit panel footer.
@@ -5119,7 +5073,7 @@ async function downloadAndAssignLocal(lsKey, overrideUrl = null) {
         localStorage.setItem(lsKey, '__local__');
         return handle.name;
     } else {
-        // FSA unavailable — trigger browser download and cache in IDB
+        // FSA unavailable â€” trigger browser download and cache in IDB
         const blob = new Blob([text], { type: 'text/plain' });
         const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(blob), download: meta.name });
         document.body.appendChild(a); a.click(); document.body.removeChild(a);
@@ -5131,8 +5085,8 @@ async function downloadAndAssignLocal(lsKey, overrideUrl = null) {
     }
 }
 
-// Cached promises — fetch starts once, result shared by all callers.
-// Map key: "stageId,groupId,posId" → [{itemId, itemNum, maxItemNum, quality, dropChance, isHidden}]
+// Cached promises â€” fetch starts once, result shared by all callers.
+// Map key: "stageId,groupId,posId" â†’ [{itemId, itemNum, maxItemNum, quality, dropChance, isHidden}]
 let _gatherItemsCache = null;
 
 function parseGatheringCsv(text) {
@@ -5184,7 +5138,7 @@ const _gatherItemsPromise = getSrcUrl('ddon-src-gathering', _DEFAULT_GATHERING_U
     .then(result => { _gatherItemsCache = result; return result; })
     .catch(() => { showSrcError('Gathering Items'); _gatherItemsCache = new Map(); return _gatherItemsCache; });
 
-// Map key for enemy spawns: "stageId,groupId,posIdx" → [{emCode, lv, bloodOrbs, highOrbs, spawnTime, drops}]
+// Map key for enemy spawns: "stageId,groupId,posIdx" â†’ [{emCode, lv, bloodOrbs, highOrbs, spawnTime, drops}]
 let _enemySpawnCache = null;
 const _enemySpawnPromise = getSrcUrl('ddon-src-spawns', _DEFAULT_SPAWNS_URL)
     .then(url => fetch(url, { cache: 'no-store' }).then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); }))
@@ -5238,7 +5192,7 @@ const _enemySpawnPromise = getSrcUrl('ddon-src-spawns', _DEFAULT_SPAWNS_URL)
             const key  = `${e[iStage]},${e[iGroup]},${e[iPosIdx]}`;
             const dtId = e[iDrops];
             const dt   = dtId != null && dtId >= 0 ? dropsTables[dtId] : null;
-            // Convert '0x011200' → 'em011200'
+            // Convert '0x011200' â†’ 'em011200'
             const hexStr = e[iEnemyId];
             const emCode = hexStr ? `em${hexStr.slice(2).toLowerCase().padStart(6, '0')}` : null;
             const bloodOrbs = e[iBlood] ?? 0;
@@ -5287,7 +5241,7 @@ const _enemySpawnPromise = getSrcUrl('ddon-src-spawns', _DEFAULT_SPAWNS_URL)
         refreshMobTooltips();
     });
 
-// Map: ShopId → {walletType, items:[{itemId, price, stock}]}
+// Map: ShopId â†’ {walletType, items:[{itemId, price, stock}]}
 let _shopCache = null;
 const _shopPromise = getSrcUrl('ddon-src-shop', _DEFAULT_SHOP_URL)
     .then(url => fetch(url, { cache: 'no-store' }).then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); }))
@@ -5305,7 +5259,7 @@ const _shopPromise = getSrcUrl('ddon-src-shop', _DEFAULT_SHOP_URL)
     })
     .catch(() => { showSrcError('Shop Data'); _shopCache = new Map(); return _shopCache; });
 
-// Map: ShopType string → { shopTypeId, categories:[{label, appraisals:[...]}] }
+// Map: ShopType string â†’ { shopTypeId, categories:[{label, appraisals:[...]}] }
 // appraisal: { label, comment?, base_items:[{item_id,name,amount}], pool:[{item_id,name,amount,crests?}] }
 let _specialShopCache = null;
 const _specialShopPromise = getSrcUrl('ddon-src-special-shop', _DEFAULT_SPECIAL_SHOP_URL)
@@ -5323,14 +5277,14 @@ const _specialShopPromise = getSrcUrl('ddon-src-special-shop', _DEFAULT_SPECIAL_
     })
     .catch(() => { showSrcError('Appraisal Data'); _specialShopCache = new Map(); return _specialShopCache; });
 
-// ── NPC shop constants ─────────────────────────────────────────────────────────
+// â”€â”€ NPC shop constants â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const NPC_FUNC_LABELS = {
     3: 'Shop',               4: 'Item Shop',        5: 'Equipment Shop',
     6: 'Material Shop',      8: 'Weapon Shop',       9: 'Armor Shop',
     19: 'Orb Exchange (Crests)',                     20: 'Orb Exchange (Materials)',
     57: 'Play Point Shop',   74: 'Adventure Pass Shop',  97: 'Bitterblack Shop',
 };
-/** Unreachable shop instances — duplicate WDT (3602) and Megado clones (471/472). */
+/** Unreachable shop instances â€” duplicate WDT (3602) and Megado clones (471/472). */
 const INACCESSIBLE_SHOP_STAGE_NOS = new Set(['3602', '471', '472']);
 function isAccessibleShopStage(stageNo) {
     return !INACCESSIBLE_SHOP_STAGE_NOS.has(String(stageNo));
@@ -5363,55 +5317,55 @@ const SHOP_TYPE_IDS = {
 const SHOP_TYPE_NAMES = Object.fromEntries(Object.entries(SHOP_TYPE_IDS).map(([k, v]) => [v, k]));
 
 
-// ── Gathering node colors ──────────────────────────────────────────────────────
+// â”€â”€ Gathering node colors â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 // Colours and labels for all known GatheringType enum values + treasure-chest UnitID types.
 const GATHER_COLORS = {
-    // ── Plants ────────────────────────────────────────────────────────────────
+    // â”€â”€ Plants â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     OM_GATHER_GRASS:       '#4CAF50',  // green
     OM_GATHER_FLOWER:      '#E91E63',  // pink
     OM_GATHER_MUSHROOM:    '#9C27B0',  // purple
-    OM_GATHER_CLOTH:       '#CE93D8',  // light purple — cloth/fibre
-    // ── Ore / Crystal ─────────────────────────────────────────────────────────
+    OM_GATHER_CLOTH:       '#CE93D8',  // light purple â€” cloth/fibre
+    // â”€â”€ Ore / Crystal â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     OM_GATHER_CRST_LV1:    '#42A5F5',  // blue
     OM_GATHER_CRST_LV2:    '#1E88E5',  // medium blue
     OM_GATHER_CRST_LV3:    '#1565C0',  // dark blue
     OM_GATHER_CRST_LV4:    '#0D47A1',  // very dark blue
-    // ── Gemstone ──────────────────────────────────────────────────────────────
+    // â”€â”€ Gemstone â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     OM_GATHER_JWL_LV1:     '#FFEE58',  // yellow
     OM_GATHER_JWL_LV2:     '#FDD835',  // deeper yellow
     OM_GATHER_JWL_LV3:     '#F9A825',  // amber
-    OM_GATHER_TWINKLE:     '#FFF9C4',  // pale yellow — sparkle/twinkle node
-    // ── Lumber ────────────────────────────────────────────────────────────────
+    OM_GATHER_TWINKLE:     '#FFF9C4',  // pale yellow â€” sparkle/twinkle node
+    // â”€â”€ Lumber â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     OM_GATHER_TREE_LV1:    '#A1887F',  // light brown
     OM_GATHER_TREE_LV2:    '#795548',  // medium brown
     OM_GATHER_TREE_LV3:    '#5D4037',  // dark brown
     OM_GATHER_TREE_LV4:    '#3E2723',  // very dark brown
-    // ── Ground / Water ────────────────────────────────────────────────────────
+    // â”€â”€ Ground / Water â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     OM_GATHER_SAND:        '#FF9800',  // orange
     OM_GATHER_SHELL:       '#FFCC80',  // light amber
     OM_GATHER_WATER:       '#00BCD4',  // cyan
-    // ── Items / Misc ──────────────────────────────────────────────────────────
+    // â”€â”€ Items / Misc â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     OM_GATHER_ANTIQUE:     '#FF5722',  // deep orange
     OM_GATHER_BOX:         '#8D6E63',  // brownish
     OM_GATHER_ALCHEMY:     '#00BFA5',  // teal
     OM_GATHER_BOOK:        '#78909C',  // blue-grey
-    OM_GATHER_ONE_OFF:     '#B0BEC5',  // light grey — one-off / event node
-    OM_GATHER_SHIP:        '#29B6F6',  // light blue — ship/maritime gather
-    // ── Key items ─────────────────────────────────────────────────────────────
+    OM_GATHER_ONE_OFF:     '#B0BEC5',  // light grey â€” one-off / event node
+    OM_GATHER_SHIP:        '#29B6F6',  // light blue â€” ship/maritime gather
+    // â”€â”€ Key items â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     OM_GATHER_KEY_LV1:     '#EF9A9A',  // light red
     OM_GATHER_KEY_LV2:     '#EF5350',  // red
     OM_GATHER_KEY_LV3:     '#C62828',  // dark red
     OM_GATHER_KEY_LV4:     '#B71C1C',  // very dark red
-    // ── Treasure (gather type on chest OM) ────────────────────────────────────
-    OM_GATHER_TREA_IRON:   '#E0E0E0',  // light grey — common chest
-    OM_GATHER_TREA_OLD:    '#BCAAA4',  // warm grey  — old/common chest
-    OM_GATHER_TREA_TREE:   '#A5D6A7',  // light green — wooden chest
+    // â”€â”€ Treasure (gather type on chest OM) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    OM_GATHER_TREA_IRON:   '#E0E0E0',  // light grey â€” common chest
+    OM_GATHER_TREA_OLD:    '#BCAAA4',  // warm grey  â€” old/common chest
+    OM_GATHER_TREA_TREE:   '#A5D6A7',  // light green â€” wooden chest
     OM_GATHER_TREA_SILVER: '#CFD8DC',  // silver-grey
     OM_GATHER_TREA_GOLD:   '#FFD54F',  // gold
-    // ── Special ───────────────────────────────────────────────────────────────
+    // â”€â”€ Special â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     OM_GATHER_CORPSE:      '#546E7A',  // dark grey
     OM_GATHER_DRAGON:      '#EF5350',  // bright red
-    // ── Treasure chest types (UnitID-based, from SetInfoOmTreasureBox/G) ─────
+    // â”€â”€ Treasure chest types (UnitID-based, from SetInfoOmTreasureBox/G) â”€â”€â”€â”€â”€
     CHEST_IRON:            '#90A4AE',  // iron = grey-blue
     CHEST_BROWN:           '#A1887F',  // brown
     CHEST_TREASURE:        '#80CBC4',  // teal-ish
@@ -5419,13 +5373,13 @@ const GATHER_COLORS = {
     CHEST_SILVER:          '#E0E0E0',  // silver
     CHEST_GOLD:            '#FFD700',  // gold
     CHEST_PURPLE:          '#CE93D8',  // purple
-    CHEST_PEARL:           '#B2EBF2',  // pearlescent — EXM reward
-    CHEST_ROUND:           '#FFF59D',  // pale yellow — small round chest
+    CHEST_PEARL:           '#B2EBF2',  // pearlescent â€” EXM reward
+    CHEST_ROUND:           '#FFF59D',  // pale yellow â€” small round chest
     CHEST_SEALED_BROWN:    '#A1887F',  // Chain Dungeon (EXM)
     CHEST_SEALED_TEAL:     '#60807E',  // Chain Dungeon (EXM)
-    CHEST_SEALED_ORANGE:   '#FF6F00',  // orange — BBM sealed
-    CHEST_SEALED_PURPLE:   '#7B1FA2',  // purple — BBM sealed
-    CHEST_SEALED_PEARL:    '#B2EBF2',  // pearlescent — EXM reward
+    CHEST_SEALED_ORANGE:   '#FF6F00',  // orange â€” BBM sealed
+    CHEST_SEALED_PURPLE:   '#7B1FA2',  // purple â€” BBM sealed
+    CHEST_SEALED_PEARL:    '#B2EBF2',  // pearlescent â€” EXM reward
     CHEST_UNKNOWN:         '#607D8B',  // fallback grey
 };
 
@@ -5512,7 +5466,7 @@ function loadGatherPoints(info, stid = null) {
                                'OM_GATHER_CORPSE'].includes(node.type);
             const badgeText = darkBadge ? '#eee' : '#111';
             const badge     = `<span style="display:inline-block;padding:1px 6px;border-radius:3px;background:${color};color:${badgeText};font-weight:bold;font-size:11px;">${label}</span>`;
-            const listIdPart = node.itemListId != null ? ` <span style="color:#888;font-size:10px">· List ${node.itemListId}</span>` : '';
+            const listIdPart = node.itemListId != null ? ` <span style="color:#888;font-size:10px">Â· List ${node.itemListId}</span>` : '';
             const typeLine  = `<br><span style="color:#666;font-size:11px">${node.type} <span style="color:#888;font-size:10px">(${node.groupId}.${node.posId})</span>${listIdPart}</span>`;
             const coordLine = `<br><span style="font-size:11px;color:#555">X:&nbsp;${node.x.toFixed(0)}&nbsp; Y:&nbsp;${node.y.toFixed(0)}&nbsp; Z:&nbsp;${node.z.toFixed(0)}</span>`;
 
@@ -5536,8 +5490,8 @@ function loadGatherPoints(info, stid = null) {
                                     : `<span style="display:inline-block;width:28px;flex-shrink:0"></span>`;
                                 const href     = itemWikiHref(it.itemId);
                                 const nameLink = `<a href="${href}" target="_blank" style="color:#222;text-decoration:none;font-size:12px;line-height:1.3;word-break:break-word" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">${name}</a>`;
-                                const qty      = it.maxItemNum > it.itemNum ? `×${it.itemNum}–${it.maxItemNum}` : `×${it.itemNum}`;
-                                const pct      = it.dropChance > 0 ? ` · ${(it.dropChance * 100).toFixed(0)}%` : '';
+                                const qty      = it.maxItemNum > it.itemNum ? `Ã—${it.itemNum}â€“${it.maxItemNum}` : `Ã—${it.itemNum}`;
+                                const pct      = it.dropChance > 0 ? ` Â· ${(it.dropChance * 100).toFixed(0)}%` : '';
                                 const meta     = `<span style="font-size:12px;color:#777">${qty}${pct}</span>`;
                                 const hiddenStyle = it.isHidden ? 'opacity:0.35;font-style:italic;' : '';
                                 const hiddenTitle = it.isHidden ? ' title="Hidden"' : '';
@@ -5552,7 +5506,7 @@ function loadGatherPoints(info, stid = null) {
                         itemsHtml = '<div class="ge-items-view ge-items-empty" style="min-height:44px;display:flex;align-items:center;justify-content:center;margin-top:8px;border-radius:4px"><span style="color:#888;font-size:11px;font-style:italic;pointer-events:none">Drop items here to add</span></div>';
                     }
                 }
-                // Edit section — shown only in edit mode when cache is loaded
+                // Edit section â€” shown only in edit mode when cache is loaded
                 let editSection = '';
                 if (_editMode && gatherMap && csvKey) {
                     const items = gatherMap.get(csvKey) ?? [];
@@ -5562,12 +5516,12 @@ function loadGatherPoints(info, stid = null) {
                         return `<tr data-idx="${i}">` +
                             `<td style="padding:2px 4px;color:#222;min-width:70px">${nm}</td>` +
                             `<td style="padding:2px 1px"><input class="popup-edit-input ge-min" type="number" min="1" value="${it.itemNum || 1}" style="width:36px" title="Min qty"></td>` +
-                            `<td style="padding:2px 1px">–</td>` +
+                            `<td style="padding:2px 1px">â€“</td>` +
                             `<td style="padding:2px 1px"><input class="popup-edit-input ge-max" type="number" min="1" value="${it.maxItemNum || 1}" style="width:36px" title="Max qty"></td>` +
                             `<td style="padding:2px 1px;white-space:nowrap" title="Drop chance %"><input class="popup-edit-input ge-chance" type="number" min="0" max="100" step="1" value="${chance}" style="width:44px">%</td>` +
                             `<td style="padding:2px 1px" title="Rarity (quality)"><input class="popup-edit-input ge-qual" type="number" min="0" max="9" value="${it.quality || 0}" style="width:38px"></td>` +
                             `<td style="padding:2px 3px" title="Hidden"><input type="checkbox" class="ge-hidden"${it.isHidden ? ' checked' : ''}></td>` +
-                            `<td style="padding:2px 3px"><button class="popup-edit-btn danger ge-remove" data-idx="${i}" style="padding:1px 4px">✕</button></td>` +
+                            `<td style="padding:2px 3px"><button class="popup-edit-btn danger ge-remove" data-idx="${i}" style="padding:1px 4px">âœ•</button></td>` +
                             `</tr>`;
                     }).join('');
                     editSection = `<div class="popup-edit-section">` +
@@ -5575,13 +5529,13 @@ function loadGatherPoints(info, stid = null) {
                         `<div class="popup-edit-row" style="margin-top:5px">` +
                         `<input class="popup-edit-input" id="ge-add-id" type="number" placeholder="Item ID" style="width:70px">` +
                         `<button class="popup-edit-btn" data-edit-action="ge-add-item">+ Add</button>` +
-                        `<button class="popup-edit-btn ge-apply-btn" data-edit-action="ge-apply" disabled>✔ Apply</button>` +
+                        `<button class="popup-edit-btn ge-apply-btn" data-edit-action="ge-apply" disabled>âœ” Apply</button>` +
                         `</div></div>`;
                 }
                 return `${badge}${typeLine}${coordLine}${itemsHtml}${editSection}`;
             };
 
-            const tooltipText = `${label} — ${node.groupId}.${node.posId}`;
+            const tooltipText = `${label} â€” ${node.groupId}.${node.posId}`;
             const poiCategory = classifyGatherPoiCategory(node.type);
             const iconSrc     = gatherMapIconSrc(node.type);
             const gatherIcon  = iconSrc
@@ -5764,7 +5718,7 @@ function loadGatherPoints(info, stid = null) {
                                     }
                                 });
                                 if (_markDirty) _markDirty('ddon-src-gathering');
-                                actionBtn.textContent = '✔ Saved';
+                                actionBtn.textContent = 'âœ” Saved';
                                 actionBtn.style.background = '#4a9';
                                 actionBtn.style.color = '#fff';
                                 setTimeout(() => rebuildGatherPopup(self, gatherMap), 500);
@@ -5869,15 +5823,15 @@ function loadNpcShops(info, stid = null) {
                 };
 
                 if (_editMode) {
-                    // ── Edit mode: editable rows with price, stock, remove ──────────
+                    // â”€â”€ Edit mode: editable rows with price, stock, remove â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                     const rows = shop.items.map((it, idx) => {
                         const name = itemNames[String(it.ItemId)]?.name ?? `Item #${it.ItemId}`;
                         return `<tr data-idx="${idx}">` +
-                            `<td style="color:#888;padding-right:4px;cursor:grab;user-select:none;white-space:nowrap;width:1px" title="Drag to reorder">⠿</td>` +
+                            `<td style="color:#888;padding-right:4px;cursor:grab;user-select:none;white-space:nowrap;width:1px" title="Drag to reorder">â ¿</td>` +
                             `<td style="padding-right:6px;font-size:12px">${itemIcon(it)}${name}</td>` +
                             `<td style="padding-right:4px;white-space:nowrap;width:1px"><input class="popup-edit-input sh-price" type="number" min="0" value="${it.Price}" style="width:68px" title="Price"></td>` +
                             `<td style="white-space:nowrap;width:1px"><input class="popup-edit-input sh-stock" type="number" min="1" max="255" value="${it.Stock}" style="width:48px" title="Stock (255 = unlimited)"> ` +
-                            `<button class="popup-edit-btn danger sh-remove" data-idx="${idx}" style="padding:1px 5px" title="Remove item">✕</button></td>` +
+                            `<button class="popup-edit-btn danger sh-remove" data-idx="${idx}" style="padding:1px 5px" title="Remove item">âœ•</button></td>` +
                             `</tr>`;
                     }).join('');
                     const emptyZone = shop.items.length === 0
@@ -5889,19 +5843,19 @@ function loadNpcShops(info, stid = null) {
                           `</div>`
                         : '';
                     const footer = `<div class="popup-edit-row" style="margin-top:5px">` +
-                        `<button class="popup-edit-btn" data-edit-action="sh-apply" title="Save price/stock changes">✔ Apply</button>` +
+                        `<button class="popup-edit-btn" data-edit-action="sh-apply" title="Save price/stock changes">âœ” Apply</button>` +
                         `</div>`;
                     return header + currencyLine + tblHtml + emptyZone + footer;
                 }
 
-                // ── View mode ────────────────────────────────────────────────────
+                // â”€â”€ View mode â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                 if (!shop.items.length) return header + '<br><span style="color:#888;font-size:11px">No inventory data</span>';
                 const viewRows = shop.items.map(it => {
                     const entry    = itemNames[String(it.ItemId)];
                     const name     = entry?.name ?? `Item #${it.ItemId}`;
                     const href     = itemWikiHref(it.ItemId);
                     const nameLink = `<a href="${href}" target="_blank" style="color:inherit;text-decoration:none" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">${name}</a>`;
-                    const stock    = it.Stock === 255 ? '' : ` <span style="color:#888">(×${it.Stock})</span>`;
+                    const stock    = it.Stock === 255 ? '' : ` <span style="color:#888">(Ã—${it.Stock})</span>`;
                     return `<tr><td style="color:#222;padding-right:8px;white-space:nowrap">${itemIcon(it)}${nameLink}</td>` +
                            `<td style="color:#555;white-space:nowrap">${it.Price} ${currency}${stock}</td></tr>`;
                 }).join('');
@@ -5923,7 +5877,7 @@ function loadNpcShops(info, stid = null) {
                 });
             const marker = L.marker(latlng, { icon })
             .bindPopup(buildShopPopup(_shopCache), { minWidth: 340 })
-            .bindTooltip(`${npcName} — ${funcLabel}`, { direction: 'top', offset: [0, -10] })
+            .bindTooltip(`${npcName} â€” ${funcLabel}`, { direction: 'top', offset: [0, -10] })
             .addTo(npcShopLayer);
             marker._poiCategory = shopCategory;
             _shopMarkerByNpcId.set(`${stageNo}:${npc.NpcId}`, marker);
@@ -6046,14 +6000,14 @@ function loadSpecialShops(info, stid = null) {
             const npcName  = npcNames[String(npc.NpcId)]?.name ?? npc.NpcName ?? `NPC #${npc.NpcId}`;
             const color    = '#c084fc';
 
-            // ── Per-marker popup state ────────────────────────────────────────
+            // â”€â”€ Per-marker popup state â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
             let _sspClickHandler = null;
             let _selCat = 0, _selAp = 0;
             let _collapsedCats   = new Set();
             let _searchQuery     = '';
             let _popupAbort      = null;   // AbortController for per-popup listeners
 
-            // ── Shared helpers ────────────────────────────────────────────────
+            // â”€â”€ Shared helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
             const itemIcon = (itemId) => {
                 const entry    = itemNames[String(itemId)];
                 const iconNo   = entry?.iconNo;
@@ -6068,7 +6022,7 @@ function loadSpecialShops(info, stid = null) {
                 return `<a href="${href}" target="_blank" style="color:inherit;text-decoration:none" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">${name}</a>`;
             };
 
-            // ── Crest badge rendering ─────────────────────────────────────────
+            // â”€â”€ Crest badge rendering â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
             const crestRef = (crestId) => {
                 const name = itemNames[String(crestId)]?.name ?? `#${crestId}`;
                 const href = itemWikiHref(crestId);
@@ -6080,21 +6034,21 @@ function loadSpecialShops(info, stid = null) {
                 return crests.map(cr => {
                     switch (cr.type) {
                         case 'Imbued':
-                            return `<span class="ssp-crest-badge ssp-crest-imbued">✦ ${crestRef(cr.crest_id)} lv.${cr.amount ?? '?'}</span>`;
+                            return `<span class="ssp-crest-badge ssp-crest-imbued">âœ¦ ${crestRef(cr.crest_id)} lv.${cr.amount ?? '?'}</span>`;
                         case 'CrestLottery': {
                             const ids  = cr.values ?? [];
                             const pills = ids.map(id =>
                                 `<span class="ssp-crest-pill">${crestRef(id)}</span>`
                             ).join('');
                             return `<details class="ssp-crest-badge ssp-crest-lottery ssp-crest-expand">` +
-                                `<summary>🎲 <span class="ssp-more-hint">Random (${ids.length})</span></summary>` +
+                                `<summary>ðŸŽ² <span class="ssp-more-hint">Random (${ids.length})</span></summary>` +
                                 `<div class="ssp-crest-rest">${pills}</div>` +
                                 `</details>`;
                         }
                         case 'DragonTrinketAlpha':
-                            return `<span class="ssp-crest-badge ssp-crest-dragon">α slot — ${cr.job_id ?? '?'}</span>`;
+                            return `<span class="ssp-crest-badge ssp-crest-dragon">Î± slot â€” ${cr.job_id ?? '?'}</span>`;
                         case 'DragonTrinketBeta':
-                            return `<span class="ssp-crest-badge ssp-crest-dragon">β slot — ${cr.job_id ?? '?'}</span>`;
+                            return `<span class="ssp-crest-badge ssp-crest-dragon">Î² slot â€” ${cr.job_id ?? '?'}</span>`;
                         case 'BitterblackBracelet':
                             return `<span class="ssp-crest-badge ssp-crest-bbm">BBM Bracelet</span>`;
                         case 'BitterBlackEarring':
@@ -6105,21 +6059,21 @@ function loadSpecialShops(info, stid = null) {
                 }).join(' ');
             };
 
-            // ── Left panel: appraisal list ────────────────────────────────────
+            // â”€â”€ Left panel: appraisal list â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
             const buildListPanel = (categories, sCat, sAp) => {
                 const catBlocks = categories.map((cat, catIdx) => {
                     const isCollapsed = _collapsedCats.has(catIdx);
-                    const arrow = isCollapsed ? '▶' : '▼';
+                    const arrow = isCollapsed ? 'â–¶' : 'â–¼';
                     const catHeader = _editMode
                         ? `<div class="ssp-list-cat-header" data-cat="${catIdx}"><span class="ssp-cat-toggle">${arrow}</span>` +
                           `<input class="popup-edit-input ssp-cat-label" value="${cat.label.replace(/"/g, '&quot;')}" style="flex:1;font-size:11px;font-weight:bold;min-width:0" placeholder="Category" data-cat="${catIdx}">` +
-                          `<button class="popup-edit-btn danger ssp-remove-cat" data-cat="${catIdx}" style="padding:0 4px;font-size:10px;flex-shrink:0">✕</button></div>`
+                          `<button class="popup-edit-btn danger ssp-remove-cat" data-cat="${catIdx}" style="padding:0 4px;font-size:10px;flex-shrink:0">âœ•</button></div>`
                         : `<div class="ssp-list-cat-header" data-cat="${catIdx}"><span class="ssp-cat-toggle">${arrow}</span>${cat.label}</div>`;
 
                     const apRows = cat.appraisals.map((ap, apIdx) => {
                         const isSelected = catIdx === sCat && apIdx === sAp;
                         const costIcons  = ap.base_items.slice(0, 2).map(bi =>
-                            `<span style="display:inline-flex;align-items:center;white-space:nowrap">${itemIcon(bi.item_id)}<span style="font-size:10px;color:#888">×${bi.amount}</span></span>`
+                            `<span style="display:inline-flex;align-items:center;white-space:nowrap">${itemIcon(bi.item_id)}<span style="font-size:10px;color:#888">Ã—${bi.amount}</span></span>`
                         ).join('<span style="color:#bbb;font-size:9px;margin:0 1px">+</span>');
                         const costMore = ap.base_items.length > 2
                             ? `<span style="font-size:9px;color:#999"> +${ap.base_items.length - 2}</span>` : '';
@@ -6127,7 +6081,7 @@ function loadSpecialShops(info, stid = null) {
                             ? `<span style="font-size:10px;color:#333;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0" title="${ap.pool[0].name.replace(/"/g, '&quot;')}">${ap.pool[0].name}</span>`
                             : `<span class="ssp-lottery-badge">${ap.pool.length} possible</span>`;
                         const editBtn = _editMode
-                            ? `<button class="popup-edit-btn danger ssp-remove-ap" data-cat="${catIdx}" data-ap="${apIdx}" style="padding:0 3px;font-size:10px;flex-shrink:0;margin-left:2px" title="Remove">✕</button>`
+                            ? `<button class="popup-edit-btn danger ssp-remove-ap" data-cat="${catIdx}" data-ap="${apIdx}" style="padding:0 3px;font-size:10px;flex-shrink:0;margin-left:2px" title="Remove">âœ•</button>`
                             : '';
                         // Build searchable text: ap label + all item names (lowercased)
                         const searchText = [
@@ -6137,7 +6091,7 @@ function loadSpecialShops(info, stid = null) {
                         ].join(' ').toLowerCase();
                         return `<div class="ssp-ap-row${isSelected ? ' selected' : ''}" data-cat="${catIdx}" data-ap="${apIdx}" data-search="${searchText.replace(/"/g, '&quot;')}">` +
                             `<div class="ssp-row-cost">${costIcons}${costMore}</div>` +
-                            `<span class="ssp-row-arrow">→</span>` +
+                            `<span class="ssp-row-arrow">â†’</span>` +
                             `<div class="ssp-row-reward">${rewardSummary}</div>` +
                             editBtn +
                             `</div>`;
@@ -6154,20 +6108,20 @@ function loadSpecialShops(info, stid = null) {
                     ? `<div style="padding:3px 4px"><button class="popup-edit-btn ssp-add-cat" style="width:100%;font-size:10px;padding:3px">+ Category</button></div>`
                     : '';
                 return `<div class="ssp-list-panel">` +
-                    `<div class="ssp-search-wrap"><input class="ssp-search-input" type="search" placeholder="Search items…" value="${_searchQuery.replace(/"/g, '&quot;')}"></div>` +
+                    `<div class="ssp-search-wrap"><input class="ssp-search-input" type="search" placeholder="Search itemsâ€¦" value="${_searchQuery.replace(/"/g, '&quot;')}"></div>` +
                     `<div class="ssp-list-scroll">${catBlocks}${addCatBtn}</div>` +
                     `</div>`;
             };
 
-            // ── Right panel: appraisal detail ─────────────────────────────────
+            // â”€â”€ Right panel: appraisal detail â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
             const buildDetailPanel = (ap, catIdx, apIdx) => {
-                if (!ap) return `<div class="ssp-detail-panel"><span style="color:#999;font-size:11px;padding:8px;display:block">← Select an appraisal</span></div>`;
+                if (!ap) return `<div class="ssp-detail-panel"><span style="color:#999;font-size:11px;padding:8px;display:block">â† Select an appraisal</span></div>`;
 
                 // Header: label (editable in edit mode)
                 const headerHtml = _editMode
                     ? `<div style="display:flex;align-items:center;gap:4px;margin-bottom:8px">` +
                       `<input class="popup-edit-input ssp-ap-label" value="${ap.label.replace(/"/g, '&quot;')}" style="flex:1;font-size:11px" placeholder="Appraisal label" data-cat="${catIdx}" data-ap="${apIdx}">` +
-                      `<button class="popup-edit-btn" data-edit-action="ssp-apply" style="padding:2px 6px;font-size:10px;flex-shrink:0">✔ Apply</button>` +
+                      `<button class="popup-edit-btn" data-edit-action="ssp-apply" style="padding:2px 6px;font-size:10px;flex-shrink:0">âœ” Apply</button>` +
                       `</div>`
                     : `<div class="ssp-detail-label">${ap.label}</div>`;
 
@@ -6176,11 +6130,11 @@ function loadSpecialShops(info, stid = null) {
                     ? `<div style="display:flex;align-items:center;gap:4px;padding:2px 0">` +
                       `${itemIcon(bi.item_id)}<span style="font-size:11px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${bi.name.replace(/"/g, '&quot;')}">${bi.name}</span>` +
                       `<input class="popup-edit-input ssp-amount" type="number" min="1" value="${bi.amount}" style="width:44px" data-side="base" data-cat="${catIdx}" data-ap="${apIdx}" data-idx="${biIdx}">` +
-                      `<button class="popup-edit-btn danger ssp-remove-item" data-side="base" data-cat="${catIdx}" data-ap="${apIdx}" data-idx="${biIdx}" style="padding:0 4px">✕</button>` +
+                      `<button class="popup-edit-btn danger ssp-remove-item" data-side="base" data-cat="${catIdx}" data-ap="${apIdx}" data-idx="${biIdx}" style="padding:0 4px">âœ•</button>` +
                       `</div>`
                     : `<div style="display:flex;align-items:center;gap:4px;padding:2px 0">` +
                       `${itemIcon(bi.item_id)}<span style="font-size:11px">${itemRef(bi.item_id, bi.name)}</span>` +
-                      `<span style="font-size:11px;color:#888;margin-left:auto;white-space:nowrap">×${bi.amount}</span>` +
+                      `<span style="font-size:11px;color:#888;margin-left:auto;white-space:nowrap">Ã—${bi.amount}</span>` +
                       `</div>`
                 ).join('');
                 const dropBase = _editMode
@@ -6198,11 +6152,11 @@ function loadSpecialShops(info, stid = null) {
                         const crests = pi.crests ?? [];
                         const crestRows = crests.map((cr, ciIdx) => {
                             const ds = `data-cat="${catIdx}" data-ap="${apIdx}" data-pi="${piIdx}" data-ci="${ciIdx}"`;
-                            const rmBtn = `<button class="popup-edit-btn danger ssp-remove-crest" ${ds} style="padding:0 4px;font-size:10px;flex-shrink:0">✕</button>`;
+                            const rmBtn = `<button class="popup-edit-btn danger ssp-remove-crest" ${ds} style="padding:0 4px;font-size:10px;flex-shrink:0">âœ•</button>`;
                             if (cr.type === 'Imbued') {
                                 const cName = itemNames[String(cr.crest_id)]?.name ?? `#${cr.crest_id}`;
                                 return `<div style="display:flex;align-items:center;gap:3px;padding:1px 0 1px 21px;font-size:10px">` +
-                                    `<span style="color:#a78bfa;flex-shrink:0">✦</span>` +
+                                    `<span style="color:#a78bfa;flex-shrink:0">âœ¦</span>` +
                                     `<span class="ssp-crest-drop" ${ds} title="Drop item to set crest" style="flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:1px 4px;border:1px dashed rgba(167,139,250,0.35);border-radius:3px;cursor:default">${cName}</span>` +
                                     `<input class="popup-edit-input ssp-crest-id" type="number" min="1" value="${cr.crest_id ?? ''}" style="width:58px" placeholder="id" ${ds}>` +
                                     `<span style="color:#888;flex-shrink:0">lv.</span>` +
@@ -6211,7 +6165,7 @@ function loadSpecialShops(info, stid = null) {
                             }
                             if (cr.type === 'CrestLottery') {
                                 return `<div style="display:flex;align-items:center;gap:3px;padding:1px 0 1px 21px;font-size:10px">` +
-                                    `<span style="flex-shrink:0">🎲</span>` +
+                                    `<span style="flex-shrink:0">ðŸŽ²</span>` +
                                     `<input class="popup-edit-input ssp-crest-values" value="${(cr.values ?? []).join(',')}" style="flex:1;min-width:0" placeholder="id1,id2,..." ${ds}>` +
                                     rmBtn + `</div>`;
                             }
@@ -6225,7 +6179,7 @@ function loadSpecialShops(info, stid = null) {
                             `<div style="display:flex;align-items:center;gap:4px;padding:3px 0">` +
                             `${itemIcon(pi.item_id)}<span style="font-size:11px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${pi.name.replace(/"/g, '&quot;')}">${pi.name}</span>` +
                             `<input class="popup-edit-input ssp-amount" type="number" min="1" value="${pi.amount}" style="width:44px" data-side="pool" data-cat="${catIdx}" data-ap="${apIdx}" data-idx="${piIdx}">` +
-                            `<button class="popup-edit-btn danger ssp-remove-item" data-side="pool" data-cat="${catIdx}" data-ap="${apIdx}" data-idx="${piIdx}" style="padding:0 4px">✕</button>` +
+                            `<button class="popup-edit-btn danger ssp-remove-item" data-side="pool" data-cat="${catIdx}" data-ap="${apIdx}" data-idx="${piIdx}" style="padding:0 4px">âœ•</button>` +
                             `</div>` +
                             crestRows + addCrestBtn +
                             `</div>`;
@@ -6234,7 +6188,7 @@ function loadSpecialShops(info, stid = null) {
                     return `<div class="ssp-pool-item">` +
                         `<div style="display:flex;align-items:center;gap:4px">` +
                         `${itemIcon(pi.item_id)}<span style="font-size:11px;flex:1;min-width:0" title="${pi.name.replace(/"/g, '&quot;')}">${itemRef(pi.item_id, pi.name)}</span>` +
-                        `<span style="font-size:11px;color:#888;white-space:nowrap;margin-left:4px">×${pi.amount}</span>` +
+                        `<span style="font-size:11px;color:#888;white-space:nowrap;margin-left:4px">Ã—${pi.amount}</span>` +
                         `</div>` +
                         (crestHtml ? `<div style="padding-left:21px;margin-top:3px">${crestHtml}</div>` : '') +
                         `</div>`;
@@ -6251,7 +6205,7 @@ function loadSpecialShops(info, stid = null) {
                     `</div>`;
             };
 
-            // ── Full popup HTML ───────────────────────────────────────────────
+            // â”€â”€ Full popup HTML â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
             const buildSpecialShopPopup = (cache, sCat, sAp) => {
                 const header = `<div class="ssp-popup-header">` +
                     `<span class="ssp-badge">Appraisals</span>` +
@@ -6259,7 +6213,7 @@ function loadSpecialShops(info, stid = null) {
                     `<span style="color:#888;font-size:11px;margin-left:6px">${shopType} (ID: ${typeId})</span>` +
                     `</div>`;
 
-                if (!cache) return header + `<div style="padding:10px;color:#888;font-size:11px">Loading…</div>`;
+                if (!cache) return header + `<div style="padding:10px;color:#888;font-size:11px">Loadingâ€¦</div>`;
 
                 let shopData = cache.get(shopType);
                 if (!shopData) {
@@ -6301,7 +6255,7 @@ function loadSpecialShops(info, stid = null) {
                 });
             const marker = L.marker(latlng, { icon })
                 .bindPopup(buildSpecialShopPopup(_specialShopCache, 0, 0), { minWidth: 600 })
-                .bindTooltip(`${npcName} — Appraisals (${shopType})`, { direction: 'top', offset: [0, -10] })
+                .bindTooltip(`${npcName} â€” Appraisals (${shopType})`, { direction: 'top', offset: [0, -10] })
                 .addTo(specialShopLayer);
 
             marker._poiCategory = 'shop';
@@ -6325,7 +6279,7 @@ function loadSpecialShops(info, stid = null) {
                     wireInteractions(cache);
                 };
 
-                // Swap only the detail panel — preserves list scroll position
+                // Swap only the detail panel â€” preserves list scroll position
                 const swapDetail = (cache, catIdx, apIdx) => {
                     const popupEl = popup.getElement();
                     const old = popupEl?.querySelector('.ssp-detail-panel');
@@ -6401,12 +6355,12 @@ function loadSpecialShops(info, stid = null) {
                     const popupEl = popup.getElement();
                     if (!popupEl) return;
 
-                    // ── Prevent popup closing on text-selection drag out ──────
+                    // â”€â”€ Prevent popup closing on text-selection drag out â”€â”€â”€â”€â”€â”€
                     // When a drag starts inside the popup (mousedown) and the
                     // mouseup fires outside it, the browser synthesises a click
                     // on the map element.  Leaflet's bubble-phase map-click
                     // handler then closes the popup.  Fix: intercept that click
-                    // in the capture phase — before Leaflet ever sees it — and
+                    // in the capture phase â€” before Leaflet ever sees it â€” and
                     // swallow it when we know the drag originated inside.
                     if (!_popupAbort) {
                         _popupAbort = new AbortController();
@@ -6424,7 +6378,7 @@ function loadSpecialShops(info, stid = null) {
                         }, { capture: true, signal });
                     }
 
-                    // ── Search input ──────────────────────────────────────────
+                    // â”€â”€ Search input â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                     const searchInput = popupEl.querySelector('.ssp-search-input');
                     if (searchInput) {
                         searchInput.addEventListener('input', () => {
@@ -6440,7 +6394,7 @@ function loadSpecialShops(info, stid = null) {
                         const shopD = cache?.get(shopType);
                         if (!shopD) return;
 
-                        // ── Category collapse toggle ──────────────────────────
+                        // â”€â”€ Category collapse toggle â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                         const catHeader = e.target.closest('.ssp-list-cat-header');
                         if (catHeader && !e.target.closest('input') && !e.target.closest('button')) {
                             const catIdx  = parseInt(catHeader.dataset.cat);
@@ -6449,16 +6403,16 @@ function loadSpecialShops(info, stid = null) {
                             if (_collapsedCats.has(catIdx)) {
                                 _collapsedCats.delete(catIdx);
                                 if (catRows) catRows.style.display = '';
-                                catHeader.querySelector('.ssp-cat-toggle').textContent = '▼';
+                                catHeader.querySelector('.ssp-cat-toggle').textContent = 'â–¼';
                             } else {
                                 _collapsedCats.add(catIdx);
                                 if (catRows) catRows.style.display = 'none';
-                                catHeader.querySelector('.ssp-cat-toggle').textContent = '▶';
+                                catHeader.querySelector('.ssp-cat-toggle').textContent = 'â–¶';
                             }
                             return;
                         }
 
-                        // ── Row selection (view + edit) ───────────────────────
+                        // â”€â”€ Row selection (view + edit) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                         const apRow = e.target.closest('.ssp-ap-row');
                         if (apRow && !e.target.closest('button')) {
                             const catIdx = parseInt(apRow.dataset.cat);
@@ -6474,7 +6428,7 @@ function loadSpecialShops(info, stid = null) {
 
                         if (!_editMode) return;
 
-                        // ── Edit actions ──────────────────────────────────────
+                        // â”€â”€ Edit actions â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                         const removeItem  = e.target.closest('.ssp-remove-item');
                         const removeAp    = e.target.closest('.ssp-remove-ap');
                         const removeCat   = e.target.closest('.ssp-remove-cat');
@@ -6636,13 +6590,13 @@ function loadLandmarks(mapName, info) {
     applyAllPoiVisibility();
 }
 
-// ── Stage connection markers ───────────────────────────────────────────────────
+// â”€â”€ Stage connection markers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 /**
  * Return a { zoom, center } view for arriving at destMap coming from srcMap,
  * or null if no positioned reverse connection exists.
  * Uses the reverse connection entry in connectionData[destMap] that points
- * back to srcMap — its x/z is where the door sits on the destination map.
+ * back to srcMap â€” its x/z is where the door sits on the destination map.
  */
 function arrivalView(srcMap, destMap, srcStageNo = null, zoom = 1.5) {
     const destInfo = mapParams[destMap];
@@ -6814,7 +6768,7 @@ function loadConnections(mapName, info) {
     applyAllPoiVisibility();
 }
 
-// ── Grid overlay ──────────────────────────────────────────────────────────────
+// â”€â”€ Grid overlay â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 // Grid unit = 10 pixels.  Major lines every GRID_MAJOR units.
 // Coordinate displayed: gx = floor(pixel_x / 10), gy = floor(pixel_y_from_top / 10)
 const GRID_UNIT  = 10;
@@ -6861,10 +6815,10 @@ function loadGrid(info) {
     }
 }
 
-// ── Floor selector ────────────────────────────────────────────────────────────
+// â”€â”€ Floor selector â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 let currentLayer = 0;
 
-// ── Stage groups panel (editor mode) ──────────────────────────────────────────
+// â”€â”€ Stage groups panel (editor mode) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 let _sgpCollapsed     = true;
 let _wfCollapsed      = true;
 let _wfQuestCollapsed = true;
@@ -6904,11 +6858,11 @@ function buildStageGroupsPanel(info, stid = null) {
 
     panel.style.display = 'block';
 
-    // ── Stage Groups section ──────────────────────────────────────────────────
+    // â”€â”€ Stage Groups section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     const sgpBodyHtml = sgpRows.map(r => {
-        const name  = r.questName ? `<span class="sgp-name" title="${r.questName.replace(/"/g,'&quot;')}">${r.questName}</span>` : `<span style="color:#445">—</span>`;
-        const quest = r.questNo    ? `<span class="sgp-quest">${r.questNo}</span>`    : `<span style="color:#445">—</span>`;
-        const flag  = r.layoutFlagNo ? `<span class="sgp-flag">${r.layoutFlagNo}</span>` : `<span style="color:#445">—</span>`;
+        const name  = r.questName ? `<span class="sgp-name" title="${r.questName.replace(/"/g,'&quot;')}">${r.questName}</span>` : `<span style="color:#445">â€”</span>`;
+        const quest = r.questNo    ? `<span class="sgp-quest">${r.questNo}</span>`    : `<span style="color:#445">â€”</span>`;
+        const flag  = r.layoutFlagNo ? `<span class="sgp-flag">${r.layoutFlagNo}</span>` : `<span style="color:#445">â€”</span>`;
         const npcLine = (r.npcs?.length)
             ? `<div class="sgp-npc-list">${r.npcs.map(n =>
                 `<span class="sgp-npc">${n.npcName || ''}${n.npcName ? ' ' : ''}<span class="sgp-npc-id">#${n.npcId}</span></span>`
@@ -6919,7 +6873,7 @@ function buildStageGroupsPanel(info, stid = null) {
         </div>`;
     }).join('');
 
-    // ── WM Layout section (qst + named, merged) ──────────────────────────────
+    // â”€â”€ WM Layout section (qst + named, merged) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     const seasonColors = {
         'S1': '#7a5c9a', 'S2': '#5c7a9a', 'S3': '#5c9a7a',
     };
@@ -6934,23 +6888,23 @@ function buildStageGroupsPanel(info, stid = null) {
         let clearCol;
         if (r._src === 'qst') {
             const permanent = r.eraseFlagNo === 0
-                ? `<span class="wf-permanent" title="Cannot be cleared">🔒</span>` : '';
-            clearCol = `<span class="wf-erase">${r.eraseFlagNo || '—'}${permanent}</span>`;
+                ? `<span class="wf-permanent" title="Cannot be cleared">ðŸ”’</span>` : '';
+            clearCol = `<span class="wf-erase">${r.eraseFlagNo || 'â€”'}${permanent}</span>`;
         } else {
-            clearCol = `<span class="wf-erase" style="color:#445">—</span>`;
+            clearCol = `<span class="wf-erase" style="color:#445">â€”</span>`;
         }
 
         // Col 4: Name (named entries only)
         const nameCol = r._src === 'named' && r.name
             ? `<span class="wf-name" title="${(r.className ? r.className + '.' : '') + r.name}">${r.name}</span>`
-            : `<span class="wf-name" style="color:#445">—</span>`;
+            : `<span class="wf-name" style="color:#445">â€”</span>`;
 
         // Col 6: Description
         let desc;
         if (r._src === 'named') {
             desc = r.description
                 ? `<span class="wf-comment" title="${r.description.replace(/"/g,'&quot;')}">${r.description}</span>`
-                : `<span style="color:#445">—</span>`;
+                : `<span style="color:#445">â€”</span>`;
         } else {
             const depStyle = r.deprecated ? 'text-decoration:line-through;opacity:0.5;' : '';
             const displayText = r.commentEn || r.comment || '';
@@ -6958,7 +6912,7 @@ function buildStageGroupsPanel(info, stid = null) {
                 ? `${r.commentEn}\n\u30FB JP: ${r.comment}` : (r.comment || r.commentEn || '');
             desc = displayText
                 ? `<span class="wf-comment" style="${depStyle}" title="${tooltipText.replace(/"/g,'&quot;')}">${displayText}</span>`
-                : `<span style="color:#445">—</span>`;
+                : `<span style="color:#445">â€”</span>`;
         }
 
         return `<div class="wf-row${r.deprecated ? ' wf-deprecated' : ''}">
@@ -6971,7 +6925,7 @@ function buildStageGroupsPanel(info, stid = null) {
         </div>`;
     }).join('');
 
-    // ── WM Quest flags — worldQuestFlags ─────────────────────────────────────
+    // â”€â”€ WM Quest flags â€” worldQuestFlags â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     const wfQuestBodyHtml = wfQuestRows.map(r => {
         const seasonKey = r.season?.slice(0, 2) ?? '';
         const chipColor = seasonColors[seasonKey] ?? '#556';
@@ -6979,14 +6933,14 @@ function buildStageGroupsPanel(info, stid = null) {
             ? `<span class="wf-season-chip" style="background:${chipColor}">${r.season}</span>` : '';
         const desc = r.description
             ? `<span class="wf-comment" title="${r.description.replace(/"/g,'&quot;')}">${r.description}</span>`
-            : `<span style="color:#445">—</span>`;
+            : `<span style="color:#445">â€”</span>`;
         const nameStr = r.name
             ? `<span class="wf-name" title="${(r.className ? r.className + '.' : '') + r.name}">${r.name}</span>`
-            : `<span class="wf-name" style="color:#445">—</span>`;
+            : `<span class="wf-name" style="color:#445">â€”</span>`;
         return `<div class="wf-row">
             ${chip}
             <span class="wf-flag">${r.flagNo}</span>
-            <span class="wf-erase" style="color:#445">—</span>
+            <span class="wf-erase" style="color:#445">â€”</span>
             ${nameStr}
             <span class="wf-questno">${r.questNo}</span>
             ${desc}
@@ -6994,38 +6948,38 @@ function buildStageGroupsPanel(info, stid = null) {
     }).join('');
 
     panel.innerHTML =
-        // ── Stage groups sub-panel ──
+        // â”€â”€ Stage groups sub-panel â”€â”€
         (sgpRows.length ? `
         <div class="sgp-header" id="sgp-header-btn">
             <span class="sgp-title">Stage Groups (${sgpRows.length})</span>
-            <span class="sgp-toggle">${_sgpCollapsed ? '▼ show' : '▲ hide'}</span>
+            <span class="sgp-toggle">${_sgpCollapsed ? 'â–¼ show' : 'â–² hide'}</span>
         </div>
         <div class="sgp-col-head">
             <span>Group</span><span>Quest Name</span><span>QuestNo</span><span>LayoutFlag</span>
         </div>
         <div class="sgp-body">${sgpBodyHtml}</div>` : '') +
-        // ── WM Layout flags (qst + named, merged) ──
+        // â”€â”€ WM Layout flags (qst + named, merged) â”€â”€
         (wfRows.length ? `
         <div class="sgp-header wf-header" id="wf-header-btn">
             <span class="sgp-title">WM Layout Flags (${wfRows.length})</span>
-            <span class="sgp-toggle">${_wfCollapsed ? '▼ show' : '▲ hide'}</span>
+            <span class="sgp-toggle">${_wfCollapsed ? 'â–¼ show' : 'â–² hide'}</span>
         </div>
         <div class="wf-col-head">
             <span>Season</span><span>Set Flag</span><span>Clear Flag</span><span>Name</span><span>QuestNo</span><span>Description</span>
         </div>
         <div class="wf-body">${wfBodyHtml}</div>` : '') +
-        // ── WM Quest Flags ──
+        // â”€â”€ WM Quest Flags â”€â”€
         (wfQuestRows.length ? `
         <div class="sgp-header wf-header" id="wf-quest-header-btn">
             <span class="sgp-title">WM Quest Flags (${wfQuestRows.length})</span>
-            <span class="sgp-toggle">${_wfQuestCollapsed ? '▼ show' : '▲ hide'}</span>
+            <span class="sgp-toggle">${_wfQuestCollapsed ? 'â–¼ show' : 'â–² hide'}</span>
         </div>
         <div class="wf-quest-col-head wf-col-head">
-            <span>Season</span><span>FlagNo</span><span>—</span><span>Name</span><span>QuestNo</span><span>Description</span>
+            <span>Season</span><span>FlagNo</span><span>â€”</span><span>Name</span><span>QuestNo</span><span>Description</span>
         </div>
         <div class="wf-quest-body wf-body">${wfQuestBodyHtml}</div>` : '');
 
-    // ── Apply collapse state and wire click handlers ───────────────────────
+    // â”€â”€ Apply collapse state and wire click handlers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     function wireSection(headerId, colHeadSel, bodySel, collapsed, setter) {
         const colHead = panel.querySelector(colHeadSel);
         const body    = panel.querySelector(bodySel);
@@ -7040,7 +6994,7 @@ function buildStageGroupsPanel(info, stid = null) {
             panel.querySelector(colHeadSel)?.classList.toggle('wf-hidden', collapsed);
             panel.querySelector(bodySel)?.classList.toggle('wf-hidden', collapsed);
             document.getElementById(headerId).querySelector('.sgp-toggle').textContent =
-                collapsed ? '▼ show' : '▲ hide';
+                collapsed ? 'â–¼ show' : 'â–² hide';
         });
     }
 
@@ -7096,7 +7050,7 @@ function swapMapImage(info, imgFile) {
     fitMapToImage(info);
 }
 
-// ── Tile-layer selector (pd maps with multi-layer pieces) ─────────────────────
+// â”€â”€ Tile-layer selector (pd maps with multi-layer pieces) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 let _tileLayerSel = null;   // id of currently shown tile-layer image, null = merged default
 
 function buildTileLayerSelector(info, { activeKey = null } = {}) {
@@ -7131,7 +7085,7 @@ function buildTileLayerSelector(info, { activeKey = null } = {}) {
     }
 }
 
-// ── Piece image lightbox ──────────────────────────────────────────────────────
+// â”€â”€ Piece image lightbox â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const _lb = (() => {
     const overlay = document.createElement('div');
     overlay.style.cssText = [
@@ -7180,7 +7134,7 @@ const _lb = (() => {
         });
 
         if (layer !== null) {
-            // Single layer — just show the image
+            // Single layer â€” just show the image
             canvas.style.display = 'none';
             img.style.display    = '';
             img.src = `images/maps/${piece.model}_l${layer}.png`;
@@ -7190,7 +7144,7 @@ const _lb = (() => {
 
         // Composite view
         if (piece.has_merged) {
-            // Pre-generated merged PNG exists — use it directly
+            // Pre-generated merged PNG exists â€” use it directly
             canvas.style.display = 'none';
             img.style.display    = '';
             img.src = `images/maps/${piece.model}_merged.png`;
@@ -7283,7 +7237,7 @@ const _lb = (() => {
     };
 })();
 
-// ── Pd piece boundaries ───────────────────────────────────────────────────────
+// â”€â”€ Pd piece boundaries â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function loadPdBoundaries(info) {
     pdBoundaryLayer.clearLayers();
     if (!info.pd_pieces) return;
@@ -7312,7 +7266,7 @@ function loadPdBoundaries(info) {
     });
 }
 
-// ── Map loader ────────────────────────────────────────────────────────────────
+// â”€â”€ Map loader â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const nextFrame = () => new Promise(resolve => {
     requestAnimationFrame(() => requestAnimationFrame(resolve));
 });
@@ -7463,7 +7417,7 @@ async function loadMapOverlaysPhase(mapName, info, stid, openGroups) {
     fitMapToImage(info);
 }
 
-// ── Map scene cache (fast browser back / revisit) ─────────────────────────────
+// â”€â”€ Map scene cache (fast browser back / revisit) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const MAP_SCENE_CACHE_MAX = 10;
 const _mapSceneCache = new Map();
 let _activeMapImageFile = null;
@@ -7558,7 +7512,7 @@ function attachSceneToMap(scene) {
 
 function createFreshSceneLayers() {
     // Cancel any in-flight chunked group expansion from the previous map before
-    // awaiting image loads — otherwise stale _expandGroupCore calls re-add
+    // awaiting image loads â€” otherwise stale _expandGroupCore calls re-add
     // orphaned spawn dots that are outside _groupStore (mob toggles won't hide them).
     ++_mobDisplayModeJob;
 
@@ -7589,7 +7543,7 @@ function createFreshSceneLayers() {
     spawnRadiiLayer = L.layerGroup().addTo(leafletMap);
     _spreadOverlay = L.layerGroup().addTo(leafletMap);
 
-    // New Maps — do not clear() the previous ones; scene cache still holds them.
+    // New Maps â€” do not clear() the previous ones; scene cache still holds them.
     _groupStore = new Map();
     _gatherMarkerByKey = new Map();
     _gatherGroupMarkers = new Map();
@@ -7751,7 +7705,7 @@ async function loadMap(mapName) {
     const info = mapParams[mapName];
     if (!info) return;
 
-    // Cancel pending mob expansion immediately — loadMap awaits image I/O and a
+    // Cancel pending mob expansion immediately â€” loadMap awaits image I/O and a
     // stale expandChunk can paint previous-map spawns onto the new view.
     ++_mobDisplayModeJob;
 
@@ -7786,7 +7740,7 @@ async function loadMap(mapName) {
 
     const title = buildMapDocumentTitle(mapName, info, stid);
     document.getElementById('map-title').textContent = title;
-    document.title = `${title} — DDON Maps`;
+    document.title = `${title} â€” DDON Maps`;
 
     if (mapSceneCacheEnabled()) {
         const cached = takeCachedScene(mapName, stid, targetFloor);
@@ -7837,13 +7791,13 @@ async function loadMap(mapName) {
     } catch (err) {
         if (!isCurrent()) return;
         console.error('loadMap failed:', err);
-        document.getElementById('map-title').textContent = `${title} — load error`;
+        document.getElementById('map-title').textContent = `${title} â€” load error`;
     } finally {
         if (isCurrent()) setMapLoading(false);
     }
 }
 
-// ── Spot search panel ─────────────────────────────────────────────────────────
+// â”€â”€ Spot search panel â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 let _spotIndex        = [];    // searchable entries for the current map
 let _spotHighlights   = [];    // active pulsing ring markers
@@ -7887,7 +7841,7 @@ function _resolveSpotLatLng(item) {
     const g = item.groupId ? _groupStore.get(item.groupId) : null;
     if (!g) return item.latlng;
     if (!g.isExpanded) return g.labelMarker.getLatLng();
-    // Group is expanded — prefer exact spawnKey match, fall back to first emCode match
+    // Group is expanded â€” prefer exact spawnKey match, fall back to first emCode match
     if (_enemySpawnCache) {
         for (const markers of Object.values(g.sgMarkers)) {
             for (const m of markers) {
@@ -7953,7 +7907,7 @@ function _navigateToSpot(target) {
         _addSpotHighlight(focusLatLng);
         if (targetMarker) setTimeout(() => targetMarker.openPopup(), 450);
     } else if (target.type === 'item' && target.source === 'enemy' && target.groupId) {
-        // Item — enemy drop: reuse full enemy navigation
+        // Item â€” enemy drop: reuse full enemy navigation
         if (_spotOpenedGroup && _spotOpenedGroup !== target.groupId) collapseGroup(_spotOpenedGroup);
         _spotOpenedGroup = target.groupId;
         expandGroup(target.groupId);
@@ -8029,7 +7983,7 @@ async function buildSpotIndex(info) {
         const serverStageId = stageIds[stageNo];
         const cache = _enemySpawnCache;  // may be null if promise not yet resolved
 
-        // ── Enemies: one entry per emCode per spawn position ────────────────
+        // â”€â”€ Enemies: one entry per emCode per spawn position â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         const groups = enemyPositionsForStage(stageNo);
         if (groups) {
             for (const [groupId, groupData] of Object.entries(groups)) {
@@ -8064,7 +8018,7 @@ async function buildSpotIndex(info) {
             }
         }
 
-        // ── Gathering: one entry per node ───────────────────────────────────
+        // â”€â”€ Gathering: one entry per node â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         const nodes = gatherPoints[stageNo];
         if (nodes) {
             for (const node of nodes) {
@@ -8087,7 +8041,7 @@ async function buildSpotIndex(info) {
             }
         }
 
-        // ── Items: enemy drops ───────────────────────────────────────────────
+        // â”€â”€ Items: enemy drops â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         if (cache && serverStageId != null) {
             for (const [groupId, groupData] of Object.entries(groups ?? {})) {
                 const spawns = groupData.spawns ?? groupData;
@@ -8106,7 +8060,7 @@ async function buildSpotIndex(info) {
                             seen.add(dedup);
                             const itemName = itemNames[String(itemId)]?.name ?? `Item #${itemId}`;
                             const emName   = emNames[e.emCode]?.name ?? e.emCode;
-                            const qty = row[2] > row[1] ? `×${row[1]}–${row[2]}` : `×${row[1] ?? 1}`;
+                            const qty = row[2] > row[1] ? `Ã—${row[1]}â€“${row[2]}` : `Ã—${row[1] ?? 1}`;
                             const pct = row[5] > 0 && row[5] < 1 ? ` (${Math.round(row[5] * 100)}%)` : '';
                             _spotIndex.push({
                                 type: 'item', source: 'enemy',
@@ -8123,7 +8077,7 @@ async function buildSpotIndex(info) {
             }
         }
 
-        // ── Items: gathering nodes ───────────────────────────────────────────
+        // â”€â”€ Items: gathering nodes â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         if (_gatherItemsCache && serverStageId != null) {
             for (const node of (gatherPoints[stageNo] ?? [])) {
                 const csvKey  = `${serverStageId},${node.groupId},${node.posId}`;
@@ -8132,7 +8086,7 @@ async function buildSpotIndex(info) {
                 const nodeLabel = GATHER_LABELS[node.type] ?? node.type.replace(/^(OM_GATHER_|CHEST_)/, '').replace(/_/g, ' ');
                 for (const it of nodeItems) {
                     const itemName = itemNames[String(it.itemId)]?.name ?? `Item #${it.itemId}`;
-                    const qty = it.maxItemNum > it.itemNum ? `×${it.itemNum}–${it.maxItemNum}` : `×${it.itemNum}`;
+                    const qty = it.maxItemNum > it.itemNum ? `Ã—${it.itemNum}â€“${it.maxItemNum}` : `Ã—${it.itemNum}`;
                     const pct = it.dropChance < 1 ? ` (${Math.round(it.dropChance * 100)}%)` : '';
                     _spotIndex.push({
                         type: 'item', source: 'gather',
@@ -8148,7 +8102,7 @@ async function buildSpotIndex(info) {
             }
         }
 
-        // ── Items: shop NPCs ─────────────────────────────────────────────────
+        // â”€â”€ Items: shop NPCs â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         if (_shopCache && isAccessibleShopStage(stageNo)) {
             for (const npc of (npcShops[stageNo] ?? [])) {
                 if (npc.ShopId == null) continue;
@@ -8216,7 +8170,7 @@ async function _buildGlobalSpotIndex() {
             await preloadAllEnemyPositionsStages((done, total) => {
                 if (showProgress) {
                     resultsEl.innerHTML =
-                        `<div class="spot-empty">Loading world spawn index… ${done}/${total}</div>`;
+                        `<div class="spot-empty">Loading world spawn indexâ€¦ ${done}/${total}</div>`;
                 }
             });
 
@@ -8228,9 +8182,9 @@ async function _buildGlobalSpotIndex() {
                     const stageNo = String(parseInt(stageId.slice(2), 10));
                     const serverStageId = stageIds[stageNo];
                     const sLabel = stageLabel(info, stageId);
-                    const locationTag = `${mapDisplayName} · ${sLabel}`;
+                    const locationTag = `${mapDisplayName} Â· ${sLabel}`;
 
-                    // Enemies — same logic as local buildSpotIndex, using global spawn cache
+                    // Enemies â€” same logic as local buildSpotIndex, using global spawn cache
                     const groups = enemyPositionsForStage(stageNo);
                     if (groups) {
                         for (const [groupId, groupData] of Object.entries(groups)) {
@@ -8282,7 +8236,7 @@ async function _buildGlobalSpotIndex() {
                                         seen.add(dedup);
                                         const itemName = itemNames[String(itemId)]?.name ?? `Item #${itemId}`;
                                         const emName   = emNames[e.emCode]?.name ?? e.emCode;
-                                        const qty = row[2] > row[1] ? `×${row[1]}–${row[2]}` : `×${row[1] ?? 1}`;
+                                        const qty = row[2] > row[1] ? `Ã—${row[1]}â€“${row[2]}` : `Ã—${row[1] ?? 1}`;
                                         const pct = row[5] > 0 && row[5] < 1 ? ` (${Math.round(row[5] * 100)}%)` : '';
                                         _globalSpotIndex.push({
                                             type: 'item', source: 'enemy',
@@ -8379,12 +8333,12 @@ const _rebuildGlobalSpotIndex = () => {
     });
 };
 
-// ── Spot search — pure helpers ───────────────────────────────────────────────
+// â”€â”€ Spot search â€” pure helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 const SPOT_LEVEL_FILTER_KEY = 'ddon-spot-level-filter';
 const SPOT_MIN_LEVEL_KEY_LEGACY = 'ddon-spot-min-level';
 
-/** Game stage order from stage_list.slt.json (StageNo → list index). */
+/** Game stage order from stage_list.slt.json (StageNo â†’ list index). */
 const _stageOrderByStageId = new Map(
     stageList.StageListInfoList.map((entry, index) => [
         `st${String(entry.StageNo).padStart(4, '0')}`,
@@ -8427,7 +8381,7 @@ const stageOrderKey = (entry) =>
 const compareSpotResultNames = (a, b) =>
     a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' });
 
-/** Hidell Plains overworld — distance sort anchor (WDT entrance on st0100). */
+/** Hidell Plains overworld â€” distance sort anchor (WDT entrance on st0100). */
 const HIDELL_PLAINS_MAP = 'field000_m00';
 
 const readWhiteDragonTempleAnchor = () => {
@@ -8571,7 +8525,7 @@ const compareSpotEnemyGroups = (itemsA, itemsB, { scope = 'local', criteria = nu
     const aPath = distA < SPOT_NO_PATH;
     const bPath = distB < SPOT_NO_PATH;
 
-    // 1. Path distance — nearer reachable spawns first
+    // 1. Path distance â€” nearer reachable spawns first
     if (aPath && bPath) {
         const distDiff = distA - distB;
         if (distDiff !== 0) return distDiff;
@@ -8585,7 +8539,7 @@ const compareSpotEnemyGroups = (itemsA, itemsB, { scope = 'local', criteria = nu
         if (stDiff !== 0) return stDiff;
     }
 
-    // 3. Level — tie-breaker after distance (applies with or without level filter)
+    // 3. Level â€” tie-breaker after distance (applies with or without level filter)
     if (a.type === 'enemy' && b.type === 'enemy') {
         const lvDiff = enemyLevelSortKey(a) - enemyLevelSortKey(b);
         if (lvDiff !== 0) return lvDiff;
@@ -8665,7 +8619,7 @@ const syncSpotSortUI = () => {
     const pickBtn = document.getElementById('spot-sort-pick');
     if (pickBtn) {
         pickBtn.classList.toggle('active', _spotSetOriginMode);
-        pickBtn.textContent = _spotSetOriginMode ? 'Click map to set origin…' : 'Set from map click…';
+        pickBtn.textContent = _spotSetOriginMode ? 'Click map to set originâ€¦' : 'Set from map clickâ€¦';
     }
 };
 
@@ -8710,9 +8664,9 @@ const spawnOverlapsLevelFilter = (entry, { minLevel, maxLevel }) => {
 };
 
 const formatSpotLevelFilterLabel = ({ minLevel, maxLevel }) => {
-    if (minLevel > 0 && maxLevel > 0) return `Lv${minLevel}–${maxLevel}`;
-    if (minLevel > 0) return `≥ Lv${minLevel}`;
-    if (maxLevel > 0) return `≤ Lv${maxLevel}`;
+    if (minLevel > 0 && maxLevel > 0) return `Lv${minLevel}â€“${maxLevel}`;
+    if (minLevel > 0) return `â‰¥ Lv${minLevel}`;
+    if (maxLevel > 0) return `â‰¤ Lv${maxLevel}`;
     return '';
 };
 
@@ -8891,7 +8845,7 @@ function* iterStagesForMultiMob(scope) {
                     stageId,
                     mapName,
                     info,
-                    locationTag: `${mapDisplayName} · ${sLabel}`,
+                    locationTag: `${mapDisplayName} Â· ${sLabel}`,
                 };
             }
         }
@@ -9015,8 +8969,8 @@ function collectMultiMobStageMatches(criteria, scope) {
 }
 
 function findRosterEnemySpots(row) {
-    // Same name + same level range (not emCode) — Undead Lv70 from different IDs merge;
-    // Lv71 stays separate. Exact base name so "Death" ≠ "Death Knight".
+    // Same name + same level range (not emCode) â€” Undead Lv70 from different IDs merge;
+    // Lv71 stays separate. Exact base name so "Death" â‰  "Death Knight".
     const want = row.baseName.toLowerCase();
     return _spotIndex.filter((e) => {
         if (e.type !== 'enemy') return false;
@@ -9130,7 +9084,7 @@ function buildStageItemRoster() {
 const filterSpotEntries = (entries, criteria) =>
     entries.filter(entry => matchesSpotCriteria(entry, criteria));
 
-/** Level identity for a spot entry — same name+level merge; different levels stay apart. */
+/** Level identity for a spot entry â€” same name+level merge; different levels stay apart. */
 const spotEnemyLevelKey = (entry) => {
     const lo = entry.minLv ?? entry.maxLv ?? '';
     const hi = entry.maxLv ?? entry.minLv ?? '';
@@ -9138,7 +9092,7 @@ const spotEnemyLevelKey = (entry) => {
     return lo === hi ? `Lv${lo}` : `Lv${lo}-${hi}`;
 };
 
-/** Same name + same level (emCode may differ). "Death" ≠ "Death Knight". */
+/** Same name + same level (emCode may differ). "Death" â‰  "Death Knight". */
 const spotEnemyGroupKey = (entry) =>
     `${spotEnemyBaseName(entry).toLowerCase()}\0${spotEnemyLevelKey(entry)}`;
 
@@ -9224,7 +9178,7 @@ function gatherTypeFromNodeKey(nodeKey) {
 
 const SPOT_LIST_ITEM_ICON_SIZE = 20;
 
-/** Item sprite — same ii icon shown in gather/shop/enemy popups. */
+/** Item sprite â€” same ii icon shown in gather/shop/enemy popups. */
 function spotItemSpriteIconHtml(itemId) {
     const entry = itemNames[String(itemId)];
     const iconNo = entry?.iconNo;
@@ -9237,19 +9191,19 @@ function spotItemSpriteIconHtml(itemId) {
         + `style="flex-shrink:0;display:block;image-rendering:pixelated;">`;
 }
 
-/** Gather rows — icon matches the gather-node POI marker on the map. */
+/** Gather rows â€” icon matches the gather-node POI marker on the map. */
 function spotGatherIconHtml(first) {
-    if (!first || first.type !== 'gather') return spotListIconSpan('🌿', '#8c8');
+    if (!first || first.type !== 'gather') return spotListIconSpan('ðŸŒ¿', '#8c8');
     const gatherType = first.gatherType ?? gatherTypeFromNodeKey(first.nodeKey);
     const iconSrc = gatherType ? gatherMapIconSrc(gatherType) : null;
     if (iconSrc) return spotListPoiImgHtml(iconSrc);
     return `<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${GATHER_COLORS[gatherType] ?? '#aaa'};flex-shrink:0"></span>`;
 }
 
-/** Empty-search stage list — same type icons as search (boss ☠, orbs, etc.). */
+/** Empty-search stage list â€” same type icons as search (boss â˜ , orbs, etc.). */
 const spotStageListEnemyIconHtml = (items) => spotSearchEnemyIconHtml(items);
 
-/** Tags for one spot-index enemy row — scoped to that mob's emCode, not the whole group. */
+/** Tags for one spot-index enemy row â€” scoped to that mob's emCode, not the whole group. */
 function spotItemMobTags(it) {
     const tags = new Set();
     if (it.type !== 'enemy') return tags;
@@ -9295,25 +9249,25 @@ function spotItemMobTags(it) {
     return tags;
 }
 
-/** Enemy rows — icon reflects mob type (boss, orb, dormant, etc.). */
+/** Enemy rows â€” icon reflects mob type (boss, orb, dormant, etc.). */
 function spotSearchEnemyIconHtml(items) {
-    if (!items?.length) return spotListIconSpan('⚔', '#c88', 'spot-list-icon-search');
+    if (!items?.length) return spotListIconSpan('âš”', '#c88', 'spot-list-icon-search');
     const tags = new Set();
     for (const it of items) {
         for (const t of spotItemMobTags(it)) tags.add(t);
     }
-    if (tags.has('boss'))      return spotListIconSpan('☠', '#f44', 'spot-list-icon-search');
-    if (tags.has('keyBearer')) return spotListIconSpan('🗝', '#c8a000', 'spot-list-icon-search');
-    if (tags.has('bloodOrb'))  return spotListIconSpan('🩸', '#e88', 'spot-list-icon-search');
-    if (tags.has('highOrb'))   return spotListIconSpan('⭐', '#ec4', 'spot-list-icon-search');
-    if (tags.has('manual'))    return spotListIconSpan('😴', '#9ab', 'spot-list-icon-search');
-    if (tags.has('dynamic'))   return spotListIconSpan('⚡', '#bdf', 'spot-list-icon-search');
-    return spotListIconSpan('⚔', '#c88', 'spot-list-icon-search');
+    if (tags.has('boss'))      return spotListIconSpan('â˜ ', '#f44', 'spot-list-icon-search');
+    if (tags.has('keyBearer')) return spotListIconSpan('ðŸ—', '#c8a000', 'spot-list-icon-search');
+    if (tags.has('bloodOrb'))  return spotListIconSpan('ðŸ©¸', '#e88', 'spot-list-icon-search');
+    if (tags.has('highOrb'))   return spotListIconSpan('â­', '#ec4', 'spot-list-icon-search');
+    if (tags.has('manual'))    return spotListIconSpan('ðŸ˜´', '#9ab', 'spot-list-icon-search');
+    if (tags.has('dynamic'))   return spotListIconSpan('âš¡', '#bdf', 'spot-list-icon-search');
+    return spotListIconSpan('âš”', '#c88', 'spot-list-icon-search');
 }
 
-/** Item rows — show the item's own sprite (same as inside gather/shop containers). */
+/** Item rows â€” show the item's own sprite (same as inside gather/shop containers). */
 function spotItemIconHtml(first, items) {
-    if (!first || first.type !== 'item') return spotListIconSpan('📦', '#aaa');
+    if (!first || first.type !== 'item') return spotListIconSpan('ðŸ“¦', '#aaa');
     const itemId = first.itemId ?? items?.[0]?.itemId;
     return spotItemSpriteIconHtml(itemId);
 }
@@ -9322,10 +9276,10 @@ function spotResultIconHtml(first, items) {
     if (first.type === 'gather') return spotGatherIconHtml(first);
     if (first.type === 'item') return spotItemIconHtml(first, items);
     if (first.type === 'enemy') return spotSearchEnemyIconHtml(items);
-    return spotListIconSpan('⚔', '#c88');
+    return spotListIconSpan('âš”', '#c88');
 }
 
-/** ◀ 1/N ▶ controls — shared by single, multi-mob, and roster spot rows. */
+/** â—€ 1/N â–¶ controls â€” shared by single, multi-mob, and roster spot rows. */
 function wireSpotRowNavigation(row, items, navigate) {
     if (!items.length) return;
     if (items.length === 1) {
@@ -9338,9 +9292,9 @@ function wireSpotRowNavigation(row, items, navigate) {
     nav.className = 'spot-nav';
     nav.style.cssText = 'display:flex;align-items:center;gap:2px;flex-shrink:0';
     nav.innerHTML =
-        `<button class="spot-nav-btn spot-prev" title="Previous">◀</button>`
-        + `<span class="spot-nav-pos" style="font-size:0.68rem;color:#667;min-width:28px;text-align:center">1/${items.length}</span>`
-        + `<button class="spot-nav-btn spot-next" title="Next">▶</button>`;
+        `<button class="spot-nav-btn spot-prev" title="Previous">â—€</button>`
+        + `<span class="spot-nav-pos" style="font-size:0.68rem;color:var(--text-dim,#6a5a4a);min-width:28px;text-align:center">1/${items.length}</span>`
+        + `<button class="spot-nav-btn spot-next" title="Next">â–¶</button>`;
 
     const preview = row.querySelector('.spot-preview');
     if (preview) row.insertBefore(nav, preview);
@@ -9421,8 +9375,8 @@ function _renderStageRoster(resultsEl, {
     const summary = document.createElement('div');
     summary.className = 'spot-summary';
     summary.textContent =
-        `${totalResults} result${totalResults !== 1 ? 's' : ''} · ${uniqueCount} unique `
-        + `${summaryNoun}${uniqueCount !== 1 ? 's' : ''} on this stage · click to go`;
+        `${totalResults} result${totalResults !== 1 ? 's' : ''} Â· ${uniqueCount} unique `
+        + `${summaryNoun}${uniqueCount !== 1 ? 's' : ''} on this stage Â· click to go`;
     frag.appendChild(summary);
 
     const enableHoverHl = uniqueCount <= 50;
@@ -9491,7 +9445,7 @@ function _renderMultiMobResults(matches, resultsEl, criteria, scope) {
     const frag = document.createDocumentFragment();
     const summary = document.createElement('div');
     summary.className = 'spot-summary';
-    summary.textContent = `${matches.length} stage${matches.length !== 1 ? 's' : ''} · ${criteria.terms.length} enemies searched`;
+    summary.textContent = `${matches.length} stage${matches.length !== 1 ? 's' : ''} Â· ${criteria.terms.length} enemies searched`;
     frag.appendChild(summary);
 
     const navigate = scope === 'global' ? _navigateToSpotGlobal : _navigateToSpot;
@@ -9544,7 +9498,7 @@ function _runSpotSearch() {
 
     if (_spotGlobal) {
         if (_globalSpotIndexPromise && !_globalSpotIndexReady) {
-            resultsEl.innerHTML = `<div class="spot-empty">Loading world spawn index…</div>`;
+            resultsEl.innerHTML = `<div class="spot-empty">Loading world spawn indexâ€¦</div>`;
             return;
         }
         if (!criteria.raw) {
@@ -9617,9 +9571,9 @@ function _runSpotSearch() {
     const frag = document.createDocumentFragment();
     const summary = document.createElement('div');
     summary.className = 'spot-summary';
-    let summaryText = `${matches.length} result${matches.length !== 1 ? 's' : ''} · ${totalGroups} unique`;
+    let summaryText = `${matches.length} result${matches.length !== 1 ? 's' : ''} Â· ${totalGroups} unique`;
     if (totalGroups > SPOT_RESULT_CAP) {
-        summaryText += ` · showing ${SPOT_RESULT_CAP} (refine search)`;
+        summaryText += ` Â· showing ${SPOT_RESULT_CAP} (refine search)`;
     }
     summary.textContent = summaryText;
     frag.appendChild(summary);
@@ -9663,7 +9617,7 @@ function _runSpotSearch() {
 }
 
 function _renderGlobalResults(matches, resultsEl, criteria = null) {
-    // Group by name + type + source + stage — enemies merge by base name (Rising-style)
+    // Group by name + type + source + stage â€” enemies merge by base name (Rising-style)
     const grouped = new Map();
     for (const m of matches) {
         const key = spotGroupKey(m, { global: true });
@@ -9681,9 +9635,9 @@ function _renderGlobalResults(matches, resultsEl, criteria = null) {
     const frag = document.createDocumentFragment();
     const summary = document.createElement('div');
     summary.className = 'spot-summary';
-    let summaryText = `${matches.length} result${matches.length !== 1 ? 's' : ''} · ${uniqueNames} unique · ${totalGroups} stage entries`;
+    let summaryText = `${matches.length} result${matches.length !== 1 ? 's' : ''} Â· ${uniqueNames} unique Â· ${totalGroups} stage entries`;
     if (totalGroups > SPOT_RESULT_CAP) {
-        summaryText += ` · showing ${SPOT_RESULT_CAP} (refine search)`;
+        summaryText += ` Â· showing ${SPOT_RESULT_CAP} (refine search)`;
     }
     summary.textContent = summaryText;
     frag.appendChild(summary);
@@ -9697,7 +9651,7 @@ function _renderGlobalResults(matches, resultsEl, criteria = null) {
 
         const row = document.createElement('div');
         row.className = 'spot-result-row';
-        row.title = `${rowName} — ${first.locationTag}`;
+        row.title = `${rowName} â€” ${first.locationTag}`;
 
         row.innerHTML =
             `${dotHtml}<div style="flex:1;min-width:0">`
@@ -9714,7 +9668,7 @@ function _renderGlobalResults(matches, resultsEl, criteria = null) {
     resultsEl.appendChild(frag);
 }
 
-// Panel wiring — called once on startup
+// Panel wiring â€” called once on startup
 (function initSpotPanel() {
     const panel  = document.getElementById('spot-panel');
     const toggle = document.getElementById('spot-panel-toggle');
@@ -9841,7 +9795,7 @@ function _renderGlobalResults(matches, resultsEl, criteria = null) {
     openPanel();
 })();
 
-// ── Coordinate readout ────────────────────────────────────────────────────────
+// â”€â”€ Coordinate readout â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 // Shows pixel and world coordinates under the cursor, useful for calibration.
 (function () {
     const el = document.getElementById('coord-display');
@@ -9879,7 +9833,7 @@ function _renderGlobalResults(matches, resultsEl, criteria = null) {
 
     leafletMap.on('mouseout', () => { el.textContent = ''; });
 
-    // Alt+click → log coordinates to console and copy to clipboard.
+    // Alt+click â†’ log coordinates to console and copy to clipboard.
     // Use this for calibration: Alt+click on a known map feature (bridge, door, etc.)
     // then compare the logged world coords with lot.json / connections.json values.
     leafletMap.on('click', (e) => {
@@ -9911,7 +9865,7 @@ function _renderGlobalResults(matches, resultsEl, criteria = null) {
     });
 })();
 
-// ── Panel resize helpers ───────────────────────────────────────────────────────
+// â”€â”€ Panel resize helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function _initPanelResize({ handleId, panelId, lsKey, minW, maxW, dragDir }) {
     const handle = document.getElementById(handleId);
     const panel  = document.getElementById(panelId);
@@ -9955,353 +9909,8 @@ loadMap = async function (mapName) {
     syncSpotOriginMarker();
 };
 
-// ── Settings modal ────────────────────────────────────────────────────────────
-{
-    const modal        = document.getElementById('settings-modal');
-    const srcRows      = [...document.querySelectorAll('.src-row')];
-    const presetSelect = document.getElementById('settings-preset-select');
-    const presetNote   = document.getElementById('settings-preset-note');
-    const pendingHandles = new Map(); // lsKey → FileSystemFileHandle  (FSA path)
-    const pendingFiles   = new Map(); // lsKey → File                  (non-FSA fallback)
-    const pendingResets  = new Set(); // lsKey → user clicked reset this session
 
-    const readActivePreset = () => presetSelect?.value || 'custom';
-
-    const syncPresetNote = (presetId) => {
-        if (!presetNote) return;
-        if (presetId === 'custom') {
-            presetNote.textContent = 'Per-source URLs and local files below — edit any field to stay in custom mode.';
-            return;
-        }
-        presetNote.textContent = _SERVER_PRESETS[presetId]?.note ?? '';
-    };
-
-    const fillRowsFromPreset = (presetId) => {
-        if (!_SERVER_PRESETS[presetId]) return;
-        for (const row of srcRows) {
-            row.querySelector('.src-url-input').value = presetUrlFor(presetId, row.dataset.key);
-            row.querySelector('.src-file-input').value = '';
-        }
-    };
-
-    const markPresetCustom = () => {
-        if (presetSelect) presetSelect.value = 'custom';
-        syncPresetNote('custom');
-    };
-
-    const applyPresetSelection = (presetId) => {
-        pendingHandles.clear();
-        pendingFiles.clear();
-        pendingResets.clear();
-        if (presetId === 'custom') {
-            syncPresetNote('custom');
-            return;
-        }
-        fillRowsFromPreset(presetId);
-        syncPresetNote(presetId);
-    };
-
-    // Updates the status label for a row. Async because it may query FSA handle permission.
-    async function srcStatus(row) {
-        const lsKey = row.dataset.key;
-        const el    = row.querySelector('.src-status');
-        const handle = pendingHandles.get(lsKey);
-        const file   = pendingFiles.get(lsKey);
-        let isLocal = false;
-        if (handle) {
-            el.textContent = `📁 ${handle.name}`;
-            el.style.color = '#4caf50';
-            isLocal = true;
-        } else if (file) {
-            el.textContent = `📁 ${file.name}`;
-            el.style.color = '#4caf50';
-            isLocal = true;
-        } else if (pendingResets.has(lsKey)) {
-            const presetId = readActivePreset();
-            el.textContent = presetId === 'custom' ? 'Default' : _SERVER_PRESETS[presetId]?.label ?? 'Default';
-            el.style.color = '#666';
-        } else {
-            const stored = localStorage.getItem(lsKey);
-            if (stored === '__local__') {
-                isLocal = true;
-                const storedHandle = await _idbGet(lsKey + '-handle');
-                if (storedHandle) {
-                    try {
-                        const perm = await storedHandle.queryPermission({ mode: 'read' });
-                        if (perm === 'granted') {
-                            el.textContent = `📁 ${storedHandle.name}`;
-                            el.style.color = '#4caf50';
-                        } else {
-                            el.innerHTML = `📁 ${storedHandle.name} <button style="font-size:10px;padding:1px 5px;cursor:pointer;background:#ffa726;color:#111;border:none;border-radius:3px;vertical-align:middle" title="Click to re-grant file access and reload">⚠ Re-grant &amp; Reload</button>`;
-                            el.style.color = '#ffa726';
-                            el.querySelector('button')?.addEventListener('click', async () => {
-                                try {
-                                    const newPerm = await storedHandle.requestPermission({ mode: 'read' });
-                                    if (newPerm === 'granted') location.reload();
-                                    else alert('Permission was not granted.');
-                                } catch (err) { alert('Could not request permission: ' + err.message); }
-                            });
-                        }
-                    } catch {
-                        el.textContent = '📁 Local file (stale handle)';
-                        el.style.color = '#f88';
-                    }
-                } else {
-                    el.textContent = '📁 Local file';
-                    el.style.color = '#4caf50';
-                }
-            } else {
-                const presetId = detectActivePreset();
-                const rowDefault = row.dataset.default;
-                const inputVal = row.querySelector('.src-url-input')?.value.trim();
-                if (presetId !== 'custom' && !stored && inputVal === presetUrlFor(presetId, lsKey)) {
-                    el.textContent = _SERVER_PRESETS[presetId]?.label ?? 'Preset';
-                    el.style.color = '#7cb342';
-                } else if (stored && stored !== rowDefault) {
-                    el.textContent = '🔗 Custom URL';
-                    el.style.color = '#42a5f5';
-                } else {
-                    el.textContent = 'Default';
-                    el.style.color = '#666';
-                }
-            }
-        }
-    }
-
-    // Opening the modal IS a user gesture — we can call requestPermission here.
-    async function openSettings() {
-        pendingHandles.clear();
-        pendingFiles.clear();
-        pendingResets.clear();
-        document.getElementById('settings-reload-note').style.display = 'none';
-        const activePreset = detectActivePreset();
-        if (presetSelect) presetSelect.value = activePreset;
-        syncPresetNote(activePreset);
-        for (const row of srcRows) {
-            const lsKey  = row.dataset.key;
-            const stored = localStorage.getItem(lsKey);
-            const urlInput = row.querySelector('.src-url-input');
-            if (stored === '__local__') {
-                const savedName = localStorage.getItem(lsKey + '-name');
-                urlInput.value = savedName || '[local file]';
-                // Auto-request permission for any stored FSA handle
-                const handle = await _idbGet(lsKey + '-handle');
-                if (handle) {
-                    try {
-                        const perm = await handle.queryPermission({ mode: 'read' });
-                        if (perm === 'prompt') await handle.requestPermission({ mode: 'read' });
-                    } catch { /* ignore */ }
-                }
-            } else if (stored) {
-                urlInput.value = stored;
-            } else if (activePreset !== 'custom') {
-                urlInput.value = presetUrlFor(activePreset, lsKey);
-            } else {
-                urlInput.value = row.dataset.default;
-            }
-            row.querySelector('.src-file-input').value = '';
-            srcStatus(row);
-        }
-        modal.classList.add('open');
-    }
-
-    function closeSettings() { modal.classList.remove('open'); }
-
-    // ── Browser-specific file permission hint ──────────────────────────────────
-    (() => {
-        const hint = document.getElementById('settings-browser-hint');
-        if (!hint) return;
-        const ua = navigator.userAgent;
-        const isFirefox = ua.includes('Firefox/');
-        const isEdge    = ua.includes('Edg/');
-        const isBrave   = navigator.brave?.isBrave != null;
-        // Brave UA looks identical to Chrome — check the Brave API first
-        const isChrome  = !isFirefox && !isBrave && ua.includes('Chrome/');
-        const base = `<b style="color:#ccc">&#128274; Local file permissions</b><br>`;
-        if (isFirefox) {
-            hint.innerHTML = base
-                + `File access only persists within the current browser session. `
-                + `After a restart, re-select the file via <b>Browse</b> to read the current version from disk.`;
-        } else {
-            // Chrome, Brave, Edge, or other Chromium
-            hint.innerHTML = base
-                + `After a browser restart, file access needs to be re-granted — a warning will appear in the sidebar with a <b>Re-grant &amp; Reload</b> button.<br>`
-                + `If a page reload does not pick up an external file change, use <b>Browse</b> to re-select the same file. `
-                + `This forces a fresh read, bypassing the browser&apos;s file cache.`;
-        }
-    })();
-
-    document.getElementById('map-settings-btn').addEventListener('click', openSettings);
-    document.getElementById('settings-close').addEventListener('click', closeSettings);
-    document.getElementById('settings-cancel').addEventListener('click', closeSettings);
-    modal.addEventListener('click', e => { if (e.target === modal) closeSettings(); });
-
-    presetSelect?.addEventListener('change', () => {
-        applyPresetSelection(presetSelect.value);
-        for (const row of srcRows) srcStatus(row);
-    });
-
-    for (const row of srcRows) {
-        const lsKey = row.dataset.key;
-
-        // Browse: use File System Access API when available (persists handle, always reads live file).
-        // Fall back to <input type="file"> on browsers without FSA support (stores a snapshot).
-        row.querySelector('.src-file-btn').addEventListener('click', async () => {
-            if (window.showOpenFilePicker) {
-                try {
-                    const [handle] = await showOpenFilePicker();
-                    pendingHandles.set(lsKey, handle);
-                    pendingFiles.delete(lsKey);
-                    pendingResets.delete(lsKey);
-                    markPresetCustom();
-                    row.querySelector('.src-url-input').value = `(local: ${handle.name})`;
-                    srcStatus(row);
-                } catch (e) {
-                    if (e.name !== 'AbortError') console.warn('File picker error:', e);
-                }
-            } else {
-                row.querySelector('.src-file-input').click();
-            }
-        });
-
-        // Fallback file input (non-FSA browsers — stores a content snapshot)
-        row.querySelector('.src-file-input').addEventListener('change', e => {
-            const file = e.target.files[0];
-            if (!file) return;
-            pendingFiles.set(lsKey, file);
-            pendingHandles.delete(lsKey);
-            pendingResets.delete(lsKey);
-            markPresetCustom();
-            row.querySelector('.src-url-input').value = `(local: ${file.name})`;
-            srcStatus(row);
-        });
-
-        row.querySelector('.src-reset-btn').addEventListener('click', () => {
-            pendingHandles.delete(lsKey);
-            pendingFiles.delete(lsKey);
-            pendingResets.add(lsKey);
-            const presetId = readActivePreset();
-            row.querySelector('.src-url-input').value = presetId === 'custom'
-                ? row.dataset.default
-                : presetUrlFor(presetId, lsKey);
-            row.querySelector('.src-file-input').value = '';
-            srcStatus(row);
-            showSettingsReloadNote(false);
-        });
-        row.querySelector('.src-url-input').addEventListener('input', () => {
-            pendingHandles.delete(lsKey);
-            pendingFiles.delete(lsKey);
-            pendingResets.delete(lsKey);
-            markPresetCustom();
-            row.querySelector('.src-file-input').value = '';
-            srcStatus(row);
-        });
-    }
-
-    function showSettingsReloadNote(immediate) {
-        const el = document.getElementById('settings-reload-note');
-        if (immediate) {
-            el.innerHTML = `⚠ Sources reset. <button class="src-btn" style="padding:1px 7px" onclick="location.reload()">Reload now</button> to apply changes.`;
-        } else {
-            el.innerHTML = `⚠ Source staged for reset — click <strong>Apply &amp; Reload</strong> below to apply.`;
-        }
-        el.style.display = '';
-    }
-
-    document.getElementById('settings-reset-all').addEventListener('click', async () => {
-        pendingHandles.clear();
-        pendingFiles.clear();
-        pendingResets.clear();
-        if (presetSelect) {
-            const resetPreset = _RISING_BRANDED ? 'rising' : 'arrowgene';
-            presetSelect.value = resetPreset;
-            applyPresetSelection(resetPreset);
-        }
-        for (const row of srcRows) {
-            row.querySelector('.src-file-input').value = '';
-            const lsKey = row.dataset.key;
-            localStorage.removeItem(lsKey);
-            localStorage.removeItem(lsKey + '-data');
-            localStorage.removeItem(lsKey + '-name');
-            await _idbDel(lsKey);
-            await _idbDel(lsKey + '-handle');
-            srcStatus(row);
-        }
-        localStorage.removeItem(_PRESET_LS_KEY);
-        showSettingsReloadNote(true);
-    });
-
-    document.getElementById('settings-apply').addEventListener('click', async () => {
-        try {
-            const presetId = readActivePreset();
-            for (const row of srcRows) {
-                const lsKey  = row.dataset.key;
-                const handle = pendingHandles.get(lsKey);
-                const file   = pendingFiles.get(lsKey);
-                if (handle) {
-                    // FSA path: store handle; file is always re-read live from disk
-                    await _idbSet(lsKey + '-handle', handle);
-                    await _idbDel(lsKey);              // no content blob needed
-                    localStorage.setItem(lsKey, '__local__');
-                    localStorage.setItem(lsKey + '-name', handle.name);
-                    localStorage.removeItem(lsKey + '-data');
-                } else if (file) {
-                    // Non-FSA fallback: store content snapshot
-                    const text = await file.text();
-                    await _idbSet(lsKey, text);
-                    await _idbDel(lsKey + '-handle');  // clear any old handle
-                    localStorage.setItem(lsKey, '__local__');
-                    localStorage.setItem(lsKey + '-name', file.name);
-                    localStorage.removeItem(lsKey + '-data');
-                } else if (pendingResets.has(lsKey)) {
-                    if (presetId !== 'custom') {
-                        const presetDefault = presetUrlFor(presetId, lsKey);
-                        if (presetDefault === row.dataset.default) localStorage.removeItem(lsKey);
-                        else localStorage.setItem(lsKey, presetDefault);
-                    } else {
-                        localStorage.removeItem(lsKey);
-                    }
-                    localStorage.removeItem(lsKey + '-name');
-                    localStorage.removeItem(lsKey + '-data');
-                    await _idbDel(lsKey);
-                    await _idbDel(lsKey + '-handle');
-                } else if (localStorage.getItem(lsKey) === '__local__') {
-                    // Local source with no pending change — preserve handle/IDB as-is
-                } else if (presetId !== 'custom') {
-                    const val = row.querySelector('.src-url-input').value.trim();
-                    const presetDefault = presetUrlFor(presetId, lsKey);
-                    const arrowDefault  = row.dataset.default;
-                    if (!val || val === presetDefault) {
-                        if (presetDefault === arrowDefault) localStorage.removeItem(lsKey);
-                        else localStorage.setItem(lsKey, presetDefault);
-                    } else {
-                        localStorage.setItem(lsKey, val);
-                    }
-                    await _idbDel(lsKey);
-                    await _idbDel(lsKey + '-handle');
-                } else {
-                    const val = row.querySelector('.src-url-input').value.trim();
-                    if (!val || val === row.dataset.default) {
-                        localStorage.removeItem(lsKey);
-                        await _idbDel(lsKey);
-                        await _idbDel(lsKey + '-handle');
-                    } else {
-                        localStorage.setItem(lsKey, val);
-                        await _idbDel(lsKey);
-                        await _idbDel(lsKey + '-handle');
-                    }
-                }
-            }
-            if (presetId === 'custom') localStorage.removeItem(_PRESET_LS_KEY);
-            else localStorage.setItem(_PRESET_LS_KEY, presetId);
-            location.reload();
-        } catch (e) {
-            alert('Failed to save settings: ' + e.message);
-        }
-    });
-}
-
-// ── Edit mode ─────────────────────────────────────────────────────────────────
+// â”€â”€ Edit mode â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 {
     const SOURCE_LABELS = {
         'ddon-src-spawns':        'Spawns',
@@ -10327,7 +9936,7 @@ loadMap = async function (mapName) {
         if (needsReload) {
             const note = document.createElement('div');
             note.className = 'edit-reload-note';
-            note.innerHTML = `⚠ Reload page to use new local source.`
+            note.innerHTML = `âš  Reload page to use new local source.`
                 + ` <button class="edit-reload-btn" onclick="location.reload()">Reload now</button>`;
             footer.appendChild(note);
         }
@@ -10353,32 +9962,32 @@ loadMap = async function (mapName) {
             if (isLocal) {
                 const display = fname ? fname.replace(/^.*[\\/]/, '') : 'local file';
                 badge.className = 'edit-src-badge' + (isDirty ? ' dirty' : ' clean');
-                badge.textContent = `📁 ${display}${isDirty ? ' ●' : ' ✓'}`;
+                badge.textContent = `ðŸ“ ${display}${isDirty ? ' â—' : ' âœ“'}`;
                 badge.title = isDirty ? 'Unsaved changes' : 'Saved';
             } else if (isDirty) {
                 badge.className = 'edit-src-badge dirty';
-                badge.textContent = '🌐 Remote ●';
-                badge.title = 'Unsaved changes — saving will create a local copy';
+                badge.textContent = 'ðŸŒ Remote â—';
+                badge.title = 'Unsaved changes â€” saving will create a local copy';
             } else {
                 badge.className = 'edit-src-badge remote';
-                badge.textContent = '🌐 Remote';
-                badge.title = 'Using remote URL — click ⬇ to save a local copy';
+                badge.textContent = 'ðŸŒ Remote';
+                badge.title = 'Using remote URL â€” click â¬‡ to save a local copy';
             }
             row.appendChild(badge);
 
             // Action button
             if (isDirty && isLoaded) {
-                // Dirty (local or remote) — save in-memory state to file
+                // Dirty (local or remote) â€” save in-memory state to file
                 const btn = document.createElement('button');
                 btn.className = 'edit-src-btn save';
-                btn.textContent = '💾 Save';
+                btn.textContent = 'ðŸ’¾ Save';
                 btn.dataset.saveKey = key;
                 row.appendChild(btn);
             } else if (!isLocal) {
-                // Clean remote — offer to download baseline as local copy
+                // Clean remote â€” offer to download baseline as local copy
                 const btn = document.createElement('button');
                 btn.className = 'edit-src-btn dl';
-                btn.textContent = '⬇ Save';
+                btn.textContent = 'â¬‡ Save';
                 btn.title = 'Download from remote and save as a local file';
                 btn.dataset.dlKey = key;
                 row.appendChild(btn);
@@ -10387,13 +9996,13 @@ loadMap = async function (mapName) {
             footer.appendChild(row);
         }
 
-        // Save All — only when multiple sources have unsaved changes
+        // Save All â€” only when multiple sources have unsaved changes
         const dirtyLoaded = Object.keys(SOURCE_LABELS)
             .filter(k => _dirtySet.has(k) && SOURCE_DATA_LOADED[k]());
         if (dirtyLoaded.length > 1) {
             const all = document.createElement('button');
             all.className = 'edit-save-all';
-            all.textContent = '💾 Save All';
+            all.textContent = 'ðŸ’¾ Save All';
             footer.appendChild(all);
         }
     }
@@ -10406,7 +10015,7 @@ loadMap = async function (mapName) {
     _markDirty = markDirty;
     _renderEditPanel = renderEditPanel;
 
-    // ── Drag-to-reorder helper ────────────────────────────────────────────────
+    // â”€â”€ Drag-to-reorder helper â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     // Makes tr[data-idx] rows within tableEl draggable and calls onReorder(items)
     // after each successful reorder (items array is mutated in place first).
     function attachDragReorder(tableEl, items, onReorder) {
@@ -10449,7 +10058,7 @@ loadMap = async function (mapName) {
     _attachDragReorder = attachDragReorder;
     _renderEditPanel   = renderEditPanel;
 
-    // ── Document-level drag-drop for Items panel → gather popup ──────────────
+    // â”€â”€ Document-level drag-drop for Items panel â†’ gather popup â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     // We listen at document level to avoid any interference from Leaflet's popup
     // DOM structure (pane z-index, disableClickPropagation, etc.).
     function clearGatherDropHighlight() {
@@ -10519,13 +10128,13 @@ loadMap = async function (mapName) {
     });
     document.addEventListener('dragend', () => { clearGatherDropHighlight(); clearShopDropHighlight(); clearSpawnDropHighlight(); });
 
-    // ── Panel list rendering ──────────────────────────────────────────────────
+    // â”€â”€ Panel list rendering â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     function renderEnemyList() {
         const query = document.getElementById('edit-search').value.trim().toLowerCase();
         const list  = document.getElementById('edit-list');
 
         // Group all known enemies by display name
-        const groups = new Map(); // name → emCode[]
+        const groups = new Map(); // name â†’ emCode[]
         for (const [emCode, entry] of Object.entries(emNames)) {
             const name = entry.name ?? emCode;
             if (query && !name.toLowerCase().includes(query) && !emCode.toLowerCase().includes(query)) continue;
@@ -10557,7 +10166,7 @@ loadMap = async function (mapName) {
             ).join('');
             return `<div class="em-group${autoOpen ? ' em-expanded' : ''}">` +
                 `<div class="edit-list-item em-group-header">` +
-                `<span class="em-arrow">▶</span>` +
+                `<span class="em-arrow">â–¶</span>` +
                 `<span class="eli-name">${name}</span>` +
                 `<span class="eli-count">${codes.length}</span>` +
                 `</div>` +
@@ -10607,7 +10216,7 @@ loadMap = async function (mapName) {
                    `<span class="eli-name">${e.name}</span>` +
                    `<span class="eli-meta">#${id}</span>` +
                    `</div>`;
-        }).join('') + (more ? `<div class="edit-empty">${more} more — refine search</div>` : '');
+        }).join('') + (more ? `<div class="edit-empty">${more} more â€” refine search</div>` : '');
         list.querySelectorAll('.edit-list-item[draggable]').forEach(el => {
             el.addEventListener('dragstart', (e) => {
                 _dragItemId = parseInt(el.dataset.id);
@@ -10628,12 +10237,12 @@ loadMap = async function (mapName) {
         const tables = [..._dropsTablesMap.values()].filter(dt =>
             !q || dt.name?.toLowerCase().includes(q) || String(dt.id).includes(q)
         ).sort((a, b) => a.id - b.id);
-        const newBtn = `<div class="dt-list-new" id="dt-list-new-btn">＋ New Drop Table</div>`;
+        const newBtn = `<div class="dt-list-new" id="dt-list-new-btn">ï¼‹ New Drop Table</div>`;
         list.innerHTML = newBtn + (tables.length
             ? tables.map(dt =>
                 `<div class="dt-list-item" data-dt-id="${dt.id}">` +
                 `<span class="dt-list-item-name">${dt.name || '(unnamed)'}</span>` +
-                `<span class="dt-list-item-meta">id:${dt.id} · ${dt.items?.length ?? 0} items</span>` +
+                `<span class="dt-list-item-meta">id:${dt.id} Â· ${dt.items?.length ?? 0} items</span>` +
                 `</div>`
               ).join('')
             : `<div class="edit-empty">No drop tables${q ? ' match.' : '.'}</div>`);
@@ -10654,7 +10263,7 @@ loadMap = async function (mapName) {
         else if (activeTab === 'drops') renderDropTablesList();
     }
 
-    // ── Edit mode toggle ──────────────────────────────────────────────────────
+    // â”€â”€ Edit mode toggle â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     function setEditMode(on) {
         _editMode = on;
         if (on) invalidateMapSceneCache();
@@ -10678,7 +10287,7 @@ loadMap = async function (mapName) {
         const curInfo = mapParams[_loadedMapName];
         if (curInfo) buildStageGroupsPanel(curInfo, currentStageName());
         // Reopen any currently open popup so it rebuilds with the new edit mode.
-        // Defer until after the layout settles — the edit panel opening/closing
+        // Defer until after the layout settles â€” the edit panel opening/closing
         // shifts the map container size, causing Leaflet to compute NaN maxHeight
         // if the popup is reopened synchronously.
         const openPopup = leafletMap._popup;
@@ -10694,7 +10303,7 @@ loadMap = async function (mapName) {
         }
     }
 
-    // ── Panel wiring ──────────────────────────────────────────────────────────
+    // â”€â”€ Panel wiring â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     document.getElementById('edit-mode-btn').addEventListener('click',
         () => setEditMode(!_editMode));
     document.getElementById('edit-panel-close').addEventListener('click',
@@ -10721,7 +10330,7 @@ loadMap = async function (mapName) {
         if (_editMode) setTimeout(renderEditPanel, 100); // wait for _currentMapInfo to update
     };
 
-    // ── Save to file ──────────────────────────────────────────────────────────
+    // â”€â”€ Save to file â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     async function serializeGatheringCsv() {
         if (!_rawGatheringRows || !_rawGatheringHeaders) return null;
         const headers   = _rawGatheringHeaders.replace(/^#/, '').split(',');
@@ -10749,7 +10358,7 @@ loadMap = async function (mapName) {
         const meta = _SOURCE_META[lsKey];
         let handle = await _idbGet(lsKey + '-handle');
         if (!handle && typeof showSaveFilePicker === 'function') {
-            // First save — ask where to put the file, then assign as local source
+            // First save â€” ask where to put the file, then assign as local source
             try {
                 handle = await showSaveFilePicker({ suggestedName: meta?.name, types: meta?.types });
                 await _idbSet(lsKey + '-handle', handle);
@@ -10768,7 +10377,7 @@ loadMap = async function (mapName) {
             await writable.write(content);
             await writable.close();
         } else {
-            // FSA not available — trigger browser download and cache in IDB
+            // FSA not available â€” trigger browser download and cache in IDB
             const mimeType = meta?.types?.[0]?.accept
                 ? Object.keys(meta.types[0].accept)[0] : 'application/octet-stream';
             const blob = new Blob([content], { type: mimeType });
@@ -10797,13 +10406,13 @@ loadMap = async function (mapName) {
     }
 
     document.getElementById('edit-panel-footer').addEventListener('click', async (e) => {
-        // ── ⬇ Use Local ────────────────────────────────────────────────────────
+        // â”€â”€ â¬‡ Use Local â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         const dlBtn = e.target.closest('[data-dl-key]');
         if (dlBtn) {
             const key = dlBtn.dataset.dlKey;
             const origText = dlBtn.textContent;
             dlBtn.disabled = true;
-            dlBtn.textContent = '⏳';
+            dlBtn.textContent = 'â³';
             try {
                 const fname = await downloadAndAssignLocal(key);
                 if (fname !== null) {
@@ -10820,7 +10429,7 @@ loadMap = async function (mapName) {
             return;
         }
 
-        // ── 💾 Save / Save All ─────────────────────────────────────────────────
+        // â”€â”€ ðŸ’¾ Save / Save All â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         const saveBtn = e.target.closest('[data-save-key]');
         const saveAll = e.target.closest('.edit-save-all');
         const keys = saveBtn ? [saveBtn.dataset.saveKey]
@@ -10831,7 +10440,7 @@ loadMap = async function (mapName) {
         const clicked = saveBtn || saveAll;
         const origText = clicked.textContent;
         clicked.disabled = true;
-        clicked.textContent = '⏳';
+        clicked.textContent = 'â³';
 
         try {
             for (const key of keys) {
@@ -10854,7 +10463,7 @@ loadMap = async function (mapName) {
         .then(() => updateSaveFooter());
 }
 
-// ── Named param picker modal ──────────────────────────────────────────────────
+// â”€â”€ Named param picker modal â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function openNamedParamPicker(popupSection, baseEmName) {
     const modal = document.getElementById('named-param-modal');
     if (!modal) return;
@@ -10872,15 +10481,15 @@ function openNamedParamPicker(popupSection, baseEmName) {
     function combinedNameHtml(p) {
         const trimName = p?.name?.trim();
         if (!trimName || !p || p.id === 0) return null;
-        const em = baseEmName ?? '…';
+        const em = baseEmName ?? 'â€¦';
         const hi = `<span class="np-name-hi">${trimName}</span>`;
         if (p.type === 'NAMED_TYPE_PREFIX')  return `${hi} ${em}`;
         if (p.type === 'NAMED_TYPE_SUFFIX')  return `${em} ${hi}`;
         if (p.type === 'NAMED_TYPE_REPLACE') return hi;
-        return null; // NONE — no name change
+        return null; // NONE â€” no name change
     }
 
-    function pct(v) { return v != null ? `${v}%` : '—'; }
+    function pct(v) { return v != null ? `${v}%` : 'â€”'; }
     function renderPreview(p) {
         if (!p || p.id === 0) { preview.innerHTML = '<div class="np-preview-empty">Select a param to preview stats</div>'; return; }
         const typeName = p.type.replace('NAMED_TYPE_', '');
@@ -10895,7 +10504,7 @@ function openNamedParamPicker(popupSection, baseEmName) {
             `<tr class="np-stat-sec"><td colspan="2">${title}</td></tr>` + rows.join('');
         preview.innerHTML =
             (combined ? `<div class="np-preview-combined">${combined}</div>` : '') +
-            `<div class="np-preview-type">${typeName} · ID ${p.id}</div>` +
+            `<div class="np-preview-type">${typeName} Â· ID ${p.id}</div>` +
             `<table class="np-stat-table">` +
             sec('HP',
                 row('HP Rate',  p.hp),
@@ -11040,7 +10649,7 @@ function openNamedParamPicker(popupSection, baseEmName) {
     setTimeout(() => searchInput.focus(), 50);
 }
 
-// ── Drop Table helpers ────────────────────────────────────────────────────────
+// â”€â”€ Drop Table helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function createDropTable() {
     const newId = (_rawEnemyData?.dropsTables?.length
         ? Math.max(..._rawEnemyData.dropsTables.map(t => t.id)) + 1 : 1);
@@ -11067,7 +10676,7 @@ function _dtItemRow(row, idx) {
         ? `<a href="${href}" target="_blank" class="dt-item-name-hint" data-name-for="${idx}" style="color:inherit;text-decoration:none" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">${nameHint}</a>`
         : `<span class="dt-item-name-hint" data-name-for="${idx}"></span>`;
     return `<tr data-idx="${idx}">` +
-        `<td><span class="dt-grab-handle" title="Drag to reorder">⠿</span></td>` +
+        `<td><span class="dt-grab-handle" title="Drag to reorder">â ¿</span></td>` +
         `<td style="text-align:center">${iconCell}</td>` +
         `<td><input type="number" data-col="0" value="${itemId}" style="width:58px" readonly tabindex="-1"></td>` +
         `<td>${nameCell}</td>` +
@@ -11076,7 +10685,7 @@ function _dtItemRow(row, idx) {
         `<td><input type="number" data-col="3" value="${row[3] ?? 0}" style="width:44px" min="0"></td>` +
         `<td style="text-align:center"><input type="checkbox" data-col="4"${row[4] ? ' checked' : ''}></td>` +
         `<td><input type="number" data-col="5" value="${((row[5] ?? 0) * 100).toFixed(1)}" style="width:58px" step="0.1" min="0" max="100"></td>` +
-        `<td><button class="dt-del-row" data-row="${idx}">✕</button></td>` +
+        `<td><button class="dt-del-row" data-row="${idx}">âœ•</button></td>` +
         `</tr>`;
 }
 
@@ -11091,7 +10700,7 @@ function _buildDropChipsHtml(dt) {
         const iconNo   = itemNames[String(itemId)]?.iconNo;
         const iconFile = iconNo != null ? `ii${String(iconNo).padStart(6,'0')}.png` : null;
         const name     = itemNames[String(itemId)]?.name ?? `#${itemId}`;
-        const qty      = maxQty > minQty ? `×${minQty}–${maxQty}` : `×${minQty}`;
+        const qty      = maxQty > minQty ? `Ã—${minQty}â€“${maxQty}` : `Ã—${minQty}`;
         const pct      = dropRate > 0 ? ` ${(dropRate * 100).toFixed(0)}%` : '';
         const imgEl    = iconFile && _iconIdSet.has(iconNo)
             ? `<img src="images/icons/small/${iconFile}" width="20" height="20" style="image-rendering:pixelated;vertical-align:middle" title="${name}">`
@@ -11146,7 +10755,7 @@ function openDropTablePicker(popupSection) {
         if (!dt) { preview.innerHTML = '<div class="dt-preview-empty">Hover a table to preview</div>'; return; }
         if (!dt.items?.length) {
             preview.innerHTML = `<div class="dt-preview-title">${dt.name || '(unnamed)'}</div>` +
-                `<div class="dt-preview-meta">id:${dt.id} · mdlType:${dt.mdlType ?? 0}</div>` +
+                `<div class="dt-preview-meta">id:${dt.id} Â· mdlType:${dt.mdlType ?? 0}</div>` +
                 `<div class="dt-preview-empty">No items</div>`;
             return;
         }
@@ -11156,8 +10765,8 @@ function openDropTablePicker(popupSection) {
             const minQty  = row[1] ?? 1;
             const maxQty  = row[2] ?? 1;
             const chance  = row[5] ?? 0;
-            const qty     = maxQty > minQty ? `×${minQty}–${maxQty}` : `×${minQty}`;
-            const pct     = chance > 0 ? `${(chance * 100).toFixed(0)}%` : '—';
+            const qty     = maxQty > minQty ? `Ã—${minQty}â€“${maxQty}` : `Ã—${minQty}`;
+            const pct     = chance > 0 ? `${(chance * 100).toFixed(0)}%` : 'â€”';
             return `<div class="dt-preview-item">` +
                 `<span class="dt-preview-item-name" title="${name}">${name}</span>` +
                 `<span class="dt-preview-item-qty">${qty}</span>` +
@@ -11166,7 +10775,7 @@ function openDropTablePicker(popupSection) {
         }).join('');
         preview.innerHTML =
             `<div class="dt-preview-title">${dt.name || '(unnamed)'}</div>` +
-            `<div class="dt-preview-meta">id:${dt.id} · ${dt.items.length} item${dt.items.length !== 1 ? 's' : ''} · mdlType:${dt.mdlType ?? 0}</div>` +
+            `<div class="dt-preview-meta">id:${dt.id} Â· ${dt.items.length} item${dt.items.length !== 1 ? 's' : ''} Â· mdlType:${dt.mdlType ?? 0}</div>` +
             rows;
     }
 
@@ -11180,7 +10789,7 @@ function openDropTablePicker(popupSection) {
             .map(dt =>
                 `<div class="dt-picker-item${dt.id === currentId ? ' dt-active' : ''}" data-id="${dt.id}">` +
                 `<span class="dt-picker-item-name">${dt.name || '(unnamed)'}</span>` +
-                `<span class="dt-picker-item-meta">id:${dt.id} · ${dt.items?.length ?? 0} items</span>` +
+                `<span class="dt-picker-item-meta">id:${dt.id} Â· ${dt.items?.length ?? 0} items</span>` +
                 `</div>`
             );
         list.innerHTML = noneHtml + (rows.length ? rows.join('') : '<div class="np-empty">No tables match.</div>');
@@ -11265,7 +10874,7 @@ function openDropTableEditor(tableId) {
     const dt = _dropsTablesMap.get(tableId);
     if (!dt) return;
 
-    title.textContent = `Edit Drop Table — id:${dt.id}`;
+    title.textContent = `Edit Drop Table â€” id:${dt.id}`;
     metaEl.innerHTML =
         `<label>Name<input id="dt-ed-name" type="text" value="${dt.name ?? ''}" style="width:200px"></label>` +
         `<label>mdlType<input id="dt-ed-mdltype" type="number" value="${dt.mdlType ?? 0}" style="width:60px" min="0"></label>`;
@@ -11322,7 +10931,7 @@ function openDropTableEditor(tableId) {
     modal._abortCtrl = new AbortController();
     const sig = modal._abortCtrl.signal;
 
-    // Item search — find and click to add
+    // Item search â€” find and click to add
     const searchInput   = document.getElementById('dt-item-search-input');
     const searchResults = document.getElementById('dt-item-search-results');
     if (searchInput)  searchInput.value = '';
@@ -11355,7 +10964,7 @@ function openDropTableEditor(tableId) {
     }
     searchInput?.addEventListener('input', () => renderItemSearch(searchInput.value.trim()), { signal: sig });
 
-    // Drag from Items panel → append new row
+    // Drag from Items panel â†’ append new row
     tbody.addEventListener('dragover', (e) => {
         if (_dragItemId == null) return;
         e.preventDefault();
@@ -11389,7 +10998,7 @@ function openDropTableEditor(tableId) {
         if (_renderEditPanel) _renderEditPanel();
         modal.classList.remove('open');
     }, { signal: sig });
-    // close button is wired statically below — no signal needed
+    // close button is wired statically below â€” no signal needed
 
     modal.classList.add('open');
 }
@@ -11415,7 +11024,7 @@ document.getElementById('dt-picker-close')?.addEventListener('click',
 document.getElementById('dt-editor-close')?.addEventListener('click',
     () => { if (_dtEditorReadAndSave) _dtEditorReadAndSave(); else document.getElementById('dt-editor-modal').classList.remove('open'); });
 
-// ── Unsaved-changes guard ─────────────────────────────────────────────────────
+// â”€â”€ Unsaved-changes guard â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 window.addEventListener('beforeunload', e => {
     if (_dirtySet.size > 0) {
         e.preventDefault();
@@ -11423,7 +11032,7 @@ window.addEventListener('beforeunload', e => {
     }
 });
 
-// ── Init ──────────────────────────────────────────────────────────────────────
+// â”€â”€ Init â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 ensureInitialHash();
 
 async function bootstrapMapApp() {
@@ -11438,7 +11047,7 @@ async function bootstrapMapApp() {
         console.error('buildSidebar failed:', err);
         const listEl = document.getElementById('map-list');
         if (listEl) {
-            listEl.innerHTML = '<div style="padding:8px 16px;color:#e94560;font-size:0.8rem">Map list failed to load — see console.</div>';
+            listEl.innerHTML = '<div style="padding:8px 16px;color:#e94560;font-size:0.8rem">Map list failed to load â€” see console.</div>';
         }
     }
     await waitForMapContainer();
@@ -11459,7 +11068,7 @@ async function bootstrapMapApp() {
 bootstrapMapApp();
 window.addEventListener('resize', () => leafletMap.invalidateSize({ animate: false }));
 
-// ── Developer panel ───────────────────────────────────────────────────────────
+// â”€â”€ Developer panel â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function initDevPanel() {
     const devPanel    = document.getElementById('dev-panel');
     const panelToggle = document.getElementById('dev-panel-toggle');
