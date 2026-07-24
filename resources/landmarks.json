@@ -30,7 +30,10 @@
       "x": -10147.885,
       "z": -347812.0,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 481,
+      "spot_name_en": "Mergoda Security District",
+      "spot_name_jp": "メルゴダ護政区"
     },
     {
       "type": "TYPE_TEXT",
@@ -70,7 +73,10 @@
       "x": -155599.39,
       "z": -293361.6,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 567,
+      "spot_name_en": "Tegor Flood Control Channel",
+      "spot_name_jp": "テゴル治水路"
     },
     {
       "type": "TYPE_TEXT",
@@ -102,7 +108,10 @@
       "x": -19019.777,
       "z": -304273.75,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 573,
+      "spot_name_en": "Zandora Wastelands Shrine",
+      "spot_name_jp": "標の祠　ザンドラ禁域"
     },
     {
       "type": "TYPE_TEXT",
@@ -142,7 +151,10 @@
       "x": -44709.906,
       "z": -286178.53,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 810,
+      "spot_name_en": "West Zandora Wastelands",
+      "spot_name_jp": "ザンドラ禁域 西側"
     },
     {
       "type": "TYPE_AREA_WARP",
@@ -150,7 +162,10 @@
       "x": -45759.84,
       "z": -313540.44,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 732,
+      "spot_name_en": "Fanatic's Hiding Ground",
+      "spot_name_jp": "狂信者の潜伏地"
     },
     {
       "type": "TYPE_TEXT",
@@ -206,7 +221,10 @@
       "x": -221704.44,
       "z": -257292.0,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 473,
+      "spot_name_en": "Gardnox Fortress",
+      "spot_name_jp": "ガルドノック砦"
     },
     {
       "type": "TYPE_TEXT",
@@ -318,7 +336,10 @@
       "x": 58420.395,
       "z": -228371.81,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 458,
+      "spot_name_en": "Zoma",
+      "spot_name_jp": "ゾマ"
     },
     {
       "type": "TYPE_WELL",
@@ -350,7 +371,10 @@
       "x": 85928.68,
       "z": -241223.17,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 458,
+      "spot_name_en": "Zoma",
+      "spot_name_jp": "ゾマ"
     },
     {
       "type": "TYPE_TEXT",
@@ -398,7 +422,10 @@
       "x": -189747.95,
       "z": -207546.19,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 457,
+      "spot_name_en": "Drawan",
+      "spot_name_jp": "ドラワン"
     },
     {
       "type": "TYPE_WELL",
@@ -422,7 +449,10 @@
       "x": -114951.664,
       "z": -190747.44,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 694,
+      "spot_name_en": "Penitentiary",
+      "spot_name_jp": "罪人の修獄"
     },
     {
       "type": "TYPE_TEXT",
@@ -518,7 +548,10 @@
       "x": -37590.812,
       "z": -194873.08,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 809,
+      "spot_name_en": "Temple of Purification Lakeside",
+      "spot_name_jp": "禊の神殿 湖畔"
     },
     {
       "type": "TYPE_AREA_WARP",
@@ -526,7 +559,10 @@
       "x": -44450.0,
       "z": -174237.0,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 478,
+      "spot_name_en": "Temple of Purification",
+      "spot_name_jp": "禊の神殿"
     },
     {
       "type": "TYPE_WELL",
@@ -566,7 +602,10 @@
       "x": 93462.97,
       "z": -223325.81,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 540,
+      "spot_name_en": "Zandora Chapel",
+      "spot_name_jp": "ザンドラ礼拝堂"
     },
     {
       "type": "TYPE_TEXT",
@@ -614,7 +653,10 @@
       "x": -82524.07,
       "z": -146715.9,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 471,
+      "spot_name_en": "Gritten Fort",
+      "spot_name_jp": "グリッテン砦"
     },
     {
       "type": "TYPE_DOOR",
@@ -686,7 +728,10 @@
       "x": -204457.94,
       "z": -75913.516,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 452,
+      "spot_name_en": "Rotes",
+      "spot_name_jp": "ローテス"
     },
     {
       "type": "TYPE_BASEMENT",
@@ -734,7 +779,10 @@
       "x": -114700.32,
       "z": -61361.773,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 451,
+      "spot_name_en": "Tel",
+      "spot_name_jp": "テル"
     },
     {
       "type": "TYPE_WELL",
@@ -758,7 +806,10 @@
       "x": -135735.61,
       "z": -57563.46,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 517,
+      "spot_name_en": "The Ark",
+      "spot_name_jp": "アーク"
     },
     {
       "type": "TYPE_TEXT",
@@ -774,7 +825,10 @@
       "x": -133325.0,
       "z": -113559.0,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 569,
+      "spot_name_en": "Training Chapel",
+      "spot_name_jp": "修練の祠"
     },
     {
       "type": "TYPE_BASEMENT",
@@ -790,7 +844,10 @@
       "x": -97708.38,
       "z": -104367.06,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 804,
+      "spot_name_en": "Before Gritten Fort Main Gate",
+      "spot_name_jp": "グリッテン砦 正門前"
     },
     {
       "type": "TYPE_AREA_WARP",
@@ -798,7 +855,10 @@
       "x": -89278.14,
       "z": -59562.645,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 451,
+      "spot_name_en": "Tel",
+      "spot_name_jp": "テル"
     },
     {
       "type": "TYPE_TEXT",
@@ -846,7 +906,10 @@
       "x": -343.3932,
       "z": -64453.367,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 808,
+      "spot_name_en": "West Dowe Valley",
+      "spot_name_jp": "ダウ渓谷 西側"
     },
     {
       "type": "TYPE_TEXT",
@@ -878,7 +941,10 @@
       "x": 44418.074,
       "z": -85080.23,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 570,
+      "spot_name_en": "Valley Chapel",
+      "spot_name_jp": "渓谷の小堂"
     },
     {
       "type": "TYPE_TEXT",
@@ -918,7 +984,10 @@
       "x": 48831.637,
       "z": -63365.12,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 454,
+      "spot_name_en": "Jingen",
+      "spot_name_jp": "ジンゲン"
     },
     {
       "type": "TYPE_TEXT",
@@ -942,7 +1011,10 @@
       "x": -278871.16,
       "z": -49294.688,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 520,
+      "spot_name_en": "Moltova Lighthouse",
+      "spot_name_jp": "モルトバ灯台"
     },
     {
       "type": "TYPE_CAVE",
@@ -966,7 +1038,10 @@
       "x": -222276.61,
       "z": -33140.484,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 805,
+      "spot_name_en": "South Breya Coast",
+      "spot_name_jp": "ブリア海岸 南側"
     },
     {
       "type": "TYPE_TEXT",
@@ -1078,7 +1153,10 @@
       "x": 36092.914,
       "z": -44374.98,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 454,
+      "spot_name_en": "Jingen",
+      "spot_name_jp": "ジンゲン"
     },
     {
       "type": "TYPE_WELL",
@@ -1110,7 +1188,10 @@
       "x": 18586.875,
       "z": -35210.36,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 454,
+      "spot_name_en": "Jingen",
+      "spot_name_jp": "ジンゲン"
     },
     {
       "type": "TYPE_TEXT",
@@ -1150,7 +1231,10 @@
       "x": -120892.65,
       "z": 34959.59,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 453,
+      "spot_name_en": "Lynwood",
+      "spot_name_jp": "リンウッド"
     },
     {
       "type": "TYPE_DOOR",
@@ -1238,7 +1322,10 @@
       "x": -75693.27,
       "z": 32879.348,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 806,
+      "spot_name_en": "East Mysree Forest",
+      "spot_name_jp": "ミスリウ森林 東側"
     },
     {
       "type": "TYPE_TEXT",
@@ -1270,7 +1357,10 @@
       "x": -97300.0,
       "z": 44360.0,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 453,
+      "spot_name_en": "Lynwood",
+      "spot_name_jp": "リンウッド"
     },
     {
       "type": "TYPE_CAVE",
@@ -1350,7 +1440,10 @@
       "x": 67310.61,
       "z": 1917.5428,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 572,
+      "spot_name_en": "Summit Chapel",
+      "spot_name_jp": "山頂の小堂"
     },
     {
       "type": "TYPE_WATER_LINE",
@@ -1366,7 +1459,10 @@
       "x": 78112.15,
       "z": 50509.215,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 455,
+      "spot_name_en": "Kinoza",
+      "spot_name_jp": "キノザ"
     },
     {
       "type": "TYPE_DOOR",
@@ -1390,7 +1486,10 @@
       "x": 64373.336,
       "z": 15915.967,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 807,
+      "spot_name_en": "North Volden Mines",
+      "spot_name_jp": "ボルド鉱山 北側"
     },
     {
       "type": "TYPE_TEXT",
@@ -1430,7 +1529,10 @@
       "x": -100726.09,
       "z": 68043.375,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 719,
+      "spot_name_en": "Peddler's Peril",
+      "spot_name_jp": "行商人の難所"
     },
     {
       "type": "TYPE_CATACOMB",
@@ -1486,7 +1588,10 @@
       "x": -68116.766,
       "z": 117500.16,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 571,
+      "spot_name_en": "Mysree Grove Shrine",
+      "spot_name_jp": "標の祠　ミスリウ森林深部"
     },
     {
       "type": "TYPE_AREA_WARP",
@@ -1494,7 +1599,10 @@
       "x": -95736.29,
       "z": 155282.67,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 470,
+      "spot_name_en": "Deenan Woods",
+      "spot_name_jp": "ディナン深層林"
     },
     {
       "type": "TYPE_AREA_WARP",
@@ -1502,7 +1610,10 @@
       "x": -78049.69,
       "z": 127977.61,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 575,
+      "spot_name_en": "Ivan's Lodge",
+      "spot_name_jp": "イヴァンの山小屋"
     },
     {
       "type": "TYPE_TEXT",
@@ -1590,7 +1701,10 @@
       "x": -72353.766,
       "z": 175147.44,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 470,
+      "spot_name_en": "Deenan Woods",
+      "spot_name_jp": "ディナン深層林"
     },
     {
       "type": "TYPE_TEXT",
@@ -1630,7 +1744,10 @@
       "x": -40002.805,
       "z": 185890.83,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 470,
+      "spot_name_en": "Deenan Woods",
+      "spot_name_jp": "ディナン深層林"
     },
     {
       "type": "TYPE_TEXT",
@@ -1678,7 +1795,10 @@
       "x": 6611.713,
       "z": 177161.3,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 475,
+      "spot_name_en": "Erte Deenan",
+      "spot_name_jp": "エルテ・ディナン"
     }
   ],
   "field003_m00": [
@@ -1728,7 +1848,10 @@
       "x": -22135.484,
       "z": -26505.688,
       "name_en": "Exploring the Den of Monsters",
-      "name_jp": "魔窟探索"
+      "name_jp": "魔窟探索",
+      "spot_id": 687,
+      "spot_name_en": "Expedition Garrison",
+      "spot_name_jp": "調査隊駐屯地"
     },
     {
       "type": "TYPE_TEXT",
@@ -1760,7 +1883,10 @@
       "x": 11278.582,
       "z": -23016.783,
       "name_en": "The Corruption and the Knights",
-      "name_jp": "侵食と騎士団"
+      "name_jp": "侵食と騎士団",
+      "spot_id": 687,
+      "spot_name_en": "Expedition Garrison",
+      "spot_name_jp": "調査隊駐屯地"
     },
     {
       "type": "TYPE_CAVE",
@@ -1848,7 +1974,10 @@
       "x": -15870.005,
       "z": -1215.979,
       "name_en": "Exploring the Den of Monsters",
-      "name_jp": "魔窟探索"
+      "name_jp": "魔窟探索",
+      "spot_id": 723,
+      "spot_name_en": "Foreign Cape",
+      "spot_name_jp": "異邦の岬"
     },
     {
       "type": "TYPE_TEXT",
@@ -1880,7 +2009,10 @@
       "x": 4539.0073,
       "z": 6808.4146,
       "name_en": "The Corruption and the Knights",
-      "name_jp": "侵食と騎士団"
+      "name_jp": "侵食と騎士団",
+      "spot_id": 815,
+      "spot_name_en": "Recrudescent Beach",
+      "spot_name_jp": "再帰の浜辺"
     }
   ],
   "field004_m00": [
@@ -1978,7 +2110,10 @@
       "x": -66365.19,
       "z": -66454.81,
       "name_en": "Homecoming",
-      "name_jp": "帰郷"
+      "name_jp": "帰郷",
+      "spot_id": 964,
+      "spot_name_en": "Morrow Forest Depths",
+      "spot_name_jp": "モロー樹林 深層"
     },
     {
       "type": "TYPE_OUTPOST",
@@ -1986,7 +2121,10 @@
       "x": 18880.955,
       "z": -57807.7,
       "name_en": "Homecoming",
-      "name_jp": "帰郷"
+      "name_jp": "帰郷",
+      "spot_id": 879,
+      "spot_name_en": "Glyndwr",
+      "spot_name_jp": "グリンデュア"
     },
     {
       "type": "TYPE_DOOR",
@@ -2090,7 +2228,10 @@
       "x": 34929.297,
       "z": -69030.164,
       "name_en": "Homecoming",
-      "name_jp": "帰郷"
+      "name_jp": "帰郷",
+      "spot_id": 965,
+      "spot_name_en": "Kingal Canyon Depths",
+      "spot_name_jp": "キンガル峡谷 深層"
     },
     {
       "type": "TYPE_DOOR",
@@ -2162,7 +2303,10 @@
       "x": -41860.582,
       "z": -13389.705,
       "name_en": "The Lost Hometown",
-      "name_jp": "失われた故郷"
+      "name_jp": "失われた故郷",
+      "spot_id": 877,
+      "spot_name_en": "Dana",
+      "spot_name_jp": "ダナ"
     },
     {
       "type": "TYPE_OUTPOST",
@@ -2170,7 +2314,10 @@
       "x": -56291.094,
       "z": -35115.3,
       "name_en": "The Village of Soldiers",
-      "name_jp": "戦士の集落"
+      "name_jp": "戦士の集落",
+      "spot_id": 878,
+      "spot_name_en": "Morfaul",
+      "spot_name_jp": "モルフォール"
     },
     {
       "type": "TYPE_DOOR",
@@ -2226,7 +2373,10 @@
       "x": -53025.53,
       "z": -11555.044,
       "name_en": "The Lost Hometown",
-      "name_jp": "失われた故郷"
+      "name_jp": "失われた故郷",
+      "spot_id": 759,
+      "spot_name_en": "Spirit Arts Hut",
+      "spot_name_jp": "武霊の庵"
     },
     {
       "type": "TYPE_TEXT",
@@ -2450,7 +2600,10 @@
       "x": -99346.71,
       "z": 62059.74,
       "name_en": "The Village of Soldiers",
-      "name_jp": "戦士の集落"
+      "name_jp": "戦士の集落",
+      "spot_id": 963,
+      "spot_name_en": "Elan Water Grove Depths",
+      "spot_name_jp": "エラン水林 深層"
     },
     {
       "type": "TYPE_AREA_WARP",
@@ -2458,7 +2611,10 @@
       "x": -83850.01,
       "z": 10184.38,
       "name_en": "The Entrusted One",
-      "name_jp": "託されし者"
+      "name_jp": "託されし者",
+      "spot_id": 962,
+      "spot_name_en": "Wharf",
+      "spot_name_jp": "船着き場"
     },
     {
       "type": "TYPE_OUTPOST",
@@ -2466,7 +2622,10 @@
       "x": -54494.008,
       "z": 49759.023,
       "name_en": "The Entrusted One",
-      "name_jp": "託されし者"
+      "name_jp": "託されし者",
+      "spot_id": 876,
+      "spot_name_en": "Protector's Retreat",
+      "spot_name_jp": "守り人の庵"
     },
     {
       "type": "TYPE_CAVE",
@@ -2538,7 +2697,10 @@
       "x": -44893.77,
       "z": 17868.37,
       "name_en": "A New Continent",
-      "name_jp": "新大陸"
+      "name_jp": "新大陸",
+      "spot_id": 917,
+      "spot_name_en": "Deserted Village of Nabhadh",
+      "spot_name_jp": "廃村ナバド"
     },
     {
       "type": "TYPE_CAVE",
@@ -2602,7 +2764,10 @@
       "x": -2820.2598,
       "z": 17408.13,
       "name_en": "A New Continent",
-      "name_jp": "新大陸"
+      "name_jp": "新大陸",
+      "spot_id": 961,
+      "spot_name_en": "Farana Plains Center",
+      "spot_name_jp": "ファーラナ平原 中央"
     },
     {
       "type": "TYPE_CAVE",
@@ -2628,7 +2793,10 @@
       "x": 37276.9,
       "z": -401451.0,
       "name_en": "The Missing Prince",
-      "name_jp": "消えた王子"
+      "name_jp": "消えた王子",
+      "spot_id": 1217,
+      "spot_name_en": "Firefall Mountain Campsite",
+      "spot_name_jp": "火垂れ山野営地"
     },
     {
       "type": "TYPE_TEXT",
@@ -2652,7 +2820,10 @@
       "x": -58713.652,
       "z": -394144.75,
       "name_en": "The Missing Prince",
-      "name_jp": "消えた王子"
+      "name_jp": "消えた王子",
+      "spot_id": 1216,
+      "spot_name_en": "Northern Bandit Hideout",
+      "spot_name_jp": "北の盗賊のアジト"
     },
     {
       "type": "TYPE_AREA_WARP",
@@ -2660,7 +2831,10 @@
       "x": -78379.92,
       "z": -367163.56,
       "name_en": "The Missing Prince",
-      "name_jp": "消えた王子"
+      "name_jp": "消えた王子",
+      "spot_id": 1287,
+      "spot_name_en": "Before the Tomb of the Royal Family",
+      "spot_name_jp": "王家の墓前"
     },
     {
       "type": "TYPE_SHRINE",
@@ -2668,7 +2842,10 @@
       "x": -93373.18,
       "z": -365956.25,
       "name_en": "The Missing Prince",
-      "name_jp": "消えた王子"
+      "name_jp": "消えた王子",
+      "spot_id": 1220,
+      "spot_name_en": "The Royal Family Mausoleum",
+      "spot_name_jp": "王家の墓"
     },
     {
       "type": "TYPE_NONE",
@@ -2724,7 +2901,10 @@
       "x": -32090.914,
       "z": -363125.6,
       "name_en": "The Final Battle of the Royal Capital",
-      "name_jp": "王都の決戦"
+      "name_jp": "王都の決戦",
+      "spot_id": 1284,
+      "spot_name_en": "Western Urteca Mountains",
+      "spot_name_jp": "ウルテカ山岳 西部"
     },
     {
       "type": "TYPE_CAVE",
@@ -2764,7 +2944,10 @@
       "x": 34342.34,
       "z": -377455.47,
       "name_en": "The Missing Prince",
-      "name_jp": "消えた王子"
+      "name_jp": "消えた王子",
+      "spot_id": 1283,
+      "spot_name_en": "Northern Urteca Mountains",
+      "spot_name_jp": "ウルテカ山岳 北部"
     },
     {
       "type": "TYPE_AREA_WARP",
@@ -2772,7 +2955,10 @@
       "x": 40085.617,
       "z": -371304.7,
       "name_en": "The Missing Prince",
-      "name_jp": "消えた王子"
+      "name_jp": "消えた王子",
+      "spot_id": 1282,
+      "spot_name_en": "Eastern Urteca Mountains",
+      "spot_name_jp": "ウルテカ山岳 東部"
     },
     {
       "type": "TYPE_SHRINE",
@@ -2780,7 +2966,10 @@
       "x": 29689.613,
       "z": -383941.47,
       "name_en": "The Final Battle of the Royal Capital",
-      "name_jp": "王都の決戦"
+      "name_jp": "王都の決戦",
+      "spot_id": 1078,
+      "spot_name_en": "Firefall Mountain Dragon Temple",
+      "spot_name_jp": "火垂れ山拝竜院"
     },
     {
       "type": "TYPE_NONE",
@@ -2932,7 +3121,10 @@
       "x": 43864.645,
       "z": -241955.27,
       "name_en": "The Battle of Lookout Castle",
-      "name_jp": "展望城の戦い"
+      "name_jp": "展望城の戦い",
+      "spot_id": 1215,
+      "spot_name_en": "Plateau Shack",
+      "spot_name_jp": "高地のあばら屋"
     },
     {
       "type": "TYPE_AREA_WARP",
@@ -2940,7 +3132,10 @@
       "x": 31909.928,
       "z": -271134.22,
       "name_en": "The Battle of Lookout Castle",
-      "name_jp": "展望城の戦い"
+      "name_jp": "展望城の戦い",
+      "spot_id": 1238,
+      "spot_name_en": "Fortress City Megado: City Gate",
+      "spot_name_jp": "城塞都市メガド 城門"
     },
     {
       "type": "TYPE_TEXT",
@@ -2980,7 +3175,10 @@
       "x": 79105.29,
       "z": -254203.23,
       "name_en": "The Battle of Lookout Castle",
-      "name_jp": "展望城の戦い"
+      "name_jp": "展望城の戦い",
+      "spot_id": 1168,
+      "spot_name_en": "Eli Guard Tower",
+      "spot_name_jp": "エリ警備塔"
     },
     {
       "type": "TYPE_WELL",
@@ -2996,7 +3194,10 @@
       "x": 83116.31,
       "z": -262350.88,
       "name_en": "The Battle of Lookout Castle",
-      "name_jp": "展望城の戦い"
+      "name_jp": "展望城の戦い",
+      "spot_id": 1076,
+      "spot_name_en": "Shrine of Combat",
+      "spot_name_jp": "戦練の社"
     },
     {
       "type": "TYPE_TEXT",
@@ -3100,7 +3301,10 @@
       "x": -152432.31,
       "z": -121159.914,
       "name_en": "Prince Nedo",
-      "name_jp": "王子ネド"
+      "name_jp": "王子ネド",
+      "spot_id": 1140,
+      "spot_name_en": "West Feryana Wilderness",
+      "spot_name_jp": "フェルヤナ荒原 西側"
     },
     {
       "type": "TYPE_CAVE",
@@ -3132,7 +3336,10 @@
       "x": -108485.07,
       "z": -128076.39,
       "name_en": "Prince Nedo",
-      "name_jp": "王子ネド"
+      "name_jp": "王子ネド",
+      "spot_id": 1139,
+      "spot_name_en": "Lookout Castle: Before the Castle Gate",
+      "spot_name_jp": "展望城 城門前"
     },
     {
       "type": "TYPE_AREA_WARP",
@@ -3140,7 +3347,10 @@
       "x": -84021.0,
       "z": -166568.0,
       "name_en": "Prince Nedo",
-      "name_jp": "王子ネド"
+      "name_jp": "王子ネド",
+      "spot_id": 1236,
+      "spot_name_en": "Lookout Castle Exterior: Sonel's Camp",
+      "spot_name_jp": "展望城城外 ソネルキャンプ"
     },
     {
       "type": "TYPE_CAVE",
@@ -3196,7 +3406,10 @@
       "x": -93370.0,
       "z": -88400.0,
       "name_en": "Prince Nedo",
-      "name_jp": "王子ネド"
+      "name_jp": "王子ネド",
+      "spot_id": 1093,
+      "spot_name_en": "Mephite",
+      "spot_name_jp": "メフィテ"
     },
     {
       "type": "TYPE_CAVE",
@@ -3276,7 +3489,10 @@
       "x": -68223.83,
       "z": -57021.883,
       "name_en": "The New Generation",
-      "name_jp": "新しい世代"
+      "name_jp": "新しい世代",
+      "spot_id": 1032,
+      "spot_name_en": "Rothgill",
+      "spot_name_jp": "ロスギル"
     },
     {
       "type": "TYPE_DOOR",
@@ -3308,7 +3524,10 @@
       "x": -99500.0,
       "z": -41950.0,
       "name_en": "The Land of Despair",
-      "name_jp": "絶望の大陸"
+      "name_jp": "絶望の大陸",
+      "spot_id": 1032,
+      "spot_name_en": "Rothgill",
+      "spot_name_jp": "ロスギル"
     },
     {
       "type": "TYPE_CAVE",
@@ -3404,7 +3623,10 @@
       "x": -7457.756,
       "z": -53942.98,
       "name_en": "The New Generation",
-      "name_jp": "新しい世代"
+      "name_jp": "新しい世代",
+      "spot_id": 1107,
+      "spot_name_en": "North Rathnite Foothills",
+      "spot_name_jp": "ラスニテ山麓 北側"
     },
     {
       "type": "TYPE_CAVE",
@@ -3436,7 +3658,10 @@
       "x": 3200.0,
       "z": 4250.0,
       "name_en": "The New Generation",
-      "name_jp": "新しい世代"
+      "name_jp": "新しい世代",
+      "spot_id": 1031,
+      "spot_name_en": "Hidden Village Piremoth",
+      "spot_name_jp": "隠れ村ピレモス"
     }
   ],
   "sfield000_m00": [
@@ -3486,7 +3711,10 @@
       "x": -114700.32,
       "z": -61361.773,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 451,
+      "spot_name_en": "Tel",
+      "spot_name_jp": "テル"
     },
     {
       "type": "TYPE_OUTPOST",
@@ -3494,7 +3722,10 @@
       "x": -204457.94,
       "z": -75913.516,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 452,
+      "spot_name_en": "Rotes",
+      "spot_name_jp": "ローテス"
     },
     {
       "type": "TYPE_OUTPOST",
@@ -3502,7 +3733,10 @@
       "x": -189747.95,
       "z": -207546.19,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 457,
+      "spot_name_en": "Drawan",
+      "spot_name_jp": "ドラワン"
     },
     {
       "type": "TYPE_TEXT",
@@ -3526,7 +3760,10 @@
       "x": -82524.07,
       "z": -146715.9,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 471,
+      "spot_name_en": "Gritten Fort",
+      "spot_name_jp": "グリッテン砦"
     },
     {
       "type": "TYPE_OUTPOST",
@@ -3534,7 +3771,10 @@
       "x": 58420.395,
       "z": -228371.81,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 458,
+      "spot_name_en": "Zoma",
+      "spot_name_jp": "ゾマ"
     },
     {
       "type": "TYPE_OUTPOST",
@@ -3542,7 +3782,10 @@
       "x": -120892.65,
       "z": 34959.59,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 453,
+      "spot_name_en": "Lynwood",
+      "spot_name_jp": "リンウッド"
     },
     {
       "type": "TYPE_DOOR",
@@ -3590,7 +3833,10 @@
       "x": 36092.914,
       "z": -44374.98,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 454,
+      "spot_name_en": "Jingen",
+      "spot_name_jp": "ジンゲン"
     },
     {
       "type": "TYPE_OUTPOST",
@@ -3598,7 +3844,10 @@
       "x": 78112.15,
       "z": 50509.215,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 455,
+      "spot_name_en": "Kinoza",
+      "spot_name_jp": "キノザ"
     },
     {
       "type": "TYPE_OUTPOST",
@@ -3606,7 +3855,10 @@
       "x": -72353.766,
       "z": 175147.44,
       "name_en": "Resolutions and Omens",
-      "name_jp": "覚悟と兆し"
+      "name_jp": "覚悟と兆し",
+      "spot_id": 470,
+      "spot_name_en": "Deenan Woods",
+      "spot_name_jp": "ディナン深層林"
     }
   ],
   "sfield003_m00": [
@@ -3632,7 +3884,10 @@
       "x": 11278.582,
       "z": -23016.783,
       "name_en": "The Corruption and the Knights",
-      "name_jp": "侵食と騎士団"
+      "name_jp": "侵食と騎士団",
+      "spot_id": 687,
+      "spot_name_en": "Expedition Garrison",
+      "spot_name_jp": "調査隊駐屯地"
     },
     {
       "type": "TYPE_TEXT",
@@ -3650,7 +3905,10 @@
       "x": 18880.955,
       "z": -57807.7,
       "name_en": "Homecoming",
-      "name_jp": "帰郷"
+      "name_jp": "帰郷",
+      "spot_id": 879,
+      "spot_name_en": "Glyndwr",
+      "spot_name_jp": "グリンデュア"
     },
     {
       "type": "TYPE_TEXT",
@@ -3666,7 +3924,10 @@
       "x": -41860.582,
       "z": -13389.705,
       "name_en": "The Lost Hometown",
-      "name_jp": "失われた故郷"
+      "name_jp": "失われた故郷",
+      "spot_id": 877,
+      "spot_name_en": "Dana",
+      "spot_name_jp": "ダナ"
     },
     {
       "type": "TYPE_OUTPOST",
@@ -3674,7 +3935,10 @@
       "x": -54494.008,
       "z": 49759.023,
       "name_en": "The Entrusted One",
-      "name_jp": "託されし者"
+      "name_jp": "託されし者",
+      "spot_id": 876,
+      "spot_name_en": "Protector's Retreat",
+      "spot_name_jp": "守り人の庵"
     },
     {
       "type": "TYPE_OUTPOST",
@@ -3682,7 +3946,10 @@
       "x": -56291.094,
       "z": -35115.3,
       "name_en": "The Village of Soldiers",
-      "name_jp": "戦士の集落"
+      "name_jp": "戦士の集落",
+      "spot_id": 878,
+      "spot_name_en": "Morfaul",
+      "spot_name_jp": "モルフォール"
     },
     {
       "type": "TYPE_TEXT",
@@ -3716,7 +3983,10 @@
       "x": -58713.652,
       "z": -394144.75,
       "name_en": "The Missing Prince",
-      "name_jp": "消えた王子"
+      "name_jp": "消えた王子",
+      "spot_id": 1216,
+      "spot_name_en": "Northern Bandit Hideout",
+      "spot_name_jp": "北の盗賊のアジト"
     },
     {
       "type": "TYPE_TEXT",
@@ -3740,7 +4010,10 @@
       "x": 37276.9,
       "z": -401451.0,
       "name_en": "The Missing Prince",
-      "name_jp": "消えた王子"
+      "name_jp": "消えた王子",
+      "spot_id": 1217,
+      "spot_name_en": "Firefall Mountain Campsite",
+      "spot_name_jp": "火垂れ山野営地"
     },
     {
       "type": "TYPE_OUTPOST",
@@ -3748,7 +4021,10 @@
       "x": -93370.0,
       "z": -88400.0,
       "name_en": "Prince Nedo",
-      "name_jp": "王子ネド"
+      "name_jp": "王子ネド",
+      "spot_id": 1093,
+      "spot_name_en": "Mephite",
+      "spot_name_jp": "メフィテ"
     },
     {
       "type": "TYPE_DOOR",
@@ -3796,7 +4072,10 @@
       "x": 79105.29,
       "z": -254203.23,
       "name_en": "The Battle of Lookout Castle",
-      "name_jp": "展望城の戦い"
+      "name_jp": "展望城の戦い",
+      "spot_id": 1168,
+      "spot_name_en": "Eli Guard Tower",
+      "spot_name_jp": "エリ警備塔"
     },
     {
       "type": "TYPE_TEXT",
@@ -3812,7 +4091,10 @@
       "x": -99500.0,
       "z": -41950.0,
       "name_en": "The Land of Despair",
-      "name_jp": "絶望の大陸"
+      "name_jp": "絶望の大陸",
+      "spot_id": 1032,
+      "spot_name_en": "Rothgill",
+      "spot_name_jp": "ロスギル"
     },
     {
       "type": "TYPE_TEXT",
@@ -3828,7 +4110,10 @@
       "x": 3200.0,
       "z": 4250.0,
       "name_en": "The New Generation",
-      "name_jp": "新しい世代"
+      "name_jp": "新しい世代",
+      "spot_id": 1031,
+      "spot_name_en": "Hidden Village Piremoth",
+      "spot_name_jp": "隠れ村ピレモス"
     },
     {
       "type": "TYPE_TEXT",
