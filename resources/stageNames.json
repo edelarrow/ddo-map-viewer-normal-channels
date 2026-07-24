@@ -1,0 +1,2372 @@
+{
+  "1": {
+    "name": "Lestania",
+    "field": "Hidell Plains",
+    "code": "st0100"
+  },
+  "2": {
+    "name": "The White Dragon Temple",
+    "field": "The White Dragon Temple",
+    "code": "st0200"
+  },
+  "3": {
+    "name": "Audience Chamber",
+    "field": "Audience Chamber",
+    "code": "st0201"
+  },
+  "4": {
+    "name": "Craft Room",
+    "field": "Craft Room",
+    "code": "st0202"
+  },
+  "5": {
+    "name": "Cave Harbor",
+    "field": "Cave Harbor",
+    "code": "st0203"
+  },
+  "8": {
+    "name": "House",
+    "field": "House",
+    "code": "st0300"
+  },
+  "9": {
+    "name": "House",
+    "field": "House",
+    "code": "st0301"
+  },
+  "10": {
+    "name": "House",
+    "field": "House",
+    "code": "st0302"
+  },
+  "11": {
+    "name": "House",
+    "field": "House",
+    "code": "st0303"
+  },
+  "12": {
+    "name": "House",
+    "field": "House",
+    "code": "st0304"
+  },
+  "13": {
+    "name": "House",
+    "field": "House",
+    "code": "st0305"
+  },
+  "14": {
+    "name": "House",
+    "field": "House",
+    "code": "st0306"
+  },
+  "15": {
+    "name": "Flavells Shop",
+    "field": "House",
+    "code": "st0307"
+  },
+  "16": {
+    "name": "Lone House in the Forest",
+    "field": "House",
+    "code": "st0308"
+  },
+  "17": {
+    "name": "House",
+    "field": "House",
+    "code": "st0310"
+  },
+  "18": {
+    "name": "House",
+    "field": "House",
+    "code": "st0311"
+  },
+  "19": {
+    "name": "Pedros General Store",
+    "field": "House",
+    "code": "st0312"
+  },
+  "20": {
+    "name": "Yanks Weapon Shop",
+    "field": "House",
+    "code": "st0313"
+  },
+  "21": {
+    "name": "House",
+    "field": "House",
+    "code": "st0314"
+  },
+  "22": {
+    "name": "Ivans Lodge",
+    "field": "House",
+    "code": "st0315"
+  },
+  "23": {
+    "name": "Eternas Outfitter",
+    "field": "Eternas Outfitter",
+    "code": "st0321"
+  },
+  "24": {
+    "name": "White Deer Inn",
+    "field": "Eternas Outfitter",
+    "code": "st0322"
+  },
+  "25": {
+    "name": "Black Grape Inn",
+    "field": "Black Grape Inn",
+    "code": "st0330"
+  },
+  "26": {
+    "name": "Sea Dragon Inn",
+    "field": "Black Grape Inn",
+    "code": "st0331"
+  },
+  "27": {
+    "name": "Supply Store",
+    "field": "Supply Store",
+    "code": "st0340"
+  },
+  "28": {
+    "name": "Forest Ruins Cellar",
+    "field": "Supply Store",
+    "code": "st0341"
+  },
+  "29": {
+    "name": "Abandoned House Cellar",
+    "field": "Supply Store",
+    "code": "st0342"
+  },
+  "30": {
+    "name": "Supply Store Ruins",
+    "field": "Supply Store",
+    "code": "st0343"
+  },
+  "31": {
+    "name": "Wine Cellar Ruins",
+    "field": "Supply Store",
+    "code": "st0344"
+  },
+  "32": {
+    "name": "Lighthouse Underground Stores",
+    "field": "Supply Store",
+    "code": "st0345"
+  },
+  "33": {
+    "name": "Seaside Cellar",
+    "field": "Seaside Cellar",
+    "code": "st0350"
+  },
+  "34": {
+    "name": "Beach Underground Stores",
+    "field": "Seaside Cellar",
+    "code": "st0351"
+  },
+  "35": {
+    "name": "Underground Stores",
+    "field": "Seaside Cellar",
+    "code": "st0352"
+  },
+  "36": {
+    "name": "Cell",
+    "field": "Seaside Cellar",
+    "code": "st0353"
+  },
+  "37": {
+    "name": "Ruins Site Cellar",
+    "field": "Seaside Cellar",
+    "code": "st0354"
+  },
+  "38": {
+    "name": "Plains Abandoned House Cellar",
+    "field": "Seaside Cellar",
+    "code": "st0355"
+  },
+  "39": {
+    "name": "Ruins Cellar",
+    "field": "Seaside Cellar",
+    "code": "st0356"
+  },
+  "40": {
+    "name": "Dry Underground Stores",
+    "field": "Seaside Cellar",
+    "code": "st0357"
+  },
+  "41": {
+    "name": "Ruins Site Cellar",
+    "field": "Seaside Cellar",
+    "code": "st0358"
+  },
+  "42": {
+    "name": "House",
+    "field": "House",
+    "code": "st0360"
+  },
+  "43": {
+    "name": "House",
+    "field": "House",
+    "code": "st0361"
+  },
+  "44": {
+    "name": "House",
+    "field": "House",
+    "code": "st0362"
+  },
+  "45": {
+    "name": "House",
+    "field": "House",
+    "code": "st0363"
+  },
+  "46": {
+    "name": "House",
+    "field": "House",
+    "code": "st0364"
+  },
+  "47": {
+    "name": "Lighthouse Keepers House",
+    "field": "House",
+    "code": "st0365"
+  },
+  "48": {
+    "name": "Singing Winds Inn",
+    "field": "Singing Winds Inn",
+    "code": "st0370"
+  },
+  "49": {
+    "name": "Rauls Arms and Armor Workshop",
+    "field": "Singing Winds Inn",
+    "code": "st0371"
+  },
+  "50": {
+    "name": "Brandons Armor Shop",
+    "field": "Singing Winds Inn",
+    "code": "st0372"
+  },
+  "51": {
+    "name": "Lone House in the Valley",
+    "field": "Singing Winds Inn",
+    "code": "st0373"
+  },
+  "52": {
+    "name": "Red Crystal Inn",
+    "field": "Red Crystal Inn",
+    "code": "st0380"
+  },
+  "53": {
+    "name": "Sleeping Wolf Inn",
+    "field": "Red Crystal Inn",
+    "code": "st0381"
+  },
+  "54": {
+    "name": "Caseys General Store",
+    "field": "Caseys General Store",
+    "code": "st0600"
+  },
+  "55": {
+    "name": "Hermits House",
+    "field": "Caseys General Store",
+    "code": "st0601"
+  },
+  "56": {
+    "name": "Specialist Trading Post",
+    "field": "Caseys General Store",
+    "code": "st0602"
+  },
+  "57": {
+    "name": "Oswalds Armor Shop",
+    "field": "Oswalds Armor Shop",
+    "code": "st0610"
+  },
+  "58": {
+    "name": "Mergodan Residence",
+    "field": "Oswalds Armor Shop",
+    "code": "st0611"
+  },
+  "59": {
+    "name": "Mergodan Residence",
+    "field": "Oswalds Armor Shop",
+    "code": "st0612"
+  },
+  "60": {
+    "name": "Old Capital Ruins",
+    "field": "Oswalds Armor Shop",
+    "code": "st0613"
+  },
+  "61": {
+    "name": "Golden Tankard Inn",
+    "field": "Golden Tankard Inn",
+    "code": "st0620"
+  },
+  "62": {
+    "name": "An Alchemists Home",
+    "field": "Golden Tankard Inn",
+    "code": "st0621"
+  },
+  "63": {
+    "name": "Theodors Alchemy Workshop",
+    "field": "Theodors Alchemy Workshop",
+    "code": "st0622"
+  },
+  "64": {
+    "name": "Elixir Refining Chamber",
+    "field": "Golden Tankard Inn",
+    "code": "st0623"
+  },
+  "65": {
+    "name": "Old Capital Ruins",
+    "field": "Golden Tankard Inn",
+    "code": "st0624"
+  },
+  "66": {
+    "name": "Gritten Fort",
+    "field": "Gritten Fort",
+    "code": "st0400"
+  },
+  "67": {
+    "name": "Glowworm Cave",
+    "field": "Glowworm Cave",
+    "code": "st0401"
+  },
+  "68": {
+    "name": "Gardnox Fortress",
+    "field": "Gardnox Fortress",
+    "code": "st0402"
+  },
+  "69": {
+    "name": "Dreed Castle",
+    "field": "Dreed Castle",
+    "code": "st0403"
+  },
+  "70": {
+    "name": "Erte Deenan",
+    "field": "Erte Deenan",
+    "code": "st0404"
+  },
+  "71": {
+    "name": "Gritten Fort",
+    "field": "Gritten Fort",
+    "code": "st0405"
+  },
+  "72": {
+    "name": "Volden Large Tunnels",
+    "field": "Volden Large Tunnels",
+    "code": "st0406"
+  },
+  "73": {
+    "name": "Dragons Nest",
+    "field": "Dragons Nest",
+    "code": "st0407"
+  },
+  "74": {
+    "name": "Temple of Purification",
+    "field": "Temple of Purification",
+    "code": "st0408"
+  },
+  "75": {
+    "name": "The Golden Palace",
+    "field": "The Golden Palace",
+    "code": "st0409"
+  },
+  "76": {
+    "name": "Mergoda Ruins Lower Level",
+    "field": "Mergoda Ruins Lower Level",
+    "code": "st0410"
+  },
+  "77": {
+    "name": "Mergoda Security District",
+    "field": "Mergoda Security District",
+    "code": "st0411"
+  },
+  "78": {
+    "name": "Pawn Cathedral",
+    "field": "Pawn Cathedral",
+    "code": "st0412"
+  },
+  "79": {
+    "name": "Ancient Place of Rituals",
+    "field": "Ancient Place of Rituals",
+    "code": "st0413"
+  },
+  "80": {
+    "name": "Kinoza Mineral Springs",
+    "field": "Kinoza Mineral Springs",
+    "code": "st0414"
+  },
+  "81": {
+    "name": "Temple of Purification South Chamber",
+    "field": "Temple of Purification South Chamber",
+    "code": "st0415"
+  },
+  "82": {
+    "name": "Ancient Place of Rituals",
+    "field": "Ancient Place of Rituals",
+    "code": "st0416"
+  },
+  "83": {
+    "name": "Gritten Fort",
+    "field": "Gritten Fort",
+    "code": "st0417"
+  },
+  "84": {
+    "name": "Mergoda Ruins Royal Palace Level",
+    "field": "Mergoda Ruins Royal Palace Level",
+    "code": "st0418"
+  },
+  "85": {
+    "name": "st0500",
+    "field": "Hidell Catacombs",
+    "code": "st0500"
+  },
+  "86": {
+    "name": "st0501",
+    "field": "Abandoned Boneyard",
+    "code": "st0501"
+  },
+  "87": {
+    "name": "st0502",
+    "field": "Blocked Passage",
+    "code": "st0502"
+  },
+  "88": {
+    "name": "st0503",
+    "field": "Small Cave Tombs",
+    "code": "st0503"
+  },
+  "89": {
+    "name": "st0504",
+    "field": "Abandoned Underground Passage",
+    "code": "st0504"
+  },
+  "90": {
+    "name": "st0505",
+    "field": "Catacombs",
+    "code": "st0505"
+  },
+  "91": {
+    "name": "st0506",
+    "field": "Betland Cemetery",
+    "code": "st0506"
+  },
+  "92": {
+    "name": "st0507",
+    "field": "Dead Lord's Labyrinth",
+    "code": "st0507"
+  },
+  "93": {
+    "name": "st0508",
+    "field": "Shrine of Resentment",
+    "code": "st0508"
+  },
+  "94": {
+    "name": "st0509",
+    "field": "Empty Chapel",
+    "code": "st0509"
+  },
+  "95": {
+    "name": "st0510",
+    "field": "Hobolic Cave",
+    "code": "st0510"
+  },
+  "96": {
+    "name": "st0511",
+    "field": "Miners' Secret Route",
+    "code": "st0511"
+  },
+  "97": {
+    "name": "st0512",
+    "field": "Forest People's Tunnel",
+    "code": "st0512"
+  },
+  "98": {
+    "name": "st0513",
+    "field": "Roaring Tide Cave",
+    "code": "st0513"
+  },
+  "99": {
+    "name": "st0514",
+    "field": "Windhowl Cave",
+    "code": "st0514"
+  },
+  "100": {
+    "name": "st0515",
+    "field": "Cliff-Side Tunnel",
+    "code": "st0515"
+  },
+  "101": {
+    "name": "st0516",
+    "field": "Volden Narrow Tunnels",
+    "code": "st0516"
+  },
+  "102": {
+    "name": "st0517",
+    "field": "Bandit Hideaway",
+    "code": "st0517"
+  },
+  "103": {
+    "name": "st0518",
+    "field": "Demon's Grotto",
+    "code": "st0518"
+  },
+  "104": {
+    "name": "st0519",
+    "field": "Southern Wall Fissure",
+    "code": "st0519"
+  },
+  "105": {
+    "name": "st0520",
+    "field": "Bowmaster's Secret Lodge",
+    "code": "st0520"
+  },
+  "106": {
+    "name": "st0521",
+    "field": "Le Karvas Patiro",
+    "code": "st0521"
+  },
+  "107": {
+    "name": "st0522",
+    "field": "Le Karvas Lotana",
+    "code": "st0522"
+  },
+  "108": {
+    "name": "st0523",
+    "field": "Le Karvas Salto",
+    "code": "st0523"
+  },
+  "109": {
+    "name": "st0524",
+    "field": "Le Karvas Arma",
+    "code": "st0524"
+  },
+  "110": {
+    "name": "st0525",
+    "field": "Dark Green Terrace",
+    "code": "st0525"
+  },
+  "111": {
+    "name": "st0526",
+    "field": "Sacred Spring Terrace",
+    "code": "st0526"
+  },
+  "112": {
+    "name": "st0527",
+    "field": "Greenleaf Terrace",
+    "code": "st0527"
+  },
+  "113": {
+    "name": "st0528",
+    "field": "Sunset Terrace",
+    "code": "st0528"
+  },
+  "114": {
+    "name": "st0529",
+    "field": "Moonlight Terrace",
+    "code": "st0529"
+  },
+  "115": {
+    "name": "st0530",
+    "field": "Dreed Drainage Channels",
+    "code": "st0530"
+  },
+  "116": {
+    "name": "st0531",
+    "field": "Cesspool",
+    "code": "st0531"
+  },
+  "117": {
+    "name": "st0532",
+    "field": "Underground Side Entrance",
+    "code": "st0532"
+  },
+  "118": {
+    "name": "st0533",
+    "field": "Defiled Waterway",
+    "code": "st0533"
+  },
+  "119": {
+    "name": "st0534",
+    "field": "North Drainage Channel",
+    "code": "st0534"
+  },
+  "120": {
+    "name": "st0535",
+    "field": "Knights' Old Route",
+    "code": "st0535"
+  },
+  "121": {
+    "name": "st0536",
+    "field": "Balcony",
+    "code": "st0536"
+  },
+  "122": {
+    "name": "st0537",
+    "field": "Purified Water Section",
+    "code": "st0537"
+  },
+  "123": {
+    "name": "st0538",
+    "field": "Knights' Old Storehouse",
+    "code": "st0538"
+  },
+  "124": {
+    "name": "st0539",
+    "field": "Lakeside Cellar",
+    "code": "st0539"
+  },
+  "125": {
+    "name": "st0540",
+    "field": "Fort's Old Well",
+    "code": "st0540"
+  },
+  "126": {
+    "name": "st0541",
+    "field": "Tel's Withered Well",
+    "code": "st0541"
+  },
+  "127": {
+    "name": "st0542",
+    "field": "Village's Abandoned Well",
+    "code": "st0542"
+  },
+  "128": {
+    "name": "st0543",
+    "field": "Old Spring",
+    "code": "st0543"
+  },
+  "129": {
+    "name": "st0544",
+    "field": "Village Well",
+    "code": "st0544"
+  },
+  "130": {
+    "name": "st0545",
+    "field": "Decaying Well",
+    "code": "st0545"
+  },
+  "131": {
+    "name": "st0546",
+    "field": "Keening Well",
+    "code": "st0546"
+  },
+  "132": {
+    "name": "st0547",
+    "field": "Sage's Old Well",
+    "code": "st0547"
+  },
+  "133": {
+    "name": "st0548",
+    "field": "Lighthouse Old Well",
+    "code": "st0548"
+  },
+  "134": {
+    "name": "st0549",
+    "field": "Roadside Dry Well",
+    "code": "st0549"
+  },
+  "135": {
+    "name": "st0550",
+    "field": "Training Chapel",
+    "code": "st0550"
+  },
+  "136": {
+    "name": "st0551",
+    "field": "Valley Chapel",
+    "code": "st0551"
+  },
+  "137": {
+    "name": "st0552",
+    "field": "Mysree Grove Shrine",
+    "code": "st0552"
+  },
+  "138": {
+    "name": "st0553",
+    "field": "Summit Chapel",
+    "code": "st0553"
+  },
+  "139": {
+    "name": "st0554",
+    "field": "Zandora Wastelands Shrine",
+    "code": "st0554"
+  },
+  "140": {
+    "name": "st0560",
+    "field": "The Rift",
+    "code": "st0560"
+  },
+  "141": {
+    "name": "Breya Coast",
+    "field": "Hidell Plains",
+    "code": "st0103"
+  },
+  "142": {
+    "name": "st0562",
+    "field": "The Rift",
+    "code": "st0562"
+  },
+  "143": {
+    "name": "st0570",
+    "field": "The Ark",
+    "code": "st0570"
+  },
+  "144": {
+    "name": "st0571",
+    "field": "The Second Ark",
+    "code": "st0571"
+  },
+  "145": {
+    "name": "st0572",
+    "field": "The Third Ark",
+    "code": "st0572"
+  },
+  "146": {
+    "name": "st0573",
+    "field": "The Ark",
+    "code": "st0573"
+  },
+  "147": {
+    "name": "st0574",
+    "field": "The Second Ark",
+    "code": "st0574"
+  },
+  "148": {
+    "name": "st0575",
+    "field": "The Third Ark",
+    "code": "st0575"
+  },
+  "149": {
+    "name": "st0580",
+    "field": "Lakebottom Connecting Passage",
+    "code": "st0580"
+  },
+  "150": {
+    "name": "st0581",
+    "field": "War Demons' Hideout",
+    "code": "st0581"
+  },
+  "151": {
+    "name": "st0582",
+    "field": "Dreed Waterway Ruins",
+    "code": "st0582"
+  },
+  "152": {
+    "name": "st0583",
+    "field": "Kinoza Drains",
+    "code": "st0583"
+  },
+  "153": {
+    "name": "st0584",
+    "field": "Lynwood Underground Waterway",
+    "code": "st0584"
+  },
+  "154": {
+    "name": "st0585",
+    "field": "Knights' Old Guardhouse",
+    "code": "st0585"
+  },
+  "155": {
+    "name": "st0586",
+    "field": "Betland Underground Passage",
+    "code": "st0586"
+  },
+  "156": {
+    "name": "st0587",
+    "field": "Tegor Floodway",
+    "code": "st0587"
+  },
+  "157": {
+    "name": "st0588",
+    "field": "Mergoda Waterway",
+    "code": "st0588"
+  },
+  "158": {
+    "name": "st0589",
+    "field": "Blue Waterway",
+    "code": "st0589"
+  },
+  "159": {
+    "name": "st0590",
+    "field": "Mysree Limestone Cave",
+    "code": "st0590"
+  },
+  "160": {
+    "name": "st0591",
+    "field": "Demon's Den",
+    "code": "st0591"
+  },
+  "161": {
+    "name": "st0592",
+    "field": "Hunters' Secret Passage",
+    "code": "st0592"
+  },
+  "162": {
+    "name": "st0700",
+    "field": "Sacred Tree Terrace",
+    "code": "st0700"
+  },
+  "163": {
+    "name": "st0701",
+    "field": "Divine Blossom Terrace",
+    "code": "st0701"
+  },
+  "164": {
+    "name": "st0710",
+    "field": "Old Underground Laboratory",
+    "code": "st0710"
+  },
+  "165": {
+    "name": "st0720",
+    "field": "Old Sealed Well",
+    "code": "st0720"
+  },
+  "166": {
+    "name": "st0721",
+    "field": "Half-finished Well",
+    "code": "st0721"
+  },
+  "167": {
+    "name": "st0722",
+    "field": "Groaning Old Well",
+    "code": "st0722"
+  },
+  "168": {
+    "name": "st0723",
+    "field": "Arcane Font",
+    "code": "st0723"
+  },
+  "169": {
+    "name": "st0724",
+    "field": "Water Channel Ruins",
+    "code": "st0724"
+  },
+  "170": {
+    "name": "st0725",
+    "field": "Deep Water's Edge",
+    "code": "st0725"
+  },
+  "171": {
+    "name": "st0726",
+    "field": "Bower Old Well",
+    "code": "st0726"
+  },
+  "172": {
+    "name": "st0727",
+    "field": "Fairy's Withered Well",
+    "code": "st0727"
+  },
+  "173": {
+    "name": "st0730",
+    "field": "Underground Crypt",
+    "code": "st0730"
+  },
+  "230": {
+    "name": "Battlefield Outside Gritten Fort",
+    "field": "Hidell Plains",
+    "code": "st0101"
+  },
+  "231": {
+    "name": "st0728",
+    "field": "Old Waterhole",
+    "code": "st0728"
+  },
+  "237": {
+    "name": "Mergoda Residential Area",
+    "field": "Golden Tankard Inn",
+    "code": "st0625"
+  },
+  "238": {
+    "name": "st0731",
+    "field": "Hidell Catacombs Depths",
+    "code": "st0731"
+  },
+  "239": {
+    "name": "st0732",
+    "field": "Hidell Catacombs Innermost Depths",
+    "code": "st0732"
+  },
+  "240": {
+    "name": "st0576",
+    "field": "The Ark",
+    "code": "st0576"
+  },
+  "286": {
+    "name": "Ancient Place of Rituals",
+    "field": "Ancient Place of Rituals",
+    "code": "st0419"
+  },
+  "288": {
+    "name": "Mergoda Ruins Royal Palace Level",
+    "field": "Mergoda Ruins Royal Palace Level",
+    "code": "st0421"
+  },
+  "289": {
+    "name": "The Golden Palace",
+    "field": "The Golden Palace",
+    "code": "st0422"
+  },
+  "290": {
+    "name": "st0702",
+    "field": "Blue Stillness Ruins",
+    "code": "st0702"
+  },
+  "293": {
+    "name": "st0733",
+    "field": "Dark Great Catacombs",
+    "code": "st0733"
+  },
+  "300": {
+    "name": "Gritten Fort",
+    "field": "Gritten Fort",
+    "code": "st0423"
+  },
+  "308": {
+    "name": "Mergoda Security District",
+    "field": "Mergoda Security District",
+    "code": "st0424"
+  },
+  "316": {
+    "name": "st0800",
+    "field": "Infected Den",
+    "code": "st0800"
+  },
+  "317": {
+    "name": "st0801",
+    "field": "Expedition Garrison",
+    "code": "st0801"
+  },
+  "318": {
+    "name": "st0802",
+    "field": "Cesspool of Filth",
+    "code": "st0802"
+  },
+  "319": {
+    "name": "st0803",
+    "field": "Echo Cascade Cavern",
+    "code": "st0803"
+  },
+  "320": {
+    "name": "st0804",
+    "field": "Statuary Hollow",
+    "code": "st0804"
+  },
+  "321": {
+    "name": "st0805",
+    "field": "Infected Den Depths",
+    "code": "st0805"
+  },
+  "322": {
+    "name": "st0806",
+    "field": "Fungal Colony Caves",
+    "code": "st0806"
+  },
+  "329": {
+    "name": "st0820",
+    "field": "Knights' Depot Ruins",
+    "code": "st0820"
+  },
+  "330": {
+    "name": "st0821",
+    "field": "Frigid Ancient Passage",
+    "code": "st0821"
+  },
+  "331": {
+    "name": "st0822",
+    "field": "Crypt of Murmurs",
+    "code": "st0822"
+  },
+  "332": {
+    "name": "st0823",
+    "field": "Dreed Connecting Passage",
+    "code": "st0823"
+  },
+  "333": {
+    "name": "st0824",
+    "field": "Moltova Ruins",
+    "code": "st0824"
+  },
+  "334": {
+    "name": "st0825",
+    "field": "Gardnox Sewers",
+    "code": "st0825"
+  },
+  "335": {
+    "name": "Bloodbane Isle",
+    "field": "Bloodbane Isle",
+    "code": "st0110"
+  },
+  "336": {
+    "name": "Bloodbane Isle Precipice",
+    "field": "Bloodbane Isle",
+    "code": "st0111"
+  },
+  "337": {
+    "name": "Bloodbane Isle Summit",
+    "field": "Bloodbane Isle",
+    "code": "st0112"
+  },
+  "339": {
+    "name": "Protectors Retreat",
+    "field": "Protectors Retreat",
+    "code": "st0910"
+  },
+  "340": {
+    "name": "Morfaul Centrum",
+    "field": "Morfaul Centrum",
+    "code": "st0920"
+  },
+  "341": {
+    "name": "Dana Centrum",
+    "field": "Dana Centrum",
+    "code": "st0930"
+  },
+  "342": {
+    "name": "Leos Hideout",
+    "field": "Leos Hideout",
+    "code": "st0940"
+  },
+  "347": {
+    "name": "Clan Hall",
+    "field": "Clan Hall",
+    "code": "st0210"
+  },
+  "348": {
+    "name": "Arisens Room",
+    "field": "Arisens Room",
+    "code": "st0211"
+  },
+  "349": {
+    "name": "Training Room",
+    "field": "Training Room",
+    "code": "st0212"
+  },
+  "350": {
+    "name": "Mayleafs Bedroom",
+    "field": "Mayleafs Bedroom",
+    "code": "st0213"
+  },
+  "361": {
+    "name": "Vortex of Stagnation",
+    "field": "Vortex of Stagnation",
+    "code": "st0430"
+  },
+  "362": {
+    "name": "Vortex of Stagnation",
+    "field": "Vortex of Stagnation",
+    "code": "st0431"
+  },
+  "363": {
+    "name": "st0840",
+    "field": "Pit of Screams",
+    "code": "st0840"
+  },
+  "364": {
+    "name": "st0841",
+    "field": "Forsaken Well",
+    "code": "st0841"
+  },
+  "365": {
+    "name": "st0842",
+    "field": "Towerside Dry Well",
+    "code": "st0842"
+  },
+  "366": {
+    "name": "st0860",
+    "field": "Farana Ruins",
+    "code": "st0860"
+  },
+  "367": {
+    "name": "st0861",
+    "field": "Sacred River Ruins",
+    "code": "st0861"
+  },
+  "368": {
+    "name": "st0862",
+    "field": "Nebula Temple",
+    "code": "st0862"
+  },
+  "369": {
+    "name": "st0863",
+    "field": "Amburos Great Ruins",
+    "code": "st0863"
+  },
+  "371": {
+    "name": "Farana Plains",
+    "field": "Farana Plains",
+    "code": "st0120"
+  },
+  "372": {
+    "name": "Elan Water Grove",
+    "field": "Farana Plains",
+    "code": "st0121"
+  },
+  "373": {
+    "name": "Kingal Canyon",
+    "field": "Farana Plains",
+    "code": "st0122"
+  },
+  "374": {
+    "name": "Morrow Forest",
+    "field": "Farana Plains",
+    "code": "st0123"
+  },
+  "375": {
+    "name": "Shadolean Great Temple",
+    "field": "Shadolean Great Temple",
+    "code": "st0433"
+  },
+  "376": {
+    "name": "Shadolean Great Temple",
+    "field": "Shadolean Great Temple",
+    "code": "st0432"
+  },
+  "377": {
+    "name": "Glyndwr Centrum",
+    "field": "Glyndwr Centrum",
+    "code": "st0921"
+  },
+  "378": {
+    "name": "Sauzanel Infected Woods",
+    "field": "Sauzanel Infected Woods",
+    "code": "st0950"
+  },
+  "379": {
+    "name": "Between Sacred Drops",
+    "field": "Between Sacred Drops",
+    "code": "st0434"
+  },
+  "380": {
+    "name": "Spirit Dragons Roost",
+    "field": "Spirit Dragons Roost",
+    "code": "st0435"
+  },
+  "381": {
+    "name": "Spirit Dragons Roost",
+    "field": "Spirit Dragons Roost",
+    "code": "st0436"
+  },
+  "382": {
+    "name": "st0880",
+    "field": "Hollow of Beginnings",
+    "code": "st0880"
+  },
+  "383": {
+    "name": "st0881",
+    "field": "Hollow of Beginnings",
+    "code": "st0881"
+  },
+  "384": {
+    "name": "st0882",
+    "field": "Hollow of Beginnings: Gathering Area",
+    "code": "st0882"
+  },
+  "385": {
+    "name": "st0883",
+    "field": "Vegasa Corridor",
+    "code": "st0883"
+  },
+  "386": {
+    "name": "st0884",
+    "field": "Valtable Hall",
+    "code": "st0884"
+  },
+  "387": {
+    "name": "st0885",
+    "field": "Branch of Remembrance",
+    "code": "st0885"
+  },
+  "388": {
+    "name": "st0886",
+    "field": "Branch of Nostalgia",
+    "code": "st0886"
+  },
+  "389": {
+    "name": "st0887",
+    "field": "Branch of Remorse",
+    "code": "st0887"
+  },
+  "390": {
+    "name": "st0888",
+    "field": "Branch of Contemplation",
+    "code": "st0888"
+  },
+  "397": {
+    "name": "Small Tower of Wisdom",
+    "field": "Small Tower of Wisdom",
+    "code": "st0901"
+  },
+  "400": {
+    "name": "Tower of Ivanos",
+    "field": "Small Tower of Wisdom",
+    "code": "st0905"
+  },
+  "401": {
+    "name": "Spirit Arts Hut",
+    "field": "Protectors Retreat",
+    "code": "st0911"
+  },
+  "402": {
+    "name": "Green Nights Retreat",
+    "field": "Protectors Retreat",
+    "code": "st0912"
+  },
+  "403": {
+    "name": "Northerners Infected Woods",
+    "field": "Northerners Infected Woods",
+    "code": "st0951"
+  },
+  "404": {
+    "name": "Deepney Great Forest",
+    "field": "Deepney Great Forest",
+    "code": "st0952"
+  },
+  "405": {
+    "name": "st0565",
+    "field": "The Rift's Inner Depths",
+    "code": "st0565"
+  },
+  "406": {
+    "name": "st0577",
+    "field": "The Ark's Lower Level",
+    "code": "st0577"
+  },
+  "408": {
+    "name": "st0807",
+    "field": "Bridgeside Tunnel",
+    "code": "st0807"
+  },
+  "409": {
+    "name": "st0808",
+    "field": "Skylight Tunnel",
+    "code": "st0808"
+  },
+  "410": {
+    "name": "st0809",
+    "field": "Scorching Blocked Passage",
+    "code": "st0809"
+  },
+  "411": {
+    "name": "st0810",
+    "field": "Manun Village",
+    "code": "st0810"
+  },
+  "413": {
+    "name": "st0812",
+    "field": "Danandell Cave",
+    "code": "st0812"
+  },
+  "414": {
+    "name": "st0813",
+    "field": "Path to Morrow",
+    "code": "st0813"
+  },
+  "415": {
+    "name": "st0814",
+    "field": "Dancing Rainbow Cave",
+    "code": "st0814"
+  },
+  "416": {
+    "name": "st0815",
+    "field": "Jungle Limestone Caves",
+    "code": "st0815"
+  },
+  "417": {
+    "name": "st0816",
+    "field": "Invading Demons Cave",
+    "code": "st0816"
+  },
+  "418": {
+    "name": "st0817",
+    "field": "Morrow Cavern",
+    "code": "st0817"
+  },
+  "419": {
+    "name": "st0826",
+    "field": "Dunhain's Hall of Trials",
+    "code": "st0826"
+  },
+  "420": {
+    "name": "st0827",
+    "field": "Magusas Ancient Canal",
+    "code": "st0827"
+  },
+  "422": {
+    "name": "st0829",
+    "field": "Hadin Underground Old Road",
+    "code": "st0829"
+  },
+  "423": {
+    "name": "st0830",
+    "field": "Ancient Underground Channels",
+    "code": "st0830"
+  },
+  "424": {
+    "name": "st0843",
+    "field": "Hidden Observatory",
+    "code": "st0843"
+  },
+  "425": {
+    "name": "st0844",
+    "field": "Dead Blooms' Well",
+    "code": "st0844"
+  },
+  "426": {
+    "name": "st0845",
+    "field": "Stream Alley",
+    "code": "st0845"
+  },
+  "427": {
+    "name": "st0850",
+    "field": "Misty Illusion Terrace",
+    "code": "st0850"
+  },
+  "428": {
+    "name": "st0851",
+    "field": "Soaring Sky Terrace",
+    "code": "st0851"
+  },
+  "429": {
+    "name": "st0865",
+    "field": "Grinmel Ruins",
+    "code": "st0865"
+  },
+  "430": {
+    "name": "st0870",
+    "field": "Mysree Barrow",
+    "code": "st0870"
+  },
+  "431": {
+    "name": "st0871",
+    "field": "Penitentiary",
+    "code": "st0871"
+  },
+  "432": {
+    "name": "st0872",
+    "field": "Mysterious Mausoleum",
+    "code": "st0872"
+  },
+  "433": {
+    "name": "Bloodbane Isle",
+    "field": "Bloodbane Isle",
+    "code": "st0113"
+  },
+  "434": {
+    "name": "Dana Chiefs Home",
+    "field": "Protectors Retreat",
+    "code": "st0913"
+  },
+  "435": {
+    "name": "Morfaul Chiefs Home",
+    "field": "Protectors Retreat",
+    "code": "st0914"
+  },
+  "439": {
+    "name": "st0818",
+    "field": "Elan Quarry Cave",
+    "code": "st0818"
+  },
+  "440": {
+    "name": "st0831",
+    "field": "Thalati Waterway",
+    "code": "st0831"
+  },
+  "442": {
+    "name": "Volden Large Tunnels",
+    "field": "Volden Large Tunnels",
+    "code": "st0437"
+  },
+  "443": {
+    "name": "st0832",
+    "field": "Echotide Meditation Hall",
+    "code": "st0832"
+  },
+  "444": {
+    "name": "Bloodbane Isle Summit",
+    "field": "Bloodbane Isle",
+    "code": "st0114"
+  },
+  "446": {
+    "name": "st0960",
+    "field": "The Foreigner's Cave",
+    "code": "st0960"
+  },
+  "448": {
+    "name": "st0866",
+    "field": "Ancient Underground Shrine",
+    "code": "st0866"
+  },
+  "449": {
+    "name": "st0867",
+    "field": "The Foreigner's Remains",
+    "code": "st0867"
+  },
+  "450": {
+    "name": "The Foreigners Tower",
+    "field": "Small Tower of Wisdom",
+    "code": "st0906"
+  },
+  "451": {
+    "name": "st0819",
+    "field": "Old Ferryman's Haunt",
+    "code": "st0819"
+  },
+  "452": {
+    "name": "Ancient Place of Rituals",
+    "field": "Ancient Place of Rituals",
+    "code": "st0438"
+  },
+  "454": {
+    "name": "st0847",
+    "field": "Thalati Waterway",
+    "code": "st0847"
+  },
+  "455": {
+    "name": "Shadolean Great Temple",
+    "field": "Shadolean Great Temple",
+    "code": "st0439"
+  },
+  "458": {
+    "name": "st0889",
+    "field": "Warped Canopy",
+    "code": "st0889"
+  },
+  "459": {
+    "name": "Farana Plains",
+    "field": "Farana Plains",
+    "code": "st0124"
+  },
+  "461": {
+    "name": "Rathnite Foothills",
+    "field": "Rathnite Foothills",
+    "code": "st0130"
+  },
+  "462": {
+    "name": "Rathnite Foothills Lakeside",
+    "field": "Rathnite Foothills",
+    "code": "st0131"
+  },
+  "463": {
+    "name": "Feryana Wilderness",
+    "field": "Rathnite Foothills",
+    "code": "st0132"
+  },
+  "464": {
+    "name": "Megadosys Plateau",
+    "field": "Rathnite Foothills",
+    "code": "st0133"
+  },
+  "465": {
+    "name": "Urteca Mountains",
+    "field": "Rathnite Foothills",
+    "code": "st0134"
+  },
+  "466": {
+    "name": "Fort Thines",
+    "field": "Fort Thines",
+    "code": "st0440"
+  },
+  "467": {
+    "name": "Fort Thines",
+    "field": "Fort Thines",
+    "code": "st0443"
+  },
+  "468": {
+    "name": "Dacreim Fortress",
+    "field": "Dacreim Fortress",
+    "code": "st0441"
+  },
+  "469": {
+    "name": "The Foreigners Tower",
+    "field": "Small Tower of Wisdom",
+    "code": "st0907"
+  },
+  "471": {
+    "name": "st0873",
+    "field": "The Foreigner's Underground Tomb",
+    "code": "st0873"
+  },
+  "472": {
+    "name": "st0890",
+    "field": "Hollow of Beginnings",
+    "code": "st0890"
+  },
+  "476": {
+    "name": "Jifule Fortress",
+    "field": "Jifule Fortress",
+    "code": "st0442"
+  },
+  "477": {
+    "name": "Lookout Castle",
+    "field": "Lookout Castle",
+    "code": "st0450"
+  },
+  "478": {
+    "name": "Lookout Castle",
+    "field": "Lookout Castle",
+    "code": "st0451"
+  },
+  "479": {
+    "name": "st1000",
+    "field": "Lakeside Grotto",
+    "code": "st1000"
+  },
+  "480": {
+    "name": "st1001",
+    "field": "Bertha's Bandit Group Hideout",
+    "code": "st1001"
+  },
+  "481": {
+    "name": "st1020",
+    "field": "Dark Path to the Secret Spring",
+    "code": "st1020"
+  },
+  "482": {
+    "name": "st1021",
+    "field": "Before the Secret Spring",
+    "code": "st1021"
+  },
+  "486": {
+    "name": "Fortress City Megado Residential Level",
+    "field": "Fortress City Megado Residential Level",
+    "code": "st0460"
+  },
+  "487": {
+    "name": "Fortress City Megado Residential Level",
+    "field": "Fortress City Megado Residential Level",
+    "code": "st0461"
+  },
+  "488": {
+    "name": "Fortress City Megado Royal Palace Level",
+    "field": "Fortress City Megado Royal Palace Level",
+    "code": "st0464"
+  },
+  "489": {
+    "name": "Megado Detached Palace",
+    "field": "Megado Corridor",
+    "code": "st0465"
+  },
+  "490": {
+    "name": "Sacred Flame Path",
+    "field": "Sacred Flame Path",
+    "code": "st1100"
+  },
+  "491": {
+    "name": "Sacred Flame Path Upper Level",
+    "field": "Sacred Flame Path Upper Level",
+    "code": "st1101"
+  },
+  "493": {
+    "name": "st1022",
+    "field": "Rathnite Underground Waterway",
+    "code": "st1022"
+  },
+  "494": {
+    "name": "st1080",
+    "field": "Reservoir Underground Tunnel",
+    "code": "st1080"
+  },
+  "495": {
+    "name": "st1002",
+    "field": "Hell's Descent Cave",
+    "code": "st1002"
+  },
+  "496": {
+    "name": "st1060",
+    "field": "Yimidhitt Ruins",
+    "code": "st1060"
+  },
+  "497": {
+    "name": "st1023",
+    "field": "Ulta Ancient Watercourse",
+    "code": "st1023"
+  },
+  "498": {
+    "name": "st1040",
+    "field": "Rathnite Columbarium",
+    "code": "st1040"
+  },
+  "499": {
+    "name": "st1093",
+    "field": "Shrine of the Eternal Blaze",
+    "code": "st1093"
+  },
+  "500": {
+    "name": "st1003",
+    "field": "Thundering Roar Cave",
+    "code": "st1003"
+  },
+  "501": {
+    "name": "st1024",
+    "field": "Restless Water Channel",
+    "code": "st1024"
+  },
+  "502": {
+    "name": "st1061",
+    "field": "False Remains",
+    "code": "st1061"
+  },
+  "504": {
+    "name": "st1025",
+    "field": "Megado Water Supply Network",
+    "code": "st1025"
+  },
+  "506": {
+    "name": "st1094",
+    "field": "Shrine of Combat",
+    "code": "st1094"
+  },
+  "507": {
+    "name": "st1004",
+    "field": "Cavern of Repose",
+    "code": "st1004"
+  },
+  "508": {
+    "name": "st1095",
+    "field": "Firefall Mountain Dragon Temple",
+    "code": "st1095"
+  },
+  "509": {
+    "name": "st1043",
+    "field": "The Burial Chamber of the Unmourned",
+    "code": "st1043"
+  },
+  "511": {
+    "name": "Piremoth Travelers Inn",
+    "field": "House",
+    "code": "st0630"
+  },
+  "512": {
+    "name": "Rothgill Travelers Inn",
+    "field": "Red Crystal Inn",
+    "code": "st0631"
+  },
+  "513": {
+    "name": "Trading Company",
+    "field": "Singing Winds Inn",
+    "code": "st0632"
+  },
+  "514": {
+    "name": "House",
+    "field": "House",
+    "code": "st0633"
+  },
+  "515": {
+    "name": "House",
+    "field": "House",
+    "code": "st0634"
+  },
+  "516": {
+    "name": "st1091",
+    "field": "Royal Family's Secret Path",
+    "code": "st1091"
+  },
+  "517": {
+    "name": "Megado Corridor",
+    "field": "Megado Corridor",
+    "code": "st0462"
+  },
+  "518": {
+    "name": "Megado Cathedral",
+    "field": "Megado Corridor",
+    "code": "st0463"
+  },
+  "519": {
+    "name": "Fort Thines",
+    "field": "Fort Thines",
+    "code": "st0444"
+  },
+  "520": {
+    "name": "Mephite Travelers Inn",
+    "field": "House",
+    "code": "st0635"
+  },
+  "523": {
+    "name": "st1120",
+    "field": "Bonus Dungeon (XP)",
+    "code": "st1120"
+  },
+  "524": {
+    "name": "st1121",
+    "field": "Bonus Dungeon (R)",
+    "code": "st1121"
+  },
+  "525": {
+    "name": "st1122",
+    "field": "Bonus Dungeon (BO)",
+    "code": "st1122"
+  },
+  "526": {
+    "name": "st1123",
+    "field": "Bonus Dungeon (G)",
+    "code": "st1123"
+  },
+  "548": {
+    "name": "Event Blackeffectroom",
+    "field": "Event Blackeffectroom",
+    "code": "st0470"
+  },
+  "549": {
+    "name": "st1140",
+    "field": "Epitaph Road: Rathnite Foothills",
+    "code": "st1140"
+  },
+  "550": {
+    "name": "st1141",
+    "field": "Epitaph Road: Shrine",
+    "code": "st1141"
+  },
+  "551": {
+    "name": "st1142",
+    "field": "Epitaph Road: Cave",
+    "code": "st1142"
+  },
+  "552": {
+    "name": "st1143",
+    "field": "Epitaph Road Ruins",
+    "code": "st1143"
+  },
+  "553": {
+    "name": "st1144",
+    "field": "Epitaph Road Waterway",
+    "code": "st1144"
+  },
+  "554": {
+    "name": "st1145",
+    "field": "Epitaph Road Well",
+    "code": "st1145"
+  },
+  "555": {
+    "name": "st1146",
+    "field": "Epitaph Road Tomb",
+    "code": "st1146"
+  },
+  "556": {
+    "name": "st1147",
+    "field": "Epitaph Road Ruins Depths",
+    "code": "st1147"
+  },
+  "557": {
+    "name": "st1148",
+    "field": "Epitaph Road: Feryana Wilderness",
+    "code": "st1148"
+  },
+  "558": {
+    "name": "st1149",
+    "field": "Old Epitaph Road Shrine",
+    "code": "st1149"
+  },
+  "559": {
+    "name": "Memory of Megadosys",
+    "field": "Rathnite Foothills",
+    "code": "st1150"
+  },
+  "560": {
+    "name": "st1151",
+    "field": "Memory of Megadosys Old Road",
+    "code": "st1151"
+  },
+  "561": {
+    "name": "st1152",
+    "field": "Memory of Megadosys: War God Room",
+    "code": "st1152"
+  },
+  "563": {
+    "name": "Memory of Urteca",
+    "field": "Rathnite Foothills",
+    "code": "st1154"
+  },
+  "564": {
+    "name": "Memories of the Earth Sacred Flame Path",
+    "field": "Sacred Flame Path",
+    "code": "st1155"
+  },
+  "565": {
+    "name": "st1156",
+    "field": "Memory of Urteca: War God Room",
+    "code": "st1156"
+  },
+  "566": {
+    "name": "Memory of Royal Family Mausoleum",
+    "field": "The Royal Family Mausoleum",
+    "code": "st1157"
+  },
+  "567": {
+    "name": "Memory of Firefall Mountain Campsite",
+    "field": "Memory of Firefall Mountain Campsite",
+    "code": "st1158"
+  },
+  "569": {
+    "name": "st1092",
+    "field": "Hell's Descent Cave Inner Depths",
+    "code": "st1092"
+  },
+  "570": {
+    "name": "st1063",
+    "field": "Old Tekia Grotto",
+    "code": "st1063"
+  },
+  "571": {
+    "name": "Forest of Mist",
+    "field": "Rathnite Foothills",
+    "code": "st0135"
+  },
+  "572": {
+    "name": "Dacreim Fortress",
+    "field": "Dacreim Fortress",
+    "code": "st0445"
+  },
+  "573": {
+    "name": "Dacreim Fortress",
+    "field": "Dacreim Fortress",
+    "code": "st0446"
+  },
+  "574": {
+    "name": "Jifule Fortress",
+    "field": "Jifule Fortress",
+    "code": "st0447"
+  },
+  "575": {
+    "name": "Rathnite Foothills Lakeside",
+    "field": "Rathnite Foothills",
+    "code": "st0136"
+  },
+  "576": {
+    "name": "Fort Thines Great Dining Hall",
+    "field": "Fort Thines Great Dining Hall",
+    "code": "st0448"
+  },
+  "578": {
+    "name": "st1124",
+    "field": "Bonus Dungeon Lobby",
+    "code": "st1124"
+  },
+  "579": {
+    "name": "Feryana Wildernessby Castle",
+    "field": "Rathnite Foothills",
+    "code": "st0137"
+  },
+  "580": {
+    "name": "Fortress City Megado Craft Room",
+    "field": "Fortress City Megado Craft Room",
+    "code": "st0466"
+  },
+  "581": {
+    "name": "Black Kings Room",
+    "field": "Black Kings Room",
+    "code": "st0467"
+  },
+  "582": {
+    "name": "The Royal Family Mausoleum",
+    "field": "The Royal Family Mausoleum",
+    "code": "st1102"
+  },
+  "583": {
+    "name": "Evil Dragons Roost",
+    "field": "Evil Dragons Roost",
+    "code": "st1103"
+  },
+  "584": {
+    "name": "Eli Guard Tower",
+    "field": "Seaside Cellar",
+    "code": "st0636"
+  },
+  "585": {
+    "name": "Lookout Castle",
+    "field": "Lookout Castle",
+    "code": "st0468"
+  },
+  "586": {
+    "name": "The Kings Room of Concealment",
+    "field": "The Kings Room of Concealment",
+    "code": "st0138"
+  },
+  "587": {
+    "name": "st0734",
+    "field": "Ghosts n' Goblins Catacombs",
+    "code": "st0734"
+  },
+  "588": {
+    "name": "Evil Dragons Roost",
+    "field": "Evil Dragons Roost",
+    "code": "st1104"
+  },
+  "589": {
+    "name": "st1005",
+    "field": "Megadosys Old Road",
+    "code": "st1005"
+  },
+  "590": {
+    "name": "st1026",
+    "field": "Hidden Waterway to Megado",
+    "code": "st1026"
+  },
+  "591": {
+    "name": "Tarie Small Tower",
+    "field": "Small Tower of Wisdom",
+    "code": "st0908"
+  },
+  "592": {
+    "name": "Sage Tower Ruins",
+    "field": "Small Tower of Wisdom",
+    "code": "st0909"
+  },
+  "593": {
+    "name": "st1064",
+    "field": "Old Tekia Grotto",
+    "code": "st1064"
+  },
+  "594": {
+    "name": "Northern Bandit Hideout",
+    "field": "Red Crystal Inn",
+    "code": "st0637"
+  },
+  "595": {
+    "name": "Firefall Mountain Campsite",
+    "field": "Rathnite Foothills",
+    "code": "st0139"
+  },
+  "596": {
+    "name": "Forest of Mist",
+    "field": "Rathnite Foothills",
+    "code": "st0140"
+  },
+  "597": {
+    "name": "st1006",
+    "field": "Quiet Concealed Cave",
+    "code": "st1006"
+  },
+  "598": {
+    "name": "Marquise Kurtsresidence",
+    "field": "Marquise Kurtsresidence",
+    "code": "st0474"
+  },
+  "599": {
+    "name": "Fortress City Megado Residential Level",
+    "field": "Fortress City Megado Residential Level",
+    "code": "st0471"
+  },
+  "600": {
+    "name": "Fortress City Megado Residential Level",
+    "field": "Fortress City Megado Residential Level",
+    "code": "st0472"
+  },
+  "601": {
+    "name": "Marquise Kurtsresidence",
+    "field": "Marquise Kurtsresidence",
+    "code": "st0473"
+  },
+  "602": {
+    "name": "Bitterblack Maze Cove",
+    "field": "Bitterblack Maze Cove",
+    "code": "st2000"
+  },
+  "603": {
+    "name": "Bitterblack Maze Garden of Ignominy",
+    "field": "Bitterblack Maze Garden of Ignominy",
+    "code": "st2001"
+  },
+  "604": {
+    "name": "Bitterblack Maze Duskmoon Tower",
+    "field": "Bitterblack Maze Duskmoon Tower",
+    "code": "st2002"
+  },
+  "605": {
+    "name": "Bitterblack Maze Rotunda of Dread",
+    "field": "Bitterblack Maze Rotunda of Dread",
+    "code": "st2003"
+  },
+  "607": {
+    "name": "st1096",
+    "field": "Royal's Hidden Chamber (Megadosys Plat.)",
+    "code": "st1096"
+  },
+  "608": {
+    "name": "st1097",
+    "field": "Royal's Hidden Chamber (Urteca Mts.)",
+    "code": "st1097"
+  },
+  "609": {
+    "name": "st1007",
+    "field": "Crumbling Entrance Path",
+    "code": "st1007"
+  },
+  "610": {
+    "name": "st2004",
+    "field": "Bitterblack Maze: Netherworld 1",
+    "code": "st2004"
+  },
+  "611": {
+    "name": "st2005",
+    "field": "Bitterblack Maze: Netherworld 1",
+    "code": "st2005"
+  },
+  "612": {
+    "name": "st2006",
+    "field": "Bitterblack Maze: Netherworld 1",
+    "code": "st2006"
+  },
+  "613": {
+    "name": "Evil Dragons Roost",
+    "field": "Evil Dragons Roost",
+    "code": "st1105"
+  },
+  "614": {
+    "name": "st2007",
+    "field": "Bitterblack Maze: Netherworld 2",
+    "code": "st2007"
+  },
+  "615": {
+    "name": "st2008",
+    "field": "Bitterblack Maze: Netherworld 2",
+    "code": "st2008"
+  },
+  "616": {
+    "name": "st2009",
+    "field": "Bitterblack Maze: Netherworld 2",
+    "code": "st2009"
+  },
+  "617": {
+    "name": "st2010",
+    "field": "Bitterblack Maze: Netherworld 3",
+    "code": "st2010"
+  },
+  "618": {
+    "name": "Bitterblack Maze Netherworld3",
+    "field": "Small Tower of Wisdom",
+    "code": "st2011"
+  },
+  "619": {
+    "name": "st2012",
+    "field": "Bitterblack Maze: Netherworld 3",
+    "code": "st2012"
+  },
+  "620": {
+    "name": "st2013",
+    "field": "Bitterblack Maze: Netherworld 3",
+    "code": "st2013"
+  },
+  "621": {
+    "name": "Bitterblack Maze Netherworld3",
+    "field": "Small Tower of Wisdom",
+    "code": "st2014"
+  },
+  "622": {
+    "name": "st2015",
+    "field": "Bitterblack Maze: Netherworld 3",
+    "code": "st2015"
+  },
+  "623": {
+    "name": "Bitterblack Maze Rift",
+    "field": "Bitterblack Maze Rift",
+    "code": "st2016"
+  },
+  "624": {
+    "name": "Bitterblack Maze Rift",
+    "field": "Bitterblack Maze Rift",
+    "code": "st2017"
+  },
+  "625": {
+    "name": "Forest of Mist",
+    "field": "Rathnite Foothills",
+    "code": "st0141"
+  },
+  "642": {
+    "name": "Event Dungeon",
+    "field": "Ancient Place of Rituals",
+    "code": "st1200"
+  },
+  "643": {
+    "name": "Event Dungeon",
+    "field": "Ancient Place of Rituals",
+    "code": "st1201"
+  },
+  "644": {
+    "name": "Event Dungeon",
+    "field": "Ancient Place of Rituals",
+    "code": "st1202"
+  },
+  "645": {
+    "name": "st1098",
+    "field": "Royal's Hidden Chamber (Megadosys Plat.)",
+    "code": "st1098"
+  },
+  "646": {
+    "name": "st1250",
+    "field": "Royal's Hidden Chamber (Urteca Mts.)",
+    "code": "st1250"
+  },
+  "647": {
+    "name": "st1251",
+    "field": "Royal's Hidden Chamber (Urteca Mts.)",
+    "code": "st1251"
+  },
+  "648": {
+    "name": "st1252",
+    "field": "Royal's Hidden Chamber (Urteca Mts.)",
+    "code": "st1252"
+  },
+  "650": {
+    "name": "West Land of Darkness",
+    "field": "West Land of Darkness",
+    "code": "st3100"
+  },
+  "651": {
+    "name": "South Land of Darkness",
+    "field": "South Land of Darkness",
+    "code": "st3200"
+  },
+  "652": {
+    "name": "East Land of Darkness",
+    "field": "East Land of Darkness",
+    "code": "st3300"
+  },
+  "653": {
+    "name": "North Land of Darkness",
+    "field": "North Land of Darkness",
+    "code": "st3400"
+  },
+  "654": {
+    "name": "Alternative Path",
+    "field": "Alternative Path",
+    "code": "st3500"
+  },
+  "655": {
+    "name": "Darkness Shrouded Shadolean Great Temple",
+    "field": "Darkness Shrouded Shadolean Great Temple",
+    "code": "st3110"
+  },
+  "656": {
+    "name": "Darkness Shrouded Mergoda Royal Palace Level",
+    "field": "Darkness Shrouded Mergoda Royal Palace Level",
+    "code": "st3210"
+  },
+  "657": {
+    "name": "Darkness Shrouded Dreed Castle",
+    "field": "Darkness Shrouded Dreed Castle",
+    "code": "st3310"
+  },
+  "658": {
+    "name": "Darkness Shrouded Mergoda Security District",
+    "field": "Darkness Shrouded Mergoda Security District",
+    "code": "st3410"
+  },
+  "659": {
+    "name": "Darkness Shrouded Megado Corridor",
+    "field": "Darkness Shrouded Megado Corridor",
+    "code": "st3211"
+  },
+  "660": {
+    "name": "st1125",
+    "field": "Bonus Dungeon (JP)",
+    "code": "st1125"
+  },
+  "661": {
+    "name": "st1126",
+    "field": "Bonus Dungeon (HO)",
+    "code": "st1126"
+  },
+  "662": {
+    "name": "st1300",
+    "field": "Hidell Catacombs",
+    "code": "st1300"
+  },
+  "682": {
+    "name": "Bitterblack Maze Noxious Cathedral",
+    "field": "Bitterblack Maze Noxious Cathedral",
+    "code": "st2018"
+  },
+  "683": {
+    "name": "Bitterblack Maze Traitors Tower",
+    "field": "Bitterblack Maze Traitors Tower",
+    "code": "st2019"
+  },
+  "684": {
+    "name": "Bitterblack Maze Fallen City",
+    "field": "Bitterblack Maze Fallen City",
+    "code": "st2020"
+  },
+  "685": {
+    "name": "Bitterblack Maze Altar of the Black Curse",
+    "field": "Bitterblack Maze Altar of the Black Curse",
+    "code": "st2021"
+  },
+  "686": {
+    "name": "st2022",
+    "field": "Bitterblack Maze: Netherworld 1",
+    "code": "st2022"
+  },
+  "687": {
+    "name": "st2023",
+    "field": "Bitterblack Maze: Netherworld 1",
+    "code": "st2023"
+  },
+  "688": {
+    "name": "st2024",
+    "field": "Bitterblack Maze: Netherworld 1",
+    "code": "st2024"
+  },
+  "689": {
+    "name": "st2025",
+    "field": "Bitterblack Maze: Netherworld 2",
+    "code": "st2025"
+  },
+  "690": {
+    "name": "Bitterblack Maze Netherworld2",
+    "field": "Small Tower of Wisdom",
+    "code": "st2026"
+  },
+  "691": {
+    "name": "st2027",
+    "field": "Bitterblack Maze: Netherworld 2",
+    "code": "st2027"
+  },
+  "692": {
+    "name": "st2028",
+    "field": "Bitterblack Maze: Netherworld 3",
+    "code": "st2028"
+  },
+  "693": {
+    "name": "Bitterblack Maze Netherworld3",
+    "field": "Northerners Infected Woods",
+    "code": "st2029"
+  },
+  "694": {
+    "name": "st2030",
+    "field": "Bitterblack Maze: Netherworld 3",
+    "code": "st2030"
+  },
+  "695": {
+    "name": "st2031",
+    "field": "Bitterblack Maze: Netherworld 4",
+    "code": "st2031"
+  },
+  "696": {
+    "name": "st2032",
+    "field": "Bitterblack Maze: Netherworld 4",
+    "code": "st2032"
+  },
+  "697": {
+    "name": "st2033",
+    "field": "Bitterblack Maze: Netherworld 4",
+    "code": "st2033"
+  },
+  "698": {
+    "name": "Bitterblack Maze Rift",
+    "field": "Bitterblack Maze Rift",
+    "code": "st2034"
+  },
+  "699": {
+    "name": "Bitterblack Maze Rift",
+    "field": "Bitterblack Maze Rift",
+    "code": "st2035"
+  },
+  "700": {
+    "name": "Bitterblack Maze Rift",
+    "field": "Bitterblack Maze Rift",
+    "code": "st2036"
+  },
+  "701": {
+    "name": "The Golden Palace",
+    "field": "The Golden Palace",
+    "code": "st1127"
+  },
+  "702": {
+    "name": "Megado Corridor",
+    "field": "Megado Corridor",
+    "code": "st0475"
+  },
+  "703": {
+    "name": "Lookout Castle",
+    "field": "Lookout Castle",
+    "code": "st0476"
+  },
+  "704": {
+    "name": "Black Kings Room",
+    "field": "Black Kings Room",
+    "code": "st0477"
+  },
+  "705": {
+    "name": "Evil Dragons Roost",
+    "field": "Evil Dragons Roost",
+    "code": "st1106"
+  },
+  "706": {
+    "name": "Darkness Shrouded Shadolean Great Temple",
+    "field": "Darkness Shrouded Shadolean Great Temple",
+    "code": "st3111"
+  },
+  "707": {
+    "name": "Darkness Shrouded Mergoda Royal Palace Level",
+    "field": "Darkness Shrouded Mergoda Royal Palace Level",
+    "code": "st3212"
+  },
+  "708": {
+    "name": "Darkness Shrouded Dreed Castle",
+    "field": "Darkness Shrouded Dreed Castle",
+    "code": "st3311"
+  },
+  "709": {
+    "name": "Darkness Shrouded Mergoda Security District",
+    "field": "Darkness Shrouded Mergoda Security District",
+    "code": "st3411"
+  },
+  "710": {
+    "name": "Darkness Shrouded Megado Corridor",
+    "field": "Darkness Shrouded Megado Corridor",
+    "code": "st3213"
+  },
+  "711": {
+    "name": "Dacreim Fortress",
+    "field": "Dacreim Fortress",
+    "code": "st0478"
+  },
+  "712": {
+    "name": "Jifule Fortress",
+    "field": "Jifule Fortress",
+    "code": "st0479"
+  },
+  "713": {
+    "name": "The Kings Room of Concealment",
+    "field": "The Kings Room of Concealment",
+    "code": "st0480"
+  },
+  "714": {
+    "name": "Sacred Flame Path",
+    "field": "Sacred Flame Path",
+    "code": "st0481"
+  },
+  "715": {
+    "name": "st2037",
+    "field": "Bitterblack Maze: Netherworld 4",
+    "code": "st2037"
+  },
+  "716": {
+    "name": "st2038",
+    "field": "Bitterblack Maze: Netherworld 4",
+    "code": "st2038"
+  },
+  "717": {
+    "name": "st2039",
+    "field": "Bitterblack Maze: Netherworld 4",
+    "code": "st2039"
+  },
+  "718": {
+    "name": "Dacreim Fortress",
+    "field": "Dacreim Fortress",
+    "code": "st0482"
+  },
+  "719": {
+    "name": "Gardnox Fortress",
+    "field": "Gardnox Fortress",
+    "code": "st3600"
+  },
+  "720": {
+    "name": "Mergoda Royal Palace Level",
+    "field": "Mergoda Ruins Royal Palace Level",
+    "code": "st3601"
+  },
+  "721": {
+    "name": "The White Dragon Temple",
+    "field": "The White Dragon Temple",
+    "code": "st3602"
+  },
+  "723": {
+    "name": "st1128",
+    "field": "Bonus Dungeon (SP)",
+    "code": "st1128"
+  }
+}
