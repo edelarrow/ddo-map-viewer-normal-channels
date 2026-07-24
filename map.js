@@ -3745,6 +3745,59 @@ const connectionDisplayName = (conn) => {
     return name || `Stage ${conn.to_stage}`;
 };
 
+/** Same-label multi-dest spots that should use one main interior stage (no picker). */
+const CONNECTION_PREFERRED_TO_STAGE = new Map([
+    ['fort thines', 443],
+    ['lookout castle', 451],
+    ['shadolean great temple', 439],
+    ['fortress city megado: residential level', 461],
+]);
+
+/**
+ * Collapse same-label dest variants to a preferred to_stage when configured
+ * (e.g. Fort Thines → st0443, Lookout Castle → st0451).
+ */
+function preferConnectionDestinations(choices) {
+    if (choices.length <= 1) return choices;
+    const byLabel = new Map();
+    for (const choice of choices) {
+        const key = connectionDisplayName(choice.conn).toLowerCase();
+        if (!byLabel.has(key)) byLabel.set(key, []);
+        byLabel.get(key).push(choice);
+    }
+    const out = [];
+    for (const [label, list] of byLabel) {
+        const preferred = CONNECTION_PREFERRED_TO_STAGE.get(label);
+        if (preferred != null) {
+            const hit = list.filter((c) => c.conn.to_stage === preferred);
+            out.push(...(hit.length ? hit : list));
+        } else {
+            out.push(...list);
+        }
+    }
+    return out.sort((a, b) =>
+        connectionDisplayName(a.conn).localeCompare(connectionDisplayName(b.conn))
+        || a.stageId.localeCompare(b.stageId),
+    );
+}
+
+/**
+ * Special / Darkness links share field coords with the permanent entrance but are not
+ * the main door. Keep them on their own marker (Special filter) so the permanent
+ * entrance can navigate without a mixed destination menu.
+ */
+function partitionConnectionMarkerChoices(choices) {
+    const permanent = preferConnectionDestinations(choices.filter((c) => !c.specialRule));
+    const specials = choices.filter((c) => c.specialRule);
+    if (!permanent.length) {
+        return { primaryGroups: [preferConnectionDestinations(specials)], specialGroups: [] };
+    }
+    return {
+        primaryGroups: [permanent],
+        specialGroups: specials.map((c) => [c]),
+    };
+}
+
 const connectionExactCoordKey = (conn) =>
     (conn.x != null && conn.z != null) ? `${conn.x}|${conn.z}` : null;
 
@@ -3796,7 +3849,7 @@ function addConnectionMapMarker(sourceMap, latlng, choices) {
     const visibleChoices = () => choices.filter(connectionChoiceVisible);
     const labels = [...new Set(choices.map((c) => connectionDisplayName(c.conn)))];
     const primary = choices[0];
-    const poiCat = choices.length > 1 ? 'outpost' : (primary.poiCat ?? null);
+    const poiCat = primary.poiCat ?? null;
     const icon = makeConnectionMarkerIcon(poiCat);
     const tooltip = labels.length === 1 ? labels[0] : labels.join(' · ');
 
@@ -6733,12 +6786,19 @@ function loadConnections(mapName, info) {
         const keyB = connectionLabelKey(b);
         return !!(keyA && keyA === keyB);
     };
-    const connectionKeepScore = (conn) => [
-        conn.stp_approx ? 0 : 1,
-        conn.to_map && mapParams[conn.to_map] ? 1 : 0,
-        /_m00(?:_|$)/.test(conn.to_map ?? '') ? 1 : 0,
-        -(conn.to_stage ?? 99999),
-    ];
+    const connectionKeepScore = (conn) => {
+        const label = connectionLabelKey(conn);
+        const preferred = CONNECTION_PREFERRED_TO_STAGE.get(label);
+        const isPreferred = preferred != null && conn.to_stage === preferred;
+        return [
+            conn.stp_approx ? 0 : 1,
+            conn.to_map && mapParams[conn.to_map] ? 1 : 0,
+            /_m00(?:_|$)/.test(conn.to_map ?? '') ? 1 : 0,
+            // Prefer configured main interior stages over lower-number variants (e.g. 439 > 432).
+            isPreferred ? 1 : 0,
+            -(conn.to_stage ?? 99999),
+        ];
+    };
     const scoreGt = (a, b) => {
         for (let i = 0; i < a.length; i++) {
             if (a[i] > b[i]) return true;
@@ -6820,7 +6880,11 @@ function loadConnections(mapName, info) {
             connectionDisplayName(a.conn).localeCompare(connectionDisplayName(b.conn))
             || a.stageId.localeCompare(b.stageId),
         );
-        addConnectionMapMarker(mapName, choices[0].latlng, choices);
+        const { primaryGroups, specialGroups } = partitionConnectionMarkerChoices(choices);
+        for (const markerChoices of [...primaryGroups, ...specialGroups]) {
+            if (!markerChoices.length) continue;
+            addConnectionMapMarker(mapName, markerChoices[0].latlng, markerChoices);
+        }
     }
 
     // Render unpositioned exits in the sidebar
