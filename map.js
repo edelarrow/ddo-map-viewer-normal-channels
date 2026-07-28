@@ -86,7 +86,8 @@ const preloadAllEnemyPositionsStages = async (onProgress) => {
 };
 
 const _iconIdSet = new Set(iconIds);
-const itemWikiHref = (itemId) => `build/i${String(itemId).padStart(8, '0')}.html`;
+const itemWikiHref = (itemId) =>
+    `https://reference.dd-on.com/build/i${String(itemId).padStart(8, '0')}.html`;
 // Build lookup map: id → named param entry
 const namedParamsById = new Map(namedParamList.map(p => [p.id, p]));
 const hmPresetsByEmCode = new Map(hmPresetList.filter(p => p.emCode).map(p => [p.emCode, p]));
