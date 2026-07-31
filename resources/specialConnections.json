@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "comment": "Hand-picked temporary dungeon links. Matched connections use the Special filter (default off); labels and icons follow normal location classification.",
+  "name_patterns": [
+    "^Darkness"
+  ],
+  "connections": [
+    {
+      "id": "wdt-breya-field",
+      "map": "field000_m00",
+      "from_stage": 103,
+      "to_stage": 200,
+      "to_map": "lb000_m00"
+    },
+    {
+      "id": "wdt-st3602-field-entrance",
+      "map": "field000_m00",
+      "from_stage": 100,
+      "to_stage": 3602,
+      "to_map": "lb000_st3602_m00"
+    },
+    {
+      "id": "wdt-st3602-field-return",
+      "map": "field000_m00",
+      "from_stage": 3602,
+      "to_stage": 3602,
+      "to_map": "lb000_st3602_m00"
+    },
+    {
+      "id": "wdt-breya-temple-exit",
+      "map": "lb000_m00",
+      "from_stage": 200,
+      "to_stage": 103,
+      "to_map": "field000_m00"
+    },
+    {
+      "id": "wdt-hidell-catacombs",
+      "map": "lb000_m00",
+      "from_stage": 200,
+      "to_stage": 1300,
+      "to_map": "st1300"
+    },
+    {
+      "id": "wdt-hidell-catacombs-return",
+      "map": "st1300",
+      "from_stage": 1300,
+      "to_stage": 200,
+      "to_map": "lb000_m00"
+    },
+    {
+      "id": "dark-great-catacombs-field",
+      "map": "field000_m00",
+      "from_stage": 100,
+      "to_stage": 733,
+      "to_map": "st0733"
+    },
+    {
+      "id": "dark-great-catacombs-field-return",
+      "map": "field000_m00",
+      "from_stage": 733,
+      "to_stage": 733,
+      "to_map": "st0733"
+    },
+    {
+      "id": "dark-great-catacombs-exit",
+      "map": "st0733",
+      "from_stage": 733,
+      "to_stage": 100,
+      "to_map": "field000_m00"
+    }
+  ]
+}

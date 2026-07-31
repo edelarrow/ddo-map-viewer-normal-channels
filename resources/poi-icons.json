@@ -1,0 +1,166 @@
+{
+  "icons": {
+    "lumber": {
+      "file": "resources/poi-icons/lumber.png",
+      "source": "github:alborrajo/DDOn-Tools/resources/items/ii000449/icon_item100022_ID.png",
+      "kind": "item",
+      "ok": true
+    },
+    "grassHerb": {
+      "file": "resources/poi-icons/grassHerb.png",
+      "source": "github:alborrajo/DDOn-Tools/resources/items/ii000508/icon_item200045_ID.png",
+      "kind": "item",
+      "ok": true
+    },
+    "flower": {
+      "file": "resources/poi-icons/flower.png",
+      "source": "github:alborrajo/DDOn-Tools/resources/items/ii000510/icon_item200047_ID.png",
+      "kind": "item",
+      "ok": true
+    },
+    "mushroom": {
+      "file": "resources/poi-icons/mushroom.png",
+      "source": "github:alborrajo/DDOn-Tools/resources/items/ii000512/icon_item200049_ID.png",
+      "kind": "item",
+      "ok": true
+    },
+    "sand": {
+      "file": "resources/poi-icons/sand.png",
+      "source": "github:alborrajo/DDOn-Tools/resources/items/ii000484/icon_item200021_ID.png",
+      "kind": "item",
+      "ok": true
+    },
+    "shell": {
+      "file": "resources/poi-icons/shell.png",
+      "source": "github:alborrajo/DDOn-Tools/resources/items/ii000517/icon_item200054_ID.png",
+      "kind": "item",
+      "ok": true
+    },
+    "crystal": {
+      "file": "resources/poi-icons/crystal.png",
+      "source": "github:alborrajo/DDOn-Tools/resources/items/ii000446/icon_item100019_ID.png",
+      "kind": "item",
+      "ok": true
+    },
+    "gemstone": {
+      "file": "resources/poi-icons/gemstone.png",
+      "source": "github:alborrajo/DDOn-Tools/resources/items/ii000452/icon_item100025_ID.png",
+      "kind": "item",
+      "ok": true
+    },
+    "sparkNode": {
+      "file": "resources/poi-icons/sparkNode.png",
+      "source": "github:alborrajo/DDOn-Tools/resources/items/ii001991/icon_item200144_ID.png",
+      "kind": "item",
+      "ok": true
+    },
+    "dragon": {
+      "file": "resources/poi-icons/dragon.png",
+      "source": "github:alborrajo/DDOn-Tools/resources/items/ii001991/icon_item200144_ID.png",
+      "kind": "item",
+      "ok": true
+    },
+    "water": {
+      "file": "resources/poi-icons/water.png",
+      "source": "github:alborrajo/DDOn-Tools/resources/items/ii000481/icon_item200018_ID.png",
+      "kind": "item",
+      "ok": true
+    },
+    "treasure": {
+      "file": "resources/poi-icons/treasure.png",
+      "source": "github:alborrajo/DDOn-Tools/resources/items/ii000423/icon_item000010_ID.png",
+      "kind": "item",
+      "ok": true
+    },
+    "box": {
+      "file": "resources/poi-icons/box.png",
+      "source": "github:alborrajo/DDOn-Tools/resources/items/ii000536/icon_item400005_ID.png",
+      "kind": "item",
+      "ok": true
+    },
+    "antique": {
+      "file": "resources/poi-icons/antique.png",
+      "source": "github:alborrajo/DDOn-Tools/resources/items/ii001275/icon_item200082_ID.png",
+      "kind": "item",
+      "ok": true
+    },
+    "oneOff": {
+      "file": "resources/poi-icons/oneOff.png",
+      "source": "icon_item200146_ID.png",
+      "kind": "item",
+      "ok": true
+    },
+    "door": {
+      "file": "resources/poi-icons/door.png",
+      "source": "mmapicon_slices/8.png",
+      "kind": "mmapicon",
+      "ok": true
+    },
+    "outpost": {
+      "file": "resources/poi-icons/outpost.png",
+      "source": "mmapicon_slices/13.png",
+      "kind": "mmapicon",
+      "ok": true
+    },
+    "cave": {
+      "file": "resources/poi-icons/cave.png",
+      "source": "mmapicon_slices/15.png",
+      "kind": "mmapicon",
+      "ok": true
+    },
+    "well": {
+      "file": "resources/poi-icons/well.png",
+      "source": "mmapicon_slices/17.png",
+      "kind": "mmapicon",
+      "ok": true
+    },
+    "areaWarp": {
+      "file": "resources/poi-icons/areaWarp.png",
+      "source": "mmapicon_slices/48.png",
+      "kind": "mmapicon",
+      "ok": true
+    },
+    "inn": {
+      "file": "resources/poi-icons/inn.png",
+      "source": "mmapicon_slices/21.png",
+      "kind": "mmapicon",
+      "ok": true
+    },
+    "basement": {
+      "file": "resources/poi-icons/basement.png",
+      "source": "mmapicon_ID.png rect (144, 34, 19, 17)",
+      "kind": "mmapicon",
+      "ok": true
+    },
+    "catacomb": {
+      "file": "resources/poi-icons/catacomb.png",
+      "source": "mmapicon_ID.png rect (118, 117, 14, 16)",
+      "kind": "mmapicon",
+      "ok": true
+    },
+    "elfRuin": {
+      "file": "resources/poi-icons/elfRuin.png",
+      "source": "mmapicon_ID.png rect (227, 113, 23, 24)",
+      "kind": "mmapicon",
+      "ok": true
+    },
+    "shrine": {
+      "file": "resources/poi-icons/shrine.png",
+      "source": "mmapicon_ID.png rect (145, 61, 18, 18)",
+      "kind": "mmapicon",
+      "ok": true
+    },
+    "itemShop": {
+      "file": "resources/poi-icons/itemShop.png",
+      "source": "mmapicon_ID.png rect (88, 60, 19, 21)",
+      "kind": "mmapicon",
+      "ok": true
+    },
+    "materialShop": {
+      "file": "resources/poi-icons/materialShop.png",
+      "source": "mmapicon_ID.png rect (5, 59, 18, 22)",
+      "kind": "mmapicon",
+      "ok": true
+    }
+  }
+}

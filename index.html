@@ -4,7 +4,7 @@
     <base target="_top">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Rising Maps Normal Channels</title>
+    <title>Rising Maps</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
@@ -95,6 +95,7 @@
 
         #map-list {
             flex: 1;
+            min-height: 0;
             overflow-y: auto;
             padding: 4px 0;
         }
@@ -107,6 +108,153 @@
             letter-spacing: 0.12em;
             text-transform: uppercase;
             color: var(--ember);
+        }
+
+        /* ── Major location groups (under continent/region dropdowns) ── */
+        .map-world-section { border-bottom: 1px solid var(--panel-border); }
+        .map-world-section:last-child { border-bottom: none; }
+        .map-world-header {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-size: 0.72rem;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--ash);
+            user-select: none;
+            position: sticky;
+            top: 0;
+            z-index: 2;
+            background: rgba(201,168,76,0.06);
+        }
+        .map-world-header:hover { background: var(--panel-hover); color: var(--parchment); }
+        .map-world-header .expand-arrow {
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            flex-shrink: 0;
+            transition: transform 0.15s;
+            width: 10px;
+            text-align: center;
+        }
+        .map-world-section.expanded .map-world-header .expand-arrow { transform: rotate(90deg); }
+        .map-world-name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .map-world-body { display: none; }
+        .map-world-section.expanded .map-world-body { display: block; }
+        .map-world-body .map-area-section { border-bottom: 1px solid rgba(201,168,76,0.1); }
+        .map-world-body .map-area-section:last-child { border-bottom: none; }
+        .map-world-body .map-area-header {
+            padding-left: 22px;
+            position: static;
+            background: transparent;
+            font-size: 0.68rem;
+            color: var(--text-dim);
+        }
+        .map-world-body .map-area-header:hover { background: var(--panel-hover); color: var(--ash); }
+        .map-world-body .map-area-body .map-entry { padding-left: 34px; }
+        .map-world-body .map-area-body .map-subentry { padding-left: 48px; }
+
+        .map-area-section { border-bottom: 1px solid var(--panel-border); }
+        .map-area-section:last-child { border-bottom: none; }
+        .map-area-header {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 16px;
+            cursor: pointer;
+            font-size: 0.72rem;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--ash);
+            user-select: none;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            background: var(--panel-bg);
+        }
+        .map-area-header:hover { background: var(--panel-hover); color: var(--parchment); }
+        .map-area-header .expand-arrow {
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            flex-shrink: 0;
+            transition: transform 0.15s;
+            width: 10px;
+            text-align: center;
+        }
+        .map-area-section.expanded .map-area-header .expand-arrow { transform: rotate(90deg); }
+        .map-area-name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .map-area-count {
+            font-size: 0.65rem;
+            font-weight: 600;
+            font-family: 'Crimson Text', Georgia, serif;
+            color: var(--text-dim);
+            background: rgba(201,168,76,0.1);
+            border: 1px solid rgba(201,168,76,0.18);
+            padding: 1px 6px;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+        .map-area-body { display: none; padding-bottom: 4px; }
+        .map-area-section.expanded .map-area-body { display: block; }
+        .map-area-body .map-entry { padding-left: 22px; }
+        .map-area-body .map-subentry { padding-left: 36px; }
+
+        .map-loc-section {
+            border-bottom: 1px solid var(--panel-border);
+            padding-bottom: 6px;
+            margin-bottom: 4px;
+        }
+        .map-loc-header {
+            padding: 8px 16px 4px;
+            font-size: 0.68rem;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--ember);
+        }
+        .map-list-maps-header {
+            margin-top: 4px;
+            padding-top: 10px;
+            border-top: 1px solid var(--panel-border);
+        }
+        .map-loc-entry {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            padding: 7px 16px 7px 14px;
+            cursor: pointer;
+            border-left: 3px solid transparent;
+        }
+        .map-loc-entry:hover {
+            background: var(--panel-hover);
+            border-left-color: var(--gold);
+        }
+        .map-loc-icon { flex-shrink: 0; }
+        .map-loc-body { flex: 1; min-width: 0; }
+        .map-loc-label {
+            font-size: 0.85rem;
+            color: var(--parchment);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .map-loc-sub {
+            font-size: 0.72rem;
+            color: var(--text-dim);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .map-loc-more {
+            padding: 4px 16px 8px;
+            font-size: 0.75rem;
+            color: var(--text-dim);
         }
 
         .map-entry {
@@ -774,76 +922,658 @@
             0%, 100% { transform: scale(1);   opacity: 1; }
             50%       { transform: scale(1.6); opacity: 0.35; }
         }
+
+        /* ── Additive: channel toggle (Rising palette) ── */
+        #rising-channel-bar {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 8px 8px;
+            border-bottom: 1px solid var(--panel-border);
+        }
+        #rising-channel-bar .rising-channel-label {
+            font-size: 0.62rem;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--ember);
+            flex-shrink: 0;
+        }
+        #rising-channel-toggle {
+            display: flex;
+            flex: 1;
+            min-width: 0;
+            border: 1px solid var(--panel-border);
+            border-radius: 2px;
+            overflow: hidden;
+            background: rgba(201,168,76,0.06);
+        }
+        #rising-channel-toggle button {
+            flex: 1;
+            border: none;
+            background: transparent;
+            color: var(--text-dim);
+            font-size: 0.75rem;
+            font-family: 'Crimson Text', serif;
+            font-weight: 600;
+            padding: 5px 6px;
+            cursor: pointer;
+        }
+        #rising-channel-toggle button + button { border-left: 1px solid var(--panel-border); }
+        #rising-channel-toggle button:hover:not(.active) {
+            background: var(--panel-hover);
+            color: var(--ash);
+        }
+        #rising-channel-toggle button.active {
+            background: rgba(201,168,76,0.22);
+            color: var(--gold);
+            text-shadow: 0 0 10px rgba(201,168,76,0.35);
+        }
+
+        /* ── Additive: major location jumpers ── */
+        #major-loc-bar {
+            padding: 0 8px 8px;
+            border-bottom: 1px solid var(--panel-border);
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        #major-loc-bar select {
+            width: 100%;
+            padding: 5px 8px;
+            appearance: none;
+            -webkit-appearance: none;
+            color-scheme: dark;
+            accent-color: var(--gold);
+            background-color: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            border-radius: 2px;
+            color: var(--parchment);
+            font-family: 'Crimson Text', Georgia, serif;
+            font-size: 0.8rem;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+        #major-loc-bar select:focus { outline: none; border-color: var(--gold); }
+        #major-loc-bar select:disabled { opacity: 0.55; cursor: default; }
+        #major-loc-bar select option {
+            background-color: var(--panel-bg);
+            color: var(--parchment);
+        }
+
+        /* Scrollable bottom so Spawns / Locations / Gatherables options stay usable */
+        #sidebar-bottom {
+            flex-shrink: 0;
+            border-top: 1px solid var(--panel-border);
+            max-height: 55vh;
+            overflow-y: auto;
+        }
+        #sidebar-bottom::-webkit-scrollbar { width: 5px; }
+        #sidebar-bottom::-webkit-scrollbar-thumb {
+            background: rgba(201,168,76,0.2);
+            border-radius: 3px;
+        }
+
+        /* ── Additive: POI filter sections (Rising chrome) ── */
+        #poi-filter-section { margin-top: 4px; }
+        .poi-section { border-top: 1px solid var(--panel-border); }
+        .poi-section:first-child { border-top: none; }
+        .poi-section-toggle {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: none;
+            border: none;
+            color: var(--ember);
+            font-family: 'Cinzel', serif;
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 6px 0 4px;
+            cursor: pointer;
+            text-align: left;
+        }
+        .poi-section-toggle:hover { color: var(--gold); }
+        .poi-section-toggle .expand-arrow {
+            display: inline-block;
+            font-size: 0.65rem;
+            width: 10px;
+            text-align: center;
+            transition: transform 0.15s;
+            color: var(--text-dim);
+            flex-shrink: 0;
+        }
+        .poi-section.expanded .poi-section-toggle .expand-arrow { transform: rotate(90deg); }
+        .poi-section-body { display: none; padding: 0 0 6px 2px; }
+        .poi-section.expanded .poi-section-body { display: block; }
+        .poi-filter-list {
+            margin-left: 2px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0 6px;
+        }
+        .poi-filter-list .layer-toggle {
+            font-size: 0.78rem;
+            color: var(--ash);
+        }
+        .poi-show-all.layer-toggle {
+            font-weight: 600;
+            margin-bottom: 2px;
+            grid-column: 1 / -1;
+        }
+        .poi-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+        .poi-icon-img {
+            width: 18px;
+            height: 18px;
+            object-fit: contain;
+            image-rendering: pixelated;
+            pointer-events: none;
+        }
+        .mob-type-icon {
+            display: inline-flex;
+            width: 18px;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        #mob-type-filter-list.poi-filter-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0 6px;
+        }
+
+        /* ── SubGroup filter pills (Rising) ── */
+        #subgroup-bar {
+            display: none;
+            flex-wrap: wrap;
+            gap: 3px;
+            margin: 2px 0 6px 20px;
+            align-items: center;
+        }
+        .sg-filter-label {
+            font-size: 9px;
+            font-family: 'Cinzel', serif;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            margin-right: 4px;
+            align-self: center;
+        }
+        .sg-filter-btn {
+            font-size: 10px;
+            font-family: 'Crimson Text', Georgia, serif;
+            padding: 1px 8px;
+            border-radius: 10px;
+            cursor: pointer;
+            border: 1px solid rgba(201,168,76,0.28);
+            background: rgba(201,168,76,0.06);
+            color: var(--ash);
+        }
+        .sg-filter-btn:hover {
+            border-color: rgba(201,168,76,0.45);
+            color: var(--parchment);
+        }
+        .sg-filter-btn.active {
+            background: rgba(201,168,76,0.22);
+            color: var(--gold);
+            border-color: rgba(201,168,76,0.55);
+        }
+
+        /* ── Developer panel (Rising; no Edit) ── */
+        #dev-panel {
+            padding: 0 0 8px;
+            border-top: 1px solid var(--panel-border);
+            font-size: 0.82rem;
+        }
+        #dev-panel-toggle {
+            width: 100%;
+            padding: 8px 16px;
+            background: none;
+            border: none;
+            color: var(--ember);
+            font-family: 'Cinzel', serif;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            cursor: pointer;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        #dev-panel-toggle:hover { color: var(--gold); background: rgba(201,168,76,0.06); }
+        #dev-panel.expanded #dev-panel-toggle { color: var(--ash); }
+        #dev-panel-toggle .expand-arrow {
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            flex-shrink: 0;
+            transition: transform 0.15s;
+            width: 10px;
+            text-align: center;
+        }
+        #dev-panel.expanded #dev-panel-toggle .expand-arrow { transform: rotate(90deg); }
+        #dev-panel-body { display: none; padding: 4px 16px 8px; }
+        #dev-panel.expanded #dev-panel-body { display: block; }
+        #dev-panel-body .dev-option-list { display: flex; flex-direction: column; gap: 2px; }
+        .dev-action-btn {
+            width: 100%;
+            margin-top: 6px;
+            padding: 5px 8px;
+            background: rgba(201,168,76,0.06);
+            color: var(--ash);
+            border: 1px solid rgba(201,168,76,0.18);
+            border-radius: 2px;
+            font-size: 0.75rem;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 0.06em;
+            cursor: pointer;
+        }
+        .dev-action-btn:hover {
+            background: rgba(201,168,76,0.12);
+            color: var(--gold);
+            border-color: rgba(201,168,76,0.35);
+        }
+        #dev-panel .dev-help {
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid rgba(201,168,76,0.18);
+            font-size: 0.72rem;
+            color: var(--text-dim);
+            line-height: 1.6;
+        }
+
+        /* Spot extras used by newer map.js (optional; Rising palette) */
+        #spot-level-section, #spot-sort-section {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            padding: 0 8px 6px;
+            flex-shrink: 0;
+        }
+        #spot-level-section.visible, #spot-sort-section.visible { display: flex; }
+        .spot-level-toggle {
+            display: flex; align-items: center; gap: 6px;
+            background: none; border: none; color: var(--ash);
+            font-family: 'Cinzel', serif; font-size: 0.65rem;
+            letter-spacing: 0.06em; text-transform: uppercase;
+            cursor: pointer; padding: 2px 0;
+            width: 100%;
+            text-align: left;
+        }
+        .spot-level-toggle:hover { color: var(--gold); }
+        .spot-level-chevron {
+            color: var(--text-dim);
+            margin-left: auto;
+            transition: transform 0.15s;
+        }
+        #spot-level-section.expanded .spot-level-chevron,
+        #spot-sort-section.expanded .spot-level-chevron { transform: rotate(90deg); }
+        #spot-level-section.expanded .spot-level-panel,
+        #spot-sort-section.expanded #spot-sort-panel { display: flex; }
+        .spot-level-panel, #spot-sort-panel {
+            display: none; gap: 6px; align-items: center; flex-wrap: wrap;
+        }
+        .spot-level-field {
+            display: flex; align-items: center; gap: 4px;
+            font-size: 0.72rem; color: var(--text-dim);
+            font-family: 'Crimson Text', serif;
+        }
+        .spot-level-input {
+            width: 52px; padding: 2px 4px;
+            background: rgba(201,168,76,0.05);
+            border: 1px solid var(--panel-border);
+            border-radius: 2px; color: var(--parchment);
+            font-family: 'Crimson Text', serif;
+        }
+        .spot-level-input:focus { outline: none; border-color: var(--gold); }
+        .spot-level-input::placeholder { color: var(--text-dim); }
+        .spot-level-badge {
+            font-size: 0.65rem; color: var(--gold);
+            border: 1px solid var(--panel-border);
+            border-radius: 2px; padding: 0 4px;
+        }
+        .spot-sort-btn {
+            background: rgba(201,168,76,0.06);
+            border: 1px solid var(--panel-border);
+            border-radius: 2px; color: var(--ash);
+            font-family: 'Crimson Text', serif; font-size: 0.72rem;
+            padding: 3px 8px; cursor: pointer;
+        }
+        .spot-sort-btn:hover, .spot-sort-btn.active {
+            color: var(--gold); border-color: var(--gold);
+            background: rgba(201,168,76,0.12);
+        }
+        #spot-sort-label { font-size: 0.72rem; color: var(--text-dim); flex: 1; min-width: 0; }
+
+        /* Sort-from origin marker on the map (blue pin) */
+        .spot-hl-origin {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #6ec4ff;
+            border: 2px solid #fff;
+            box-shadow: 0 0 8px rgba(110, 196, 255, 0.85);
+        }
+
+        .spot-section-header {
+            padding: 6px 8px 2px;
+            color: var(--ember);
+            font-size: 0.68rem;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+        .spot-multi-badge {
+            flex-shrink: 0;
+            font-size: 0.65rem;
+            color: var(--gold);
+            background: rgba(201,168,76,0.1);
+            border: 1px solid rgba(201,168,76,0.28);
+            border-radius: 3px;
+            padding: 1px 5px;
+        }
+        .spot-roster-row .spot-result-count { color: var(--text-dim); }
+
+        /* ── Special Shop / appraisal split-panel popup (ported from Campbell) ── */
+        .leaflet-popup-content:has(.ssp-split-panel) { width: auto !important; }
+        .ssp-popup-header {
+            display: flex; align-items: center; flex-wrap: wrap; gap: 2px;
+            padding-bottom: 6px; margin-bottom: 6px;
+            border-bottom: 1px solid #ddd;
+        }
+        .ssp-badge {
+            display: inline-block; padding: 1px 7px; border-radius: 3px;
+            background: #c084fc; color: #111; font-weight: bold; font-size: 11px;
+        }
+        .ssp-split-panel {
+            display: flex; gap: 0; min-width: 580px;
+        }
+        .ssp-list-panel {
+            width: 220px; flex-shrink: 0; display: flex; flex-direction: column;
+            border-right: 1px solid #ddd; max-height: 400px;
+        }
+        .ssp-search-wrap {
+            padding: 4px; border-bottom: 1px solid #ddd; flex-shrink: 0;
+        }
+        .ssp-search-input {
+            width: 100%; box-sizing: border-box; font-size: 11px; padding: 3px 6px;
+            border-radius: 3px; border: 1px solid #bbb;
+            background: #fff; color: #333;
+        }
+        .ssp-search-input:focus { outline: none; border-color: #9050cc; }
+        .ssp-list-scroll { overflow-y: auto; flex: 1; }
+        .ssp-list-cat-header {
+            display: flex; align-items: center; gap: 4px;
+            font-size: 11px; font-weight: bold; color: #333;
+            background: #f0f0f0;
+            padding: 3px 5px; cursor: pointer; user-select: none;
+            border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1;
+        }
+        .ssp-list-cat-header:hover { background: #e6e0f0; }
+        .ssp-cat-toggle { font-size: 9px; color: #888; flex-shrink: 0; }
+        .ssp-ap-row {
+            display: flex; align-items: center; gap: 3px;
+            padding: 4px 5px; cursor: pointer; font-size: 11px;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            border-left: 3px solid transparent;
+            transition: background 0.1s;
+        }
+        .ssp-ap-row:hover    { background: rgba(144,80,204,0.07); }
+        .ssp-ap-row.selected { background: rgba(144,80,204,0.12); border-left-color: #9050cc; }
+        .ssp-row-cost   { display: inline-flex; align-items: center; gap: 1px; flex-shrink: 0; }
+        .ssp-row-arrow  { color: #bbb; flex-shrink: 0; margin: 0 2px; font-size: 10px; }
+        .ssp-row-reward { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .ssp-lottery-badge {
+            display: inline-block; padding: 0 5px; border-radius: 3px;
+            background: rgba(144,80,204,0.12); color: #7030b0;
+            font-size: 10px; font-weight: bold; white-space: nowrap;
+        }
+        .ssp-detail-panel {
+            flex: 1; min-width: 0; overflow-y: auto; max-height: 400px;
+            padding: 0 6px 4px 10px;
+        }
+        .ssp-detail-label {
+            font-size: 12px; font-weight: bold; color: #333; margin-bottom: 8px;
+        }
+        .ssp-section-title {
+            display: block; font-size: 10px; font-weight: bold; color: #999;
+            text-transform: uppercase; letter-spacing: 0.06em;
+            margin-bottom: 4px;
+        }
+        .ssp-pool-item {
+            padding: 5px 0; border-top: 1px solid rgba(0,0,0,0.07);
+        }
+        .ssp-pool-item:first-child { border-top: none; }
+        .ssp-crest-badge {
+            display: inline-block; font-size: 10px; padding: 1px 6px;
+            border-radius: 3px; margin-top: 2px; margin-right: 2px;
+            background: #f0f0f0; color: #666;
+        }
+        .ssp-crest-imbued  { background: #f0e8ff; color: #7030b0; }
+        .ssp-crest-lottery { background: #fef9e7; color: #b45309; }
+        details.ssp-crest-expand { cursor: pointer; }
+        details.ssp-crest-expand summary { list-style: none; cursor: pointer; }
+        details.ssp-crest-expand summary::-webkit-details-marker { display: none; }
+        .ssp-more-hint { text-decoration: underline dotted; }
+        .ssp-crest-rest {
+            display: flex; flex-wrap: wrap; gap: 3px;
+            margin-top: 5px; padding-top: 5px;
+            border-top: 1px solid rgba(180,83,9,0.2);
+        }
+        .ssp-crest-pill {
+            display: inline-block; padding: 2px 7px; border-radius: 10px;
+            background: #fff3dc; border: 1px solid #f0d090;
+            font-size: 10px; color: #b45309; white-space: nowrap;
+        }
+        .ssp-crest-pill a { color: inherit; text-decoration: none; }
+        .ssp-crest-pill a:hover { text-decoration: underline; }
+        .ssp-crest-dragon  { background: #fff4ec; color: #c2410c; }
+        .ssp-crest-bbm     { background: #e8faf8; color: #0d9488; }
+        .ssp-drop-zone {
+            min-height: 24px; border: 1px dashed #ccc; border-radius: 3px;
+            font-size: 10px; color: #aaa; text-align: center;
+            padding: 4px; margin: 3px 0;
+            transition: background 0.1s, border-color 0.1s;
+        }
+
+        /* Connection choice popup (same coords, multiple destinations) */
+        .leaflet-popup:has(.conn-choice-popup) .leaflet-popup-content-wrapper {
+            background: var(--panel-bg);
+            color: var(--parchment);
+            border: 1px solid var(--panel-border);
+            border-radius: 2px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.65);
+            font-family: 'Crimson Text', Georgia, serif;
+        }
+        .leaflet-popup:has(.conn-choice-popup) .leaflet-popup-tip {
+            background: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            box-shadow: none;
+        }
+        .leaflet-popup:has(.conn-choice-popup) .leaflet-popup-content {
+            margin: 10px 12px;
+            min-width: 210px;
+        }
+        .leaflet-popup:has(.conn-choice-popup) .leaflet-popup-close-button {
+            color: var(--text-dim);
+            padding: 6px 8px 0 0;
+            font-size: 16px;
+            font-family: sans-serif;
+        }
+        .leaflet-popup:has(.conn-choice-popup) .leaflet-popup-close-button:hover {
+            color: var(--gold);
+        }
+        .conn-choice-popup { min-width: 200px; }
+        .conn-choice-title {
+            font-family: 'Cinzel', serif;
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 8px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid var(--panel-border);
+        }
+        .conn-choice-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2px;
+            width: 100%;
+            margin: 0 0 4px;
+            padding: 7px 9px;
+            border: 1px solid var(--panel-border);
+            border-radius: 2px;
+            background: rgba(201, 168, 76, 0.04);
+            cursor: pointer;
+            text-align: left;
+            transition: background 0.12s, border-color 0.12s;
+            font-family: 'Crimson Text', Georgia, serif;
+        }
+        .conn-choice-btn:last-child { margin-bottom: 0; }
+        .conn-choice-btn:hover {
+            background: var(--panel-hover);
+            border-color: var(--gold);
+        }
+        .conn-choice-label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--parchment);
+        }
+        .conn-choice-btn:hover .conn-choice-label { color: var(--gold); }
+        .conn-choice-sub {
+            font-size: 0.72rem;
+            color: var(--text-dim);
+            font-variant-numeric: tabular-nums;
+        }
+        .conn-choice-btn:hover .conn-choice-sub { color: var(--ash); }
+
     </style>
 </head>
 <body>
 <div id="app">
     <div id="sidebar">
         <div id="sidebar-resize-handle"></div>
-        <h1>Rising Maps Normal Channels <button id="sidebar-collapse" title="Collapse sidebar" style="float:right;background:none;border:none;color:var(--text-dim);font-size:1rem;cursor:pointer;padding:0 4px;line-height:1">◀</button></h1>
+        <h1 style="display:flex;align-items:center;justify-content:space-between;gap:8px"><span id="rising-title-text">Rising Maps</span><button id="sidebar-collapse" title="Collapse sidebar" style="background:none;border:none;color:var(--text-dim);font-size:1rem;cursor:pointer;padding:0 4px;line-height:1;flex-shrink:0">◀</button></h1>
+        <div id="rising-channel-bar" aria-label="Rising channel">
+            <span class="rising-channel-label">Channel</span>
+            <div id="rising-channel-toggle" role="group">
+                <button type="button" data-preset="rising" title="Normal Channels">Normal</button>
+                <button type="button" data-preset="rising-endgame" title="Endgame Channel 4">Endgame (CH4)</button>
+            </div>
+        </div>
         <div id="search-box">
             <input type="text" id="map-search" placeholder="Search maps..." autocomplete="off" spellcheck="false" title="Search by name&#10;stageno=200  — match stage number&#10;stageid=2    — match internal stage ID&#10;area=cassardis — match quest area name">
             <button id="map-search-clear" title="Clear search">✕</button>
         </div>
+        <div id="major-loc-bar" title="Jump to major overworld continents and regions">
+            <select id="major-continent-select" aria-label="Continent">
+                <option value="">— Continent —</option>
+            </select>
+            <select id="major-region-select" aria-label="Region within continent" disabled>
+                <option value="">— Region —</option>
+            </select>
+        </div>
         <div id="map-list"></div>
+        <div id="sidebar-bottom">
         <div id="layers-panel">
             <h3>Layers</h3>
             <label class="layer-toggle">
                 <input type="checkbox" id="layer-enemies" checked>
                 Enemy Spawns
             </label>
-            <div id="subgroup-bar" style="display:none;flex-wrap:wrap;gap:3px;margin:2px 0 4px 20px;align-items:center"></div>
-            <div class="layer-list">
-                <label class="layer-toggle">
-                    <input type="checkbox" id="layer-gather">
-                    Gathering Nodes
-                </label>
-                <label class="layer-toggle">
-                    <input type="checkbox" id="layer-shops">
-                    Shops &amp; Appraisals
-                </label>
-                <label class="layer-toggle">
-                    <input type="checkbox" id="layer-break-targets">
-                    Destroyable Objects
-                </label>
-                <label class="layer-toggle">
-                    <input type="checkbox" id="layer-connections" checked>
-                    Connections
-                </label>
-                <label class="layer-toggle">
-                    <input type="checkbox" id="layer-landmarks" checked>
-                    Landmarks
-                </label>
-                <label class="layer-toggle">
-                    <input type="checkbox" id="layer-stage-labels" checked>
-                    Area Names
-                </label>
-                <label class="layer-toggle">
-                    <input type="checkbox" id="layer-radii">
-                    Aggro/Link Radius
-                </label>
-
-                <label class="layer-toggle">
-                    <input type="checkbox" id="layer-grid">
-                    Grid
-                </label>
+            <div id="subgroup-bar"></div>
+            <div id="poi-filter-section">
+                <div class="poi-section expanded" id="mob-types-section" data-poi-section="mobTypes">
+                    <button type="button" class="poi-section-toggle" aria-expanded="true">
+                        <span class="expand-arrow">&#9654;</span><span>Spawns</span>
+                    </button>
+                    <div class="poi-section-body">
+                        <label class="layer-toggle poi-show-all" title="Show or hide all mob types">
+                            <input type="checkbox" id="mob-types-show-all" checked>
+                            Show all
+                        </label>
+                        <div id="mob-type-filter-list" class="layer-list poi-filter-list"></div>
+                        <label class="layer-toggle" title="When enabled, Spawns type checkboxes also filter the spot search list">
+                            <input type="checkbox" id="mob-types-apply-spot-search">
+                            Apply to spot search
+                        </label>
+                    </div>
+                </div>
+                <div class="poi-section expanded" id="locations-section" data-poi-section="locations">
+                    <button type="button" class="poi-section-toggle" aria-expanded="true">
+                        <span class="expand-arrow">&#9654;</span><span>Locations</span>
+                    </button>
+                    <div class="poi-section-body">
+                        <label class="layer-toggle poi-show-all" title="Show or hide all location markers">
+                            <input type="checkbox" id="poi-locations-show-all" checked>
+                            Show all
+                        </label>
+                        <div id="poi-filter-locations" class="layer-list poi-filter-list"></div>
+                    </div>
+                </div>
+                <div class="poi-section expanded" id="gatherables-section" data-poi-section="gatherables">
+                    <button type="button" class="poi-section-toggle" aria-expanded="true">
+                        <span class="expand-arrow">&#9654;</span><span>Gatherables</span>
+                    </button>
+                    <div class="poi-section-body">
+                        <label class="layer-toggle poi-show-all" title="Show or hide all gatherables">
+                            <input type="checkbox" id="poi-gatherables-show-all" checked>
+                            Show all
+                        </label>
+                        <div id="poi-filter-gatherables" class="layer-list poi-filter-list"></div>
+                    </div>
+                </div>
             </div>
             <div id="exits-panel" style="display:none;margin-top:6px;padding-top:6px;border-top:1px solid rgba(201,168,76,0.18);">
                 <div style="font-size:0.65rem;font-family:'Cinzel',serif;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--ember);margin-bottom:4px;">Exits</div>
                 <div id="exits-list"></div>
             </div>
-            <button id="btn-expand-collapse" style="
-                margin-top:8px;width:100%;padding:4px 0;
-                background:rgba(201,168,76,0.06);color:var(--ash);border:1px solid rgba(201,168,76,0.18);
-                border-radius:2px;font-size:0.72rem;font-family:'Cinzel',serif;letter-spacing:0.06em;cursor:pointer;
-            ">Expand All</button>
-            <div style="margin-top:6px;padding-top:6px;border-top:1px solid rgba(201,168,76,0.18);font-size:0.75rem;color:var(--text-dim);line-height:1.7">
-                Click chip to expand group<br>
-                Middle-click hull to collapse<br>
-                Click spawn to show:<br>
-                <span style="color:#ffd700">&#9679;</span> Aggro radius<br>
-                <span style="color:#ff7700">&#9675;</span> Link radius
+        </div>
+
+        <div id="dev-panel">
+            <button type="button" id="dev-panel-toggle" aria-expanded="false">
+                <span class="expand-arrow">&#9654;</span><span>Developer</span>
+            </button>
+            <div id="dev-panel-body">
+                <div class="dev-option-list">
+                    <label class="layer-toggle" title="Spawn IDs, group chips (G#), counts, and expand/collapse hull outlines on expanded groups">
+                        <input type="checkbox" id="dev-mob-spawn-labels">
+                        Technical spawn labels
+                    </label>
+                    <label class="layer-toggle">
+                        <input type="checkbox" id="layer-stage-labels" checked>
+                        Area Names
+                    </label>
+                    <label class="layer-toggle">
+                        <input type="checkbox" id="layer-radii">
+                        Aggro / link radius
+                    </label>
+                    <label class="layer-toggle">
+                        <input type="checkbox" id="layer-grid">
+                        Grid
+                    </label>
+                </div>
+                <button type="button" id="btn-expand-collapse" class="dev-action-btn">Expand all groups</button>
+                <div class="dev-help">
+                    Technical labels: click chip to expand · middle-click hull to collapse<br>
+                    Aggro / link radius: click a spawn on the map<br>
+                    Alt+click map to log world coordinates
+                </div>
             </div>
+        </div>
         </div>
     </div>
 
@@ -870,6 +1600,32 @@
                 <button class="spot-tab active" data-filter="enemy">Enemies</button>
                 <button class="spot-tab" data-filter="gather">Gathering</button>
                 <button class="spot-tab" data-filter="item">Items</button>
+            </div>
+            <div id="spot-level-section" class="visible">
+                <button type="button" id="spot-level-toggle" class="spot-level-toggle" aria-expanded="false">
+                    <span>Level range</span>
+                    <span id="spot-level-badge" class="spot-level-badge" hidden></span>
+                    <span class="spot-level-chevron" aria-hidden="true">&#9656;</span>
+                </button>
+                <div id="spot-level-panel" class="spot-level-panel">
+                    <label class="spot-level-field" for="spot-min-level">Min
+                        <input type="number" id="spot-min-level" class="spot-level-input" min="1" max="999" step="1" placeholder="—">
+                    </label>
+                    <label class="spot-level-field" for="spot-max-level">Max
+                        <input type="number" id="spot-max-level" class="spot-level-input" min="1" max="999" step="1" placeholder="—">
+                    </label>
+                </div>
+            </div>
+            <div id="spot-sort-section" class="visible">
+                <button type="button" id="spot-sort-toggle" class="spot-level-toggle" aria-expanded="false">
+                    <span>Sort from</span>
+                    <span id="spot-sort-badge" class="spot-level-badge">WDT</span>
+                    <span class="spot-level-chevron" aria-hidden="true">&#9656;</span>
+                </button>
+                <div id="spot-sort-panel">
+                    <div id="spot-sort-label">White Dragon Temple</div>
+                    <button type="button" id="spot-sort-pick" class="spot-sort-btn">Set from map click…</button>
+                </div>
             </div>
             <div id="spot-scope-row">
                 <button class="spot-scope active" data-scope="local">This Stage</button>

@@ -6010,6 +6010,14 @@
       "itemListId": 1144
     },
     {
+      "type": "CHEST_SILVER",
+      "groupId": 213,
+      "posId": 0,
+      "x": 20930.0,
+      "y": 7065.0,
+      "z": -11130.9
+    },
+    {
       "type": "OM_GATHER_SAND",
       "groupId": 202,
       "posId": 1,
@@ -15599,6 +15607,14 @@
       "z": -311687.7
     },
     {
+      "type": "CHEST_SILVER",
+      "groupId": 221,
+      "posId": 0,
+      "x": 21929.2,
+      "y": 24000.0,
+      "z": -310845.0
+    },
+    {
       "type": "OM_GATHER_MUSHROOM",
       "groupId": 229,
       "posId": 2,
@@ -15720,6 +15736,14 @@
       "y": 25146.7,
       "z": -290648.9,
       "itemListId": 1742
+    },
+    {
+      "type": "CHEST_SILVER",
+      "groupId": 221,
+      "posId": 1,
+      "x": 1702.4,
+      "y": 24999.5,
+      "z": -290051.1
     },
     {
       "type": "OM_GATHER_ONE_OFF",
@@ -16119,6 +16143,14 @@
       "itemListId": 1742
     },
     {
+      "type": "CHEST_SILVER",
+      "groupId": 221,
+      "posId": 2,
+      "x": 23941.0,
+      "y": 24001.5,
+      "z": -278588.7
+    },
+    {
       "type": "OM_GATHER_GRASS",
       "groupId": 241,
       "posId": 4,
@@ -16498,6 +16530,14 @@
       "y": 21798.1,
       "z": -264776.5,
       "itemListId": 1742
+    },
+    {
+      "type": "CHEST_SILVER",
+      "groupId": 221,
+      "posId": 3,
+      "x": 43704.0,
+      "y": 21798.1,
+      "z": -264376.0
     },
     {
       "type": "OM_GATHER_TREE_LV1",
@@ -16887,6 +16927,14 @@
       "itemListId": 1742
     },
     {
+      "type": "CHEST_SILVER",
+      "groupId": 221,
+      "posId": 4,
+      "x": 77604.3,
+      "y": 25854.3,
+      "z": -255790.0
+    },
+    {
       "type": "OM_GATHER_CRST_LV1",
       "groupId": 236,
       "posId": 6,
@@ -16912,6 +16960,14 @@
       "y": 21334.7,
       "z": -242798.2,
       "itemListId": 1742
+    },
+    {
+      "type": "CHEST_SILVER",
+      "groupId": 221,
+      "posId": 5,
+      "x": 43701.4,
+      "y": 18182.5,
+      "z": -241447.6
     },
     {
       "type": "OM_GATHER_CRST_LV1",
@@ -18636,6 +18692,24 @@
       "itemListId": 946
     }
   ],
+  "351": [
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 200,
+      "posId": 0,
+      "x": 646.7,
+      "y": -0.0,
+      "z": -4149.5
+    },
+    {
+      "type": "CHEST_BROWN",
+      "groupId": 200,
+      "posId": 1,
+      "x": -1066.3,
+      "y": 0.0,
+      "z": -1792.7
+    }
+  ],
   "352": [
     {
       "type": "CHEST_IRON",
@@ -20254,6 +20328,22 @@
       "itemListId": 662
     },
     {
+      "type": "CHEST_IRON",
+      "groupId": 201,
+      "posId": 2,
+      "x": -13570.3,
+      "y": 1768.3,
+      "z": 10900.2
+    },
+    {
+      "type": "CHEST_IRON",
+      "groupId": 201,
+      "posId": 3,
+      "x": -12786.4,
+      "y": 561.9,
+      "z": 23842.1
+    },
+    {
       "type": "OM_GATHER_ALCHEMY",
       "groupId": 201,
       "posId": 4,
@@ -20272,6 +20362,30 @@
       "itemListId": 664
     },
     {
+      "type": "CHEST_BROWN",
+      "groupId": 202,
+      "posId": 0,
+      "x": 5792.6,
+      "y": -1838.4,
+      "z": 17573.6
+    },
+    {
+      "type": "CHEST_IRON",
+      "groupId": 202,
+      "posId": 1,
+      "x": 6871.1,
+      "y": -2016.0,
+      "z": 25196.3
+    },
+    {
+      "type": "CHEST_IRON",
+      "groupId": 202,
+      "posId": 2,
+      "x": 14694.1,
+      "y": -508.9,
+      "z": 20398.3
+    },
+    {
       "type": "OM_GATHER_ANTIQUE",
       "groupId": 202,
       "posId": 3,
@@ -20288,6 +20402,14 @@
       "y": -605.6,
       "z": 21680.6,
       "itemListId": 664
+    },
+    {
+      "type": "CHEST_IRON",
+      "groupId": 202,
+      "posId": 5,
+      "x": 9322.3,
+      "y": 156.8,
+      "z": 7095.9
     },
     {
       "type": "OM_GATHER_ALCHEMY",
@@ -21285,6 +21407,14 @@
     {
       "type": "CHEST_BROWN",
       "groupId": 205,
+      "posId": 0,
+      "x": -483.1,
+      "y": 2119.1,
+      "z": -1234.4
+    },
+    {
+      "type": "CHEST_BROWN",
+      "groupId": 205,
       "posId": 1,
       "x": 507.8,
       "y": 2119.1,
@@ -21312,6 +21442,22 @@
     }
   ],
   "462": [
+    {
+      "type": "CHEST_SILVER",
+      "groupId": 200,
+      "posId": 0,
+      "x": -4215.3,
+      "y": 55.5,
+      "z": -19898.4
+    },
+    {
+      "type": "CHEST_SILVER",
+      "groupId": 200,
+      "posId": 1,
+      "x": 987.1,
+      "y": 4800.0,
+      "z": -3097.7
+    },
     {
       "type": "CHEST_BROWN",
       "groupId": 201,
@@ -21354,6 +21500,22 @@
     }
   ],
   "463": [
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 220,
+      "posId": 0,
+      "x": -3940.1,
+      "y": 32.6,
+      "z": -19725.4
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 220,
+      "posId": 1,
+      "x": -3929.4,
+      "y": 34.4,
+      "z": -20086.2
+    },
     {
       "type": "CHEST_TREASURE",
       "groupId": 221,
@@ -21401,6 +21563,14 @@
       "x": 1389.1,
       "y": 2400.6,
       "z": -6815.7
+    },
+    {
+      "type": "CHEST_PURPLE",
+      "groupId": 223,
+      "posId": 0,
+      "x": -4417.3,
+      "y": 54.9,
+      "z": -19899.8
     }
   ],
   "464": [
@@ -21461,6 +21631,14 @@
       "x": -4413.3,
       "y": 3200.0,
       "z": -9299.6
+    },
+    {
+      "type": "CHEST_SILVER",
+      "groupId": 201,
+      "posId": 0,
+      "x": 912.9,
+      "y": 2400.0,
+      "z": -7312.0
     }
   ],
   "472": [
@@ -21472,6 +21650,16 @@
       "y": 0.0,
       "z": -8706.1,
       "itemListId": 1809
+    }
+  ],
+  "477": [
+    {
+      "type": "CHEST_GOLD",
+      "groupId": 220,
+      "posId": 0,
+      "x": 7433.7,
+      "y": 255.2,
+      "z": 3514.5
     }
   ],
   "500": [
@@ -28439,6 +28627,14 @@
       "z": -43574.3
     },
     {
+      "type": "CHEST_TREASURE",
+      "groupId": 204,
+      "posId": 1,
+      "x": 4673.6,
+      "y": -225.4,
+      "z": -44329.0
+    },
+    {
       "type": "OM_GATHER_GRASS",
       "groupId": 204,
       "posId": 2,
@@ -29009,6 +29205,14 @@
     {
       "type": "CHEST_BROWN",
       "groupId": 208,
+      "posId": 2,
+      "x": 7434.7,
+      "y": 2339.3,
+      "z": -90623.0
+    },
+    {
+      "type": "CHEST_BROWN",
+      "groupId": 208,
       "posId": 3,
       "x": -2824.8,
       "y": -15.5,
@@ -29282,6 +29486,22 @@
       "z": -35892.9
     },
     {
+      "type": "CHEST_TREASURE",
+      "groupId": 205,
+      "posId": 1,
+      "x": 1162.0,
+      "y": 743.3,
+      "z": -50171.9
+    },
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 205,
+      "posId": 2,
+      "x": -4023.2,
+      "y": 14.2,
+      "z": -49501.6
+    },
+    {
       "type": "CHEST_IRON",
       "groupId": 207,
       "posId": 0,
@@ -29332,6 +29552,14 @@
       "y": -445.4,
       "z": -22911.8,
       "itemListId": 1301
+    },
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 202,
+      "posId": 1,
+      "x": 3324.8,
+      "y": -203.0,
+      "z": -22944.4
     },
     {
       "type": "OM_GATHER_JWL_LV1",
@@ -29539,6 +29767,14 @@
       "y": -42.8,
       "z": -37675.2,
       "itemListId": 1371
+    },
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 205,
+      "posId": 1,
+      "x": 3334.2,
+      "y": -204.8,
+      "z": -39638.9
     },
     {
       "type": "OM_GATHER_SAND",
@@ -29767,11 +30003,27 @@
     },
     {
       "type": "CHEST_BROWN",
+      "groupId": 202,
+      "posId": 1,
+      "x": 3841.1,
+      "y": 55.5,
+      "z": -16567.0
+    },
+    {
+      "type": "CHEST_BROWN",
       "groupId": 204,
       "posId": 0,
       "x": 2258.7,
       "y": 0.7,
       "z": -26577.6
+    },
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 205,
+      "posId": 0,
+      "x": 747.8,
+      "y": 28.9,
+      "z": -41242.7
     },
     {
       "type": "OM_GATHER_MUSHROOM",
@@ -30024,6 +30276,14 @@
       "y": -10.0,
       "z": -33296.6,
       "itemListId": 1377
+    },
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 206,
+      "posId": 0,
+      "x": 1467.6,
+      "y": 10.7,
+      "z": -46029.2
     },
     {
       "type": "OM_GATHER_SHELL",
@@ -30371,6 +30631,14 @@
       "itemListId": 1047
     },
     {
+      "type": "CHEST_TREASURE",
+      "groupId": 203,
+      "posId": 2,
+      "x": 3622.4,
+      "y": 500.0,
+      "z": -31827.5
+    },
+    {
       "type": "OM_GATHER_CRST_LV1",
       "groupId": 204,
       "posId": 0,
@@ -30387,6 +30655,14 @@
       "y": 22.0,
       "z": -34449.8,
       "itemListId": 1046
+    },
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 204,
+      "posId": 2,
+      "x": -2382.6,
+      "y": -300.0,
+      "z": -33630.8
     },
     {
       "type": "CHEST_IRON",
@@ -30830,6 +31106,14 @@
       "x": 864.4,
       "y": 1250.0,
       "z": -13124.2
+    },
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 204,
+      "posId": 0,
+      "x": 7315.3,
+      "y": 900.0,
+      "z": -25400.6
     },
     {
       "type": "CHEST_BROWN",
@@ -31323,6 +31607,14 @@
       "itemListId": 1337
     },
     {
+      "type": "CHEST_BROWN",
+      "groupId": 206,
+      "posId": 0,
+      "x": 2701.9,
+      "y": -1.0,
+      "z": -39737.6
+    },
+    {
       "type": "OM_GATHER_MUSHROOM",
       "groupId": 206,
       "posId": 1,
@@ -31757,6 +32049,14 @@
       "z": -29743.9
     },
     {
+      "type": "CHEST_TREASURE",
+      "groupId": 205,
+      "posId": 0,
+      "x": 3913.9,
+      "y": 0.0,
+      "z": -37568.9
+    },
+    {
       "type": "CHEST_IRON",
       "groupId": 207,
       "posId": 0,
@@ -31873,6 +32173,14 @@
       "z": -11455.9
     },
     {
+      "type": "CHEST_TREASURE",
+      "groupId": 202,
+      "posId": 0,
+      "x": 3465.3,
+      "y": 0.0,
+      "z": -22308.7
+    },
+    {
       "type": "CHEST_BROWN",
       "groupId": 203,
       "posId": 0,
@@ -31955,6 +32263,14 @@
       "z": -29864.9
     },
     {
+      "type": "CHEST_TREASURE",
+      "groupId": 206,
+      "posId": 0,
+      "x": -542.1,
+      "y": -209.6,
+      "z": -44782.2
+    },
+    {
       "type": "CHEST_IRON",
       "groupId": 208,
       "posId": 0,
@@ -32019,6 +32335,14 @@
       "x": 2145.5,
       "y": -432.3,
       "z": -36595.8
+    },
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 206,
+      "posId": 0,
+      "x": -228.6,
+      "y": 160.0,
+      "z": -46015.3
     },
     {
       "type": "CHEST_BROWN",
@@ -32314,6 +32638,14 @@
     },
     {
       "type": "CHEST_BROWN",
+      "groupId": 205,
+      "posId": 0,
+      "x": -4838.6,
+      "y": -3850.9,
+      "z": -47405.4
+    },
+    {
+      "type": "CHEST_BROWN",
       "groupId": 206,
       "posId": 0,
       "x": 2332.4,
@@ -32327,6 +32659,14 @@
       "x": -4875.7,
       "y": -2417.0,
       "z": -59571.9
+    },
+    {
+      "type": "CHEST_BROWN",
+      "groupId": 206,
+      "posId": 2,
+      "x": -2791.6,
+      "y": -2480.7,
+      "z": -64560.7
     },
     {
       "type": "CHEST_BROWN",
@@ -32351,6 +32691,14 @@
       "x": 6814.3,
       "y": -3807.6,
       "z": -76053.0
+    },
+    {
+      "type": "CHEST_BROWN",
+      "groupId": 209,
+      "posId": 3,
+      "x": 2431.4,
+      "y": -4002.7,
+      "z": -81380.8
     },
     {
       "type": "OM_GATHER_TWINKLE",
@@ -32388,6 +32736,14 @@
       "z": -10242.9
     },
     {
+      "type": "CHEST_TREASURE",
+      "groupId": 201,
+      "posId": 1,
+      "x": -747.7,
+      "y": -1192.0,
+      "z": -14513.4
+    },
+    {
       "type": "CHEST_IRON",
       "groupId": 202,
       "posId": 0,
@@ -32418,6 +32774,22 @@
       "x": -4908.9,
       "y": -3446.1,
       "z": -41501.9
+    },
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 204,
+      "posId": 2,
+      "x": -4908.6,
+      "y": -3445.7,
+      "z": -41313.7
+    },
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 204,
+      "posId": 3,
+      "x": 5461.8,
+      "y": -1847.2,
+      "z": -44408.8
     },
     {
       "type": "CHEST_IRON",
@@ -33414,6 +33786,14 @@
       "x": -119.8,
       "y": 5100.0,
       "z": -961.7
+    },
+    {
+      "type": "CHEST_SILVER",
+      "groupId": 201,
+      "posId": 0,
+      "x": 475.9,
+      "y": 5700.0,
+      "z": 420.7
     }
   ],
   "909": [
@@ -33487,6 +33867,22 @@
       "itemListId": 1351
     },
     {
+      "type": "CHEST_TREASURE",
+      "groupId": 202,
+      "posId": 2,
+      "x": 6621.1,
+      "y": 1338.9,
+      "z": 5122.5
+    },
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 202,
+      "posId": 3,
+      "x": 14287.7,
+      "y": 1918.7,
+      "z": 4300.5
+    },
+    {
       "type": "OM_GATHER_TREE_LV2",
       "groupId": 202,
       "posId": 4,
@@ -33502,6 +33898,14 @@
       "x": 7106.9,
       "y": 2257.9,
       "z": 2902.7
+    },
+    {
+      "type": "CHEST_BROWN",
+      "groupId": 202,
+      "posId": 6,
+      "x": 8217.6,
+      "y": 1639.4,
+      "z": -1695.9
     },
     {
       "type": "CHEST_BROWN",
@@ -34801,6 +35205,22 @@
       "z": -45837.8
     },
     {
+      "type": "CHEST_BRONZE",
+      "groupId": 200,
+      "posId": 0,
+      "x": 7060.7,
+      "y": -971.2,
+      "z": -51503.8
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 200,
+      "posId": 1,
+      "x": 7254.2,
+      "y": -971.2,
+      "z": -51192.8
+    },
+    {
       "type": "OM_GATHER_GRASS",
       "groupId": 205,
       "posId": 1,
@@ -34898,9 +35318,25 @@
       "y": 110.5,
       "z": -70860.2,
       "itemListId": 1790
+    },
+    {
+      "type": "CHEST_SILVER",
+      "groupId": 200,
+      "posId": 0,
+      "x": 6911.5,
+      "y": -973.9,
+      "z": -114839.9
     }
   ],
   "1006": [
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 202,
+      "posId": 0,
+      "x": -2607.3,
+      "y": -158.4,
+      "z": -9894.1
+    },
     {
       "type": "OM_GATHER_CRST_LV1",
       "groupId": 206,
@@ -34947,6 +35383,14 @@
       "itemListId": 1757
     },
     {
+      "type": "CHEST_TREASURE",
+      "groupId": 201,
+      "posId": 0,
+      "x": -4115.5,
+      "y": 74.9,
+      "z": -33192.3
+    },
+    {
       "type": "OM_GATHER_MUSHROOM",
       "groupId": 209,
       "posId": 0,
@@ -34956,12 +35400,44 @@
       "itemListId": 1761
     },
     {
+      "type": "CHEST_TREASURE",
+      "groupId": 202,
+      "posId": 1,
+      "x": -563.2,
+      "y": 79.0,
+      "z": -54624.5
+    },
+    {
       "type": "CHEST_BROWN",
       "groupId": 209,
       "posId": 1,
       "x": 4075.1,
       "y": 41.9,
       "z": -52082.0
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 200,
+      "posId": 0,
+      "x": -4080.8,
+      "y": -820.6,
+      "z": -63794.0
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 200,
+      "posId": 1,
+      "x": -4163.1,
+      "y": -820.5,
+      "z": -63948.4
+    },
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 201,
+      "posId": 1,
+      "x": 2969.2,
+      "y": -445.9,
+      "z": -60393.8
     },
     {
       "type": "OM_GATHER_GRASS",
@@ -35069,6 +35545,14 @@
       "y": 24.5,
       "z": -35852.2,
       "itemListId": 1991
+    },
+    {
+      "type": "CHEST_SILVER",
+      "groupId": 200,
+      "posId": 0,
+      "x": -5001.6,
+      "y": 46.3,
+      "z": -46756.5
     }
   ],
   "1020": [
@@ -35713,6 +36197,22 @@
       "z": -40571.5
     },
     {
+      "type": "CHEST_BRONZE",
+      "groupId": 200,
+      "posId": 0,
+      "x": -107.7,
+      "y": 1672.3,
+      "z": -70902.4
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 200,
+      "posId": 1,
+      "x": 83.9,
+      "y": 1672.3,
+      "z": -70902.4
+    },
+    {
       "type": "OM_GATHER_WATER",
       "groupId": 212,
       "posId": 0,
@@ -35801,6 +36301,14 @@
       "x": 3606.5,
       "y": -343.8,
       "z": -21941.8
+    },
+    {
+      "type": "CHEST_SILVER",
+      "groupId": 220,
+      "posId": 0,
+      "x": -887.9,
+      "y": -544.5,
+      "z": -48350.1
     }
   ],
   "1040": [
@@ -36054,6 +36562,22 @@
       "x": 5260.0,
       "y": -4242.1,
       "z": -65083.4
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 200,
+      "posId": 0,
+      "x": -94.2,
+      "y": -3944.5,
+      "z": -76855.3
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 200,
+      "posId": 1,
+      "x": 86.0,
+      "y": -3944.5,
+      "z": -76858.5
     },
     {
       "type": "CHEST_TREASURE",
@@ -36754,6 +37278,22 @@
       "y": -3.1,
       "z": -81262.3,
       "itemListId": 1800
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 220,
+      "posId": 0,
+      "x": -491.6,
+      "y": 1432.8,
+      "z": -93242.5
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 220,
+      "posId": 1,
+      "x": 513.7,
+      "y": 1432.8,
+      "z": -93242.5
     }
   ],
   "1095": [
@@ -36790,6 +37330,22 @@
       "y": 300.0,
       "z": -21184.6,
       "itemListId": 1911
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 210,
+      "posId": 0,
+      "x": -126.0,
+      "y": 35.5,
+      "z": -29908.5
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 210,
+      "posId": 1,
+      "x": -126.1,
+      "y": 34.8,
+      "z": -30284.0
     },
     {
       "type": "OM_GATHER_SAND",
@@ -36851,6 +37407,16 @@
       "z": -42165.5
     }
   ],
+  "1096": [
+    {
+      "type": "CHEST_SILVER",
+      "groupId": 210,
+      "posId": 0,
+      "x": 1.9,
+      "y": 1466.2,
+      "z": -13921.2
+    }
+  ],
   "1097": [
     {
       "type": "CHEST_SILVER",
@@ -36861,7 +37427,65 @@
       "z": -6959.2
     }
   ],
+  "1098": [
+    {
+      "type": "CHEST_SILVER",
+      "groupId": 211,
+      "posId": 0,
+      "x": -3313.5,
+      "y": 955.8,
+      "z": -22369.8
+    }
+  ],
   "1100": [
+    {
+      "type": "CHEST_PURPLE",
+      "groupId": 210,
+      "posId": 0,
+      "x": -11245.7,
+      "y": 6834.4,
+      "z": -19058.8
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 211,
+      "posId": 0,
+      "x": -10587.0,
+      "y": 6856.5,
+      "z": -19133.9
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 211,
+      "posId": 1,
+      "x": -10637.3,
+      "y": 6856.5,
+      "z": -19321.7
+    },
+    {
+      "type": "CHEST_SILVER",
+      "groupId": 212,
+      "posId": 0,
+      "x": 1245.0,
+      "y": 2626.2,
+      "z": -2093.1
+    },
+    {
+      "type": "CHEST_SILVER",
+      "groupId": 212,
+      "posId": 1,
+      "x": 1344.6,
+      "y": 5346.2,
+      "z": -8343.4
+    },
+    {
+      "type": "CHEST_SILVER",
+      "groupId": 212,
+      "posId": 2,
+      "x": -310.2,
+      "y": 1594.2,
+      "z": -8177.4
+    },
     {
       "type": "OM_GATHER_GRASS",
       "groupId": 214,
@@ -37027,6 +37651,22 @@
   ],
   "1101": [
     {
+      "type": "CHEST_SILVER",
+      "groupId": 201,
+      "posId": 0,
+      "x": 12713.0,
+      "y": 2724.5,
+      "z": -17459.8
+    },
+    {
+      "type": "CHEST_SILVER",
+      "groupId": 201,
+      "posId": 1,
+      "x": 9290.0,
+      "y": 935.2,
+      "z": -13579.5
+    },
+    {
       "type": "CHEST_BROWN",
       "groupId": 202,
       "posId": 0,
@@ -37122,9 +37762,65 @@
       "x": 1510.7,
       "y": 1814.3,
       "z": -12536.2
+    },
+    {
+      "type": "CHEST_SILVER",
+      "groupId": 201,
+      "posId": 0,
+      "x": 1019.9,
+      "y": 3683.3,
+      "z": -23799.3
     }
   ],
   "1104": [
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 207,
+      "posId": 0,
+      "x": -3316.0,
+      "y": -23402.7,
+      "z": -5342.0
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 207,
+      "posId": 1,
+      "x": -5188.1,
+      "y": -17103.7,
+      "z": -3629.7
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 208,
+      "posId": 0,
+      "x": -4179.1,
+      "y": -22389.9,
+      "z": -4784.1
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 208,
+      "posId": 1,
+      "x": -3415.8,
+      "y": -19095.6,
+      "z": -5606.3
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 209,
+      "posId": 0,
+      "x": -1046.8,
+      "y": -21093.5,
+      "z": -6265.3
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 209,
+      "posId": 1,
+      "x": 6070.7,
+      "y": -19096.0,
+      "z": -1824.1
+    },
     {
       "type": "OM_GATHER_TWINKLE",
       "groupId": 210,
@@ -43509,6 +44205,22 @@
       "z": -60502.2
     },
     {
+      "type": "CHEST_GOLD",
+      "groupId": 214,
+      "posId": 0,
+      "x": -182.7,
+      "y": -3379.9,
+      "z": -69032.9
+    },
+    {
+      "type": "CHEST_GOLD",
+      "groupId": 214,
+      "posId": 1,
+      "x": 186.2,
+      "y": -3379.9,
+      "z": -69032.9
+    },
+    {
       "type": "OM_GATHER_TWINKLE",
       "groupId": 121,
       "posId": 0,
@@ -44833,6 +45545,14 @@
       "z": -311687.7
     },
     {
+      "type": "CHEST_BRONZE",
+      "groupId": 246,
+      "posId": 0,
+      "x": 10722.6,
+      "y": 23898.9,
+      "z": -311179.6
+    },
+    {
       "type": "OM_GATHER_MUSHROOM",
       "groupId": 229,
       "posId": 2,
@@ -44840,6 +45560,14 @@
       "y": 24000.0,
       "z": -310340.1,
       "itemListId": 1806
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 246,
+      "posId": 1,
+      "x": 22575.3,
+      "y": 24054.5,
+      "z": -310224.2
     },
     {
       "type": "OM_GATHER_MUSHROOM",
@@ -44858,6 +45586,14 @@
       "y": 23999.2,
       "z": -305719.4,
       "itemListId": 1806
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 246,
+      "posId": 2,
+      "x": 18703.3,
+      "y": 24000.0,
+      "z": -305722.8
     },
     {
       "type": "OM_GATHER_MUSHROOM",
@@ -44911,6 +45647,14 @@
       "z": -287634.9
     },
     {
+      "type": "CHEST_BRONZE",
+      "groupId": 246,
+      "posId": 3,
+      "x": 4561.7,
+      "y": 24006.2,
+      "z": -287151.8
+    },
+    {
       "type": "CHEST_BROWN",
       "groupId": 241,
       "posId": 0,
@@ -44943,6 +45687,46 @@
       "x": 20372.7,
       "y": 24001.5,
       "z": -281648.1
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 246,
+      "posId": 4,
+      "x": 26046.1,
+      "y": 22999.9,
+      "z": -288915.2
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 246,
+      "posId": 5,
+      "x": 20577.5,
+      "y": 24001.5,
+      "z": -281857.1
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 246,
+      "posId": 6,
+      "x": 20522.0,
+      "y": 23000.0,
+      "z": -283155.4
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 246,
+      "posId": 7,
+      "x": 28043.3,
+      "y": 23000.0,
+      "z": -280158.9
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 247,
+      "posId": 0,
+      "x": 34150.8,
+      "y": 22327.4,
+      "z": -280458.1
     },
     {
       "type": "OM_GATHER_GRASS",
@@ -45094,6 +45878,14 @@
       "itemListId": 1806
     },
     {
+      "type": "CHEST_BRONZE",
+      "groupId": 247,
+      "posId": 1,
+      "x": 60950.8,
+      "y": 16234.7,
+      "z": -284451.1
+    },
+    {
       "type": "CHEST_BROWN",
       "groupId": 96,
       "posId": 4,
@@ -45136,6 +45928,14 @@
       "y": 22281.3,
       "z": -277575.0,
       "itemListId": 1806
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 247,
+      "posId": 2,
+      "x": 30455.4,
+      "y": 21047.4,
+      "z": -273919.2
     },
     {
       "type": "CHEST_BROWN",
@@ -45262,6 +46062,22 @@
       "itemListId": 1806
     },
     {
+      "type": "CHEST_BRONZE",
+      "groupId": 247,
+      "posId": 3,
+      "x": 61168.7,
+      "y": 14637.5,
+      "z": -276064.8
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 247,
+      "posId": 4,
+      "x": 69994.2,
+      "y": 16260.1,
+      "z": -276466.0
+    },
+    {
       "type": "CHEST_BROWN",
       "groupId": 96,
       "posId": 7,
@@ -45350,6 +46166,14 @@
       "itemListId": 1806
     },
     {
+      "type": "CHEST_BRONZE",
+      "groupId": 248,
+      "posId": 0,
+      "x": 43924.1,
+      "y": 21798.1,
+      "z": -266607.8
+    },
+    {
       "type": "OM_GATHER_WATER",
       "groupId": 226,
       "posId": 0,
@@ -45411,6 +46235,14 @@
       "y": 14598.7,
       "z": -269088.1,
       "itemListId": 1806
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 247,
+      "posId": 5,
+      "x": 59297.4,
+      "y": 17477.2,
+      "z": -265535.5
     },
     {
       "type": "CHEST_BROWN",
@@ -45579,6 +46411,22 @@
       "itemListId": 1806
     },
     {
+      "type": "CHEST_BRONZE",
+      "groupId": 247,
+      "posId": 6,
+      "x": 84330.9,
+      "y": 16778.1,
+      "z": -267143.1
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 248,
+      "posId": 1,
+      "x": 83217.5,
+      "y": 20021.8,
+      "z": -261952.7
+    },
+    {
       "type": "OM_GATHER_MUSHROOM",
       "groupId": 237,
       "posId": 7,
@@ -45586,6 +46434,22 @@
       "y": 18042.8,
       "z": -257729.8,
       "itemListId": 1806
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 247,
+      "posId": 7,
+      "x": 57322.5,
+      "y": 14772.7,
+      "z": -259561.4
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 248,
+      "posId": 2,
+      "x": 55962.3,
+      "y": 21062.7,
+      "z": -256951.9
     },
     {
       "type": "CHEST_BROWN",
@@ -45784,6 +46648,14 @@
       "itemListId": 1806
     },
     {
+      "type": "CHEST_BRONZE",
+      "groupId": 248,
+      "posId": 3,
+      "x": 31343.0,
+      "y": 16253.3,
+      "z": -232215.6
+    },
+    {
       "type": "OM_GATHER_GRASS",
       "groupId": 231,
       "posId": 2,
@@ -45827,6 +46699,14 @@
       "y": 21694.5,
       "z": -237684.9,
       "itemListId": 1806
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 248,
+      "posId": 4,
+      "x": 67057.9,
+      "y": 19090.5,
+      "z": -233220.1
     },
     {
       "type": "OM_GATHER_CRST_LV1",
@@ -45881,6 +46761,14 @@
       "y": 19180.4,
       "z": -236241.2,
       "itemListId": 1806
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 248,
+      "posId": 5,
+      "x": 71184.4,
+      "y": 20046.2,
+      "z": -238281.7
     }
   ],
   "1151": [
@@ -45903,6 +46791,14 @@
       "itemListId": 1808
     },
     {
+      "type": "CHEST_BRONZE",
+      "groupId": 206,
+      "posId": 0,
+      "x": 3925.4,
+      "y": 405.6,
+      "z": -6564.7
+    },
+    {
       "type": "OM_GATHER_GRASS",
       "groupId": 202,
       "posId": 2,
@@ -45918,6 +46814,14 @@
       "x": -618.5,
       "y": 410.0,
       "z": -34071.4
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 206,
+      "posId": 1,
+      "x": -726.1,
+      "y": 411.9,
+      "z": -34199.1
     },
     {
       "type": "OM_GATHER_CRST_LV1",
@@ -45938,6 +46842,14 @@
       "itemListId": 1808
     },
     {
+      "type": "CHEST_BRONZE",
+      "groupId": 206,
+      "posId": 2,
+      "x": 4168.6,
+      "y": -1779.8,
+      "z": -49827.1
+    },
+    {
       "type": "CHEST_BROWN",
       "groupId": 204,
       "posId": 0,
@@ -45955,15 +46867,47 @@
       "itemListId": 1808
     },
     {
+      "type": "CHEST_BRONZE",
+      "groupId": 206,
+      "posId": 3,
+      "x": 1183.3,
+      "y": 39.3,
+      "z": -67009.9
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 206,
+      "posId": 4,
+      "x": -4791.1,
+      "y": 1704.2,
+      "z": -104330.3
+    },
+    {
       "type": "CHEST_BROWN",
       "groupId": 200,
       "posId": 0,
       "x": 6911.5,
       "y": -973.9,
       "z": -114839.9
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 206,
+      "posId": 5,
+      "x": 7314.0,
+      "y": -1007.6,
+      "z": -115109.7
     }
   ],
   "1154": [
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 231,
+      "posId": 0,
+      "x": 28291.8,
+      "y": 78650.8,
+      "z": -403513.8
+    },
     {
       "type": "OM_GATHER_TREE_LV1",
       "groupId": 222,
@@ -46051,6 +46995,14 @@
       "z": -382685.4
     },
     {
+      "type": "CHEST_BRONZE",
+      "groupId": 230,
+      "posId": 0,
+      "x": -81217.6,
+      "y": 54424.2,
+      "z": -383925.6
+    },
+    {
       "type": "CHEST_BROWN",
       "groupId": 240,
       "posId": 0,
@@ -46093,6 +47045,22 @@
       "itemListId": 1968
     },
     {
+      "type": "CHEST_BRONZE",
+      "groupId": 230,
+      "posId": 1,
+      "x": -58013.5,
+      "y": 58544.1,
+      "z": -381113.4
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 231,
+      "posId": 1,
+      "x": -38645.2,
+      "y": 58006.5,
+      "z": -381335.9
+    },
+    {
       "type": "OM_GATHER_SAND",
       "groupId": 222,
       "posId": 8,
@@ -46100,6 +47068,22 @@
       "y": 73006.1,
       "z": -384670.5,
       "itemListId": 1969
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 231,
+      "posId": 2,
+      "x": 28876.3,
+      "y": 72975.7,
+      "z": -384478.1
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 231,
+      "posId": 3,
+      "x": 29386.7,
+      "y": 75831.4,
+      "z": -389197.9
     },
     {
       "type": "OM_GATHER_SAND",
@@ -46174,6 +47158,14 @@
       "itemListId": 1970
     },
     {
+      "type": "CHEST_BRONZE",
+      "groupId": 232,
+      "posId": 0,
+      "x": 60291.9,
+      "y": 60126.3,
+      "z": -380017.1
+    },
+    {
       "type": "CHEST_TREASURE",
       "groupId": 223,
       "posId": 5,
@@ -46189,6 +47181,14 @@
       "y": 59862.7,
       "z": -389392.1,
       "itemListId": 1970
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 232,
+      "posId": 1,
+      "x": 76626.0,
+      "y": 60000.0,
+      "z": -388367.5
     },
     {
       "type": "OM_GATHER_MUSHROOM",
@@ -46254,6 +47254,14 @@
       "itemListId": 1968
     },
     {
+      "type": "CHEST_BRONZE",
+      "groupId": 230,
+      "posId": 2,
+      "x": -67140.1,
+      "y": 58333.5,
+      "z": -372028.3
+    },
+    {
       "type": "OM_GATHER_GRASS",
       "groupId": 221,
       "posId": 0,
@@ -46307,6 +47315,14 @@
       "itemListId": 1969
     },
     {
+      "type": "CHEST_BRONZE",
+      "groupId": 232,
+      "posId": 2,
+      "x": 37785.0,
+      "y": 57001.5,
+      "z": -370903.6
+    },
+    {
       "type": "CHEST_BROWN",
       "groupId": 240,
       "posId": 3,
@@ -46332,6 +47348,14 @@
       "itemListId": 1970
     },
     {
+      "type": "CHEST_BRONZE",
+      "groupId": 232,
+      "posId": 3,
+      "x": 56401.5,
+      "y": 58078.1,
+      "z": -370638.6
+    },
+    {
       "type": "OM_GATHER_SAND",
       "groupId": 223,
       "posId": 9,
@@ -46348,6 +47372,14 @@
       "y": 60893.0,
       "z": -377107.9,
       "itemListId": 1970
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 232,
+      "posId": 4,
+      "x": 62091.2,
+      "y": 60854.0,
+      "z": -376991.2
     },
     {
       "type": "OM_GATHER_TREE_LV1",
@@ -46368,6 +47400,14 @@
       "itemListId": 1968
     },
     {
+      "type": "CHEST_BRONZE",
+      "groupId": 230,
+      "posId": 3,
+      "x": -92748.3,
+      "y": 60940.8,
+      "z": -366617.6
+    },
+    {
       "type": "OM_GATHER_TREE_LV1",
       "groupId": 220,
       "posId": 12,
@@ -46384,6 +47424,14 @@
       "y": 59638.6,
       "z": -360748.4,
       "itemListId": 1968
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 230,
+      "posId": 4,
+      "x": -86257.2,
+      "y": 59665.7,
+      "z": -361587.5
     },
     {
       "type": "OM_GATHER_CRST_LV1",
@@ -46420,6 +47468,14 @@
       "y": 59671.6,
       "z": -363638.1,
       "itemListId": 1968
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 230,
+      "posId": 5,
+      "x": -74398.7,
+      "y": 59480.9,
+      "z": -365738.7
     },
     {
       "type": "OM_GATHER_CRST_LV1",
@@ -46464,6 +47520,14 @@
       "x": -64013.8,
       "y": 59749.2,
       "z": -365619.1
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 230,
+      "posId": 6,
+      "x": -63381.6,
+      "y": 59715.7,
+      "z": -365345.5
     },
     {
       "type": "OM_GATHER_GRASS",
@@ -46547,6 +47611,22 @@
       "itemListId": 1969
     },
     {
+      "type": "CHEST_BRONZE",
+      "groupId": 231,
+      "posId": 4,
+      "x": -44814.1,
+      "y": 59778.2,
+      "z": -364201.0
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 231,
+      "posId": 5,
+      "x": -29432.9,
+      "y": 61662.3,
+      "z": -362650.6
+    },
+    {
       "type": "CHEST_BROWN",
       "groupId": 240,
       "posId": 4,
@@ -46609,12 +47689,28 @@
       "itemListId": 1970
     },
     {
+      "type": "CHEST_BRONZE",
+      "groupId": 232,
+      "posId": 5,
+      "x": 47257.8,
+      "y": 57417.2,
+      "z": -366206.8
+    },
+    {
       "type": "CHEST_BROWN",
       "groupId": 240,
       "posId": 5,
       "x": 41330.8,
       "y": 57023.0,
       "z": -369018.4
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 232,
+      "posId": 6,
+      "x": 68679.4,
+      "y": 61788.3,
+      "z": -369084.8
     },
     {
       "type": "OM_GATHER_TREE_LV1",
@@ -46626,6 +47722,14 @@
       "itemListId": 1968
     },
     {
+      "type": "CHEST_BRONZE",
+      "groupId": 230,
+      "posId": 7,
+      "x": -67741.9,
+      "y": 55826.9,
+      "z": -351685.0
+    },
+    {
       "type": "OM_GATHER_SAND",
       "groupId": 221,
       "posId": 14,
@@ -46633,6 +47737,22 @@
       "y": 57786.7,
       "z": -352380.8,
       "itemListId": 1969
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 231,
+      "posId": 6,
+      "x": -50270.2,
+      "y": 57769.1,
+      "z": -353299.1
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 231,
+      "posId": 7,
+      "x": -50270.2,
+      "y": 57769.1,
+      "z": -353299.1
     },
     {
       "type": "OM_GATHER_GRASS",
@@ -46645,6 +47765,62 @@
     }
   ],
   "1155": [
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 212,
+      "posId": 0,
+      "x": 1245.0,
+      "y": 2626.2,
+      "z": -2093.1
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 212,
+      "posId": 1,
+      "x": 1344.6,
+      "y": 5346.2,
+      "z": -8343.4
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 212,
+      "posId": 2,
+      "x": -310.2,
+      "y": 1594.2,
+      "z": -8177.4
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 212,
+      "posId": 3,
+      "x": 82.5,
+      "y": 5260.0,
+      "z": -14808.0
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 212,
+      "posId": 4,
+      "x": -3497.8,
+      "y": 8479.0,
+      "z": -19102.4
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 212,
+      "posId": 5,
+      "x": -5680.5,
+      "y": 2992.6,
+      "z": -7325.8
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 212,
+      "posId": 6,
+      "x": 2724.6,
+      "y": 25.7,
+      "z": -5452.5
+    },
     {
       "type": "OM_GATHER_GRASS",
       "groupId": 214,
@@ -47656,6 +48832,22 @@
       "z": -17219.1
     },
     {
+      "type": "CHEST_ROUND",
+      "groupId": 204,
+      "posId": 0,
+      "x": -1457.3,
+      "y": 92.5,
+      "z": -25627.7
+    },
+    {
+      "type": "CHEST_ROUND",
+      "groupId": 204,
+      "posId": 1,
+      "x": 1458.8,
+      "y": 91.1,
+      "z": -25622.2
+    },
+    {
       "type": "CHEST_BROWN",
       "groupId": 204,
       "posId": 2,
@@ -47720,6 +48912,14 @@
       "x": 988.6,
       "y": 887.7,
       "z": -59922.5
+    },
+    {
+      "type": "CHEST_IRON",
+      "groupId": 203,
+      "posId": 2,
+      "x": 4060.9,
+      "y": -274.8,
+      "z": -58992.0
     },
     {
       "type": "CHEST_TREASURE",
@@ -48021,6 +49221,70 @@
       "x": -5304.7,
       "y": -1599.1,
       "z": -44952.6
+    },
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 202,
+      "posId": 0,
+      "x": 2853.9,
+      "y": -1045.7,
+      "z": -17043.7
+    },
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 202,
+      "posId": 1,
+      "x": 5210.1,
+      "y": -1045.3,
+      "z": -14685.9
+    },
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 202,
+      "posId": 2,
+      "x": -4238.9,
+      "y": -993.2,
+      "z": -15891.9
+    },
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 203,
+      "posId": 0,
+      "x": -692.7,
+      "y": -200.0,
+      "z": -26662.7
+    },
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 203,
+      "posId": 1,
+      "x": 6052.5,
+      "y": -10.0,
+      "z": -26010.6
+    },
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 204,
+      "posId": 0,
+      "x": 2443.0,
+      "y": -1999.2,
+      "z": -40445.7
+    },
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 204,
+      "posId": 1,
+      "x": -4966.4,
+      "y": -1814.9,
+      "z": -37469.7
+    },
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 204,
+      "posId": 2,
+      "x": -4496.6,
+      "y": -1813.1,
+      "z": -39163.9
     }
   ],
   "2011": [
@@ -48131,6 +49395,14 @@
       "z": -31014.7
     },
     {
+      "type": "CHEST_BROWN",
+      "groupId": 220,
+      "posId": 1,
+      "x": 3686.9,
+      "y": -500.0,
+      "z": -27890.9
+    },
+    {
       "type": "CHEST_SEALED_ORANGE",
       "groupId": 30,
       "posId": 1,
@@ -48203,6 +49475,70 @@
       "x": -5304.7,
       "y": -1599.1,
       "z": -44952.6
+    },
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 202,
+      "posId": 0,
+      "x": 2853.9,
+      "y": -1045.7,
+      "z": -17043.7
+    },
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 202,
+      "posId": 1,
+      "x": 5210.1,
+      "y": -1045.3,
+      "z": -14685.9
+    },
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 202,
+      "posId": 2,
+      "x": -4238.9,
+      "y": -993.2,
+      "z": -15891.9
+    },
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 203,
+      "posId": 0,
+      "x": -692.7,
+      "y": -200.0,
+      "z": -26662.7
+    },
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 203,
+      "posId": 1,
+      "x": 6052.5,
+      "y": -10.0,
+      "z": -26010.6
+    },
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 204,
+      "posId": 0,
+      "x": 2443.0,
+      "y": -1999.2,
+      "z": -40445.7
+    },
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 204,
+      "posId": 1,
+      "x": -4966.4,
+      "y": -1814.9,
+      "z": -37469.7
+    },
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 204,
+      "posId": 2,
+      "x": -4496.6,
+      "y": -1813.1,
+      "z": -39163.9
     }
   ],
   "2014": [
@@ -48311,6 +49647,14 @@
       "x": -184.6,
       "y": 50.5,
       "z": -31014.7
+    },
+    {
+      "type": "CHEST_BROWN",
+      "groupId": 220,
+      "posId": 1,
+      "x": 3686.9,
+      "y": -500.0,
+      "z": -27890.9
     },
     {
       "type": "CHEST_SEALED_ORANGE",
@@ -48708,6 +50052,38 @@
       "x": -3500.5,
       "y": -1123.6,
       "z": -15431.7
+    },
+    {
+      "type": "CHEST_IRON",
+      "groupId": 200,
+      "posId": 1,
+      "x": 13598.8,
+      "y": -1100.7,
+      "z": -26899.1
+    },
+    {
+      "type": "CHEST_IRON",
+      "groupId": 200,
+      "posId": 2,
+      "x": 13922.0,
+      "y": -1100.0,
+      "z": -19910.0
+    },
+    {
+      "type": "CHEST_IRON",
+      "groupId": 200,
+      "posId": 3,
+      "x": -3118.1,
+      "y": 1.4,
+      "z": -15432.2
+    },
+    {
+      "type": "CHEST_IRON",
+      "groupId": 200,
+      "posId": 4,
+      "x": 5196.9,
+      "y": -350.0,
+      "z": -22160.2
     }
   ],
   "2026": [
@@ -49011,6 +50387,22 @@
       "z": -12410.8
     },
     {
+      "type": "CHEST_IRON",
+      "groupId": 200,
+      "posId": 0,
+      "x": -3192.4,
+      "y": 600.0,
+      "z": -12503.7
+    },
+    {
+      "type": "CHEST_ROUND",
+      "groupId": 200,
+      "posId": 1,
+      "x": 3059.8,
+      "y": -500.0,
+      "z": -12378.8
+    },
+    {
       "type": "CHEST_TREASURE",
       "groupId": 201,
       "posId": 0,
@@ -49025,6 +50417,14 @@
       "x": -4195.7,
       "y": -1007.0,
       "z": -21903.2
+    },
+    {
+      "type": "CHEST_IRON",
+      "groupId": 202,
+      "posId": 0,
+      "x": -1501.9,
+      "y": -1200.0,
+      "z": -24343.3
     }
   ],
   "2032": [
@@ -49051,6 +50451,22 @@
       "x": -2390.9,
       "y": 37.6,
       "z": -9375.3
+    },
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 206,
+      "posId": 0,
+      "x": -1741.7,
+      "y": -1.1,
+      "z": -37567.3
+    },
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 206,
+      "posId": 1,
+      "x": 1172.5,
+      "y": -45.8,
+      "z": -36105.6
     }
   ],
   "2033": [
@@ -49113,6 +50529,22 @@
       "z": -12410.8
     },
     {
+      "type": "CHEST_IRON",
+      "groupId": 200,
+      "posId": 0,
+      "x": -3192.4,
+      "y": 600.0,
+      "z": -12503.7
+    },
+    {
+      "type": "CHEST_ROUND",
+      "groupId": 200,
+      "posId": 1,
+      "x": 3059.8,
+      "y": -500.0,
+      "z": -12378.8
+    },
+    {
       "type": "CHEST_TREASURE",
       "groupId": 201,
       "posId": 0,
@@ -49127,6 +50559,14 @@
       "x": -4195.7,
       "y": -1007.0,
       "z": -21903.2
+    },
+    {
+      "type": "CHEST_IRON",
+      "groupId": 202,
+      "posId": 0,
+      "x": -1501.9,
+      "y": -1200.0,
+      "z": -24343.3
     }
   ],
   "2038": [
@@ -49153,6 +50593,22 @@
       "x": -2390.9,
       "y": 37.6,
       "z": -9375.3
+    },
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 206,
+      "posId": 0,
+      "x": 1131.0,
+      "y": -45.0,
+      "z": -36150.6
+    },
+    {
+      "type": "CHEST_TREASURE",
+      "groupId": 206,
+      "posId": 1,
+      "x": -1741.7,
+      "y": -1.1,
+      "z": -37567.3
     }
   ],
   "2039": [
@@ -49216,6 +50672,15 @@
     }
   ],
   "3110": [
+    {
+      "type": "CHEST_SEALED_BROWN",
+      "groupId": 150,
+      "posId": 0,
+      "x": -8900.0,
+      "y": -1459.8,
+      "z": 14000.0,
+      "itemListId": 2059
+    },
     {
       "type": "OM_GATHER_TWINKLE",
       "groupId": 151,
@@ -49341,6 +50806,15 @@
       "y": -1500.0,
       "z": 13108.9,
       "itemListId": 2061
+    },
+    {
+      "type": "CHEST_SEALED_TEAL",
+      "groupId": 152,
+      "posId": 0,
+      "x": 8900.0,
+      "y": -1459.8,
+      "z": 14000.0,
+      "itemListId": 2060
     },
     {
       "type": "CHEST_BROWN",
@@ -51002,7 +52476,7 @@
       "itemListId": 2088
     },
     {
-      "type": "CHEST_UNKNOWN",
+      "type": "CHEST_BRONZE",
       "groupId": 250,
       "posId": 0,
       "x": -300.0,
@@ -51010,7 +52484,7 @@
       "z": -13640.0
     },
     {
-      "type": "CHEST_UNKNOWN",
+      "type": "CHEST_BRONZE",
       "groupId": 251,
       "posId": 0,
       "x": 0.0,
@@ -51018,12 +52492,20 @@
       "z": -13640.0
     },
     {
-      "type": "CHEST_UNKNOWN",
+      "type": "CHEST_BRONZE",
       "groupId": 252,
       "posId": 0,
       "x": 300.0,
       "y": -483.7,
       "z": -13640.0
+    },
+    {
+      "type": "CHEST_PEARL",
+      "groupId": 253,
+      "posId": 0,
+      "x": -651.6,
+      "y": -436.4,
+      "z": -14052.9
     }
   ],
   "3200": [
@@ -51243,7 +52725,7 @@
       "itemListId": 2105
     },
     {
-      "type": "CHEST_UNKNOWN",
+      "type": "CHEST_BRONZE",
       "groupId": 250,
       "posId": 0,
       "x": -300.0,
@@ -51251,7 +52733,7 @@
       "z": -10031.8
     },
     {
-      "type": "CHEST_UNKNOWN",
+      "type": "CHEST_BRONZE",
       "groupId": 251,
       "posId": 0,
       "x": 0.0,
@@ -51259,15 +52741,32 @@
       "z": -10031.8
     },
     {
-      "type": "CHEST_UNKNOWN",
+      "type": "CHEST_BRONZE",
       "groupId": 252,
       "posId": 0,
       "x": 300.0,
       "y": 4886.0,
       "z": -10031.8
+    },
+    {
+      "type": "CHEST_PEARL",
+      "groupId": 253,
+      "posId": 0,
+      "x": 608.5,
+      "y": 4889.4,
+      "z": -10467.0
     }
   ],
   "3211": [
+    {
+      "type": "CHEST_SEALED_BROWN",
+      "groupId": 150,
+      "posId": 0,
+      "x": 3500.0,
+      "y": 56.0,
+      "z": -11500.0,
+      "itemListId": 2107
+    },
     {
       "type": "OM_GATHER_TWINKLE",
       "groupId": 151,
@@ -51348,6 +52847,15 @@
       "y": 2400.0,
       "z": -6799.2,
       "itemListId": 2109
+    },
+    {
+      "type": "CHEST_SEALED_TEAL",
+      "groupId": 152,
+      "posId": 0,
+      "x": -4200.0,
+      "y": 51.9,
+      "z": -19900.0,
+      "itemListId": 2108
     },
     {
       "type": "CHEST_BROWN",
@@ -52670,6 +54178,15 @@
   ],
   "3310": [
     {
+      "type": "CHEST_SEALED_BROWN",
+      "groupId": 150,
+      "posId": 0,
+      "x": 0.0,
+      "y": -4390.0,
+      "z": 11401.5,
+      "itemListId": 2112
+    },
+    {
       "type": "OM_GATHER_TWINKLE",
       "groupId": 151,
       "posId": 0,
@@ -52767,6 +54284,15 @@
       "y": -3065.8,
       "z": 16337.5,
       "itemListId": 2114
+    },
+    {
+      "type": "CHEST_SEALED_TEAL",
+      "groupId": 152,
+      "posId": 0,
+      "x": 1793.3,
+      "y": 29.5,
+      "z": 15695.6,
+      "itemListId": 2113
     },
     {
       "type": "CHEST_BROWN",
@@ -54050,6 +55576,38 @@
       "y": 1555.1,
       "z": 12992.9,
       "itemListId": 2120
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 250,
+      "posId": 0,
+      "x": -1057.8,
+      "y": 1451.8,
+      "z": 14309.5
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 251,
+      "posId": 0,
+      "x": -1057.8,
+      "y": 1451.8,
+      "z": 13970.7
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 252,
+      "posId": 0,
+      "x": -1057.8,
+      "y": 1451.8,
+      "z": 13635.2
+    },
+    {
+      "type": "CHEST_PEARL",
+      "groupId": 253,
+      "posId": 0,
+      "x": -849.2,
+      "y": 1543.1,
+      "z": 12971.2
     }
   ],
   "3400": [
@@ -54079,6 +55637,15 @@
     }
   ],
   "3410": [
+    {
+      "type": "CHEST_SEALED_BROWN",
+      "groupId": 150,
+      "posId": 0,
+      "x": -5627.2,
+      "y": 1811.8,
+      "z": 12649.8,
+      "itemListId": 2122
+    },
     {
       "type": "OM_GATHER_TWINKLE",
       "groupId": 151,
@@ -54213,6 +55780,15 @@
       "y": 1778.2,
       "z": 15296.2,
       "itemListId": 2124
+    },
+    {
+      "type": "CHEST_SEALED_TEAL",
+      "groupId": 152,
+      "posId": 0,
+      "x": 14415.3,
+      "y": -452.7,
+      "z": 20420.8,
+      "itemListId": 2123
     },
     {
       "type": "CHEST_BROWN",
@@ -56174,6 +57750,38 @@
       "y": 63.1,
       "z": -306.3,
       "itemListId": 2130
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 250,
+      "posId": 0,
+      "x": -1013.4,
+      "y": 87.4,
+      "z": -301.2
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 251,
+      "posId": 0,
+      "x": -511.7,
+      "y": 87.4,
+      "z": -1190.4
+    },
+    {
+      "type": "CHEST_BRONZE",
+      "groupId": 252,
+      "posId": 0,
+      "x": 507.5,
+      "y": 87.4,
+      "z": -1170.7
+    },
+    {
+      "type": "CHEST_PEARL",
+      "groupId": 253,
+      "posId": 0,
+      "x": 999.9,
+      "y": 87.4,
+      "z": -388.1
     }
   ],
   "3600": [

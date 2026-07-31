@@ -1,0 +1,16 @@
+node_modules/
+package.json
+package-lock.json
+diag-out.txt
+diag.mjs
+*.clean
+*.restore
+index.port.html
+index.rising-orig.html
+resources/_icon_test/
+resources/connection-icon-audit.txt
+resources/connectionOverlapReport.json
+resources/connections.generated.json
+resources/mmapicon_slices_29/
+__pycache__/
+.DS_Store
