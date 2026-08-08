@@ -278,6 +278,7 @@ L.Control.SpawnTimeFilter = L.Control.extend({
                 saveSpawnTimeFilter();
                 this._updateActive();
                 applySubGroupFilter();
+                refreshSpotSearchFromMobTypes();
             });
             this._buttons.push({ btn, filter: mode.filter });
         }
@@ -554,6 +555,7 @@ const DEV_PREFS_KEY     = 'ddon-dev-prefs';
 const DEV_PANEL_KEY     = 'ddon-dev-panel-open';
 
 let _devMobSpawnLabels   = false;
+let _devSgOpenAllTooltips = false;
 const DYNAMIC_ENEMY_LABEL = 'Dynamic Enemy';
 let _enemySpawnDataLoaded  = false;
 
@@ -574,7 +576,10 @@ const readMobSpawnLabelsPref = (devPrefs) => {
 };
 
 const saveDevPrefs = () => {
-    const prefs = { mobSpawnLabels: _devMobSpawnLabels };
+    const prefs = {
+        mobSpawnLabels: _devMobSpawnLabels,
+        sgOpenAllTooltips: _devSgOpenAllTooltips,
+    };
     try { localStorage.setItem(DEV_PREFS_KEY, JSON.stringify(prefs)); } catch { /* ignore */ }
 };
 
@@ -1442,7 +1447,7 @@ function _doSpread(markers, overlayLayer) {
             .bindTooltip(`<b>${N} stacked here:</b><br>${stackLines.join('<br>')}`,
                          { direction: 'top', offset: [0, -8] })
             .addTo(overlayLayer);
-        anchor.on('mouseover', function() { _applyHighlight(group); });
+        anchor.on('mouseover', function() { _applyHighlight(group, { openTooltips: false }); });
         anchor.on('mouseout',  _unhighlightSG);
 
         group.forEach((m, i) => {
@@ -3079,7 +3084,7 @@ function buildGroupDetails(g) {
         else _enemySpawnPromise.then(applyBossStyle).catch(() => {});
 
         marker
-            .on('mouseover', function() { _highlightSG(this._sgKey); })
+            .on('mouseover', function() { _highlightSG(this._sgKey, this); })
             .on('mouseout',  _unhighlightSG)
             .on('click',     function() { _radiiClickConsumed = true; showSpawnRadii(this); });
         layer.addLayer(marker);
@@ -3311,14 +3316,13 @@ function _clearHighlight() {
     _highlightedSet.clear();
 }
 
-function _applyHighlight(markers) {
+function _applyHighlight(markers, { openTooltips = true, tooltipMarker = null } = {}) {
     clearTimeout(_unhighlightTimer);
-    _clearHighlight();                  // synchronously reset any previously lit markers
+    _clearHighlight();
     for (const m of markers) {
         if (m._hidden) continue;
         m.setStyle({ weight: 4, fillOpacity: 1.0, color: '#ffffff' });
         m.setRadius(9);
-        m.openTooltip();
         _highlightedSet.add(m);
         if (m._spreadAnchor) {
             m._spreadAnchor.setRadius(8);
@@ -3326,10 +3330,22 @@ function _applyHighlight(markers) {
         }
         if (m._spokeLine) m._spokeLine.setStyle({ weight: 2.5, opacity: 1.0, dashArray: null });
     }
+    if (tooltipMarker && !tooltipMarker._hidden) tooltipMarker.openTooltip();
+    else if (openTooltips) {
+        for (const m of markers) {
+            if (!m._hidden) m.openTooltip();
+        }
+    }
 }
 
-function _highlightSG(sgKey) {
-    _applyHighlight((_sgMarkers[sgKey] || []).filter(m => !m._hidden));
+function _highlightSG(sgKey, hoveredMarker = null) {
+    const openAll = _devSgOpenAllTooltips;
+    _applyHighlight(
+        (_sgMarkers[sgKey] || []).filter(m => !m._hidden),
+        openAll
+            ? { openTooltips: true }
+            : { openTooltips: false, tooltipMarker: hoveredMarker },
+    );
 }
 
 function _unhighlightSG() {
@@ -8022,7 +8038,7 @@ function _navigateToSpot(target) {
         if (targetFloor !== null && targetFloor !== currentLayer) _switchToFloor(targetFloor);
     }
     if (target.type === 'enemy' && target.groupId) {
-        if (_spotOpenedGroup && _spotOpenedGroup !== target.groupId) collapseGroup(_spotOpenedGroup);
+        if (useLegacyGroupChips() && _spotOpenedGroup && _spotOpenedGroup !== target.groupId) collapseGroup(_spotOpenedGroup);
         _spotOpenedGroup = target.groupId;
         expandGroup(target.groupId);
         const g = _groupStore.get(target.groupId);
@@ -8055,12 +8071,12 @@ function _navigateToSpot(target) {
         // Fly to and highlight the specific marker position, not just the group centroid
         const focusLatLng = targetMarker?.getLatLng() ?? target.latlng;
         leafletMap.flyTo(focusLatLng, Math.max(leafletMap.getZoom(), 2), { duration: 0.4 });
-        _clearSpotHighlights();
+        _clearAllSpotHoverEffects();
         _addSpotHighlight(focusLatLng);
         if (targetMarker) setTimeout(() => targetMarker.openPopup(), 450);
     } else if (target.type === 'item' && target.source === 'enemy' && target.groupId) {
         // Item — enemy drop: reuse full enemy navigation
-        if (_spotOpenedGroup && _spotOpenedGroup !== target.groupId) collapseGroup(_spotOpenedGroup);
+        if (useLegacyGroupChips() && _spotOpenedGroup && _spotOpenedGroup !== target.groupId) collapseGroup(_spotOpenedGroup);
         _spotOpenedGroup = target.groupId;
         expandGroup(target.groupId);
         const g = _groupStore.get(target.groupId);
@@ -8087,13 +8103,13 @@ function _navigateToSpot(target) {
         }
         const focusLatLng = targetMarker?.getLatLng() ?? target.latlng;
         leafletMap.flyTo(focusLatLng, Math.max(leafletMap.getZoom(), 2), { duration: 0.4 });
-        _clearSpotHighlights();
+        _clearAllSpotHoverEffects();
         _addSpotHighlight(focusLatLng);
         if (targetMarker) setTimeout(() => targetMarker.openPopup(), 450);
     } else {
         // Gather, shop item, or generic fallback
         leafletMap.flyTo(target.latlng, Math.max(leafletMap.getZoom(), 2), { duration: 0.4 });
-        _clearSpotHighlights();
+        _clearAllSpotHoverEffects();
         _addSpotHighlight(target.latlng);
         if ((target.type === 'gather' || target.source === 'gather') && target.nodeKey) {
             const m = _gatherMarkerByKey.get(target.nodeKey);
@@ -8973,10 +8989,22 @@ const meetsSpotMobTypeFilter = (entry) => {
     return [...tags].some(t => _mobTypeFilters[t]);
 };
 
+const meetsSpotSpawnTimeFilter = (entry) => {
+    if (!_activeSpawnTimeFilter) return true;
+    if (entry.type !== 'enemy' && entry.source !== 'enemy') return true;
+    if (!_enemySpawnDataLoaded || !entry.spawnKey || !_enemySpawnCache) return true;
+    const all = _enemySpawnCache.get(entry.spawnKey) ?? [];
+    if (!all.length) return true;
+    const visible = filterEntriesBySpawnTime(all);
+    if (entry.emCode) return visible.some((e) => e.emCode === entry.emCode && e.lv);
+    return visible.some((e) => !!e.lv);
+};
+
 const matchesSpotCriteria = (entry, criteria) =>
     meetsSpotType(entry, criteria.filter)
     && meetsSpotLevelFilter(entry, criteria.filter, criteria)
     && meetsSpotMobTypeFilter(entry)
+    && meetsSpotSpawnTimeFilter(entry)
     && (criteria.multiTerm || _spotEntryMatches(entry, criteria.term, criteria.exact));
 
 const spotEnemyBaseName = (entry) => {
@@ -9069,6 +9097,7 @@ function collectMultiMobStageMatches(criteria, scope) {
 
                     if (!meetsSpotLevelFilter(entry, 'enemy', criteria)) continue;
                     if (!meetsSpotMobTypeFilter(entry)) continue;
+                    if (!meetsSpotSpawnTimeFilter(entry)) continue;
 
                     let termHit = false;
                     for (const term of terms) {
@@ -9128,7 +9157,9 @@ function findRosterEnemySpots(row) {
         if (e.type !== 'enemy') return false;
         if (spotEnemyBaseName(e).toLowerCase() !== want) return false;
         if (spotEnemyLevelKey(e) !== row.levelKey) return false;
-        return meetsSpotMobTypeFilter(e);
+        if (!meetsSpotMobTypeFilter(e)) return false;
+        if (!meetsSpotSpawnTimeFilter(e)) return false;
+        return true;
     });
 }
 
@@ -9204,7 +9235,8 @@ function buildStageGatherRoster() {
 
 function findRosterItemSpots(row) {
     return _spotIndex.filter((e) =>
-        e.type === 'item' && e.source === row.source && e.name === row.name);
+        e.type === 'item' && e.source === row.source && e.name === row.name
+        && meetsSpotSpawnTimeFilter(e));
 }
 
 function rosterItemLocationKey(entry) {
@@ -9473,21 +9505,32 @@ function wireSpotRowNavigation(row, items, navigate) {
     });
 }
 
+const SPOT_HOVER_HL_CAP = 80;
+
+function _clearAllSpotHoverEffects() {
+    _clearSpotHighlights();
+    _clearHighlight();
+    clearTimeout(_gatherHighlightTimer);
+    _clearGatherHighlight();
+}
+
 function _highlightSpotItems(items) {
     const drawnGroups = new Set();
+    let ringCount = 0;
     for (const item of items) {
+        if (ringCount >= SPOT_HOVER_HL_CAP) break;
         if (_currentFloorObbs && item.worldPos) {
             const f = getEnemyFloor(item.worldPos.x, item.worldPos.y, item.worldPos.z, _currentFloorObbs);
             if (f !== null && f !== currentLayer) continue;
         }
-        const grp = item.groupId ? _groupStore.get(item.groupId) : null;
-        if (item.type === 'enemy' && grp && !grp.isExpanded) {
-            if (!drawnGroups.has(item.groupId)) {
-                drawnGroups.add(item.groupId);
-                _addChipHighlight(grp);
-            }
-        } else {
-            _addSpotHighlight(_resolveSpotLatLng(item));
+        const grp = item.groupId != null ? _groupStore.get(String(item.groupId)) : null;
+        const latlng = (grp?.isExpanded ? _resolveSpotLatLng(item) : null) ?? item.latlng;
+        if (!latlng) continue;
+        _addSpotHighlight(latlng);
+        ringCount++;
+        if (useLegacyGroupChips() && grp && !grp.isExpanded && !drawnGroups.has(item.groupId)) {
+            drawnGroups.add(item.groupId);
+            _addChipHighlight(grp);
         }
     }
 }
@@ -9495,10 +9538,10 @@ function _highlightSpotItems(items) {
 function wireSpotRowHoverHighlight(row, items) {
     if (!items.length) return;
     row.addEventListener('mouseenter', () => {
-        _clearSpotHighlights();
+        _clearAllSpotHoverEffects();
         _highlightSpotItems(items);
     });
-    row.addEventListener('mouseleave', _clearSpotHighlights);
+    row.addEventListener('mouseleave', _clearAllSpotHoverEffects);
 }
 
 function _renderStageRoster(resultsEl, {
@@ -9531,8 +9574,6 @@ function _renderStageRoster(resultsEl, {
         + `${summaryNoun}${uniqueCount !== 1 ? 's' : ''} on this stage · click to go`;
     frag.appendChild(summary);
 
-    const enableHoverHl = uniqueCount <= 50;
-
     for (const { row, items } of rows) {
         const el = document.createElement('div');
         el.className = 'spot-result-row spot-roster-row';
@@ -9542,7 +9583,7 @@ function _renderStageRoster(resultsEl, {
             iconForRow(row, items)
             + `<span class="spot-result-name">${row.displayName}</span>`;
         wireSpotRowNavigation(el, items, _navigateToSpot);
-        if (enableHoverHl) wireSpotRowHoverHighlight(el, items);
+        wireSpotRowHoverHighlight(el, items);
         frag.appendChild(el);
     }
 
@@ -9646,7 +9687,7 @@ function _runSpotSearch() {
     if (!resultsEl) return;
 
     const criteria = readSpotSearchCriteria();
-    _clearSpotHighlights();
+    _clearAllSpotHoverEffects();
 
     if (_spotGlobal) {
         if (_globalSpotIndexPromise && !_globalSpotIndexReady) {
@@ -9730,8 +9771,6 @@ function _runSpotSearch() {
     summary.textContent = summaryText;
     frag.appendChild(summary);
 
-    const enableHoverHl = totalGroups <= 50;
-
     for (const rawItems of cappedGroups) {
         const items = orderSpotGroupItems(rawItems, 'local', criteria);
         const first = items[0];
@@ -9756,10 +9795,7 @@ function _runSpotSearch() {
             row.appendChild(preview);
         }
         wireSpotRowNavigation(row, items, _navigateToSpot);
-
-        if (enableHoverHl) {
-            wireSpotRowHoverHighlight(row, items);
-        }
+        wireSpotRowHoverHighlight(row, items);
 
         frag.appendChild(row);
     }
@@ -9839,7 +9875,7 @@ function _renderGlobalResults(matches, resultsEl, criteria = null) {
         panel.classList.remove('open');
         toggle.style.display = '';
         cancelSpotSetOriginMode();
-        _clearSpotHighlights();
+        _clearAllSpotHoverEffects();
     };
 
     toggle.addEventListener('click', openPanel);
@@ -9918,7 +9954,7 @@ function _renderGlobalResults(matches, resultsEl, criteria = null) {
             document.querySelectorAll('.spot-scope').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             _spotGlobal = btn.dataset.scope === 'global';
-            _clearSpotHighlights();
+            _clearAllSpotHoverEffects();
             if (_spotGlobal && !_globalSpotIndexReady) {
                 _buildGlobalSpotIndex().then(() => _runSpotSearch());
             } else {
@@ -10674,9 +10710,12 @@ function initDevPanel() {
 
     const devPrefs = loadDevPrefs();
     _devMobSpawnLabels = readMobSpawnLabelsPref(devPrefs);
+    _devSgOpenAllTooltips = !!devPrefs.sgOpenAllTooltips;
 
     const mobLabelsEl = document.getElementById('dev-mob-spawn-labels');
     if (mobLabelsEl) mobLabelsEl.checked = _devMobSpawnLabels;
+    const sgTooltipsEl = document.getElementById('dev-sg-open-all-tooltips');
+    if (sgTooltipsEl) sgTooltipsEl.checked = _devSgOpenAllTooltips;
     applyDevDisplayPrefs();
 
     mobLabelsEl?.addEventListener('change', () => {
@@ -10689,6 +10728,11 @@ function initDevPanel() {
         refreshMobTooltips();
         refreshGroupChipIcons();
         saveLayerPrefs();
+    });
+
+    sgTooltipsEl?.addEventListener('change', () => {
+        _devSgOpenAllTooltips = sgTooltipsEl.checked;
+        saveDevPrefs();
     });
 
     const setPanelOpen = (open) => {
